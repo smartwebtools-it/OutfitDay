@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OutfitDay – Il tuo outfit del giorno, abbinato e adatto al meteo</title>
-<meta name="description" content="OutfitDay è il tuo armadio digitale gratuito: fotografa i tuoi vestiti e ogni giorno ricevi un outfit con colori abbinati e adatto al meteo della tua città. Funziona su iPhone, senza registrazione.">
-<meta name="keywords" content="outfit del giorno, armadio digitale, abbinare vestiti, abbinamento colori, cosa mi metto oggi, meteo outfit">
+<meta name="description" content="OutfitDay è il tuo armadio digitale gratuito: fotografa i tuoi vestiti e ogni giorno ricevi un outfit con colori abbinati, adatto al meteo e al tuo stile, con avviso pioggia. Funziona su iPhone, senza registrazione.">
+<meta name="keywords" content="outfit del giorno, armadio digitale, abbinare vestiti, abbinamento colori, cosa mi metto oggi, meteo outfit, moda gen z">
 <meta property="og:title" content="OutfitDay – Il tuo outfit del giorno">
-<meta property="og:description" content="Fotografa i tuoi vestiti e ogni giorno ricevi un outfit abbinato e adatto al meteo.">
+<meta property="og:description" content="Fotografa i tuoi vestiti e ogni giorno ricevi un outfit abbinato, adatto al meteo e al tuo stile.">
 <meta property="og:type" content="website">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -16,6 +16,7 @@
 <meta name="theme-color" content="#0e0f13">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c6cff'/%3E%3Cstop offset='1' stop-color='%233d8bff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpolygon points='36,22 43,26 50,28 57,26 64,22 86,34 78,48 68,43 68,80 32,80 32,43 22,48 14,34' fill='%23fff' stroke='%23fff' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAQjElEQVR42u3dW5AU13nA8f853XPdBWQLCSJbQFnIBIFMJCQIimwhgbnYlioVVVyVZ/slVSlbspOnPOQpT3nNs8uRXS5JQZQkYMXF3LRoARkMCIKQuUgWN8EC6wV2Zmd2uk8epmdnZuc+093TPXP6id3qOfR2/+brc/vOEf/+L4qSo+yH/G9ExW8andNGIQpoWEijc9oopI3/pdlC6p7T8ASPCql5QrVzJHWPNmRAEx+pPKljGe0V0salNltI3WfWuYwWLl408ZFqekwdM3TMqHWOdFFGe4EnQDFDhCpmCA9jRr3XSnsylBeBp5ln1o3A0/63uWMZrkWvRnHFVFqGllGjEKllaBm1HpapZWgZtQqRWoaWUesjppahZdQqxNQytIxanSJSy9AyanWKSC1Dy6hViNQytIxahUgtQ8uoVYjUMrSMWoVILUPLqFWI1DK0jFqFSC1Dy6hViNQytIxahUgtQ8uoVYjUMrSMWoVILUPLqFWI1DK0jGZTE7QMLYNmxla0jH6WQXGyj0dJK1pGaGXMnEOqZWgZpT+aOmZoGbUSLaWWoWXQzNiKlqFlVB9b0TK0jOpjK1qGljHjnNqTfbSMvpcBmDpmaBlVZbSTmqBl9ImMllMTtIz+kdFaakIwZUiJEAGTAUIgZbhltJCaEEAZQiAEqTSZLIaBEIGQIQSGSXaKVBpE2VWFS0azqQlBk5H/XmayTGZY8SQLHmXsLraNIbsmQ4ECw8BWjI2z6Bs8vYzJDJkshnSIhEtGU2MrgZLhsMiQnWLRAv7hZZ5cyuQkuw+wd5ixcQYHkALb9luGFCgYv8/X5/Dyi2x+gUSMU+d4c4hLl4lEiMWw7bIPBlwGIP715yosMqQklyOVZuGjbFrHqpWYBko538sbo3ywl48+xrJJJrBtbOXL20QgBalJpMH3nuXlF5k/F3AuLGcxcoJt+7l0hYEkERPLbmfVR/9lIMpxBFaGlFg2qRRzH+R7z7F+LYk4gG079b7pf5w7z9Yhzp0nFiMawVLeypCS7BTpLMsW84+beGJx+VUppABITzI0zN6jjN4hmcCQWHbQZRQjh3JpPVDXZTgs0iQTbHiJl77LrMGyB1D8oEIppMS2GTnGezu5cYtkwvmN6zLyFzaRZv5cXt3I8yud/0hUVEKnL/XufXaPsO0gE2kGKi8sYDJKcARPhpQoRWqSeIzVK1m/lkfmO/e68gFUPol7E2zfw4ERMtlCmFHuyMgHg4lJolHWreHv1zNroCxOUK00VbiwKzcYGuajE6QzJOOQryEFT4YC8cufq6DFjPyzT6dRghXLefXlplhUJXLtK97ezsn/QwiiEQyJAlvVqxhWX+lGIAQCLJvsFLbiqWX80w/5xrzqYaw6kUJsyxP53RDHzgIMJLAVSgVLBiB++ZoKigwQEiHIZJjK8eQyNq1j6bdbY1H1SZw+x5YdXL9JKoWQRKJETRCgZkKZudaiAIFSTFlks9g2A0nmP8SPf8CKv3bjws6z7SDHPyUSIR51iARExkwcXZQhBNIgmyWbZeEC1q/luVXOrczHkvaO6Y8rxfWbnPmMC1/w+WVu3sayMAwiEQyj+MzyVyIKldxMlqkcpsnXZvP4IpZ8i+Xf5pGHnQJduTDg4HF2DHPxCrEI0Uh5FOmejDIc3ZIBCINcjnSaefN4ZTOrV2IYZd+wDo8ZtYHJDJ9f5sxnnLvI9ZuM3wOImESiCMhaTE2hFMkkCx7hsQU8sZjHFzGYrFlg+xdWCDw5i0Mn+N89XBslEXdavA0nAHsqo4ijWzKmGyMPPsgLz/HC8zUbI50fqhC0S0u+PcanF/jsEpcuc/UrLJt5c1n4Tf5mKY8t5JGHyz6eNyGEyxdWbM5MsPswu48wOsZAAsPouFOkAxkOjq7IkBJbMZEimWTVSl75AQ/M9opFM0psmy+uks2y6FHi0bLfT9eRPT2m//Cxu7y1h0MnmUgzmCw0Z/yV4VQBf/Ga8llGvqc5lcYw+bu/bbaN6jMUf0BUXoytnBGiyzfYcYh9x8hZDBSa4r7FjOo4PJWRv92TkyhYtpRN61nyeNdYVK2aoLp/JaWVrTMXefcAJ88DJGKF5owvMpi5a4JnMvJ3PJMhm2XJEl7ZzNIlRRZev0eaPPIN164f+XuVJ7L8MZY/xicXeGsPpy8QixKPNeoUcUkGYsYeb27LyP9oSLJTZCZZtJB1a1n9LIZ0/ryAsAjgkSdiKwR8ZzHLvsWHJ9h+iAtXiMeImLXHeF2SUXyteBQzpOGMo859kBe/y4Z1TqeCD7XOXjqmW845i/c+ZOgwN8dIxolUNmfck6HyOLyQ4YxLpXhgDi+94G0btV+IFG7d+H12HWXHCHfGGUg6A3iuywDE668pd2XkB8wm0iTjPLOSTet5+CHNwn0i12+x9SDDp0hNMpiAOoPP7TZwxOuvK7dkTE/qVLDmWTZv4K/mB6gx0jNHWYv3Jlv2c+AECJKxaoPPHTR9y3B0GDOyWWzF8if4/ktljRHNwusW76kLvDvMH/+EgFjUte4y08V6xqPfZOP3eeap4sCSfo/40OIFVixmxWIOnWbrQa6OBiw1QQgyWX78Ks88hWVhKx0w/G7xWhbPP8lPf0QmW3LnA5GaILBthnaRsxDCnRFLfdBi913O4u39WNNdqB13pEpX+jNsm2SSU6c5cbKkZaUPvw7LxpCMnOHoWQYTzc07bKLpK90aN1GKaIwdu0ini+9CffhTMxWCiUne3udMJ3Nn8KX+sk8tjbUqRTzGF19y4JDzFtSHn/2nHxzh/FUS0ZIn0uHgiyipkHY+c8eyGRhg935u3caQ2odPYUNKbozx7jCzk8U8nQ5jRnnkcGMeqFKYJuN3eX+o7gqG+nD3nQK/28Ode5hm4RXfcczIp/5K5WJWgcCyGRxg5A+cv6Rrpj51pZ/9gr1/ZPaAM+3UlaH8QuQQLueoKRCSd7aRyznz+vXhTdBwmq9v7MQwmn3wLQ2+SNfzWm2bRIxP/8Txk0iNw7vmq0IKPjrNqUskY02NurU6LCe9WD/DViTibN3OREo3az2rhwrup/nNbpJxLG8mhkkv1txRiqjJV6PsG9Y4vGq+CsH2w1y9RdSscoddmYAuPVrBzVIMJBn6PTdv6Zqp+/VQQ3L9Nu8cZDBJTnmVmiC9WttPYRhMZti2Uz9NT44395HKYMiZd98tGTXWIXVp1cf8CjsffexOs1apXng9df5XOM3XP7P3OIOJskVg3JVRrbXi6nqgQiAMtnTWrFWqdyYNOSPsdrtECs3X/9mJNGo/CzdklO+a4MFKsZZNIsbZ8xw71U6zdpqFlNwZ589Xi9OIwhgzgEvXuD3urJ3aBpFi8/Wi03z1TkZ5a8WDNYSnm7XvtNisLWVx9z7v/55/+0/+8MnMOZLhal8AR87wz//Flv2M32+ZyHTz9Y3dJOP15oq6IkPlpwl6urp0vll7Y5S9w7yy0XnkzUyNFIK799k3wv7D3PkL2amy/OaQHoko91P8dic7D7NhNRtXM2ew2cm2+UnF+ebrA4PF2oZHMnDWIfV43XFbkUwytJfVTzPvoZo5ClVZjN4mHmf2AGP3emGY11IYBnMGuJvijZ3sOsqG1Wxqgkj+pl27zZaDzKo6+uq2DMD0YUV6WyElqTRvvc/PflLl1TODxf4R9k2zGMRW5OzemQCgFDm7SOQ3u9j9MRtWs2lVXSICAb8aIp0tzPXyWEa1RGpv9iqwFYkEJ85w9jxPPF4MHpUs9h/mZgkLy+5odaXAtVZKiFgK02ROhPFCFNlYg0j+dp26yJGzDMZ9klF302G3d7HI/6lvvsd//MJpuVSyGL1NrJxFWSGiF0ZSS5+ZUuQUZsWLZnM5kXyn0a+GMGRFj4BnMmpvOuzB/ia2TTzG518yfJS1axwupSwScWaVs5hZSC+N0YiyOrtVIFIaRaaJCNh1jPNXmD1AzvZJhqq+ML5nO9/YiliMrR+w5mlyFns+5MARRu84LxFL1ejvq8jC6AUZlUtclkaRNG/sYtfHbFjFj9YQMfjtHuKxstW6vZZRJXJ4uieSUpgGExP896+5eZsvr5FMFqucbexvEvaYUbXlb1GMIr/+gIMnmf917qWcVSh9k9HWyj6d7YmkFJEIn5zDMHhgDrZdd8E8UfaqFr0uo3hCIYp8bRY3xrh6y1nzyU8ZFbmyvuyjlu8zVWBZTa8uTY/P96v6UPN1kYhJxOyCjOKyTz7vsGerjnbL6hEKTT5U5Uerteo5Zuj2XuyHmOHpWGszMupO9tEy+lgGTXafB26/1l4BEWQZrqYm+LX3Yq80VsIhw43UBP026aD7PMgyOk5N8HP37x5r2QZeRmepCd3YF17L8E1GB6kJWkYHCa6hkNFuakI3ZPRInTQ8MtpKTeiSjF4KIqGQ0XpqQvdkoGX4K6PF1AQtw/t+0uDIKGmtaBlaRsUJMkQyeqn7PPgyGi/7pGX4008aQBkNxla0DO9SE4IvgwapCYGS0YupCUGWUTc1IWgyejc1IYAyihVSFQoZPZaaEOyYUbv7PJAyVH+kJgRBRt3JPoGUQT+lJgRBRrXJPgF8m/RZ93lAZJTtmhBYGX0+zbhbMson+2gZWkb11IQwyFBaho8yCnUOLSN4qQldlzFzbEXLCEhqQhBktJaaoGX4k5oQEBktpCZ0WUbfpCYER0azqQk6ZvShjKZSE7ovQ/SQFRUaGY1TE7QM92OGQIVBRoPUhKDJED3ffR4kGcyc7KNjRnetBEeGmBE5tAwto/o6pFqGllGZmhAWGb0x2UeFR0Zz3ec6ZnjXfR5gGU10nwdDRo/1oIdCRqPu80DJ6JXUhLDIKFmHNPgy+i01oasyGq1DGjQZPbe4T5BjRjdTE9qQoUAJHTP8kNHN1IT2ZPROaoIIh4wupCb079ukg7GVrsjwOzWhPRl93k/aLRm+piZoGeGS4V9qgisylJbhowyfUhO0jDbGVrouw4/UBLdkqN7ZFjIcMjxPTXAxZvTmNLAAy/A2NcHlt0mPLo8fWBmq3thK8GQoha2wFSKE75j8ZSsVGhk0syN1UGSAaSIF0ghlmMhfdsQo3F4VdBmNd6QOiAxbkYix7zhnLjrjVq3NDxLtT/vufLSstIAbf2EghhUGGQ12pA5OPcNWmCbXR/nyq9bvgitJRK3ca1WtbSJACWcHYaVCIMPl1ASPZKiSfc6j0VbugipOEWr/TtUuRM1IYhMzn3rx+1YoJF9tCoWM4o7UAZdR3Jt5xvbMqtHXXTVxDjUeat1CqpSpavMq/CMUbxMKsyNMFRIZbi0mT6jWEO5WzKg72UfL6GMZquqO1FqGluFaaoKW0cMyOkpN0DJ6W0bdlX20jP6W0WZqgpbRDzLaSU3QMvpERsupCVpG/8hoLTVBy+grGS2MrWgZ/SWj+dQELaPfYkb5ZB8tQ8toNTVBy+hbGQ1SE7SMfpbRxKbDWka/yqjSCaZlaBkV65BqGVpG5diKlqFltLKyj5ahZdSc7KNlaBnVJ/toGVpGaWqClqFlVE1NkFqGltEoNUHL0DLqj61oGVpG9bEVLUPL6EZqgpYRQhm+pCZoGeGUUTc1gVDJIFQy8HtOV3uFmM2sSO/1oij+rKzi6dYkfhdSbQ8J1wuRLS0E6/JiS26t2OTenkjtrwvVWcxouyuiw5hR/4T/B27HGlCSZf7JAAAAAElFTkSuQmCC">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
   :root{
     --bg:#0e0f13; --card:#181a21; --card2:#20232c; --line:#2a2e39;
@@ -30,14 +31,36 @@
   body.app{padding-bottom:calc(86px + env(safe-area-inset-bottom))}
   .hidden{display:none!important}
 
-  /* Ingranaggio lingua: piccolo, in alto a destra */
-  .gear{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:15;width:42px;height:42px;
-    border-radius:50%;border:1px solid var(--line);background:rgba(24,26,33,.9);color:var(--text);
-    font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+  /* Ingranaggio delle impostazioni, in alto a destra */
+  .gear{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:15;width:50px;height:50px;
+    border-radius:50%;border:1px solid var(--line);background:rgba(32,35,44,.95);color:var(--text);
+    font-size:28px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;
+    box-shadow:0 4px 16px rgba(0,0,0,.4)}
   .gear:active{transform:scale(.92)}
+  /* Account, in alto a sinistra */
+  .accbtn{position:fixed;top:calc(12px + env(safe-area-inset-top));left:12px;z-index:15;height:50px;padding:0 20px;
+    border-radius:999px;border:0;background:linear-gradient(135deg,#3d8bff,#2a6fe0);color:#fff;font-size:17px;font-weight:800;
+    cursor:pointer;box-shadow:0 4px 16px rgba(61,139,255,.35)}
+  .accbtn.on{width:50px;padding:0;background:var(--card2);border:1px solid var(--line);box-shadow:0 4px 16px rgba(0,0,0,.4)}
+  .accbtn img{width:46px;height:46px;border-radius:50%;object-fit:cover;display:block;margin:auto}
+  .accbtn:active{transform:scale(.94)}
+  .ini{display:flex;align-items:center;justify-content:center;width:46px;height:46px;margin:auto;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;font-weight:800;font-size:20px}
+  .ini.big{width:56px;height:56px;margin:0;font-size:24px}
+  .sdot{position:absolute;right:0;bottom:0;width:14px;height:14px;border-radius:50%;border:2px solid var(--bg);background:#3ecf8e}
+  .sdot.dirty,.sdot.busy{background:#ffb02e}.sdot.err{background:var(--danger)}
+  .gbtn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;border:0;border-radius:14px;
+    padding:15px 18px;background:#fff;color:#1f1f1f;font-size:17px;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+  .gbtn:active{transform:scale(.97)}
+  .bens{list-style:none;padding:0;margin:0 0 16px}
+  .bens li{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:8px;font-size:15.5px}
+  .sub{color:var(--muted);margin:-4px 0 14px}
+  .accHead{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+  .accHead img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+  .accHead b{display:block;font-size:19px}.accHead small{color:var(--muted);font-size:14px}
 
   /* Pagina di benvenuto */
-  #welcome{max-width:640px;margin:0 auto;padding:34px 20px calc(30px + env(safe-area-inset-bottom))}
+  #welcome{max-width:640px;margin:0 auto;padding:78px 20px calc(30px + env(safe-area-inset-bottom))}
   .logo{text-align:center;margin-bottom:10px}
   .logo svg{width:84px;height:84px;filter:drop-shadow(0 10px 30px rgba(124,108,255,.45))}
   #welcome h1{font-size:30px;font-weight:800;letter-spacing:-.6px;text-align:center;margin:0 0 10px}
@@ -61,7 +84,7 @@
   #startBtn{font-size:19px;padding:17px}
 
   /* App */
-  header{padding:18px 64px 6px 20px}
+  header{padding:76px 20px 6px 20px}
   header h1{margin:0;font-size:28px;font-weight:800;letter-spacing:-.5px}
   header p{margin:4px 0 0;color:var(--muted);font-size:15px}
   main{padding:8px 16px 20px;max-width:640px;margin:0 auto}
@@ -71,18 +94,47 @@
     box-shadow:0 6px 20px rgba(124,108,255,.25);transition:transform .1s}
   .btn:active{transform:scale(.97)}
   .btn.ghost{background:var(--card2);box-shadow:none;color:var(--text);border:1px solid var(--line)}
+  .btn.blue{background:linear-gradient(135deg,#3d8bff,#2a6fe0);box-shadow:0 6px 20px rgba(61,139,255,.25)}
   .btn.danger{background:transparent;color:var(--danger);border:1px solid rgba(255,93,108,.4);box-shadow:none;
-    padding:9px 12px;font-size:14px;border-radius:11px;width:auto}
+    padding:9px 10px;font-size:14px;border-radius:11px;width:auto;flex:1}
+  .btn.editbtn{background:rgba(61,139,255,.12);color:#9cc4ff;border:1px solid rgba(61,139,255,.45);box-shadow:none;
+    padding:9px 10px;font-size:14px;border-radius:11px;width:auto;flex:1}
   .btn.small{width:auto;padding:10px 14px;font-size:15px;margin-top:10px;border-radius:12px}
   .row{display:flex;gap:10px}
   .row .btn.small{margin-top:0}
+  .row2{display:flex;gap:10px}
+  .row2 .btn{flex:1;font-size:15px;padding:14px 8px}
   .linkbtn{border:0;background:none;color:var(--accent2);font-size:14px;font-weight:700;padding:6px 0 0;cursor:pointer}
 
   .weather{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
     border-radius:var(--radius);padding:14px 16px;margin-bottom:14px}
-  .weather .ic{font-size:34px}
+  .weather .ic{font-size:34px;align-self:flex-start}
   .weather b{font-size:20px}
   .weather small{color:var(--muted);display:block;font-size:14px}
+  .rain{color:#6fb1ff;font-weight:700;font-size:15px;margin-top:8px;padding:10px 12px;border-radius:12px;
+    background:rgba(61,139,255,.1);border:1px solid rgba(61,139,255,.3)}
+  .morebtn{display:block;margin-top:8px;border:0;background:none;color:#9cc4ff;font-size:15px;font-weight:800;
+    padding:0;cursor:pointer;text-decoration:underline}
+  .days{display:flex;flex-direction:column;gap:10px}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .day.open{border-color:rgba(61,139,255,.5)}
+  .drow{display:flex;align-items:center;gap:12px;padding:14px;cursor:pointer}
+  .dic{font-size:32px;flex:none}
+  .dname{flex:1;min-width:0}.dname b{display:block;font-size:17px}.dname small{color:var(--muted);font-size:14px}
+  .dtemp{display:flex;flex-direction:column;align-items:flex-end;flex:none}
+  .tmax{font-size:20px;font-weight:800}.tmin{color:var(--muted);font-size:15px}
+  .chev{color:var(--muted);font-size:20px;width:18px;text-align:center}
+  .dayx{padding:0 14px 14px;border-top:1px solid var(--line)}
+  .minis{display:flex;flex-direction:column;gap:8px}
+  .mini{display:flex;align-items:center;gap:12px;background:var(--card2);border-radius:12px;padding:8px}
+  .mini img{width:56px;height:56px;border-radius:10px;object-fit:cover;flex:none;background:#000}
+  .mini b{display:block;font-size:14px}.mini span{color:var(--muted);font-size:14px;display:inline-flex;align-items:center;gap:5px}
+  .ranges{display:flex;flex-direction:column;gap:8px}
+  .rng{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .rng b{display:block}.rng span{color:var(--muted);font-size:14px}
+  .rng.warn{border-color:rgba(255,176,46,.5);background:rgba(255,176,46,.1)}
+  .links{display:flex;gap:10px;flex-wrap:wrap}
+  .links a{color:#9cc4ff;font-weight:800;text-decoration:none;border:1px solid rgba(61,139,255,.45);border-radius:12px;padding:10px 14px}
   .cityform{display:flex;gap:8px;margin-top:10px}
   .cityform input{flex:1;background:var(--card2);border:1px solid var(--line);color:var(--text);
     border-radius:12px;padding:12px;font-size:16px;min-width:0}
@@ -95,7 +147,9 @@
   .piece .lab{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
   .piece .nm{font-size:19px;font-weight:700;margin-top:2px;display:flex;align-items:center;gap:8px}
   .layer{font-size:13px;color:var(--accent2);margin-top:4px}
-  .change{display:inline-block;margin-top:8px;border:1px solid var(--line);background:var(--card2);
+  .brandtag{display:inline-block;font-size:12.5px;font-weight:700;color:#e9d9ff;background:rgba(124,108,255,.18);
+    border:1px solid rgba(124,108,255,.35);border-radius:8px;padding:2px 8px;margin-top:4px}
+  .change{display:block;margin-top:8px;border:1px solid var(--line);background:var(--card2);
     color:var(--text);border-radius:12px;padding:8px 12px;font-size:14px;font-weight:700;cursor:pointer}
   .change:active{transform:scale(.95)}
   .dot{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,.35);flex:none;display:inline-block}
@@ -104,19 +158,16 @@
   .empty .big{font-size:48px}
   .empty h2{color:var(--text);margin:8px 0 6px;font-size:21px}
   .tip{color:var(--muted);font-size:14px;text-align:center;margin:12px 0 0}
-  .row2{display:flex;gap:10px}
-  .row2 .btn{flex:1;font-size:15px;padding:14px 8px}
-  .btn.blue{background:linear-gradient(135deg,#3d8bff,#2a6fe0);box-shadow:0 6px 20px rgba(61,139,255,.25)}
 
   .cat h3{margin:22px 4px 10px;font-size:19px;display:flex;justify-content:space-between;align-items:center}
   .cat h3 span{color:var(--muted);font-size:14px;font-weight:600}
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
   .item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
   .item img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#000}
-  .item .bar{display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:10px}
-  .btns{display:flex;flex-wrap:wrap;gap:6px}
-  .colorbtn{display:flex;align-items:center;gap:7px;background:var(--card2);border:1px solid var(--line);
-    color:var(--text);border-radius:11px;padding:8px 10px;font-size:14px;cursor:pointer}
+  .item .bar{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:10px}
+  .meta{display:flex;align-items:center;gap:7px;font-weight:700;font-size:15px}
+  .meta2{color:var(--muted);font-size:13.5px}
+  .btns2{display:flex;gap:6px;width:100%;margin-top:6px}
   .nocat{color:var(--muted);font-size:15px;padding:4px}
 
   nav{position:fixed;left:0;right:0;bottom:0;background:rgba(14,15,19,.92);backdrop-filter:blur(14px);
@@ -148,11 +199,29 @@
   .palette button .dot{width:28px;height:28px}
   .palette button.on{border:3px solid var(--blue);background:rgba(61,139,255,.16);box-shadow:0 0 0 3px rgba(61,139,255,.3)}
   .palette button.on .dot{border-color:var(--blue)}
+  .txt{width:100%;background:var(--card2);border:1px solid var(--line);color:var(--text);border-radius:12px;
+    padding:13px 14px;font-size:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .chips button{border:1px solid var(--line);background:var(--card2);color:var(--text);border-radius:999px;
+    padding:8px 14px;font-size:15px;font-weight:600;cursor:pointer}
+  .chips.big button{padding:12px 18px;font-size:16px}
+  .chips button.on{border:2px solid var(--blue);background:rgba(61,139,255,.16)}
   .langs{display:flex;flex-direction:column;gap:10px;margin-bottom:6px}
   .langs button{display:flex;align-items:center;gap:12px;border:1px solid var(--line);background:var(--card2);
     color:var(--text);border-radius:14px;padding:14px;font-size:17px;font-weight:700;cursor:pointer;text-align:left}
-  .langs button .fl{font-size:24px}
+  .langs button .fl{font-size:24px;flex:none}
+  .langs button .desc{display:block;color:var(--muted);font-size:14px;font-weight:500;margin-top:2px}
   .langs button.on{border:3px solid var(--blue);background:rgba(61,139,255,.16)}
+  .explain{background:rgba(61,139,255,.1);border:1px solid rgba(61,139,255,.35);border-radius:14px;
+    padding:14px;font-size:16px;color:#d8e6ff;margin-bottom:16px;line-height:1.5}
+  .trow{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card2);
+    border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:10px}
+  .ttxt b{display:block;font-size:16px}
+  .ttxt span{color:var(--muted);font-size:14px}
+  .stepper{display:flex;align-items:center;gap:6px;flex:none}
+  .stepper button{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);
+    color:var(--text);font-size:24px;font-weight:700;cursor:pointer;line-height:1}
+  .stepper output{min-width:48px;text-align:center;font-size:20px;font-weight:800}
   .toast{position:fixed;left:50%;bottom:calc(100px + env(safe-area-inset-bottom));transform:translateX(-50%);
     background:#2b2f3b;color:var(--text);border:1px solid var(--line);border-radius:14px;padding:12px 16px;
     font-size:15px;font-weight:600;z-index:40;max-width:90%;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.5);
@@ -166,7 +235,8 @@
 </head>
 <body>
 
-<button class="gear" id="gear" aria-label="Lingua / Language">⚙︎</button>
+<button class="accbtn" id="acc" aria-label="Account">Accedi</button>
+<button class="gear" id="gear" aria-label="Impostazioni / Settings">⚙︎</button>
 
 <!-- ================= PAGINA DI BENVENUTO (solo al primo accesso) ================= -->
 <section id="welcome" class="hidden">
@@ -177,9 +247,9 @@
   <h2 data-i18n="w_how">Come funziona</h2>
   <ol class="steps">
     <li data-i18n="w_s1"><b>Fotografa i tuoi vestiti.</b> Scatta una foto a ogni capo, oppure seleziona dalla galleria tante foto insieme.</li>
-    <li data-i18n="w_s2"><b>Scegli la categoria.</b> Maglietta, felpa, pantaloni o scarpe. Per magliette e pantaloni indichi anche se sono a manica corta o lunga, corti o lunghi.</li>
+    <li data-i18n="w_s2"><b>Scegli la categoria.</b> Maglietta, felpa, giacca, pantaloni, scarpe o calze. Per alcuni capi indichi anche il tipo: manica corta o lunga, corti o lunghi, leggera o pesante. Se vuoi, aggiungi il marchio.</li>
     <li data-i18n="w_s3"><b>Il colore lo trova da solo.</b> OutfitDay riconosce il colore principale dalla foto. Se sbaglia, lo correggi con un tocco.</li>
-    <li data-i18n="w_s4"><b>Controlla il meteo.</b> Usa la tua posizione per sapere che tempo fa: con il freddo aggiunge la felpa, con il caldo sceglie i pantaloni corti.</li>
+    <li data-i18n="w_s4"><b>Controlla il meteo.</b> Usa la tua posizione per sapere che tempo fa: con il freddo aggiunge felpa e giacca, con il caldo sceglie i pantaloni corti, e se piove ti avvisa.</li>
     <li data-i18n="w_s5"><b>Ogni giorno un outfit nuovo.</b> Ti propone un abbinamento diverso, evitando quelli dei giorni precedenti.</li>
   </ol>
 
@@ -187,11 +257,18 @@
   <div class="feats">
     <div class="feat"><div class="fi">🎨</div><div data-i18n="w_f1"><b>Abbinamenti da stilista</b><span>Colori neutri con tutto, al massimo un colore acceso, niente accoppiate che stonano.</span></div></div>
     <div class="feat"><div class="fi">🔄</div><div data-i18n="w_f2"><b>Pulsante Cambia</b><span>Un capo è a lavare? Lo cambi da solo e il resto dell'outfit rimane.</span></div></div>
-    <div class="feat"><div class="fi">🌦️</div><div data-i18n="w_f3"><b>Adatto al meteo</b><span>Felpa sopra la maglietta quando fa freddo, mai strati in più del necessario.</span></div></div>
-    <div class="feat"><div class="fi">🗂️</div><div data-i18n="w_f4"><b>Il tuo armadio in ordine</b><span>Tutti i capi divisi per categoria: aggiungi, rimuovi o correggi il colore quando vuoi.</span></div></div>
-    <div class="feat"><div class="fi">🔒</div><div data-i18n="w_f5"><b>Privato e gratuito</b><span>Le foto restano sul tuo telefono: nessun account, nessun abbonamento.</span></div></div>
-    <div class="feat"><div class="fi">✨</div><div data-i18n="w_f7"><b>Il tuo stile</b><span>Rispondi a poche domande su stile e colori preferiti: gli outfit si adattano ai tuoi gusti.</span></div></div>
-    <div class="feat"><div class="fi">🌍</div><div data-i18n="w_f6"><b>In 4 lingue</b><span>Italiano, inglese, spagnolo e francese: cambia lingua dall'ingranaggio in alto a destra.</span></div></div>
+    <div class="feat"><div class="fi">🌦️</div><div data-i18n="w_f3"><b>Adatto al meteo</b><span>Maglietta, felpa e giacca si aggiungono man mano che fa più freddo, mai strati inutili.</span></div></div>
+    <div class="feat"><div class="fi">📅</div><div data-i18n="w_f16"><b>Meteo della settimana</b><span>Le previsioni dei prossimi 7 giorni con minima e massima: tocca un giorno per vedere cosa indossare.</span></div></div>
+    <div class="feat"><div class="fi">☔</div><div data-i18n="w_f11"><b>Avviso pioggia</b><span>Se è prevista pioggia ti consiglia l'ombrello e le scarpe pesanti, e ti mostra a che ora piove ed eventuali allerte.</span></div></div>
+    <div class="feat"><div class="fi">✨</div><div data-i18n="w_f7"><b>Il tuo stile</b><span>Rispondi a poche domande su stile, colori e marchi preferiti: gli outfit si adattano ai tuoi gusti.</span></div></div>
+    <div class="feat"><div class="fi">🔥</div><div data-i18n="w_f12"><b>Alla moda e Gen Z</b><span>Due stili che seguono le tendenze di questa stagione, aggiornate ogni mese.</span></div></div>
+    <div class="feat"><div class="fi">🏷️</div><div data-i18n="w_f8"><b>I tuoi marchi</b><span>Se vuoi, indica il marchio di ogni capo: quelli che preferisci usciranno un po' più spesso.</span></div></div>
+    <div class="feat"><div class="fi">🗂️</div><div data-i18n="w_f4"><b>Il tuo armadio in ordine</b><span>Tutti i capi divisi per categoria, comprese giacche e calze. Con Modifica correggi categoria, colore, tipo e marchio.</span></div></div>
+    <div class="feat"><div class="fi">🌡️</div><div data-i18n="w_f13"><b>Le tue temperature</b><span>Decidi tu da quanti gradi proporre felpa, giacca, pantaloni corti e manica corta.</span></div></div>
+    <div class="feat"><div class="fi">🔁</div><div data-i18n="w_f14"><b>Varietà degli outfit</b><span>Scegli se ricevere sempre capi nuovi o se un capo può tornare per più giorni di fila.</span></div></div>
+    <div class="feat"><div class="fi">☁️</div><div data-i18n="w_f15"><b>Account Google facoltativo</b><span>Se vuoi, accedi con Google: l'armadio si salva nel tuo Google Drive e lo ritrovi su ogni dispositivo, anche se cancelli i dati del browser.</span></div></div>
+    <div class="feat"><div class="fi">🔒</div><div data-i18n="w_f5"><b>Privato e gratuito</b><span>Le foto restano sul tuo telefono, oppure nel tuo Google Drive se accedi: nessun abbonamento, nessuna pubblicità.</span></div></div>
+    <div class="feat"><div class="fi">🌍</div><div data-i18n="w_f6"><b>In 4 lingue</b><span>Italiano, inglese, spagnolo e francese: cambia lingua dall'ingranaggio in alto a destra, dove trovi anche le altre impostazioni.</span></div></div>
   </div>
 
   <div class="tipbox" data-i18n="w_tip">💡 Su iPhone apri OutfitDay con Safari, tocca Condividi e poi <b>Aggiungi alla schermata Home</b>: si aprirà come una vera app.</div>
@@ -210,14 +287,18 @@
       <div class="weather" id="weather"></div>
       <div id="outfitBox"></div>
     </section>
+    <section id="tab-meteo" class="hidden">
+      <div id="meteoBox"></div>
+    </section>
     <section id="tab-armadio" class="hidden">
       <button class="btn" id="addBtn"></button>
       <div id="wardrobe"></div>
     </section>
   </main>
   <nav>
-    <button class="on" data-tab="outfit"><span class="i">✨</span><span data-i18n="tabOutfit">Outfit del giorno</span></button>
-    <button data-tab="armadio"><span class="i">👕</span><span data-i18n="tabWardrobe">Armadio</span></button>
+    <button class="on" data-tab="outfit"><span class="i">✨</span><span data-i18n="tabOutfit"></span></button>
+    <button data-tab="meteo"><span class="i">🌦️</span><span data-i18n="tabMeteo"></span></button>
+    <button data-tab="armadio"><span class="i">👕</span><span data-i18n="tabWardrobe"></span></button>
   </nav>
 </div>
 
@@ -234,55 +315,114 @@ it:{
   w_intro:"Il tuo armadio digitale che ogni mattina ti dice cosa metterti: outfit con colori abbinati e adatti al meteo della tua città, usando solo i vestiti che hai davvero.",
   w_how:"Come funziona",
   w_s1:"<b>Fotografa i tuoi vestiti.</b> Scatta una foto a ogni capo, oppure seleziona dalla galleria tante foto insieme.",
-  w_s2:"<b>Scegli la categoria.</b> Maglietta, felpa, pantaloni o scarpe. Per magliette e pantaloni indichi anche se sono a manica corta o lunga, corti o lunghi.",
+  w_s2:"<b>Scegli la categoria.</b> Maglietta, felpa, giacca, pantaloni, scarpe o calze. Per alcuni capi indichi anche il tipo: manica corta o lunga, corti o lunghi, leggera o pesante. Se vuoi, aggiungi il marchio.",
   w_s3:"<b>Il colore lo trova da solo.</b> OutfitDay riconosce il colore principale dalla foto. Se sbaglia, lo correggi con un tocco.",
-  w_s4:"<b>Controlla il meteo.</b> Usa la tua posizione per sapere che tempo fa: con il freddo aggiunge la felpa, con il caldo sceglie i pantaloni corti.",
+  w_s4:"<b>Controlla il meteo.</b> Usa la tua posizione per sapere che tempo fa: con il freddo aggiunge felpa e giacca, con il caldo sceglie i pantaloni corti, e se piove ti avvisa.",
   w_s5:"<b>Ogni giorno un outfit nuovo.</b> Ti propone un abbinamento diverso, evitando quelli dei giorni precedenti.",
   w_feat:"Cosa sa fare",
   w_f1:"<b>Abbinamenti da stilista</b><span>Colori neutri con tutto, al massimo un colore acceso, niente accoppiate che stonano.</span>",
   w_f2:"<b>Pulsante Cambia</b><span>Un capo è a lavare? Lo cambi da solo e il resto dell'outfit rimane.</span>",
-  w_f3:"<b>Adatto al meteo</b><span>Felpa sopra la maglietta quando fa freddo, mai strati in più del necessario.</span>",
-  w_f4:"<b>Il tuo armadio in ordine</b><span>Tutti i capi divisi per categoria: aggiungi, rimuovi o correggi il colore quando vuoi.</span>",
-  w_f5:"<b>Privato e gratuito</b><span>Le foto restano sul tuo telefono: nessun account, nessun abbonamento.</span>",
-  w_f6:"<b>In 4 lingue</b><span>Italiano, inglese, spagnolo e francese: cambia lingua dall'ingranaggio in alto a destra.</span>",
+  w_f3:"<b>Adatto al meteo</b><span>Maglietta, felpa e giacca si aggiungono man mano che fa più freddo, mai strati inutili.</span>",
+  w_f11:"<b>Avviso pioggia</b><span>Se è prevista pioggia ti consiglia l'ombrello e le scarpe pesanti, e ti mostra a che ora piove ed eventuali allerte.</span>",
+  w_f7:"<b>Il tuo stile</b><span>Rispondi a poche domande su stile, colori e marchi preferiti: gli outfit si adattano ai tuoi gusti.</span>",
+  w_f12:"<b>Alla moda e Gen Z</b><span>Due stili che seguono le tendenze di questa stagione, aggiornate ogni mese.</span>",
+  w_f8:"<b>I tuoi marchi</b><span>Se vuoi, indica il marchio di ogni capo: quelli che preferisci usciranno un po' più spesso.</span>",
+  w_f4:"<b>Il tuo armadio in ordine</b><span>Tutti i capi divisi per categoria, comprese giacche e calze. Con Modifica correggi categoria, colore, tipo e marchio.</span>",
+  w_f13:"<b>Le tue temperature</b><span>Decidi tu da quanti gradi proporre felpa, giacca, pantaloni corti e manica corta.</span>",
+  w_f14:"<b>Varietà degli outfit</b><span>Scegli se ricevere sempre capi nuovi o se un capo può tornare per più giorni di fila.</span>",
+  w_f5:"<b>Privato e gratuito</b><span>Le foto restano sul tuo telefono, oppure nel tuo Google Drive se accedi: nessun abbonamento, nessuna pubblicità.</span>",
+  w_f6:"<b>In 4 lingue</b><span>Italiano, inglese, spagnolo e francese: cambia lingua dall'ingranaggio in alto a destra, dove trovi anche le altre impostazioni.</span>",
   w_tip:"💡 Su iPhone apri OutfitDay con Safari, tocca Condividi e poi <b>Aggiungi alla schermata Home</b>: si aprirà come una vera app.",
   w_start:"Inizia",
-  tabOutfit:"Outfit del giorno", tabWardrobe:"Armadio", language:"Lingua",
-  cat_maglietta:"Maglietta", cat_felpa:"Felpa", cat_pantaloni:"Pantaloni", cat_scarpe:"Scarpe",
-  pantsShort:"Pantaloni corti", pantsLong:"Pantaloni lunghi", shortBtn:"🩳 Corti", longBtn:"👖 Lunghi",
+  tabOutfit:"Outfit del giorno", tabWardrobe:"Armadio",
+  cat_maglietta:"Maglietta", cat_felpa:"Felpa", cat_giacca:"Giacca", cat_pantaloni:"Pantaloni", cat_scarpe:"Scarpe", cat_calze:"Calze",
+  v_maglietta_q:"Manica corta o lunga?", v_maglietta_corto:"👕 Manica corta", v_maglietta_lungo:"🥼 Manica lunga",
+  l_maglietta_corto:"Maglietta manica corta", l_maglietta_lungo:"Maglietta manica lunga", v_maglietta_need:"Scegli se la maglietta è a manica corta o lunga.",
+  v_pantaloni_q:"Corti o lunghi?", v_pantaloni_corto:"🩳 Corti", v_pantaloni_lungo:"👖 Lunghi",
+  l_pantaloni_corto:"Pantaloni corti", l_pantaloni_lungo:"Pantaloni lunghi", v_pantaloni_need:"Scegli se i pantaloni sono corti o lunghi.",
+  v_giacca_q:"Leggera o pesante?", v_giacca_leggero:"🧥 Leggera", v_giacca_pesante:"🧣 Pesante",
+  l_giacca_leggero:"Giacca leggera", l_giacca_pesante:"Giacca pesante", v_giacca_need:"Scegli se la giacca è leggera o pesante.",
+  v_scarpe_q:"Leggere o pesanti?", v_scarpe_leggero:"👟 Leggere", v_scarpe_pesante:"🥾 Pesanti",
+  l_scarpe_leggero:"Scarpe leggere", l_scarpe_pesante:"Scarpe pesanti", v_scarpe_need:"Scegli se le scarpe sono leggere o pesanti.",
   wLoading:"Meteo…", wSearching:"Sto cercando la tua posizione", wAlt:"🌐 Usa un altro metodo",
   wIp:"Sto cercando la città da internet", wFail:"Non riesco a trovare la città", wFailSub:"Puoi scriverla tu, ci vuole un attimo",
   wManual:"✏️ Inserisci manualmente", wRetry:"Riprova", wWrite:"Scrivi la tua città", wPh:"Es. Genova",
   wBackAuto:"📍 Torna alla posizione automatica", wChange:"Cambia città", wYourPos:"La tua posizione", wNet:"Posizione da internet",
-  felpaYes:"Oggi serve la felpa 🧥", felpaNo:"Niente felpa oggi 😎", cityNotFound:"Città non trovata, controlla come l'hai scritta.",
+  felpaYes:"Oggi serve la felpa", felpaNo:"Niente felpa oggi 😎", jLightYes:"giacca leggera", jHeavyYes:"giacca pesante",
+  rainTip:"☔ Ti consiglio di prendere l'ombrello e di indossare scarpe pesanti.",
+  cityNotFound:"Città non trovata, controlla come l'hai scritta.",
   wc0:"Sereno", wc1:"Poco nuvoloso", wc2:"Nuvoloso", wc3:"Nebbia", wc4:"Pioggia", wc5:"Neve", wc6:"Rovesci", wc7:"Temporale",
   emptyTitle:"Carica il tuo armadio", emptyText:"Fotografa i tuoi vestiti e scegli la categoria. Poi ogni giorno ti propongo un outfit.",
-  missingTitle:"Manca ancora qualcosa", missingText:"Per creare un outfit mi servono anche: <b>{x}</b>.",
   addOne:"＋ Aggiungi capo", addAll:"📸 Carica tutti i tuoi capi",
-  change:"🔄 Cambia", underHoodie:"Sotto la felpa", overTee:"Sopra la maglietta",
-  another:"🔄 Un altro outfit", outfitTip:"L'outfit resta lo stesso per tutta la giornata. Domani ne arriva uno nuovo.",
+  change:"🔄 Cambia", underHoodie:"Sotto la felpa", overTee:"Sopra la maglietta", jacketNote:"Ultimo strato: mettila se ne hai voglia",
+  another:"🔄 Un altro outfit", styleBtn:"🎨 Personalizza stile",
+  outfitTip:"L'outfit resta lo stesso per tutta la giornata. Domani ne arriva uno nuovo.",
   noOther:"Non hai altri capi nella categoria \"{c}\" da proporre oggi.",
   count1:"{n} capo nel tuo armadio", countN:"{n} capi nel tuo armadio", noneInCat:"Nessun capo in questa categoria.",
+  edit:"✏️ Modifica", editTitle:"Modifica capo", editSaved:"Modifiche salvate ✓",
   remove:"Rimuovi", rmTitle:"Rimuovere il capo?", rmText:"Verrà tolto dal tuo armadio e non ti verrà più proposto.", cancel:"Annulla",
   addTitle:"Aggiungi capo", pickPhoto:"Scatta o scegli una foto", pickHint:"Inquadra bene il capo al centro",
-  category:"Categoria", shortLong:"Corti o lunghi?", colorDetected:"Colore riconosciuto · tocca per correggere", save:"Salva",
-  needPhoto:"Prima scatta o scegli una foto.", needCat:"Scegli la categoria del capo.", needLen:"Scegli se i pantaloni sono corti o lunghi.",
+  category:"Categoria", colorDetected:"Colore · tocca per correggere", save:"Salva",
+  brand:"Marchio (facoltativo)", brandPh:"Es. Nike", brandPick:"Oppure tocca un marchio che hai già:",
+  needPhoto:"Prima scatta o scegli una foto.", needCat:"Scegli la categoria del capo.",
   badPhoto:"Non riesco a leggere questa foto, prova con un'altra.", memFull:"Memoria piena: rimuovi qualche capo e riprova.",
-  whatColor:"Di che colore è?",
   bulkTitle:"Carica il tuo armadio", bulkText:"Seleziona dalla galleria tutte le foto dei tuoi vestiti in una volta. Poi te le mostro una alla volta: scegli la categoria, controlli il colore e premi Avanti.",
   bulkPick:"📸 Scegli le foto", bulkOne:"Aggiungi un capo alla volta", itemOf:"Capo {i} di {n}", reading:"Sto leggendo la foto…",
   whatItem:"Che capo è?", skip:"Salta", next:"Avanti →", finish:"Fine ✓", stop:"Interrompi e salva quelli fatti",
-  unreadable:"Questa foto non si legge, passo alla prossima.", needCatBulk:"Scegli prima che capo è.",
+  unreadable:"Questa foto non si legge, passo alla prossima.",
   memFullBulk:"Memoria piena: non posso salvare altri capi.", done1:"Fatto! 1 capo aggiunto al tuo armadio 👕", doneN:"Fatto! {n} capi aggiunti al tuo armadio 👕",
-  w_f7:"<b>Il tuo stile</b><span>Rispondi a poche domande su stile e colori preferiti: gli outfit si adattano ai tuoi gusti.</span>",
-  teeShort:"Maglietta manica corta", teeLong:"Maglietta manica lunga", teeShortBtn:"👕 Manica corta", teeLongBtn:"🥼 Manica lunga",
-  sleeve:"Manica corta o lunga?", needSleeve:"Scegli se la maglietta è a manica corta o lunga.",
-  styleBtn:"🎨 Personalizza stile", styleTitle:"Personalizza il tuo stile", styleIntro:"Rispondi a qualche domanda: gli outfit si adatteranno ai tuoi gusti.",
+  styleTitle:"Personalizza il tuo stile", styleIntro:"Rispondi a qualche domanda: gli outfit si adatteranno ai tuoi gusti.",
   qOf:"Domanda {i} di {n}", sq1:"Che stile preferisci?", so_sport:"Sportivo", so_casual:"Casual", so_eleg:"Elegante", so_street:"Street",
+  so_moda:"Alla moda", so_genz:"Moda della generazione Z", so_genz_d:"Comoda, rilassata e sempre curata.",
   sq2:"Quanto colore ti piace?", co_neutri:"Solo colori neutri", co_tocco:"Un tocco di colore", co_vivaci:"Colori vivaci",
   sq3:"Come abbini sopra e sotto?", ab_contr:"A contrasto (chiaro e scuro)", ab_tono:"Tono su tono", ab_libero:"Mi è indifferente",
   sq4:"Quali sono i tuoi colori preferiti?", sq4hint:"Puoi sceglierne più di uno, oppure nessuno. Usciranno un po' più spesso, senza escludere gli altri.",
+  sq5:"Quali sono i tuoi marchi preferiti?", sq5hint:"Ecco i marchi del tuo armadio. Scegli quelli che preferisci, oppure nessuno: usciranno un po' più spesso, senza escludere gli altri.",
   back:"← Indietro", later:"Più tardi", saveStyle:"Salva ✓", pickOne:"Scegli una risposta.", styleSaved:"Stile salvato! Ecco un outfit su misura ✨",
+  settings:"Impostazioni", setLang:"🌍 Lingua", setTemp:"🌡️ Personalizza regimi di temperatura", setVar:"🔄 Varietà degli outfit", language:"Lingua",
+  tempTitle:"Regimi di temperatura",
+  tempExplain:"<b>Qui decidi tu quando OutfitDay ti propone ogni capo.</b><br>Il sito guarda la <b>temperatura più alta</b> della giornata.<br><br>Esempio: se la felpa va <b>da 19° in giù</b>, quando oggi la massima è 17° te la propone, quando è 23° no.<br><br>Usa i pulsanti <b>−</b> e <b>+</b> per cambiare i gradi. Se sbagli, premi <b>Ripristina</b> e torna tutto come prima.",
+  tr_manica:"👕 Maglietta a manica corta", tr_manica_d:"da {n}° in su. Sotto: manica lunga.",
+  tr_corti:"🩳 Pantaloni corti", tr_corti_d:"da {n}° in su. Sotto: pantaloni lunghi.",
+  tr_felpa:"🧶 Felpa", tr_felpa_d:"da {n}° in giù.",
+  tr_giacca:"🧥 Giacca leggera", tr_giacca_d:"da {n}° in giù.",
+  tr_pesante:"🧣 Giacca pesante", tr_pesante_d:"da {n}° in giù, al posto di quella leggera.",
+  tempNone:"Aggiungi qualche capo all'armadio: qui compariranno le regole dei capi che hai.",
+  reset:"↺ Ripristina", tempSaved:"Temperature salvate ✓", tempReset:"Valori iniziali ripristinati",
+  varTitle:"Varietà degli outfit", varText:"Scegli se OutfitDay può riproporti lo stesso capo per più giorni di fila.",
+  var_new:"Sempre capi nuovi", var_new_d:"Evita i capi usati nei giorni prima, finché ne hai altri della stessa categoria.",
+  var_rep:"Si possono ripetere", var_rep_d:"Lo stesso capo può tornare anche per più giorni di fila.", varSaved:"Fatto ✓",
+  w_f15:"<b>Account Google facoltativo</b><span>Se vuoi, accedi con Google: l'armadio si salva nel tuo Google Drive e lo ritrovi su ogni dispositivo, anche se cancelli i dati del browser.</span>",
+  acc_login:"Accedi", accTitle:"Il tuo account", accChoose:"Salva il tuo armadio nel tuo Google Drive, così non lo perdi mai.",
+  accReg:"Registrati", accRegD:"È la prima volta: crea il tuo account.", accLog:"Accedi", accLogD:"Hai già un account: ritrova il tuo armadio.",
+  accRegGoogle:"Registrati con Google", accLogGoogle:"Accedi con Google",
+  accRegText:"Basta il tuo account Google, nessuna password nuova da ricordare.",
+  accLogText:"Accedi con lo stesso account Google che hai usato per registrarti: ritroverai il tuo armadio.",
+  ben1:"☁️ Il tuo armadio è al sicuro anche se cancelli i dati del browser.",
+  ben2:"📱 Lo ritrovi su qualsiasi telefono o computer, accedendo con Google.",
+  ben3:"🔒 Si salva nel tuo Google Drive, in uno spazio riservato a OutfitDay: nessun altro può vederlo, nemmeno chi ha creato il sito.",
+  askTitle:"Vuoi registrarti?", askText:"È facoltativo, ma conviene:", noThanks:"No grazie", haveAcc:"Ho già un account: Accedi con Google",
+  accSyncing:"Collegamento al tuo Google Drive…", accDone:"Fatto! Il tuo armadio è salvato nel tuo Google Drive ☁️",
+  accFail:"Accesso non riuscito. Riprova.", accNoGoogle:"Non riesco a contattare Google. Controlla la connessione e riprova.",
+  accSynced:"Armadio salvato nel tuo Google Drive · {t}", accDirty:"Ci sono modifiche da salvare nel tuo Google Drive.",
+  accErr:"Salvataggio nel Google Drive non riuscito. Riprova con Sincronizza ora.",
+  syncNow:"☁️ Sincronizza ora", logout:"Esci", logoutTitle:"Uscire dall'account?",
+  logoutText:"L'armadio resta su questo telefono e nel tuo Google Drive. Potrai rientrare quando vuoi.", loggedOut:"Sei uscito dall'account.",
+  w_f16:"<b>Meteo della settimana</b><span>Le previsioni dei prossimi 7 giorni con minima e massima: tocca un giorno per vedere cosa indossare.</span>",
+  tabMeteo:"Meteo", meteoSub:"Prossimi 7 giorni · {p}", today:"Oggi", tomorrow:"Domani",
+  meteoNoData:"Il meteo non è ancora disponibile. Consenti la posizione oppure scrivi la tua città.", meteoNoDataBtn:"📍 Scegli la città",
+  dayOutfit:"Cosa indossare", dayTap:"Tocca un giorno per vedere cosa indossare.",
+  rainMore:"Ulteriori informazioni", rainTitle:"Pioggia · {d}", rainHours:"Orari della pioggia", rainFromTo:"dalle {a} alle {b}",
+  rainProb:"probabilità fino al {p}%", rainNone:"Pioggia possibile durante la giornata, senza orari precisi.",
+  alertsTitle:"Allerte", al_storm:"⛈️ Possibili temporali", al_wind:"💨 Raffiche di vento forti, fino a {v} km/h",
+  al_heavy:"🌊 Pioggia abbondante, circa {v} mm", al_snow:"❄️ Possibile neve", alNone:"Nessuna allerta nelle previsioni.",
+  alNote:"Questi avvisi vengono dalle previsioni meteo e non sono allerte ufficiali. Per quelle ufficiali consulta:", close:"Chiudi",
+  siTitle:"Come funziona la sincronizzazione", siIntro:"Il tuo armadio ora è collegato al tuo Google Drive. Ecco cosa succede:",
+  si1:"🔄 Quando aggiungi, modifichi o rimuovi un capo, o cambi le impostazioni, tutto si aggiorna da solo anche nel tuo Google Drive.",
+  si2:"⏱️ Per sicurezza Google tiene aperto il collegamento per circa un'ora. Dopo, al primo salvataggio può comparire per un attimo la finestra di Google: è normale.",
+  si3:"🟢 Il pallino vicino alla tua foto, in alto a sinistra, ti dice com'è la situazione: verde vuol dire tutto salvato, arancione che ci sono modifiche da salvare.",
+  si4:"📱 Per aggiornare subito tocca la tua foto e poi Sincronizza ora. Su un altro telefono ti basta accedere con lo stesso account per ritrovare tutto.",
+  siOk:"Ho capito",
   col:{"nero":"Nero","bianco":"Bianco","grigio":"Grigio","blu scuro":"Blu scuro","beige":"Beige","blu jeans":"Blu jeans","marrone":"Marrone","verde oliva":"Verde oliva","bordeaux":"Bordeaux","azzurro":"Azzurro","rosso":"Rosso","rosa":"Rosa","arancione":"Arancione","giallo":"Giallo","verde":"Verde","viola":"Viola"}
 },
 en:{
@@ -291,55 +431,114 @@ en:{
   w_intro:"Your digital wardrobe that tells you what to wear every morning: outfits with matching colours, suited to the weather in your city, using only the clothes you actually own.",
   w_how:"How it works",
   w_s1:"<b>Photograph your clothes.</b> Take a photo of each item, or select many photos at once from your gallery.",
-  w_s2:"<b>Choose the category.</b> T-shirt, sweatshirt, trousers or shoes. For T-shirts and trousers you also say whether they are short or long.",
+  w_s2:"<b>Choose the category.</b> T-shirt, sweatshirt, jacket, trousers, shoes or socks. For some items you also choose the type: short or long sleeve, short or long, light or heavy. If you like, add the brand.",
   w_s3:"<b>It finds the colour by itself.</b> OutfitDay recognises the main colour from the photo. If it gets it wrong, fix it with one tap.",
-  w_s4:"<b>It checks the weather.</b> It uses your location to know the forecast: when it's cold it adds the sweatshirt, when it's hot it picks shorts.",
+  w_s4:"<b>It checks the weather.</b> It uses your location to know the forecast: when it's cold it adds sweatshirt and jacket, when it's hot it picks shorts, and it warns you if it's going to rain.",
   w_s5:"<b>A new outfit every day.</b> It suggests a different combination, avoiding the ones from previous days.",
   w_feat:"What it can do",
   w_f1:"<b>Stylist-level matching</b><span>Neutral colours go with everything, at most one bright colour, no clashing pairs.</span>",
   w_f2:"<b>Change button</b><span>An item is in the wash? Swap just that one and keep the rest of the outfit.</span>",
-  w_f3:"<b>Weather-ready</b><span>Sweatshirt over the T-shirt when it's cold, never more layers than needed.</span>",
-  w_f4:"<b>Your wardrobe, organised</b><span>All items sorted by category: add, remove or fix the colour whenever you like.</span>",
-  w_f5:"<b>Private and free</b><span>Your photos stay on your phone: no account, no subscription.</span>",
-  w_f6:"<b>In 4 languages</b><span>Italian, English, Spanish and French: change language with the gear at the top right.</span>",
+  w_f3:"<b>Weather-ready</b><span>T-shirt, sweatshirt and jacket are added as it gets colder, never extra layers.</span>",
+  w_f11:"<b>Rain alert</b><span>If rain is forecast it suggests an umbrella and heavy shoes, and shows you when it will rain and any alerts.</span>",
+  w_f7:"<b>Your style</b><span>Answer a few questions about style, favourite colours and brands: outfits adapt to your taste.</span>",
+  w_f12:"<b>Trendy and Gen Z</b><span>Two styles that follow this season's trends, updated every month.</span>",
+  w_f8:"<b>Your brands</b><span>If you like, add the brand of each item: your favourites will come up a bit more often.</span>",
+  w_f4:"<b>Your wardrobe, organised</b><span>All items sorted by category, jackets and socks included. With Edit you fix category, colour, type and brand.</span>",
+  w_f13:"<b>Your temperatures</b><span>You decide from how many degrees to suggest sweatshirt, jacket, shorts and short sleeves.</span>",
+  w_f14:"<b>Outfit variety</b><span>Choose whether to always get new items or let an item come back several days in a row.</span>",
+  w_f5:"<b>Private and free</b><span>Your photos stay on your phone, or in your Google Drive if you sign in: no subscription, no ads.</span>",
+  w_f6:"<b>In 4 languages</b><span>Italian, English, Spanish and French: change language with the gear at the top right, where you'll also find the other settings.</span>",
   w_tip:"💡 On iPhone, open OutfitDay in Safari, tap Share and then <b>Add to Home Screen</b>: it will open like a real app.",
   w_start:"Start",
-  tabOutfit:"Outfit of the day", tabWardrobe:"Wardrobe", language:"Language",
-  cat_maglietta:"T-shirt", cat_felpa:"Sweatshirt", cat_pantaloni:"Trousers", cat_scarpe:"Shoes",
-  pantsShort:"Shorts", pantsLong:"Long trousers", shortBtn:"🩳 Short", longBtn:"👖 Long",
+  tabOutfit:"Outfit of the day", tabWardrobe:"Wardrobe",
+  cat_maglietta:"T-shirt", cat_felpa:"Sweatshirt", cat_giacca:"Jacket", cat_pantaloni:"Trousers", cat_scarpe:"Shoes", cat_calze:"Socks",
+  v_maglietta_q:"Short or long sleeve?", v_maglietta_corto:"👕 Short sleeve", v_maglietta_lungo:"🥼 Long sleeve",
+  l_maglietta_corto:"Short-sleeve T-shirt", l_maglietta_lungo:"Long-sleeve T-shirt", v_maglietta_need:"Choose whether the T-shirt has short or long sleeves.",
+  v_pantaloni_q:"Short or long?", v_pantaloni_corto:"🩳 Short", v_pantaloni_lungo:"👖 Long",
+  l_pantaloni_corto:"Shorts", l_pantaloni_lungo:"Long trousers", v_pantaloni_need:"Choose whether the trousers are short or long.",
+  v_giacca_q:"Light or heavy?", v_giacca_leggero:"🧥 Light", v_giacca_pesante:"🧣 Heavy",
+  l_giacca_leggero:"Light jacket", l_giacca_pesante:"Heavy jacket", v_giacca_need:"Choose whether the jacket is light or heavy.",
+  v_scarpe_q:"Light or heavy?", v_scarpe_leggero:"👟 Light", v_scarpe_pesante:"🥾 Heavy",
+  l_scarpe_leggero:"Light shoes", l_scarpe_pesante:"Heavy shoes", v_scarpe_need:"Choose whether the shoes are light or heavy.",
   wLoading:"Weather…", wSearching:"Looking for your location", wAlt:"🌐 Use another method",
   wIp:"Looking up your city from the internet", wFail:"I can't find your city", wFailSub:"You can type it in, it only takes a moment",
   wManual:"✏️ Enter manually", wRetry:"Try again", wWrite:"Type your city", wPh:"e.g. London",
   wBackAuto:"📍 Back to automatic location", wChange:"Change city", wYourPos:"Your location", wNet:"Location from internet",
-  felpaYes:"Sweatshirt needed today 🧥", felpaNo:"No sweatshirt today 😎", cityNotFound:"City not found, check the spelling.",
+  felpaYes:"Sweatshirt needed today", felpaNo:"No sweatshirt today 😎", jLightYes:"light jacket", jHeavyYes:"heavy jacket",
+  rainTip:"☔ I suggest taking an umbrella and wearing heavy shoes.",
+  cityNotFound:"City not found, check the spelling.",
   wc0:"Clear", wc1:"Partly cloudy", wc2:"Cloudy", wc3:"Fog", wc4:"Rain", wc5:"Snow", wc6:"Showers", wc7:"Thunderstorm",
   emptyTitle:"Load your wardrobe", emptyText:"Photograph your clothes and pick a category. Then every day I'll suggest an outfit.",
-  missingTitle:"Something is still missing", missingText:"To create an outfit I also need: <b>{x}</b>.",
   addOne:"＋ Add item", addAll:"📸 Upload all your clothes",
-  change:"🔄 Change", underHoodie:"Under the sweatshirt", overTee:"Over the T-shirt",
-  another:"🔄 Another outfit", outfitTip:"The outfit stays the same all day. A new one arrives tomorrow.",
+  change:"🔄 Change", underHoodie:"Under the sweatshirt", overTee:"Over the T-shirt", jacketNote:"Top layer: wear it if you feel like it",
+  another:"🔄 Another outfit", styleBtn:"🎨 Customise style",
+  outfitTip:"The outfit stays the same all day. A new one arrives tomorrow.",
   noOther:"You have no other items in \"{c}\" to suggest today.",
   count1:"{n} item in your wardrobe", countN:"{n} items in your wardrobe", noneInCat:"No items in this category.",
+  edit:"✏️ Edit", editTitle:"Edit item", editSaved:"Changes saved ✓",
   remove:"Remove", rmTitle:"Remove this item?", rmText:"It will be taken out of your wardrobe and won't be suggested again.", cancel:"Cancel",
   addTitle:"Add item", pickPhoto:"Take or choose a photo", pickHint:"Keep the item well centred",
-  category:"Category", shortLong:"Short or long?", colorDetected:"Detected colour · tap to fix", save:"Save",
-  needPhoto:"First take or choose a photo.", needCat:"Choose the item's category.", needLen:"Choose whether the trousers are short or long.",
+  category:"Category", colorDetected:"Colour · tap to fix", save:"Save",
+  brand:"Brand (optional)", brandPh:"e.g. Nike", brandPick:"Or tap a brand you already have:",
+  needPhoto:"First take or choose a photo.", needCat:"Choose the item's category.",
   badPhoto:"I can't read this photo, try another one.", memFull:"Storage full: remove a few items and try again.",
-  whatColor:"What colour is it?",
   bulkTitle:"Load your wardrobe", bulkText:"Select all the photos of your clothes from your gallery at once. Then I'll show them one at a time: pick the category, check the colour and tap Next.",
   bulkPick:"📸 Choose photos", bulkOne:"Add one item at a time", itemOf:"Item {i} of {n}", reading:"Reading the photo…",
   whatItem:"What item is it?", skip:"Skip", next:"Next →", finish:"Done ✓", stop:"Stop and save the ones done",
-  unreadable:"This photo can't be read, moving to the next one.", needCatBulk:"First choose what item it is.",
+  unreadable:"This photo can't be read, moving to the next one.",
   memFullBulk:"Storage full: I can't save more items.", done1:"Done! 1 item added to your wardrobe 👕", doneN:"Done! {n} items added to your wardrobe 👕",
-  w_f7:"<b>Your style</b><span>Answer a few questions about style and favourite colours: outfits adapt to your taste.</span>",
-  teeShort:"Short-sleeve T-shirt", teeLong:"Long-sleeve T-shirt", teeShortBtn:"👕 Short sleeve", teeLongBtn:"🥼 Long sleeve",
-  sleeve:"Short or long sleeve?", needSleeve:"Choose whether the T-shirt has short or long sleeves.",
-  styleBtn:"🎨 Customise style", styleTitle:"Customise your style", styleIntro:"Answer a few questions: outfits will adapt to your taste.",
+  styleTitle:"Customise your style", styleIntro:"Answer a few questions: outfits will adapt to your taste.",
   qOf:"Question {i} of {n}", sq1:"Which style do you prefer?", so_sport:"Sporty", so_casual:"Casual", so_eleg:"Smart", so_street:"Street",
+  so_moda:"Trendy", so_genz:"Gen Z fashion", so_genz_d:"Comfy, relaxed and always neat.",
   sq2:"How much colour do you like?", co_neutri:"Neutral colours only", co_tocco:"A touch of colour", co_vivaci:"Bright colours",
   sq3:"How do you match top and bottom?", ab_contr:"Contrasting (light and dark)", ab_tono:"Tone on tone", ab_libero:"I don't mind",
   sq4:"What are your favourite colours?", sq4hint:"Pick as many as you like, or none. They'll appear a bit more often, without excluding the others.",
+  sq5:"What are your favourite brands?", sq5hint:"These are the brands in your wardrobe. Pick your favourites, or none: they'll appear a bit more often, without excluding the others.",
   back:"← Back", later:"Later", saveStyle:"Save ✓", pickOne:"Choose an answer.", styleSaved:"Style saved! Here's an outfit made for you ✨",
+  settings:"Settings", setLang:"🌍 Language", setTemp:"🌡️ Customise temperature rules", setVar:"🔄 Outfit variety", language:"Language",
+  tempTitle:"Temperature rules",
+  tempExplain:"<b>Here you decide when OutfitDay suggests each item.</b><br>The site looks at the <b>highest temperature</b> of the day.<br><br>Example: if the sweatshirt is set to <b>19° or below</b>, when today's high is 17° you get it, when it's 23° you don't.<br><br>Use the <b>−</b> and <b>+</b> buttons to change the degrees. If you make a mistake, tap <b>Reset</b> and everything goes back to how it was.",
+  tr_manica:"👕 Short-sleeve T-shirt", tr_manica_d:"from {n}° up. Below: long sleeve.",
+  tr_corti:"🩳 Shorts", tr_corti_d:"from {n}° up. Below: long trousers.",
+  tr_felpa:"🧶 Sweatshirt", tr_felpa_d:"from {n}° down.",
+  tr_giacca:"🧥 Light jacket", tr_giacca_d:"from {n}° down.",
+  tr_pesante:"🧣 Heavy jacket", tr_pesante_d:"from {n}° down, instead of the light one.",
+  tempNone:"Add some items to your wardrobe: the rules for the items you own will appear here.",
+  reset:"↺ Reset", tempSaved:"Temperatures saved ✓", tempReset:"Default values restored",
+  varTitle:"Outfit variety", varText:"Choose whether OutfitDay can suggest the same item several days in a row.",
+  var_new:"Always new items", var_new_d:"Avoids items used in previous days, as long as you have others in the same category.",
+  var_rep:"Items can repeat", var_rep_d:"The same item can come back several days in a row.", varSaved:"Done ✓",
+  w_f15:"<b>Optional Google account</b><span>If you like, sign in with Google: your wardrobe is saved in your Google Drive and you'll find it on every device, even if you clear the browser data.</span>",
+  acc_login:"Sign in", accTitle:"Your account", accChoose:"Save your wardrobe in your Google Drive, so you never lose it.",
+  accReg:"Sign up", accRegD:"First time here: create your account.", accLog:"Sign in", accLogD:"You already have an account: get your wardrobe back.",
+  accRegGoogle:"Sign up with Google", accLogGoogle:"Sign in with Google",
+  accRegText:"All you need is your Google account, no new password to remember.",
+  accLogText:"Sign in with the same Google account you used to sign up: you'll find your wardrobe.",
+  ben1:"☁️ Your wardrobe is safe even if you clear the browser data.",
+  ben2:"📱 You'll find it on any phone or computer by signing in with Google.",
+  ben3:"🔒 It's saved in your Google Drive, in a space reserved for OutfitDay: nobody else can see it, not even the site's creator.",
+  askTitle:"Would you like to sign up?", askText:"It's optional, but worth it:", noThanks:"No thanks", haveAcc:"I already have an account: Sign in with Google",
+  accSyncing:"Connecting to your Google Drive…", accDone:"Done! Your wardrobe is saved in your Google Drive ☁️",
+  accFail:"Sign-in failed. Please try again.", accNoGoogle:"I can't reach Google. Check your connection and try again.",
+  accSynced:"Wardrobe saved in your Google Drive · {t}", accDirty:"There are changes to save in your Google Drive.",
+  accErr:"Saving to Google Drive failed. Try again with Sync now.",
+  syncNow:"☁️ Sync now", logout:"Sign out", logoutTitle:"Sign out?",
+  logoutText:"Your wardrobe stays on this phone and in your Google Drive. You can sign back in whenever you like.", loggedOut:"You've signed out.",
+  w_f16:"<b>Weekly weather</b><span>The forecast for the next 7 days with lows and highs: tap a day to see what to wear.</span>",
+  tabMeteo:"Weather", meteoSub:"Next 7 days · {p}", today:"Today", tomorrow:"Tomorrow",
+  meteoNoData:"The weather isn't available yet. Allow location or type your city.", meteoNoDataBtn:"📍 Choose city",
+  dayOutfit:"What to wear", dayTap:"Tap a day to see what to wear.",
+  rainMore:"More information", rainTitle:"Rain · {d}", rainHours:"Rain times", rainFromTo:"from {a} to {b}",
+  rainProb:"chance up to {p}%", rainNone:"Rain possible during the day, no precise times.",
+  alertsTitle:"Alerts", al_storm:"⛈️ Possible thunderstorms", al_wind:"💨 Strong wind gusts, up to {v} km/h",
+  al_heavy:"🌊 Heavy rain, about {v} mm", al_snow:"❄️ Possible snow", alNone:"No alerts in the forecast.",
+  alNote:"These warnings come from the weather forecast and are not official alerts. For official ones, check:", close:"Close",
+  siTitle:"How syncing works", siIntro:"Your wardrobe is now connected to your Google Drive. Here's what happens:",
+  si1:"🔄 When you add, edit or remove an item, or change the settings, everything is updated automatically in your Google Drive too.",
+  si2:"⏱️ For security, Google keeps the connection open for about an hour. After that, the Google window may appear for a moment the next time you save: that's normal.",
+  si3:"🟢 The dot next to your picture, at the top left, shows the status: green means everything is saved, orange means there are changes to save.",
+  si4:"📱 To update right away, tap your picture and then Sync now. On another phone, just sign in with the same account to find everything.",
+  siOk:"Got it",
   col:{"nero":"Black","bianco":"White","grigio":"Grey","blu scuro":"Navy","beige":"Beige","blu jeans":"Denim blue","marrone":"Brown","verde oliva":"Olive","bordeaux":"Burgundy","azzurro":"Light blue","rosso":"Red","rosa":"Pink","arancione":"Orange","giallo":"Yellow","verde":"Green","viola":"Purple"}
 },
 es:{
@@ -348,55 +547,114 @@ es:{
   w_intro:"Tu armario digital que cada mañana te dice qué ponerte: outfits con colores combinados y adecuados al tiempo de tu ciudad, usando solo la ropa que realmente tienes.",
   w_how:"Cómo funciona",
   w_s1:"<b>Fotografía tu ropa.</b> Haz una foto de cada prenda, o selecciona muchas fotos a la vez desde la galería.",
-  w_s2:"<b>Elige la categoría.</b> Camiseta, sudadera, pantalones o zapatos. Para camisetas y pantalones indicas también si son de manga corta o larga, cortos o largos.",
+  w_s2:"<b>Elige la categoría.</b> Camiseta, sudadera, chaqueta, pantalones, zapatos o calcetines. Para algunas prendas indicas también el tipo: manga corta o larga, cortos o largos, ligera o gruesa. Si quieres, añade la marca.",
   w_s3:"<b>Encuentra el color solo.</b> OutfitDay reconoce el color principal de la foto. Si se equivoca, lo corriges con un toque.",
-  w_s4:"<b>Consulta el tiempo.</b> Usa tu ubicación para saber qué tiempo hace: con frío añade la sudadera, con calor elige pantalones cortos.",
+  w_s4:"<b>Consulta el tiempo.</b> Usa tu ubicación para saber qué tiempo hace: con frío añade sudadera y chaqueta, con calor elige pantalones cortos, y si va a llover te avisa.",
   w_s5:"<b>Cada día un outfit nuevo.</b> Te propone una combinación diferente, evitando las de los días anteriores.",
   w_feat:"Qué sabe hacer",
   w_f1:"<b>Combinaciones de estilista</b><span>Colores neutros con todo, como máximo un color vivo, nada de parejas que desentonan.</span>",
   w_f2:"<b>Botón Cambiar</b><span>¿Una prenda está para lavar? Cambias solo esa y el resto del outfit se queda.</span>",
-  w_f3:"<b>Adaptado al tiempo</b><span>Sudadera sobre la camiseta cuando hace frío, nunca más capas de las necesarias.</span>",
-  w_f4:"<b>Tu armario en orden</b><span>Todas las prendas por categoría: añade, quita o corrige el color cuando quieras.</span>",
-  w_f5:"<b>Privado y gratuito</b><span>Las fotos se quedan en tu teléfono: sin cuenta, sin suscripción.</span>",
-  w_f6:"<b>En 4 idiomas</b><span>Italiano, inglés, español y francés: cambia el idioma con el engranaje arriba a la derecha.</span>",
+  w_f3:"<b>Adaptado al tiempo</b><span>Camiseta, sudadera y chaqueta se añaden según hace más frío, nunca capas de más.</span>",
+  w_f11:"<b>Aviso de lluvia</b><span>Si se prevé lluvia te aconseja el paraguas y zapatos gruesos, y te muestra a qué hora llueve y si hay alertas.</span>",
+  w_f7:"<b>Tu estilo</b><span>Responde a unas preguntas sobre estilo, colores y marcas favoritas: los outfits se adaptan a tus gustos.</span>",
+  w_f12:"<b>A la moda y Gen Z</b><span>Dos estilos que siguen las tendencias de esta temporada, actualizadas cada mes.</span>",
+  w_f8:"<b>Tus marcas</b><span>Si quieres, indica la marca de cada prenda: tus favoritas saldrán un poco más a menudo.</span>",
+  w_f4:"<b>Tu armario en orden</b><span>Todas las prendas por categoría, también chaquetas y calcetines. Con Editar corriges categoría, color, tipo y marca.</span>",
+  w_f13:"<b>Tus temperaturas</b><span>Decides tú a partir de cuántos grados proponer sudadera, chaqueta, pantalones cortos y manga corta.</span>",
+  w_f14:"<b>Variedad de outfits</b><span>Elige si recibir siempre prendas nuevas o si una prenda puede volver varios días seguidos.</span>",
+  w_f5:"<b>Privado y gratuito</b><span>Las fotos se quedan en tu teléfono, o en tu Google Drive si accedes: sin suscripción, sin publicidad.</span>",
+  w_f6:"<b>En 4 idiomas</b><span>Italiano, inglés, español y francés: cambia el idioma con el engranaje arriba a la derecha, donde están también los demás ajustes.</span>",
   w_tip:"💡 En iPhone abre OutfitDay con Safari, toca Compartir y luego <b>Añadir a pantalla de inicio</b>: se abrirá como una app de verdad.",
   w_start:"Empezar",
-  tabOutfit:"Outfit del día", tabWardrobe:"Armario", language:"Idioma",
-  cat_maglietta:"Camiseta", cat_felpa:"Sudadera", cat_pantaloni:"Pantalones", cat_scarpe:"Zapatos",
-  pantsShort:"Pantalones cortos", pantsLong:"Pantalones largos", shortBtn:"🩳 Cortos", longBtn:"👖 Largos",
+  tabOutfit:"Outfit del día", tabWardrobe:"Armario",
+  cat_maglietta:"Camiseta", cat_felpa:"Sudadera", cat_giacca:"Chaqueta", cat_pantaloni:"Pantalones", cat_scarpe:"Zapatos", cat_calze:"Calcetines",
+  v_maglietta_q:"¿Manga corta o larga?", v_maglietta_corto:"👕 Manga corta", v_maglietta_lungo:"🥼 Manga larga",
+  l_maglietta_corto:"Camiseta de manga corta", l_maglietta_lungo:"Camiseta de manga larga", v_maglietta_need:"Elige si la camiseta es de manga corta o larga.",
+  v_pantaloni_q:"¿Cortos o largos?", v_pantaloni_corto:"🩳 Cortos", v_pantaloni_lungo:"👖 Largos",
+  l_pantaloni_corto:"Pantalones cortos", l_pantaloni_lungo:"Pantalones largos", v_pantaloni_need:"Elige si los pantalones son cortos o largos.",
+  v_giacca_q:"¿Ligera o gruesa?", v_giacca_leggero:"🧥 Ligera", v_giacca_pesante:"🧣 Gruesa",
+  l_giacca_leggero:"Chaqueta ligera", l_giacca_pesante:"Chaqueta gruesa", v_giacca_need:"Elige si la chaqueta es ligera o gruesa.",
+  v_scarpe_q:"¿Ligeros o gruesos?", v_scarpe_leggero:"👟 Ligeros", v_scarpe_pesante:"🥾 Gruesos",
+  l_scarpe_leggero:"Zapatos ligeros", l_scarpe_pesante:"Zapatos gruesos", v_scarpe_need:"Elige si los zapatos son ligeros o gruesos.",
   wLoading:"Tiempo…", wSearching:"Buscando tu ubicación", wAlt:"🌐 Usar otro método",
   wIp:"Buscando la ciudad por internet", wFail:"No encuentro la ciudad", wFailSub:"Puedes escribirla tú, es un momento",
   wManual:"✏️ Introducir manualmente", wRetry:"Reintentar", wWrite:"Escribe tu ciudad", wPh:"Ej. Madrid",
   wBackAuto:"📍 Volver a la ubicación automática", wChange:"Cambiar ciudad", wYourPos:"Tu ubicación", wNet:"Ubicación por internet",
-  felpaYes:"Hoy hace falta sudadera 🧥", felpaNo:"Hoy sin sudadera 😎", cityNotFound:"Ciudad no encontrada, revisa cómo la has escrito.",
+  felpaYes:"Hoy hace falta sudadera", felpaNo:"Hoy sin sudadera 😎", jLightYes:"chaqueta ligera", jHeavyYes:"chaqueta gruesa",
+  rainTip:"☔ Te aconsejo llevar paraguas y ponerte zapatos gruesos.",
+  cityNotFound:"Ciudad no encontrada, revisa cómo la has escrito.",
   wc0:"Despejado", wc1:"Poco nuboso", wc2:"Nublado", wc3:"Niebla", wc4:"Lluvia", wc5:"Nieve", wc6:"Chubascos", wc7:"Tormenta",
   emptyTitle:"Carga tu armario", emptyText:"Fotografía tu ropa y elige la categoría. Después cada día te propongo un outfit.",
-  missingTitle:"Todavía falta algo", missingText:"Para crear un outfit también necesito: <b>{x}</b>.",
   addOne:"＋ Añadir prenda", addAll:"📸 Sube toda tu ropa",
-  change:"🔄 Cambiar", underHoodie:"Debajo de la sudadera", overTee:"Encima de la camiseta",
-  another:"🔄 Otro outfit", outfitTip:"El outfit es el mismo todo el día. Mañana llega uno nuevo.",
+  change:"🔄 Cambiar", underHoodie:"Debajo de la sudadera", overTee:"Encima de la camiseta", jacketNote:"Última capa: póntela si te apetece",
+  another:"🔄 Otro outfit", styleBtn:"🎨 Personalizar estilo",
+  outfitTip:"El outfit es el mismo todo el día. Mañana llega uno nuevo.",
   noOther:"No tienes otras prendas en \"{c}\" para proponer hoy.",
   count1:"{n} prenda en tu armario", countN:"{n} prendas en tu armario", noneInCat:"No hay prendas en esta categoría.",
+  edit:"✏️ Editar", editTitle:"Editar prenda", editSaved:"Cambios guardados ✓",
   remove:"Quitar", rmTitle:"¿Quitar esta prenda?", rmText:"Se eliminará de tu armario y no se volverá a proponer.", cancel:"Cancelar",
   addTitle:"Añadir prenda", pickPhoto:"Haz o elige una foto", pickHint:"Centra bien la prenda",
-  category:"Categoría", shortLong:"¿Cortos o largos?", colorDetected:"Color reconocido · toca para corregir", save:"Guardar",
-  needPhoto:"Primero haz o elige una foto.", needCat:"Elige la categoría de la prenda.", needLen:"Elige si los pantalones son cortos o largos.",
+  category:"Categoría", colorDetected:"Color · toca para corregir", save:"Guardar",
+  brand:"Marca (opcional)", brandPh:"Ej. Nike", brandPick:"O toca una marca que ya tienes:",
+  needPhoto:"Primero haz o elige una foto.", needCat:"Elige la categoría de la prenda.",
   badPhoto:"No puedo leer esta foto, prueba con otra.", memFull:"Memoria llena: quita algunas prendas y vuelve a intentarlo.",
-  whatColor:"¿De qué color es?",
   bulkTitle:"Carga tu armario", bulkText:"Selecciona de la galería todas las fotos de tu ropa a la vez. Luego te las enseño una a una: eliges la categoría, revisas el color y pulsas Siguiente.",
   bulkPick:"📸 Elegir fotos", bulkOne:"Añadir una prenda cada vez", itemOf:"Prenda {i} de {n}", reading:"Leyendo la foto…",
   whatItem:"¿Qué prenda es?", skip:"Saltar", next:"Siguiente →", finish:"Listo ✓", stop:"Parar y guardar las hechas",
-  unreadable:"Esta foto no se puede leer, paso a la siguiente.", needCatBulk:"Primero elige qué prenda es.",
+  unreadable:"Esta foto no se puede leer, paso a la siguiente.",
   memFullBulk:"Memoria llena: no puedo guardar más prendas.", done1:"¡Hecho! 1 prenda añadida a tu armario 👕", doneN:"¡Hecho! {n} prendas añadidas a tu armario 👕",
-  w_f7:"<b>Tu estilo</b><span>Responde a unas preguntas sobre estilo y colores favoritos: los outfits se adaptan a tus gustos.</span>",
-  teeShort:"Camiseta de manga corta", teeLong:"Camiseta de manga larga", teeShortBtn:"👕 Manga corta", teeLongBtn:"🥼 Manga larga",
-  sleeve:"¿Manga corta o larga?", needSleeve:"Elige si la camiseta es de manga corta o larga.",
-  styleBtn:"🎨 Personalizar estilo", styleTitle:"Personaliza tu estilo", styleIntro:"Responde a unas preguntas: los outfits se adaptarán a tus gustos.",
+  styleTitle:"Personaliza tu estilo", styleIntro:"Responde a unas preguntas: los outfits se adaptarán a tus gustos.",
   qOf:"Pregunta {i} de {n}", sq1:"¿Qué estilo prefieres?", so_sport:"Deportivo", so_casual:"Casual", so_eleg:"Elegante", so_street:"Urbano",
+  so_moda:"A la moda", so_genz:"Moda de la generación Z", so_genz_d:"Cómoda, relajada y siempre cuidada.",
   sq2:"¿Cuánto color te gusta?", co_neutri:"Solo colores neutros", co_tocco:"Un toque de color", co_vivaci:"Colores vivos",
   sq3:"¿Cómo combinas arriba y abajo?", ab_contr:"En contraste (claro y oscuro)", ab_tono:"Tono sobre tono", ab_libero:"Me da igual",
   sq4:"¿Cuáles son tus colores favoritos?", sq4hint:"Puedes elegir varios, o ninguno. Saldrán un poco más a menudo, sin excluir los demás.",
+  sq5:"¿Cuáles son tus marcas favoritas?", sq5hint:"Estas son las marcas de tu armario. Elige tus favoritas, o ninguna: saldrán un poco más a menudo, sin excluir las demás.",
   back:"← Atrás", later:"Más tarde", saveStyle:"Guardar ✓", pickOne:"Elige una respuesta.", styleSaved:"¡Estilo guardado! Aquí tienes un outfit a tu medida ✨",
+  settings:"Ajustes", setLang:"🌍 Idioma", setTemp:"🌡️ Personalizar reglas de temperatura", setVar:"🔄 Variedad de outfits", language:"Idioma",
+  tempTitle:"Reglas de temperatura",
+  tempExplain:"<b>Aquí decides tú cuándo OutfitDay te propone cada prenda.</b><br>La web mira la <b>temperatura más alta</b> del día.<br><br>Ejemplo: si la sudadera va <b>de 19° para abajo</b>, cuando hoy la máxima es 17° te la propone, cuando es 23° no.<br><br>Usa los botones <b>−</b> y <b>+</b> para cambiar los grados. Si te equivocas, pulsa <b>Restablecer</b> y todo vuelve a como estaba.",
+  tr_manica:"👕 Camiseta de manga corta", tr_manica_d:"de {n}° para arriba. Por debajo: manga larga.",
+  tr_corti:"🩳 Pantalones cortos", tr_corti_d:"de {n}° para arriba. Por debajo: pantalones largos.",
+  tr_felpa:"🧶 Sudadera", tr_felpa_d:"de {n}° para abajo.",
+  tr_giacca:"🧥 Chaqueta ligera", tr_giacca_d:"de {n}° para abajo.",
+  tr_pesante:"🧣 Chaqueta gruesa", tr_pesante_d:"de {n}° para abajo, en lugar de la ligera.",
+  tempNone:"Añade algunas prendas a tu armario: aquí aparecerán las reglas de las prendas que tienes.",
+  reset:"↺ Restablecer", tempSaved:"Temperaturas guardadas ✓", tempReset:"Valores iniciales restablecidos",
+  varTitle:"Variedad de outfits", varText:"Elige si OutfitDay puede proponerte la misma prenda varios días seguidos.",
+  var_new:"Siempre prendas nuevas", var_new_d:"Evita las prendas usadas los días anteriores, mientras tengas otras de la misma categoría.",
+  var_rep:"Se pueden repetir", var_rep_d:"La misma prenda puede volver varios días seguidos.", varSaved:"Hecho ✓",
+  w_f15:"<b>Cuenta de Google opcional</b><span>Si quieres, inicia sesión con Google: el armario se guarda en tu Google Drive y lo encuentras en cualquier dispositivo, aunque borres los datos del navegador.</span>",
+  acc_login:"Acceder", accTitle:"Tu cuenta", accChoose:"Guarda tu armario en tu Google Drive, así no lo pierdes nunca.",
+  accReg:"Regístrate", accRegD:"Es la primera vez: crea tu cuenta.", accLog:"Acceder", accLogD:"Ya tienes cuenta: recupera tu armario.",
+  accRegGoogle:"Regístrate con Google", accLogGoogle:"Acceder con Google",
+  accRegText:"Basta con tu cuenta de Google, sin contraseñas nuevas que recordar.",
+  accLogText:"Accede con la misma cuenta de Google que usaste para registrarte: encontrarás tu armario.",
+  ben1:"☁️ Tu armario está a salvo aunque borres los datos del navegador.",
+  ben2:"📱 Lo encuentras en cualquier teléfono u ordenador, accediendo con Google.",
+  ben3:"🔒 Se guarda en tu Google Drive, en un espacio reservado a OutfitDay: nadie más puede verlo, ni siquiera quien creó la web.",
+  askTitle:"¿Quieres registrarte?", askText:"Es opcional, pero vale la pena:", noThanks:"No, gracias", haveAcc:"Ya tengo cuenta: Acceder con Google",
+  accSyncing:"Conectando con tu Google Drive…", accDone:"¡Hecho! Tu armario está guardado en tu Google Drive ☁️",
+  accFail:"No se pudo acceder. Inténtalo de nuevo.", accNoGoogle:"No puedo contactar con Google. Revisa la conexión e inténtalo de nuevo.",
+  accSynced:"Armario guardado en tu Google Drive · {t}", accDirty:"Hay cambios por guardar en tu Google Drive.",
+  accErr:"No se pudo guardar en Google Drive. Inténtalo con Sincronizar ahora.",
+  syncNow:"☁️ Sincronizar ahora", logout:"Cerrar sesión", logoutTitle:"¿Cerrar sesión?",
+  logoutText:"El armario se queda en este teléfono y en tu Google Drive. Podrás volver a entrar cuando quieras.", loggedOut:"Has cerrado sesión.",
+  w_f16:"<b>El tiempo de la semana</b><span>La previsión de los próximos 7 días con mínima y máxima: toca un día para ver qué ponerte.</span>",
+  tabMeteo:"Tiempo", meteoSub:"Próximos 7 días · {p}", today:"Hoy", tomorrow:"Mañana",
+  meteoNoData:"El tiempo aún no está disponible. Permite la ubicación o escribe tu ciudad.", meteoNoDataBtn:"📍 Elegir ciudad",
+  dayOutfit:"Qué ponerte", dayTap:"Toca un día para ver qué ponerte.",
+  rainMore:"Más información", rainTitle:"Lluvia · {d}", rainHours:"Horas de lluvia", rainFromTo:"de {a} a {b}",
+  rainProb:"probabilidad hasta el {p}%", rainNone:"Posible lluvia durante el día, sin horas precisas.",
+  alertsTitle:"Alertas", al_storm:"⛈️ Posibles tormentas", al_wind:"💨 Rachas de viento fuertes, hasta {v} km/h",
+  al_heavy:"🌊 Lluvia abundante, unos {v} mm", al_snow:"❄️ Posible nieve", alNone:"Ninguna alerta en la previsión.",
+  alNote:"Estos avisos vienen de la previsión meteorológica y no son alertas oficiales. Para las oficiales consulta:", close:"Cerrar",
+  siTitle:"Cómo funciona la sincronización", siIntro:"Tu armario ahora está conectado a tu Google Drive. Esto es lo que pasa:",
+  si1:"🔄 Cuando añades, editas o quitas una prenda, o cambias los ajustes, todo se actualiza solo también en tu Google Drive.",
+  si2:"⏱️ Por seguridad, Google mantiene la conexión abierta durante una hora aproximadamente. Después, al guardar puede aparecer un momento la ventana de Google: es normal.",
+  si3:"🟢 El punto junto a tu foto, arriba a la izquierda, te indica la situación: verde significa todo guardado, naranja que hay cambios por guardar.",
+  si4:"📱 Para actualizar enseguida, toca tu foto y luego Sincronizar ahora. En otro teléfono basta con acceder con la misma cuenta para encontrarlo todo.",
+  siOk:"Entendido",
   col:{"nero":"Negro","bianco":"Blanco","grigio":"Gris","blu scuro":"Azul marino","beige":"Beige","blu jeans":"Azul vaquero","marrone":"Marrón","verde oliva":"Verde oliva","bordeaux":"Burdeos","azzurro":"Celeste","rosso":"Rojo","rosa":"Rosa","arancione":"Naranja","giallo":"Amarillo","verde":"Verde","viola":"Morado"}
 },
 fr:{
@@ -405,67 +663,138 @@ fr:{
   w_intro:"Ton dressing numérique qui te dit chaque matin quoi porter : des tenues aux couleurs assorties et adaptées à la météo de ta ville, avec uniquement les vêtements que tu as vraiment.",
   w_how:"Comment ça marche",
   w_s1:"<b>Photographie tes vêtements.</b> Prends une photo de chaque pièce, ou sélectionne plusieurs photos à la fois dans ta galerie.",
-  w_s2:"<b>Choisis la catégorie.</b> T-shirt, sweat, pantalon ou chaussures. Pour les T-shirts et les pantalons, tu indiques aussi s'ils sont courts ou longs.",
+  w_s2:"<b>Choisis la catégorie.</b> T-shirt, sweat, veste, pantalon, chaussures ou chaussettes. Pour certaines pièces tu indiques aussi le type : manches courtes ou longues, court ou long, légère ou chaude. Si tu veux, ajoute la marque.",
   w_s3:"<b>Il trouve la couleur tout seul.</b> OutfitDay reconnaît la couleur principale sur la photo. S'il se trompe, tu la corriges d'un geste.",
-  w_s4:"<b>Il vérifie la météo.</b> Il utilise ta position pour connaître le temps : quand il fait froid il ajoute le sweat, quand il fait chaud il choisit un short.",
+  w_s4:"<b>Il vérifie la météo.</b> Il utilise ta position pour connaître le temps : quand il fait froid il ajoute sweat et veste, quand il fait chaud il choisit un short, et s'il va pleuvoir il te prévient.",
   w_s5:"<b>Une nouvelle tenue chaque jour.</b> Il te propose une combinaison différente, en évitant celles des jours précédents.",
   w_feat:"Ce qu'il sait faire",
   w_f1:"<b>Des associations de styliste</b><span>Couleurs neutres avec tout, une seule couleur vive au maximum, pas de mélanges qui jurent.</span>",
   w_f2:"<b>Bouton Changer</b><span>Une pièce est au lavage ? Tu changes seulement celle-là et le reste de la tenue reste.</span>",
-  w_f3:"<b>Adapté à la météo</b><span>Sweat par-dessus le T-shirt quand il fait froid, jamais plus de couches que nécessaire.</span>",
-  w_f4:"<b>Ton dressing bien rangé</b><span>Toutes les pièces par catégorie : ajoute, supprime ou corrige la couleur quand tu veux.</span>",
-  w_f5:"<b>Privé et gratuit</b><span>Tes photos restent sur ton téléphone : pas de compte, pas d'abonnement.</span>",
-  w_f6:"<b>En 4 langues</b><span>Italien, anglais, espagnol et français : change de langue avec l'engrenage en haut à droite.</span>",
+  w_f3:"<b>Adapté à la météo</b><span>T-shirt, sweat et veste s'ajoutent au fur et à mesure qu'il fait plus froid, jamais de couches en trop.</span>",
+  w_f11:"<b>Alerte pluie</b><span>Si de la pluie est prévue, il te conseille un parapluie et des chaussures chaudes, et te montre à quelle heure il pleut et les éventuelles alertes.</span>",
+  w_f7:"<b>Ton style</b><span>Réponds à quelques questions sur ton style, tes couleurs et marques préférées : les tenues s'adaptent à tes goûts.</span>",
+  w_f12:"<b>Tendance et Gen Z</b><span>Deux styles qui suivent les tendances de la saison, mises à jour chaque mois.</span>",
+  w_f8:"<b>Tes marques</b><span>Si tu veux, indique la marque de chaque pièce : tes préférées sortiront un peu plus souvent.</span>",
+  w_f4:"<b>Ton dressing bien rangé</b><span>Toutes les pièces par catégorie, vestes et chaussettes comprises. Avec Modifier tu corriges catégorie, couleur, type et marque.</span>",
+  w_f13:"<b>Tes températures</b><span>Tu décides à partir de combien de degrés proposer sweat, veste, short et manches courtes.</span>",
+  w_f14:"<b>Variété des tenues</b><span>Choisis de recevoir toujours de nouvelles pièces ou qu'une pièce puisse revenir plusieurs jours de suite.</span>",
+  w_f5:"<b>Privé et gratuit</b><span>Tes photos restent sur ton téléphone, ou dans ton Google Drive si tu te connectes : pas d'abonnement, pas de pub.</span>",
+  w_f6:"<b>En 4 langues</b><span>Italien, anglais, espagnol et français : change de langue avec l'engrenage en haut à droite, où tu trouves aussi les autres réglages.</span>",
   w_tip:"💡 Sur iPhone, ouvre OutfitDay avec Safari, touche Partager puis <b>Sur l'écran d'accueil</b> : il s'ouvrira comme une vraie app.",
   w_start:"Commencer",
-  tabOutfit:"Tenue du jour", tabWardrobe:"Dressing", language:"Langue",
-  cat_maglietta:"T-shirt", cat_felpa:"Sweat", cat_pantaloni:"Pantalon", cat_scarpe:"Chaussures",
-  pantsShort:"Short", pantsLong:"Pantalon long", shortBtn:"🩳 Courts", longBtn:"👖 Longs",
+  tabOutfit:"Tenue du jour", tabWardrobe:"Dressing",
+  cat_maglietta:"T-shirt", cat_felpa:"Sweat", cat_giacca:"Veste", cat_pantaloni:"Pantalon", cat_scarpe:"Chaussures", cat_calze:"Chaussettes",
+  v_maglietta_q:"Manches courtes ou longues ?", v_maglietta_corto:"👕 Manches courtes", v_maglietta_lungo:"🥼 Manches longues",
+  l_maglietta_corto:"T-shirt manches courtes", l_maglietta_lungo:"T-shirt manches longues", v_maglietta_need:"Choisis si le T-shirt a des manches courtes ou longues.",
+  v_pantaloni_q:"Courts ou longs ?", v_pantaloni_corto:"🩳 Courts", v_pantaloni_lungo:"👖 Longs",
+  l_pantaloni_corto:"Short", l_pantaloni_lungo:"Pantalon long", v_pantaloni_need:"Choisis si le pantalon est court ou long.",
+  v_giacca_q:"Légère ou chaude ?", v_giacca_leggero:"🧥 Légère", v_giacca_pesante:"🧣 Chaude",
+  l_giacca_leggero:"Veste légère", l_giacca_pesante:"Veste chaude", v_giacca_need:"Choisis si la veste est légère ou chaude.",
+  v_scarpe_q:"Légères ou chaudes ?", v_scarpe_leggero:"👟 Légères", v_scarpe_pesante:"🥾 Chaudes",
+  l_scarpe_leggero:"Chaussures légères", l_scarpe_pesante:"Chaussures chaudes", v_scarpe_need:"Choisis si les chaussures sont légères ou chaudes.",
   wLoading:"Météo…", wSearching:"Je cherche ta position", wAlt:"🌐 Utiliser une autre méthode",
   wIp:"Je cherche ta ville via internet", wFail:"Je ne trouve pas ta ville", wFailSub:"Tu peux l'écrire, ça prend un instant",
   wManual:"✏️ Saisir manuellement", wRetry:"Réessayer", wWrite:"Écris ta ville", wPh:"Ex. Paris",
   wBackAuto:"📍 Revenir à la position automatique", wChange:"Changer de ville", wYourPos:"Ta position", wNet:"Position via internet",
-  felpaYes:"Sweat nécessaire aujourd'hui 🧥", felpaNo:"Pas de sweat aujourd'hui 😎", cityNotFound:"Ville introuvable, vérifie l'orthographe.",
+  felpaYes:"Sweat nécessaire aujourd'hui", felpaNo:"Pas de sweat aujourd'hui 😎", jLightYes:"veste légère", jHeavyYes:"veste chaude",
+  rainTip:"☔ Je te conseille de prendre un parapluie et de mettre des chaussures chaudes.",
+  cityNotFound:"Ville introuvable, vérifie l'orthographe.",
   wc0:"Ensoleillé", wc1:"Peu nuageux", wc2:"Nuageux", wc3:"Brouillard", wc4:"Pluie", wc5:"Neige", wc6:"Averses", wc7:"Orage",
   emptyTitle:"Remplis ton dressing", emptyText:"Photographie tes vêtements et choisis la catégorie. Ensuite, chaque jour je te propose une tenue.",
-  missingTitle:"Il manque encore quelque chose", missingText:"Pour créer une tenue, il me faut aussi : <b>{x}</b>.",
   addOne:"＋ Ajouter une pièce", addAll:"📸 Charge tous tes vêtements",
-  change:"🔄 Changer", underHoodie:"Sous le sweat", overTee:"Par-dessus le T-shirt",
-  another:"🔄 Une autre tenue", outfitTip:"La tenue reste la même toute la journée. Demain, une nouvelle arrive.",
+  change:"🔄 Changer", underHoodie:"Sous le sweat", overTee:"Par-dessus le T-shirt", jacketNote:"Dernière couche : mets-la si tu en as envie",
+  another:"🔄 Une autre tenue", styleBtn:"🎨 Personnaliser le style",
+  outfitTip:"La tenue reste la même toute la journée. Demain, une nouvelle arrive.",
   noOther:"Tu n'as pas d'autre pièce dans « {c} » à proposer aujourd'hui.",
   count1:"{n} pièce dans ton dressing", countN:"{n} pièces dans ton dressing", noneInCat:"Aucune pièce dans cette catégorie.",
+  edit:"✏️ Modifier", editTitle:"Modifier la pièce", editSaved:"Modifications enregistrées ✓",
   remove:"Supprimer", rmTitle:"Supprimer cette pièce ?", rmText:"Elle sera retirée de ton dressing et ne sera plus proposée.", cancel:"Annuler",
   addTitle:"Ajouter une pièce", pickPhoto:"Prends ou choisis une photo", pickHint:"Centre bien la pièce",
-  category:"Catégorie", shortLong:"Courts ou longs ?", colorDetected:"Couleur détectée · touche pour corriger", save:"Enregistrer",
-  needPhoto:"Prends ou choisis d'abord une photo.", needCat:"Choisis la catégorie de la pièce.", needLen:"Choisis si le pantalon est court ou long.",
+  category:"Catégorie", colorDetected:"Couleur · touche pour corriger", save:"Enregistrer",
+  brand:"Marque (facultatif)", brandPh:"Ex. Nike", brandPick:"Ou touche une marque que tu as déjà :",
+  needPhoto:"Prends ou choisis d'abord une photo.", needCat:"Choisis la catégorie de la pièce.",
   badPhoto:"Je n'arrive pas à lire cette photo, essaie-en une autre.", memFull:"Mémoire pleine : supprime quelques pièces et réessaie.",
-  whatColor:"De quelle couleur est-ce ?",
   bulkTitle:"Remplis ton dressing", bulkText:"Sélectionne dans ta galerie toutes les photos de tes vêtements en une fois. Ensuite je te les montre une par une : choisis la catégorie, vérifie la couleur et touche Suivant.",
   bulkPick:"📸 Choisir les photos", bulkOne:"Ajouter une pièce à la fois", itemOf:"Pièce {i} sur {n}", reading:"Lecture de la photo…",
   whatItem:"Quelle pièce est-ce ?", skip:"Passer", next:"Suivant →", finish:"Terminé ✓", stop:"Arrêter et garder celles faites",
-  unreadable:"Cette photo est illisible, je passe à la suivante.", needCatBulk:"Choisis d'abord quelle pièce c'est.",
+  unreadable:"Cette photo est illisible, je passe à la suivante.",
   memFullBulk:"Mémoire pleine : impossible d'ajouter d'autres pièces.", done1:"C'est fait ! 1 pièce ajoutée à ton dressing 👕", doneN:"C'est fait ! {n} pièces ajoutées à ton dressing 👕",
-  w_f7:"<b>Ton style</b><span>Réponds à quelques questions sur ton style et tes couleurs préférées : les tenues s'adaptent à tes goûts.</span>",
-  teeShort:"T-shirt manches courtes", teeLong:"T-shirt manches longues", teeShortBtn:"👕 Manches courtes", teeLongBtn:"🥼 Manches longues",
-  sleeve:"Manches courtes ou longues ?", needSleeve:"Choisis si le T-shirt a des manches courtes ou longues.",
-  styleBtn:"🎨 Personnaliser le style", styleTitle:"Personnalise ton style", styleIntro:"Réponds à quelques questions : les tenues s'adapteront à tes goûts.",
+  styleTitle:"Personnalise ton style", styleIntro:"Réponds à quelques questions : les tenues s'adapteront à tes goûts.",
   qOf:"Question {i} sur {n}", sq1:"Quel style préfères-tu ?", so_sport:"Sportif", so_casual:"Décontracté", so_eleg:"Élégant", so_street:"Streetwear",
+  so_moda:"Tendance", so_genz:"Mode de la génération Z", so_genz_d:"Confortable, détendue et toujours soignée.",
   sq2:"Combien de couleur aimes-tu ?", co_neutri:"Seulement des couleurs neutres", co_tocco:"Une touche de couleur", co_vivaci:"Des couleurs vives",
   sq3:"Comment associes-tu le haut et le bas ?", ab_contr:"En contraste (clair et foncé)", ab_tono:"Ton sur ton", ab_libero:"Peu importe",
   sq4:"Quelles sont tes couleurs préférées ?", sq4hint:"Tu peux en choisir plusieurs, ou aucune. Elles apparaîtront un peu plus souvent, sans exclure les autres.",
+  sq5:"Quelles sont tes marques préférées ?", sq5hint:"Voici les marques de ton dressing. Choisis tes préférées, ou aucune : elles apparaîtront un peu plus souvent, sans exclure les autres.",
   back:"← Retour", later:"Plus tard", saveStyle:"Enregistrer ✓", pickOne:"Choisis une réponse.", styleSaved:"Style enregistré ! Voici une tenue sur mesure ✨",
+  settings:"Réglages", setLang:"🌍 Langue", setTemp:"🌡️ Personnaliser les règles de température", setVar:"🔄 Variété des tenues", language:"Langue",
+  tempTitle:"Règles de température",
+  tempExplain:"<b>Ici, tu décides quand OutfitDay te propose chaque pièce.</b><br>Le site regarde la <b>température la plus haute</b> de la journée.<br><br>Exemple : si le sweat est réglé <b>à 19° ou moins</b>, quand la max du jour est 17° il te le propose, quand elle est 23° non.<br><br>Utilise les boutons <b>−</b> et <b>+</b> pour changer les degrés. Si tu te trompes, touche <b>Réinitialiser</b> et tout redevient comme avant.",
+  tr_manica:"👕 T-shirt manches courtes", tr_manica_d:"à partir de {n}°. En dessous : manches longues.",
+  tr_corti:"🩳 Short", tr_corti_d:"à partir de {n}°. En dessous : pantalon long.",
+  tr_felpa:"🧶 Sweat", tr_felpa_d:"à {n}° ou moins.",
+  tr_giacca:"🧥 Veste légère", tr_giacca_d:"à {n}° ou moins.",
+  tr_pesante:"🧣 Veste chaude", tr_pesante_d:"à {n}° ou moins, à la place de la légère.",
+  tempNone:"Ajoute quelques pièces à ton dressing : les règles des pièces que tu as apparaîtront ici.",
+  reset:"↺ Réinitialiser", tempSaved:"Températures enregistrées ✓", tempReset:"Valeurs initiales rétablies",
+  varTitle:"Variété des tenues", varText:"Choisis si OutfitDay peut te reproposer la même pièce plusieurs jours de suite.",
+  var_new:"Toujours de nouvelles pièces", var_new_d:"Évite les pièces portées les jours précédents, tant que tu en as d'autres dans la même catégorie.",
+  var_rep:"Les pièces peuvent revenir", var_rep_d:"La même pièce peut revenir plusieurs jours de suite.", varSaved:"C'est fait ✓",
+  w_f15:"<b>Compte Google facultatif</b><span>Si tu veux, connecte-toi avec Google : ton dressing est enregistré dans ton Google Drive et tu le retrouves sur tous tes appareils, même si tu effaces les données du navigateur.</span>",
+  acc_login:"Connexion", accTitle:"Ton compte", accChoose:"Enregistre ton dressing dans ton Google Drive, pour ne jamais le perdre.",
+  accReg:"S'inscrire", accRegD:"C'est la première fois : crée ton compte.", accLog:"Se connecter", accLogD:"Tu as déjà un compte : retrouve ton dressing.",
+  accRegGoogle:"S'inscrire avec Google", accLogGoogle:"Se connecter avec Google",
+  accRegText:"Ton compte Google suffit, aucun nouveau mot de passe à retenir.",
+  accLogText:"Connecte-toi avec le même compte Google que pour l'inscription : tu retrouveras ton dressing.",
+  ben1:"☁️ Ton dressing est à l'abri même si tu effaces les données du navigateur.",
+  ben2:"📱 Tu le retrouves sur n'importe quel téléphone ou ordinateur en te connectant avec Google.",
+  ben3:"🔒 Il est enregistré dans ton Google Drive, dans un espace réservé à OutfitDay : personne d'autre ne peut le voir, pas même le créateur du site.",
+  askTitle:"Tu veux t'inscrire ?", askText:"C'est facultatif, mais ça vaut le coup :", noThanks:"Non merci", haveAcc:"J'ai déjà un compte : Se connecter avec Google",
+  accSyncing:"Connexion à ton Google Drive…", accDone:"C'est fait ! Ton dressing est enregistré dans ton Google Drive ☁️",
+  accFail:"Connexion échouée. Réessaie.", accNoGoogle:"Impossible de joindre Google. Vérifie ta connexion et réessaie.",
+  accSynced:"Dressing enregistré dans ton Google Drive · {t}", accDirty:"Il y a des modifications à enregistrer dans ton Google Drive.",
+  accErr:"Échec de l'enregistrement dans Google Drive. Réessaie avec Synchroniser.",
+  syncNow:"☁️ Synchroniser", logout:"Se déconnecter", logoutTitle:"Se déconnecter ?",
+  logoutText:"Ton dressing reste sur ce téléphone et dans ton Google Drive. Tu pourras te reconnecter quand tu veux.", loggedOut:"Tu t'es déconnecté.",
+  w_f16:"<b>La météo de la semaine</b><span>Les prévisions des 7 prochains jours avec minimales et maximales : touche un jour pour voir quoi porter.</span>",
+  tabMeteo:"Météo", meteoSub:"7 prochains jours · {p}", today:"Aujourd'hui", tomorrow:"Demain",
+  meteoNoData:"La météo n'est pas encore disponible. Autorise la position ou écris ta ville.", meteoNoDataBtn:"📍 Choisir la ville",
+  dayOutfit:"Quoi porter", dayTap:"Touche un jour pour voir quoi porter.",
+  rainMore:"Plus d'informations", rainTitle:"Pluie · {d}", rainHours:"Heures de pluie", rainFromTo:"de {a} à {b}",
+  rainProb:"probabilité jusqu'à {p} %", rainNone:"Pluie possible dans la journée, sans heures précises.",
+  alertsTitle:"Alertes", al_storm:"⛈️ Orages possibles", al_wind:"💨 Fortes rafales de vent, jusqu'à {v} km/h",
+  al_heavy:"🌊 Fortes pluies, environ {v} mm", al_snow:"❄️ Neige possible", alNone:"Aucune alerte dans les prévisions.",
+  alNote:"Ces avertissements viennent des prévisions météo et ne sont pas des alertes officielles. Pour les alertes officielles, consulte :", close:"Fermer",
+  siTitle:"Comment fonctionne la synchronisation", siIntro:"Ton dressing est maintenant relié à ton Google Drive. Voici ce qui se passe :",
+  si1:"🔄 Quand tu ajoutes, modifies ou supprimes une pièce, ou changes les réglages, tout se met à jour tout seul dans ton Google Drive aussi.",
+  si2:"⏱️ Par sécurité, Google garde la connexion ouverte environ une heure. Ensuite, à la prochaine sauvegarde, la fenêtre de Google peut apparaître un instant : c'est normal.",
+  si3:"🟢 Le point à côté de ta photo, en haut à gauche, indique l'état : vert veut dire tout est enregistré, orange qu'il y a des modifications à enregistrer.",
+  si4:"📱 Pour mettre à jour tout de suite, touche ta photo puis Synchroniser. Sur un autre téléphone, connecte-toi avec le même compte pour tout retrouver.",
+  siOk:"J'ai compris",
   col:{"nero":"Noir","bianco":"Blanc","grigio":"Gris","blu scuro":"Bleu marine","beige":"Beige","blu jeans":"Bleu jean","marrone":"Marron","verde oliva":"Vert olive","bordeaux":"Bordeaux","azzurro":"Bleu ciel","rosso":"Rouge","rosa":"Rose","arancione":"Orange","giallo":"Jaune","verde":"Vert","viola":"Violet"}
 }};
+
 const LOCALE = {it:'it-IT',en:'en-GB',es:'es-ES',fr:'fr-FR'};
 let LANG = 'it';
-function t(k,v){let s=(TXT[LANG][k]!==undefined?TXT[LANG][k]:TXT.it[k])||k;
+function t(k,v){let s=(TXT[LANG][k]!==undefined?TXT[LANG][k]:TXT.it[k]);if(s===undefined)s=k;
   if(v)for(const x in v)s=s.split('{'+x+'}').join(v[x]);return s}
 const catName=c=>t('cat_'+c);
 const colName=c=>TXT[LANG].col[c]||c;
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 /* ================= DATI DI BASE ================= */
-const CAT_ICON = {maglietta:'👕', felpa:'🧥', pantaloni:'👖', scarpe:'👟'};
-const CAT_ORDER = ['maglietta','felpa','pantaloni','scarpe'];
+const CAT_ICON = {maglietta:'👕', felpa:'🧶', giacca:'🧥', pantaloni:'👖', scarpe:'👟', calze:'🧦'};
+const CAT_ORDER = ['maglietta','felpa','giacca','pantaloni','scarpe','calze'];
+// tipo di capo: per alcune categorie si sceglie anche il tipo
+// (capi caricati prima: magliette manica corta, pantaloni lunghi, giacche e scarpe leggere)
+const VARIANTS = {
+  maglietta:{vals:['corto','lungo'],def:'corto'},
+  pantaloni:{vals:['corto','lungo'],def:'lungo'},
+  giacca:{vals:['leggero','pesante'],def:'leggero'},
+  scarpe:{vals:['leggero','pesante'],def:'leggero'}
+};
+const hasVar=c=>!!VARIANTS[c];
+function lenOf(i){return i.len||(VARIANTS[i.cat]?VARIANTS[i.cat].def:null)}
 // tipo: n = neutro, s = semi-neutro, f = colore forte
 const COLORS = {
   'nero':{hex:'#1a1a1a',t:'n'}, 'bianco':{hex:'#f2f2f2',t:'n'}, 'grigio':{hex:'#8c8c8c',t:'n'},
@@ -480,9 +809,20 @@ const CLASH = [
   ['rosa','arancione'],['rosa','verde'],['arancione','viola'],['giallo','viola'],
   ['giallo','rosa'],['verde','viola'],['marrone','nero'],['bordeaux','rosso'],['blu scuro','nero']
 ];
-const FELPA_SOTTO = 19;  // massima fino a 19°: felpa sopra la maglietta
-const CORTI_DA = 24;     // massima da 24° in su: pantaloni corti
-const MANICA_CORTA_DA = 22; // massima da 22° in su: maglietta a manica corta
+/* Tendenze di stagione (inverno 2026-27). Da rinnovare a ogni aggiornamento mensile.
+   moda: base scura e neutra, un solo colore di stagione (bordeaux, verde, rosso), marrone con beige/panna.
+   genz: comodità, neutri e pastello (azzurro, rosa) con grigio, bianco e jeans, niente colori troppo accesi. */
+const TRENDS = {
+  moda:{base:['nero','grigio','blu scuro','marrone','beige','bianco'],accent:['bordeaux','verde oliva','verde','rosso'],
+    pairs:[['marrone','beige'],['verde oliva','beige'],['verde oliva','grigio'],['bordeaux','grigio'],['blu scuro','beige']],
+    avoid:['giallo','arancione','viola','rosa']},
+  genz:{base:['grigio','beige','bianco','nero','blu jeans'],accent:['azzurro','rosa'],
+    pairs:[['azzurro','grigio'],['azzurro','bianco'],['rosa','grigio'],['rosa','bianco'],['azzurro','blu jeans'],['rosa','blu jeans'],['marrone','beige']],
+    avoid:['rosso','arancione','giallo','verde','viola']}
+};
+// regimi di temperatura (temperatura massima del giorno); l'utente li può cambiare nelle impostazioni
+const REG_DEF = {manica:22, corti:24, felpa:19, giacca:15, pesante:10};
+function R(){return Object.assign({},REG_DEF,LS.get('regimi',{}))}
 
 /* ================= ARCHIVIO ================= */
 const DB = {
@@ -502,8 +842,14 @@ const LS = {
   set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}},
   del(k){try{localStorage.removeItem(k)}catch(e){}}
 };
-let ITEMS=[], WEATHER=null, CURRENT=null;
+let ITEMS=[], WEATHER=null, CURRENT=null, WX=null;
+const W=()=>WX||WEATHER; // WX: meteo di un altro giorno (sezione Meteo)
 const newId=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+function brands(){const m=new Map();ITEMS.forEach(i=>{if(i.brand){const k=i.brand.toLowerCase();if(!m.has(k))m.set(k,i.brand)}});
+  return [...m.values()].sort((a,b)=>a.localeCompare(b))}
+// "nike", "Nike " e "NIKE" diventano lo stesso marchio
+function normBrand(v){v=String(v||'').trim().replace(/\s+/g,' ');if(!v)return '';
+  const ex=brands().find(b=>b.toLowerCase()===v.toLowerCase());return ex||v}
 
 /* ================= COLORE DALLA FOTO ================= */
 function hexToRgb(h){const n=parseInt(h.slice(1),16);return[(n>>16)&255,(n>>8)&255,n&255]}
@@ -514,6 +860,7 @@ function rgbToLab([r,g,b]){
   return[116*y-16,500*(x-y),200*(y-z)];
 }
 const PAL_LAB=Object.entries(COLORS).map(([n,c])=>[n,rgbToLab(hexToRgb(c.hex))]);
+const LIGHT={};PAL_LAB.forEach(([n,l])=>LIGHT[n]=l[0]);
 function nearestColor(rgb){const L=rgbToLab(rgb);let best=null,bd=1e9;
   for(const[n,p]of PAL_LAB){const d=(L[0]-p[0])**2+(L[1]-p[1])**2+(L[2]-p[2])**2;if(d<bd){bd=d;best=n}}return best}
 function detectColor(img){
@@ -531,13 +878,22 @@ function compress(img){const M=700,r=Math.min(1,M/Math.max(img.width,img.height)
 
 /* ================= METEO ================= */
 const WCODE=c=>c===0?['☀️',0]:c<=2?['🌤️',1]:c===3?['☁️',2]:c<=48?['🌫️',3]:c<=67?['🌧️',4]:c<=77?['❄️',5]:c<=82?['🌦️',6]:['⛈️',7];
+const isRainCode=c=>(c>=51&&c<=67)||(c>=80&&c<=82)||c>=95;
 function fetchT(url,ms=15000){const c=new AbortController();const tm=setTimeout(()=>c.abort(),ms);
   return fetch(url,{signal:c.signal}).finally(()=>clearTimeout(tm))}
 async function fetchWeather(lat,lon,place){
-  const u=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=1`;
+  const u=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`+
+    `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max,precipitation_sum,wind_gusts_10m_max`+
+    `&hourly=precipitation_probability,precipitation,weather_code&timezone=auto&forecast_days=7`;
   const j=await (await fetchT(u)).json();
-  WEATHER={max:Math.round(j.daily.temperature_2m_max[0]),min:Math.round(j.daily.temperature_2m_min[0]),
-    now:Math.round(j.current.temperature_2m),code:j.current.weather_code,place};
+  const d=j.daily,g=(k,i)=>(d[k]&&d[k][i]!=null)?d[k][i]:0;
+  const days=d.time.map((date,i)=>{const x={date,max:Math.round(g('temperature_2m_max',i)),min:Math.round(g('temperature_2m_min',i)),
+    code:g('weather_code',i),prob:g('precipitation_probability_max',i),sum:g('precipitation_sum',i),gust:g('wind_gusts_10m_max',i)};
+    x.rain=isRainCode(x.code)||x.prob>=60;return x});
+  const h=j.hourly||{},hours=(h.time||[]).map((tm,i)=>({time:tm,prob:(h.precipitation_probability||[])[i]||0,
+    mm:(h.precipitation||[])[i]||0,code:(h.weather_code||[])[i]||0}));
+  WEATHER={max:days[0].max,min:days[0].min,now:Math.round(j.current.temperature_2m),code:j.current.weather_code,place,
+    rain:isRainCode(j.current.weather_code)||days[0].rain,days,hours}; // anche se piove più tardi
 }
 function getPosition(){return new Promise((res,rej)=>{if(!navigator.geolocation)return rej();
   navigator.geolocation.getCurrentPosition(p=>res(p.coords),rej,{timeout:12000,maximumAge:3600000})})}
@@ -556,7 +912,7 @@ async function ipLocation(){
 }
 /* Gradini: 1) posizione dell'iPhone  2) città da internet  3) inserimento manuale */
 let WSTATE='gps',WTOKEN=0,PLACE_AUTO=null;
-function weatherDone(tok){if(tok!==WTOKEN)return;WSTATE='ok';renderWeather();renderOutfit(false)}
+function weatherDone(tok){if(tok!==WTOKEN)return;WSTATE='ok';DAYCACHE={};renderWeather();renderOutfit(false);renderMeteo();updateSub()}
 async function startGPS(){
   const tok=++WTOKEN;WSTATE='gps';renderWeather();
   const manual=LS.get('citta',null);
@@ -573,8 +929,23 @@ async function startIP(){
 }
 function startManual(){++WTOKEN;WSTATE='manual';renderWeather();
   setTimeout(()=>{const i=document.getElementById('cityIn');if(i)i.focus()},50)}
-function needFelpa(){if(WEATHER)return WEATHER.max<=FELPA_SOTTO;const m=new Date().getMonth();return m>=9||m<=3}
-function wantShort(){if(WEATHER)return WEATHER.max>=CORTI_DA;const m=new Date().getMonth();return m>=5&&m<=8}
+
+// cosa serve oggi, in base ai regimi di temperatura (senza meteo: in base al mese)
+const month=()=>new Date().getMonth();
+function needFelpa(){return W()?W().max<=R().felpa:(month()>=9||month()<=3)}
+function wantShort(){return W()?W().max>=R().corti:(month()>=5&&month()<=8)}
+function jacketWant(){ // null = niente giacca
+  if(W()){const r=R(),mx=W().max;if(mx<=r.pesante)return 'pesante';if(mx<=r.giacca)return 'leggero';return null}
+  const m=month();if(m===11||m<=1)return 'pesante';if(m===10||m===2)return 'leggero';return null;
+}
+function teeWant(withFelpa){ // null = va bene qualsiasi manica
+  if(needFelpa())return withFelpa?null:'lungo';
+  if(W())return W().max>=R().manica?'corto':'lungo';
+  return (month()>=4&&month()<=8)?'corto':'lungo';
+}
+const isRain=()=>!!(W()&&W().rain);
+function prefer(list,v){if(!v)return list;const ok=list.filter(i=>lenOf(i)===v);return ok.length?ok:list}
+
 function renderWeather(){
   const w=document.getElementById('weather');
   const on=(id,fn)=>{const b=document.getElementById(id);if(b)b.onclick=fn};
@@ -601,27 +972,117 @@ function renderWeather(){
     on('wAuto',()=>{LS.del('citta');startGPS()});return}
   const [ic,k]=WCODE(WEATHER.code);
   const place=WEATHER.place||(PLACE_AUTO==='gps'?t('wYourPos'):t('wNet'));
+  const jw=jacketWant();
+  let layers=needFelpa()?t('felpaYes'):t('felpaNo');
+  if(jw)layers+=` + ${jw==='pesante'?t('jHeavyYes'):t('jLightYes')}`;
+  if(needFelpa())layers+=' 🧥';
   w.innerHTML=`<div class="ic">${ic}</div><div style="flex:1"><b>${WEATHER.now}° · ${t('wc'+k)}</b>
-    <small>${place} · min ${WEATHER.min}° / max ${WEATHER.max}° · ${needFelpa()?t('felpaYes'):t('felpaNo')}</small>
+    <small>${esc(place)} · min ${WEATHER.min}° / max ${WEATHER.max}°</small>
+    <small>${layers}</small>
+    ${isRain()?`<div class="rain">${t('rainTip')}<button class="morebtn" id="wRain">${t('rainMore')} ›</button></div>`:''}
     <button class="linkbtn" id="wChange">${t('wChange')}</button></div>`;
-  on('wChange',startManual);
+  on('wChange',startManual);on('wRain',()=>openRain(0));
+}
+
+/* ================= SEZIONE METEO (prossimi 7 giorni) ================= */
+let OPEN_DAY=null, DAYCACHE={};
+function dayName(i,date){
+  if(i===0)return t('today');if(i===1)return t('tomorrow');
+  const s=new Date(date+'T12:00:00').toLocaleDateString(LOCALE[LANG],{weekday:'long',day:'numeric',month:'long'});
+  return s.charAt(0).toUpperCase()+s.slice(1);
+}
+// outfit consigliato per un giorno: stesse regole di oggi, ma con il meteo di quel giorno
+function outfitForDay(i){
+  if(i===0&&CURRENT)return CURRENT;
+  if(DAYCACHE[i])return DAYCACHE[i];
+  const d=WEATHER.days[i];
+  WX={max:d.max,min:d.min,rain:d.rain,code:d.code};
+  let p=null;try{p=generate()}finally{WX=null}
+  if(p)p=p.slice().sort((a,b)=>ORDER_SHOW.indexOf(a.cat)-ORDER_SHOW.indexOf(b.cat));
+  DAYCACHE[i]=p;return p;
+}
+function layersText(d){
+  WX={max:d.max,min:d.min,rain:d.rain,code:d.code};
+  try{const jw=jacketWant();let s=needFelpa()?t('felpaYes'):t('felpaNo');
+    if(jw)s+=` + ${jw==='pesante'?t('jHeavyYes'):t('jLightYes')}`;return s}
+  finally{WX=null}
+}
+function renderMeteo(){
+  const box=document.getElementById('meteoBox');if(!box)return;
+  if(!WEATHER||!WEATHER.days){
+    box.innerHTML=`<div class="empty"><div class="big">🌦️</div><p>${t('meteoNoData')}</p>
+      <button class="btn" id="mGo">${t('meteoNoDataBtn')}</button></div>`;
+    document.getElementById('mGo').onclick=()=>{showTab('outfit');if(WSTATE!=='gps'&&WSTATE!=='ip')startManual()};
+    return;
+  }
+  box.innerHTML=`<div class="days">${WEATHER.days.map((d,i)=>{
+    const [ic,k]=WCODE(d.code),open=OPEN_DAY===i;
+    let x='';
+    if(open){
+      const p=outfitForDay(i)||[];
+      x=`<div class="dayx"><div class="lbl" style="margin-top:4px">${t('dayOutfit')}</div>
+        <p class="step" style="margin:0 0 10px">${layersText(d)}</p>
+        ${p.length?`<div class="minis">${p.map(q=>`<div class="mini"><img src="${q.img}" alt="">
+          <div><b>${CAT_ICON[q.cat]} ${pieceLabel(q)}</b><span><span class="dot" style="background:${COLORS[q.color].hex};width:12px;height:12px"></span> ${colName(q.color)}${q.brand?' · '+esc(q.brand):''}</span></div></div>`).join('')}</div>`
+          :`<p class="step">${t('emptyText')}</p>`}
+        ${d.rain?`<div class="rain">${t('rainTip')}<button class="morebtn" data-rain="${i}">${t('rainMore')} ›</button></div>`:''}
+      </div>`;
+    }
+    return `<div class="day${open?' open':''}" data-day="${i}">
+      <div class="drow"><div class="dic">${ic}</div>
+        <div class="dname"><b>${dayName(i,d.date)}</b><small>${t('wc'+k)}${d.prob?` · 💧 ${d.prob}%`:''}</small></div>
+        <div class="dtemp"><span class="tmax">${d.max}°</span><span class="tmin">${d.min}°</span></div>
+        <div class="chev">${open?'⌃':'⌄'}</div></div>${x}</div>`;
+  }).join('')}</div><p class="tip">${t('dayTap')}</p>`;
+  box.querySelectorAll('.drow').forEach(r=>r.onclick=()=>{const i=+r.parentNode.dataset.day;OPEN_DAY=OPEN_DAY===i?null:i;renderMeteo()});
+  box.querySelectorAll('[data-rain]').forEach(b=>b.onclick=e=>{e.stopPropagation();openRain(+b.dataset.rain)});
+}
+// orari della pioggia e avvisi per un giorno
+function openRain(i){
+  const d=WEATHER.days[i];
+  const hs=(WEATHER.hours||[]).filter(h=>h.time.startsWith(d.date));
+  const ranges=[];let cur=null;
+  hs.forEach(h=>{
+    const wet=h.prob>=40||h.mm>=0.1||isRainCode(h.code),hr=+h.time.slice(11,13);
+    if(wet){if(cur&&cur.to===hr){cur.to=hr+1;cur.p=Math.max(cur.p,h.prob);cur.mm+=h.mm}
+      else{cur={from:hr,to:hr+1,p:h.prob,mm:h.mm};ranges.push(cur)}}
+    else cur=null;
+  });
+  const hh=n=>String(n%24).padStart(2,'0')+':00';
+  const al=[];
+  if(d.code>=95||hs.some(h=>h.code>=95))al.push(t('al_storm'));
+  if(d.gust>=60)al.push(t('al_wind',{v:Math.round(d.gust)}));
+  if(d.sum>=30)al.push(t('al_heavy',{v:Math.round(d.sum)}));
+  if((d.code>=71&&d.code<=77)||d.code===85||d.code===86)al.push(t('al_snow'));
+  const s=sheet(`<h2>☔ ${t('rainTitle',{d:dayName(i,d.date)})}</h2>
+    <div class="lbl">${t('rainHours')}</div>
+    ${ranges.length?`<div class="ranges">${ranges.map(r=>`<div class="rng"><b>🕒 ${t('rainFromTo',{a:hh(r.from),b:hh(r.to)})}</b>
+      <span>${t('rainProb',{p:r.p})}${r.mm>=0.1?` · ${r.mm.toFixed(1)} mm`:''}</span></div>`).join('')}</div>`
+      :`<p class="step" style="margin:0 0 12px">${t('rainNone')}</p>`}
+    <div class="lbl" style="margin-top:14px">${t('alertsTitle')}</div>
+    ${al.length?`<div class="ranges">${al.map(a=>`<div class="rng warn"><b>${a}</b></div>`).join('')}</div>`:`<p class="step" style="margin:0 0 12px">${t('alNone')}</p>`}
+    <p class="sub" style="margin-top:12px">${t('alNote')}</p>
+    <div class="links">${LANG==='it'?`<a href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener">Protezione Civile ↗</a>`:''}
+      <a href="https://meteoalarm.org" target="_blank" rel="noopener">MeteoAlarm ↗</a></div>
+    <button class="btn ghost" id="rClose" style="margin-top:16px">${t('close')}</button>`);
+  s.querySelector('#rClose').onclick=()=>s.remove();
 }
 
 /* ================= ABBINAMENTI ================= */
-// lunghezza: pantaloni corti/lunghi, magliette a manica corta/lunga
-// (capi caricati prima di questa versione: pantaloni lunghi, magliette a manica corta)
-function lenOf(i){if(i.len)return i.len;return i.cat==='maglietta'?'corto':'lungo'}
-const hasLen=c=>c==='pantaloni'||c==='maglietta';
-const LIGHT={};PAL_LAB.forEach(([n,l])=>LIGHT[n]=l[0]);
-function pantsOk(list){const want=wantShort()?'corto':'lungo',ok=list.filter(i=>lenOf(i)===want);return ok.length?ok:list}
-function teeWant(withFelpa){ // null = va bene qualsiasi manica
-  if(needFelpa())return withFelpa?null:'lungo'; // freddo senza felpe: manica lunga
-  if(WEATHER)return WEATHER.max>=MANICA_CORTA_DA?'corto':'lungo';
-  const m=new Date().getMonth();return (m>=4&&m<=8)?'corto':'lungo';
-}
-function teeOk(list,withFelpa){const w=teeWant(withFelpa);if(!w)return list;const ok=list.filter(i=>lenOf(i)===w);return ok.length?ok:list}
 const clash=(a,b)=>CLASH.some(([x,y])=>(x===a&&y===b)||(x===b&&y===a));
-function score(pieces){
+function trendScore(cols,tr){
+  let s=0;const acc=cols.filter(c=>tr.accent.includes(c)).length;
+  if(acc===1)s+=2.5;else if(acc>1)s-=1;
+  s-=cols.filter(c=>!tr.base.includes(c)&&!tr.accent.includes(c)).length*0.5;
+  let p=0;for(const[a,b]of tr.pairs)if(cols.includes(a)&&cols.includes(b))p+=1.5;s+=Math.min(3,p);
+  s-=cols.filter(c=>tr.avoid.includes(c)).length*1.5;
+  return s;
+}
+function recentlyUsed(){ // capi usati nei giorni precedenti (non oggi)
+  const td=today();const ids=new Set();
+  LS.get('usati',[]).filter(x=>x.date!==td).slice(-3).forEach(x=>x.ids.forEach(id=>ids.add(id)));return ids;
+}
+function score(pieces,recent){
   const st=LS.get('stile',null)||{};
   const cols=pieces.map(p=>p.color);let s=0;
   const strong=cols.filter(c=>COLORS[c].t==='f').length,semi=cols.filter(c=>COLORS[c].t==='s').length;
@@ -645,59 +1106,67 @@ function score(pieces){
   else if(st.stile==='sportivo'){if(strong>=1)s+=1}
   else if(st.stile==='casual'){if(pants&&pants.color==='blu jeans')s+=1.5}
   else if(st.stile==='street'){if(cols.includes('nero'))s+=1;if(top&&pants&&Math.abs(LIGHT[top.color]-LIGHT[pants.color])>=30)s+=1}
-  // colori preferiti: escono un po' più spesso, senza escludere gli altri
-  const fav=st.preferiti||[];
-  if(fav.length)s+=Math.min(3,cols.filter(c=>fav.includes(c)).length*1.5);
+  else if(st.stile==='moda'){s+=trendScore(cols,TRENDS.moda)}
+  else if(st.stile==='genz'){s+=trendScore(cols,TRENDS.genz);if(pants&&pants.color==='blu jeans')s+=1}
+  // colori e marchi preferiti: escono un po' più spesso, senza escludere gli altri
+  const fav=st.preferiti||[];if(fav.length)s+=Math.min(3,cols.filter(c=>fav.includes(c)).length*1.5);
+  const favB=(st.marchi||[]).map(b=>b.toLowerCase());
+  if(favB.length)s+=Math.min(2,pieces.filter(p=>p.brand&&favB.includes(p.brand.toLowerCase())).length*1);
+  // varietà: evita i capi usati nei giorni prima
+  if(recent&&LS.get('varieta','nuovi')==='nuovi')s-=pieces.filter(p=>recent.has(p.id)).length*5;
   return s+Math.random()*1.5;
 }
 const sig=ids=>ids.slice().sort().join('|');
 function today(){const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
 function scartati(){const s=LS.get('scartati',null);return s&&s.date===today()?s.ids:[]}
 function addScartato(id){const ids=scartati();if(!ids.includes(id))ids.push(id);LS.set('scartati',{date:today(),ids})}
+function saveToday(ids){
+  LS.set('oggi',{date:today(),ids});
+  const u=LS.get('usati',[]).filter(x=>x.date!==today());u.push({date:today(),ids});LS.set('usati',u.slice(-7));
+}
 // nessuna categoria è obbligatoria: l'outfit si fa con quello che c'è
 function slotsNow(){
-  const sc=scartati();
+  const sc=WX?[]:scartati(); // per gli altri giorni non contano i capi scartati oggi
   const by=c=>{const all=ITEMS.filter(i=>i.cat===c),ok=all.filter(i=>!sc.includes(i.id));return ok.length?ok:all};
-  const F=by('felpa'),T0=by('maglietta');
-  const useF=F.length>0&&(needFelpa()||T0.length===0);
-  return {T:teeOk(T0,useF),F:useF?F:[],P:pantsOk(by('pantaloni')),S:by('scarpe'),useF};
+  const Fall=by('felpa'),T0=by('maglietta'),Gall=by('giacca');
+  const useF=Fall.length>0&&(needFelpa()||T0.length===0);
+  const jw=jacketWant();
+  return {
+    T:prefer(T0,teeWant(useF)), F:useF?Fall:[], G:jw?prefer(Gall,jw):[],
+    P:prefer(by('pantaloni'),wantShort()?'corto':'lungo'),
+    S:prefer(by('scarpe'),isRain()?'pesante':null), C:by('calze'), useF, jw
+  };
 }
 function generate(){
   if(!ITEMS.length)return null;
-  const {T,F,P,S}=slotsNow();
-  let combos=[[]];
-  for(const sl of [T,F,P,S]){
-    if(!sl.length)continue;
-    const nx=[];for(const c of combos){for(const x of sl)nx.push(c.concat([x]));if(nx.length>20000)break}
-    combos=nx;
-  }
-  combos=combos.filter(c=>c.length);if(!combos.length)return null;
-  if(combos.length>4000)combos=combos.sort(()=>Math.random()-.5).slice(0,4000);
-  const recent=LS.get('storico',[]).slice(-7);
-  const ranked=combos.map(c=>({c,s:score(c),r:recent.includes(sig(c.map(x=>x.id)))}));
+  const {T,F,G,P,S,C}=slotsNow();
+  const slots=[T,F,G,P,C,S].filter(x=>x.length);if(!slots.length)return null;
+  const total=slots.reduce((a,x)=>a*x.length,1);
+  let combos=[];
+  if(total<=4000){combos=[[]];for(const sl of slots){const nx=[];for(const c of combos)for(const x of sl)nx.push(c.concat([x]));combos=nx}}
+  else for(let k=0;k<4000;k++)combos.push(slots.map(sl=>sl[Math.floor(Math.random()*sl.length)]));
+  const recentOut=LS.get('storico',[]).slice(-7),recent=recentlyUsed();
+  const ranked=combos.map(c=>({c,s:score(c,recent),r:recentOut.includes(sig(c.map(x=>x.id)))}));
   let pool=ranked.filter(x=>!x.r);if(!pool.length)pool=ranked;
   pool.sort((a,b)=>b.s-a.s);
-  const best=pool.slice(0,Math.max(1,Math.ceil(pool.length*0.2)));
+  const best=pool.slice(0,Math.max(1,Math.ceil(pool.length*0.15)));
   return best[Math.floor(Math.random()*best.length)].c;
 }
 function stillValid(pieces){
   if(pieces.some(p=>!p))return false;
-  const {T,F,P,S,useF}=slotsNow();
-  const has=c=>pieces.some(p=>p.cat===c);
+  const {T,F,G,P,S,C,useF,jw}=slotsNow();
+  const has=c=>pieces.some(p=>p.cat===c),get=c=>pieces.find(p=>p.cat===c);
   if(has('felpa')!==useF)return false;
+  if(has('giacca')!==(G.length>0))return false;
   // se nel frattempo hai aggiunto una categoria che mancava, rifaccio l'outfit
-  if(T.length&&!has('maglietta'))return false;
-  if(P.length&&!has('pantaloni'))return false;
-  if(S.length&&!has('scarpe'))return false;
-  const tee=pieces.find(p=>p.cat==='maglietta');if(tee&&!T.some(i=>lenOf(i)===lenOf(tee)))return false;
-  const pa=pieces.find(p=>p.cat==='pantaloni');if(pa&&!P.some(i=>lenOf(i)===lenOf(pa)))return false;
+  if((T.length&&!has('maglietta'))||(P.length&&!has('pantaloni'))||(S.length&&!has('scarpe'))||(C.length&&!has('calze')))return false;
+  for(const[c,list]of[['maglietta',T],['pantaloni',P],['giacca',G],['scarpe',S]]){
+    const p=get(c);if(p&&!list.some(i=>lenOf(i)===lenOf(p)))return false;
+  }
   return true;
 }
-function pieceLabel(p){
-  if(p.cat==='pantaloni')return lenOf(p)==='corto'?t('pantsShort'):t('pantsLong');
-  if(p.cat==='maglietta')return lenOf(p)==='corto'?t('teeShort'):t('teeLong');
-  return catName(p.cat);
-}
+function pieceLabel(p){return hasVar(p.cat)&&TXT.it['l_'+p.cat+'_'+lenOf(p)]?t('l_'+p.cat+'_'+lenOf(p)):catName(p.cat)}
+const ORDER_SHOW=['giacca','felpa','maglietta','pantaloni','calze','scarpe'];
 function renderOutfit(force){
   const box=document.getElementById('outfitBox');
   if(!ITEMS.length){
@@ -712,18 +1181,20 @@ function renderOutfit(force){
   }
   if(!pieces){
     pieces=generate();if(!pieces){box.innerHTML='';return}
-    const ids=pieces.map(p=>p.id);
-    LS.set('oggi',{date:today(),ids});
+    const ids=pieces.map(p=>p.id);saveToday(ids);
     const st=LS.get('storico',[]);st.push(sig(ids));LS.set('storico',st.slice(-20));
   }
+  pieces=pieces.slice().sort((a,b)=>ORDER_SHOW.indexOf(a.cat)-ORDER_SHOW.indexOf(b.cat));
   CURRENT=pieces;
   const hasF=pieces.some(p=>p.cat==='felpa'),hasT=pieces.some(p=>p.cat==='maglietta');
   box.innerHTML=`<div class="outfit">${pieces.map((p,idx)=>`
       <div class="piece"><img src="${p.img}" alt="">
         <div><div class="lab">${CAT_ICON[p.cat]} ${pieceLabel(p)}</div>
         <div class="nm"><span class="dot" style="background:${COLORS[p.color].hex}"></span>${colName(p.color)}</div>
+        ${p.brand?`<div class="brandtag">${esc(p.brand)}</div>`:''}
         ${hasF&&p.cat==='maglietta'?`<div class="layer">${t('underHoodie')}</div>`:''}
         ${hasT&&p.cat==='felpa'?`<div class="layer">${t('overTee')}</div>`:''}
+        ${p.cat==='giacca'?`<div class="layer">${t('jacketNote')}</div>`:''}
         <button class="change" data-change="${idx}">${t('change')}</button>
         </div></div>`).join('')}
     </div>
@@ -737,18 +1208,18 @@ function renderOutfit(force){
 // sostituisce un solo capo (es. è a lavare) e tiene il resto dell'outfit
 function changePiece(idx){
   const cur=CURRENT[idx],sc=scartati().concat(cur.id);
+  const sl=slotsNow(),map={maglietta:sl.T,felpa:sl.F,giacca:sl.G,pantaloni:sl.P,scarpe:sl.S,calze:sl.C};
   let cands=ITEMS.filter(i=>i.cat===cur.cat&&!sc.includes(i.id));
-  if(cur.cat==='pantaloni')cands=pantsOk(cands);
-  if(cur.cat==='maglietta')cands=teeOk(cands,CURRENT.some(p=>p.cat==='felpa'));
+  const pref=(map[cur.cat]||[]).filter(i=>i.id!==cur.id&&!sc.includes(i.id));
+  if(pref.length)cands=pref;
   if(!cands.length)return toast(t('noOther',{c:catName(cur.cat)}));
   addScartato(cur.id);
-  let best=null,bs=-1e9;
-  for(const c of cands){const tt=CURRENT.slice();tt[idx]=c;const s=score(tt);if(s>bs){bs=s;best=tt}}
-  LS.set('oggi',{date:today(),ids:best.map(p=>p.id)});renderOutfit(false);
+  const recent=recentlyUsed();let best=null,bs=-1e9;
+  for(const c of cands){const tt=CURRENT.slice();tt[idx]=c;const s=score(tt,recent);if(s>bs){bs=s;best=tt}}
+  saveToday(best.map(p=>p.id));renderOutfit(false);
 }
 
 /* ================= ARMADIO ================= */
-const lenBtnText=(cat,len)=>cat==='maglietta'?(len==='corto'?t('teeShortBtn'):t('teeLongBtn')):(len==='corto'?t('shortBtn'):t('longBtn'));
 function renderWardrobe(){
   const w=document.getElementById('wardrobe');
   w.innerHTML=CAT_ORDER.map(c=>{
@@ -756,23 +1227,20 @@ function renderWardrobe(){
     return `<div class="cat"><h3>${CAT_ICON[c]} ${catName(c)} <span>${list.length}</span></h3>
       ${list.length?`<div class="grid">${list.map(i=>`
         <div class="item"><img src="${i.img}" alt="">
-          <div class="bar"><div class="btns">
-            <button class="colorbtn" data-color="${i.id}"><span class="dot" style="background:${COLORS[i.color].hex}"></span>${colName(i.color)}</button>
-            ${hasLen(i.cat)?`<button class="colorbtn" data-len="${i.id}">${lenBtnText(i.cat,lenOf(i))}</button>`:''}</div>
-            <button class="btn danger" data-del="${i.id}">${t('remove')}</button>
+          <div class="bar">
+            <div class="meta"><span class="dot" style="background:${COLORS[i.color].hex}"></span>${colName(i.color)}</div>
+            ${hasVar(i.cat)?`<div class="meta2">${pieceLabel(i)}</div>`:''}
+            ${i.brand?`<div class="brandtag">${esc(i.brand)}</div>`:''}
+            <div class="btns2"><button class="btn editbtn" data-edit="${i.id}">${t('edit')}</button>
+            <button class="btn danger" data-del="${i.id}">${t('remove')}</button></div>
           </div></div>`).join('')}</div>`
       :`<div class="nocat">${t('noneInCat')}</div>`}</div>`;
   }).join('');
   w.querySelectorAll('[data-del]').forEach(b=>b.onclick=async()=>{
     if(!await ask(t('rmTitle'),t('rmText'),t('remove')))return;
-    await DB.del(b.dataset.del);ITEMS=ITEMS.filter(i=>i.id!==b.dataset.del);refresh();
+    await DB.del(b.dataset.del);addTomb(b.dataset.del);ITEMS=ITEMS.filter(i=>i.id!==b.dataset.del);refresh();markDirty();
   });
-  w.querySelectorAll('[data-len]').forEach(b=>b.onclick=async()=>{
-    const it=ITEMS.find(i=>i.id===b.dataset.len);it.len=lenOf(it)==='corto'?'lungo':'corto';await DB.put(it);refresh();
-  });
-  w.querySelectorAll('[data-color]').forEach(b=>b.onclick=()=>{
-    const it=ITEMS.find(i=>i.id===b.dataset.color);pickColor(it.color,async col=>{it.color=col;await DB.put(it);refresh()});
-  });
+  w.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>openEdit(ITEMS.find(i=>i.id===b.dataset.edit)));
 }
 
 /* ================= FINESTRE (tutto disegnato nel sito, niente finestre del browser) ================= */
@@ -793,53 +1261,76 @@ function ask(title,text,okLabel){return new Promise(res=>{
 })}
 function paletteHTML(sel,attr='c'){return `<div class="palette">${Object.entries(COLORS).map(([n,c])=>
   `<button data-${attr}="${n}" class="${(Array.isArray(sel)?sel.includes(n):n===sel)?'on':''}"><span class="dot" style="background:${c.hex}"></span>${colName(n)}</button>`).join('')}</div>`}
-function pickColor(current,cb){
-  const s=sheet(`<h2>${t('whatColor')}</h2>${paletteHTML(current)}<button class="btn ghost" id="cl">${t('cancel')}</button>`);
-  s.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{s.remove();cb(b.dataset.c)});
-  s.querySelector('#cl').onclick=()=>s.remove();
+function catButtons(sel){return `<div class="cats">${CAT_ORDER.map(c=>`<button data-cat="${c}" class="${sel===c?'on':''}">${CAT_ICON[c]} ${catName(c)}</button>`).join('')}</div>`}
+
+/* Scheda del capo, usata da Aggiungi, Caricamento multiplo e Modifica.
+   st = {cat, len, color, brand} */
+function formHTML(st){
+  let h=`<div class="lbl">${t('category')}</div>${catButtons(st.cat)}`;
+  if(hasVar(st.cat)){
+    h+=`<div class="lbl">${t('v_'+st.cat+'_q')}</div><div class="cats">${VARIANTS[st.cat].vals.map(v=>
+      `<button data-len="${v}" class="${st.len===v?'on':''}">${t('v_'+st.cat+'_'+v)}</button>`).join('')}</div>`;
+  }
+  if(st.color)h+=`<div class="lbl">${t('colorDetected')}</div><div id="pal">${paletteHTML(st.color)}</div>`;
+  const bl=brands();
+  h+=`<div class="lbl">${t('brand')}</div>
+    <input class="txt" id="brandIn" value="${esc(st.brand||'')}" placeholder="${t('brandPh')}" autocomplete="off" autocapitalize="words" enterkeyhint="done">
+    ${bl.length?`<p class="step" style="margin:8px 0 6px">${t('brandPick')}</p><div class="chips">${bl.map(b=>
+      `<button data-brand="${esc(b)}" class="${(st.brand||'').toLowerCase()===b.toLowerCase()?'on':''}">${esc(b)}</button>`).join('')}</div>`:''}`;
+  return h;
 }
-function catButtons(sel){return CAT_ORDER.map(c=>`<button data-cat="${c}" class="${sel===c?'on':''}">${CAT_ICON[c]} ${catName(c)}</button>`).join('')}
-// scelta corto/lungo: per i pantaloni e (manica) per le magliette
-function lenHTML(cat,len){
-  if(!hasLen(cat))return '';
-  return `<div class="lbl">${cat==='maglietta'?t('sleeve'):t('shortLong')}</div>
-    <div class="cats"><button data-len="corto" class="${len==='corto'?'on':''}">${lenBtnText(cat,'corto')}</button>
-    <button data-len="lungo" class="${len==='lungo'?'on':''}">${lenBtnText(cat,'lungo')}</button></div>`;
+function bindForm(el,st,redraw){
+  el.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{if(st.cat!==b.dataset.cat)st.len=null;st.cat=b.dataset.cat;redraw()});
+  el.querySelectorAll('[data-len]').forEach(b=>b.onclick=()=>{st.len=b.dataset.len;redraw()});
+  el.querySelectorAll('#pal [data-c]').forEach(b=>b.onclick=()=>{st.color=b.dataset.c;redraw()});
+  const bi=el.querySelector('#brandIn');if(bi)bi.oninput=()=>{st.brand=bi.value};
+  el.querySelectorAll('[data-brand]').forEach(b=>b.onclick=()=>{
+    st.brand=(st.brand||'').toLowerCase()===b.dataset.brand.toLowerCase()?'':b.dataset.brand;redraw()});
 }
-const lenMissingMsg=cat=>cat==='maglietta'?t('needSleeve'):t('needLen');
+function formError(st){
+  if(!st.cat)return t('needCat');
+  if(hasVar(st.cat)&&!st.len)return t('v_'+st.cat+'_need');
+  return null;
+}
+function applyForm(it,st){it.updated=Date.now();it.cat=st.cat;it.color=st.color;if(hasVar(st.cat))it.len=st.len;else delete it.len;
+  const b=normBrand(st.brand);if(b)it.brand=b;else delete it.brand;return it}
 
 function openAdd(){
-  let img=null,cat=null,color=null,len=null;
+  let img=null;const st={cat:null,len:null,color:null,brand:''};
   const s=sheet(`<h2>${t('addTitle')}</h2>
     <div class="pick" id="pick"><div class="big">📷</div><b>${t('pickPhoto')}</b><small>${t('pickHint')}</small></div>
     <img class="preview hidden" id="prev" alt="">
-    <div class="lbl">${t('category')}</div><div class="cats" id="catBox">${catButtons(null)}</div>
-    <div id="lenBox"></div>
-    <div id="colBox" class="hidden"><div class="lbl">${t('colorDetected')}</div><div id="pal"></div></div>
-    <div class="row"><button class="btn ghost" id="cancel">${t('cancel')}</button><button class="btn" id="save">${t('save')}</button></div>`);
+    <div id="form"></div>
+    <div class="row" style="margin-top:16px"><button class="btn ghost" id="cancel">${t('cancel')}</button><button class="btn" id="save">${t('save')}</button></div>`);
+  const form=s.querySelector('#form');
+  const redraw=()=>{form.innerHTML=formHTML(st);bindForm(form,st,redraw)};redraw();
   const fi=document.getElementById('fileInput');const choose=()=>{fi.value='';fi.click()};
   s.querySelector('#pick').onclick=choose;s.querySelector('#prev').onclick=choose;
   fi.onchange=async()=>{const f=fi.files[0];if(!f)return;
-    try{const im=await loadImage(f);img=compress(im);color=detectColor(im);
-      const p=s.querySelector('#prev');p.src=img;p.classList.remove('hidden');s.querySelector('#pick').classList.add('hidden');drawPal();
+    try{const im=await loadImage(f);img=compress(im);st.color=detectColor(im);
+      const p=s.querySelector('#prev');p.src=img;p.classList.remove('hidden');s.querySelector('#pick').classList.add('hidden');redraw();
     }catch(e){toast(t('badPhoto'))}};
-  function drawPal(){s.querySelector('#colBox').classList.remove('hidden');s.querySelector('#pal').innerHTML=paletteHTML(color);
-    s.querySelectorAll('#pal [data-c]').forEach(b=>b.onclick=()=>{color=b.dataset.c;drawPal()})}
-  function drawLen(){
-    s.querySelector('#lenBox').innerHTML=lenHTML(cat,len);
-    s.querySelectorAll('#lenBox [data-len]').forEach(b=>b.onclick=()=>{len=b.dataset.len;drawLen()});
-  }
-  s.querySelectorAll('#catBox [data-cat]').forEach(b=>b.onclick=()=>{
-    if(cat!==b.dataset.cat)len=null;cat=b.dataset.cat;
-    s.querySelectorAll('#catBox [data-cat]').forEach(x=>x.classList.toggle('on',x===b));drawLen();
-  });
   s.querySelector('#cancel').onclick=()=>s.remove();
   s.querySelector('#save').onclick=async()=>{
-    if(!img)return toast(t('needPhoto'));if(!cat)return toast(t('needCat'));
-    if(hasLen(cat)&&!len)return toast(lenMissingMsg(cat));
-    const it={id:newId(),cat,color,img,added:Date.now()};if(hasLen(cat))it.len=len;
+    if(!img)return toast(t('needPhoto'));if(formError(st))return toast(formError(st));kickSync();const err=formError(st);if(err)return toast(err);
+    const it=applyForm({id:newId(),img,added:Date.now()},st);
     try{await DB.put(it)}catch(e){return toast(t('memFull'))}
-    ITEMS.push(it);s.remove();refresh();
+    ITEMS.push(it);s.remove();refresh();markDirty();
+  };
+}
+function openEdit(item){
+  const st={cat:item.cat,len:hasVar(item.cat)?lenOf(item):null,color:item.color,brand:item.brand||''};
+  const s=sheet(`<h2>${t('editTitle')}</h2><img class="preview" src="${item.img}" alt="">
+    <div id="form"></div>
+    <div class="row" style="margin-top:16px"><button class="btn ghost" id="cancel">${t('cancel')}</button><button class="btn" id="save">${t('save')}</button></div>`);
+  const form=s.querySelector('#form');
+  const redraw=()=>{form.innerHTML=formHTML(st);bindForm(form,st,redraw)};redraw();
+  s.querySelector('#cancel').onclick=()=>s.remove();
+  s.querySelector('#save').onclick=async()=>{
+    const err=formError(st);if(err)return toast(err);kickSync();
+    applyForm(item,st);
+    try{await DB.put(item)}catch(e){return toast(t('memFull'))}
+    s.remove();refresh();toast(t('editSaved'));markDirty();
   };
 }
 
@@ -854,7 +1345,7 @@ function openBulk(){
   fm.onchange=()=>{const files=[...fm.files];if(!files.length)return;s.remove();bulkWizard(files)};
 }
 function bulkWizard(files){
-  let i=0,saved=0,cur=null,ended=false;
+  let i=0,saved=0,img=null,st=null,ended=false;
   const s=sheet('<div id="wz"></div>',()=>finish());const wz=s.querySelector('#wz');
   function finish(){if(ended)return;ended=true;if(s.isConnected)s.remove();refresh();
     if(saved)toast(saved===1?t('done1'):t('doneN',{n:saved}));
@@ -864,31 +1355,27 @@ function bulkWizard(files){
   async function load(){
     if(i>=files.length)return finish();
     wz.innerHTML=`<h2>${t('itemOf',{i:i+1,n:files.length})}</h2><p class="step">${t('reading')}</p>`;
-    try{const im=await loadImage(files[i]);cur={img:compress(im),color:detectColor(im),cat:null,len:null};draw()}
+    try{const im=await loadImage(files[i]);img=compress(im);st={cat:null,len:null,color:detectColor(im),brand:''};draw()}
     catch(e){toast(t('unreadable'));i++;load()}
   }
   function draw(){
     const last=i===files.length-1;
     wz.innerHTML=`<h2>${t('itemOf',{i:i+1,n:files.length})}</h2>
       <div class="progress"><div style="width:${(i/files.length)*100}%"></div></div>
-      <img class="preview" src="${cur.img}" alt="">
-      <div class="lbl">${t('whatItem')}</div><div class="cats">${catButtons(cur.cat)}</div>
-      ${lenHTML(cur.cat,cur.len)}
-      <div class="lbl">${t('colorDetected')}</div><div id="pal">${paletteHTML(cur.color)}</div>
-      <div class="row"><button class="btn ghost" id="skip">${t('skip')}</button>
+      <img class="preview" src="${img}" alt="">
+      <div id="form"></div>
+      <div class="row" style="margin-top:16px"><button class="btn ghost" id="skip">${t('skip')}</button>
         <button class="btn" id="next">${last?t('finish'):t('next')}</button></div>
       <button class="btn ghost" id="stop" style="margin-top:10px;font-size:15px;padding:12px">${t('stop')}</button>`;
-    wz.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{if(cur.cat!==b.dataset.cat)cur.len=null;cur.cat=b.dataset.cat;draw()});
-    wz.querySelectorAll('[data-len]').forEach(b=>b.onclick=()=>{cur.len=b.dataset.len;draw()});
-    wz.querySelectorAll('#pal [data-c]').forEach(b=>b.onclick=()=>{cur.color=b.dataset.c;draw()});
+    const form=wz.querySelector('#form');
+    const redraw=()=>{form.innerHTML=formHTML(st);bindForm(form,st,redraw)};redraw();
     wz.querySelector('#skip').onclick=()=>{i++;load()};
     wz.querySelector('#stop').onclick=()=>finish();
     wz.querySelector('#next').onclick=async()=>{
-      if(!cur.cat)return toast(t('needCatBulk'));
-      if(hasLen(cur.cat)&&!cur.len)return toast(lenMissingMsg(cur.cat));
-      const it={id:newId(),cat:cur.cat,color:cur.color,img:cur.img,added:Date.now()};if(hasLen(it.cat))it.len=cur.len;
+      const err=formError(st);if(err)return toast(err);kickSync();
+      const it=applyForm({id:newId(),img,added:Date.now()},st);
       try{await DB.put(it)}catch(e){toast(t('memFullBulk'));return finish()}
-      ITEMS.push(it);saved++;i++;load();
+      ITEMS.push(it);saved++;markDirty();i++;s.querySelector('.sheet').scrollTop=0;load();
     };
   }
   load();
@@ -898,20 +1385,25 @@ function addClick(){ITEMS.length?openAdd():openBulk()}
 /* ================= PERSONALIZZA STILE ================= */
 function openStyle(isNew){
   const prev=LS.get('stile',null)||{};
-  const ans={stile:prev.stile||null,colore:prev.colore||null,abbina:prev.abbina||null,preferiti:(prev.preferiti||[]).slice()};
+  const ans={stile:prev.stile||null,colore:prev.colore||null,abbina:prev.abbina||null,
+    preferiti:(prev.preferiti||[]).slice(),marchi:(prev.marchi||[]).slice()};
   const Q=[
-    {k:'stile',q:'sq1',opts:[['sportivo','🏃','so_sport'],['casual','👟','so_casual'],['elegante','👔','so_eleg'],['street','🧢','so_street']]},
+    {k:'stile',q:'sq1',opts:[['sportivo','🏃','so_sport'],['casual','👟','so_casual'],['elegante','👔','so_eleg'],
+      ['street','🧢','so_street'],['moda','🔥','so_moda'],['genz','✌️','so_genz','so_genz_d']]},
     {k:'colore',q:'sq2',opts:[['neutri','⚫','co_neutri'],['tocco','🎯','co_tocco'],['vivaci','🌈','co_vivaci']]},
     {k:'abbina',q:'sq3',opts:[['contrasto','🌗','ab_contr'],['tono','🎨','ab_tono'],['libero','🤷','ab_libero']]},
-    {k:'preferiti',q:'sq4',multi:true}
+    {k:'preferiti',q:'sq4',multi:'colors'}
   ];
+  const bl=brands();if(bl.length)Q.push({k:'marchi',q:'sq5',multi:'brands'}); // solo se nell'armadio ci sono marchi
   let i=0;
   const s=sheet('<div id="sq"></div>');const box=s.querySelector('#sq');
   function draw(){
-    const q=Q[i],last=i===Q.length-1;
-    const body=q.multi
-      ?`<p class="step" style="margin:0 0 12px">${t('sq4hint')}</p>${paletteHTML(ans.preferiti,'fav')}`
-      :`<div class="langs">${q.opts.map(([v,ic,lk])=>`<button data-v="${v}" class="${ans[q.k]===v?'on':''}"><span class="fl">${ic}</span>${t(lk)}</button>`).join('')}</div>`;
+    const q=Q[i],last=i===Q.length-1;let body;
+    if(q.multi==='colors')body=`<p class="step" style="margin:0 0 12px">${t('sq4hint')}</p>${paletteHTML(ans.preferiti,'fav')}`;
+    else if(q.multi==='brands')body=`<p class="step" style="margin:0 0 12px">${t('sq5hint')}</p><div class="chips big">${bl.map(b=>
+      `<button data-fb="${esc(b)}" class="${ans.marchi.some(x=>x.toLowerCase()===b.toLowerCase())?'on':''}">${esc(b)}</button>`).join('')}</div>`;
+    else body=`<div class="langs">${q.opts.map(([v,ic,lk,dk])=>`<button data-v="${v}" class="${ans[q.k]===v?'on':''}"><span class="fl">${ic}</span>
+      <span>${t(lk)}${dk?`<small class="desc">${t(dk)}</small>`:''}</span></button>`).join('')}</div>`;
     box.innerHTML=`<h2>${t('styleTitle')}</h2>
       ${i===0?`<p style="color:var(--muted);margin:-6px 0 14px">${t('styleIntro')}</p>`:''}
       <div class="progress"><div style="width:${(i/Q.length)*100}%"></div></div>
@@ -924,16 +1416,270 @@ function openStyle(isNew){
     box.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{ans[q.k]=b.dataset.v;draw()});
     box.querySelectorAll('[data-fav]').forEach(b=>b.onclick=()=>{
       const c=b.dataset.fav,k=ans.preferiti.indexOf(c);if(k>=0)ans.preferiti.splice(k,1);else ans.preferiti.push(c);draw()});
+    box.querySelectorAll('[data-fb]').forEach(b=>b.onclick=()=>{
+      const c=b.dataset.fb,k=ans.marchi.findIndex(x=>x.toLowerCase()===c.toLowerCase());if(k>=0)ans.marchi.splice(k,1);else ans.marchi.push(c);draw()});
     const back=box.querySelector('#sqBack');if(back)back.onclick=()=>{i--;draw()};
     const skip=box.querySelector('#sqSkip');if(skip)skip.onclick=()=>s.remove();
     box.querySelector('#sqNext').onclick=()=>{
       if(!q.multi&&!ans[q.k])return toast(t('pickOne'));
-      if(!last){i++;draw();return}
-      LS.set('stile',ans);s.remove();renderOutfit(true);showTab('outfit');toast(t('styleSaved'));
+      if(!last){i++;draw();s.querySelector('.sheet').scrollTop=0;return}
+      kickSync();setSetting('stile',ans);s.remove();renderOutfit(true);showTab('outfit');toast(t('styleSaved'));
     };
-    s.querySelector('.sheet').scrollTop=0;
   }
   draw();
+}
+
+/* ================= IMPOSTAZIONI ================= */
+function openSettings(){
+  const s=sheet(`<h2>⚙︎ ${t('settings')}</h2><div class="langs">
+    <button id="sLang">${t('setLang')}</button><button id="sTemp">${t('setTemp')}</button><button id="sVar">${t('setVar')}</button></div>`);
+  s.querySelector('#sLang').onclick=()=>{s.remove();openLang()};
+  s.querySelector('#sTemp').onclick=()=>{s.remove();openTemp()};
+  s.querySelector('#sVar').onclick=()=>{s.remove();openVariety()};
+}
+function openLang(){
+  const s=sheet(`<h2>🌍 ${t('language')}</h2><div class="langs">${Object.entries(LANGS).map(([k,[f,n]])=>
+    `<button data-l="${k}" class="${k===LANG?'on':''}"><span class="fl">${f}</span>${n}</button>`).join('')}</div>`);
+  s.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+}
+function openTemp(){
+  const r=R();
+  const has=c=>ITEMS.some(i=>i.cat===c);
+  // mostra solo le regole dei capi che hai nell'armadio
+  const rows=[['manica','tr_manica','tr_manica_d',has('maglietta')],['corti','tr_corti','tr_corti_d',has('pantaloni')],
+    ['felpa','tr_felpa','tr_felpa_d',has('felpa')],['giacca','tr_giacca','tr_giacca_d',has('giacca')],['pesante','tr_pesante','tr_pesante_d',has('giacca')]]
+    .filter(x=>x[3]);
+  const s=sheet('<div id="tp"></div>');const box=s.querySelector('#tp');
+  function draw(){
+    box.innerHTML=`<h2>🌡️ ${t('tempTitle')}</h2><div class="explain">${t('tempExplain')}</div>
+      ${rows.length?rows.map(([k,lk,dk])=>`<div class="trow"><div class="ttxt"><b>${t(lk)}</b><span>${t(dk,{n:r[k]})}</span></div>
+        <div class="stepper"><button data-k="${k}" data-d="-1" aria-label="meno">−</button><output>${r[k]}°</output><button data-k="${k}" data-d="1" aria-label="più">+</button></div></div>`).join('')
+        :`<p class="step">${t('tempNone')}</p>`}
+      <div class="row" style="margin-top:16px"><button class="btn ghost" id="tReset">${t('reset')}</button><button class="btn" id="tSave">${t('save')}</button></div>`;
+    box.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{
+      const k=b.dataset.k;r[k]=Math.max(-10,Math.min(40,r[k]+(+b.dataset.d)));
+      // la giacca pesante deve restare sotto quella leggera
+      if(k==='pesante'&&r.pesante>=r.giacca)r.giacca=r.pesante+1;
+      if(k==='giacca'&&r.giacca<=r.pesante)r.pesante=r.giacca-1;
+      draw();
+    });
+    box.querySelector('#tReset').onclick=()=>{kickSync();Object.assign(r,REG_DEF);setSetting('regimi',null);draw();toast(t('tempReset'));afterRules()};
+    box.querySelector('#tSave').onclick=()=>{kickSync();setSetting('regimi',r);s.remove();toast(t('tempSaved'));afterRules()};
+  }
+  draw();
+}
+function afterRules(){if(WSTATE==='ok')renderWeather();renderOutfit(false)}
+function openVariety(){
+  const cur=LS.get('varieta','nuovi');
+  const s=sheet(`<h2>🔄 ${t('varTitle')}</h2><p style="color:var(--muted);margin:-4px 0 14px">${t('varText')}</p><div class="langs">
+    <button data-var="nuovi" class="${cur==='nuovi'?'on':''}"><span class="fl">✨</span><span>${t('var_new')}<small class="desc">${t('var_new_d')}</small></span></button>
+    <button data-var="ripeti" class="${cur==='ripeti'?'on':''}"><span class="fl">🔁</span><span>${t('var_rep')}<small class="desc">${t('var_rep_d')}</small></span></button></div>`);
+  s.querySelectorAll('[data-var]').forEach(b=>b.onclick=()=>{kickSync();setSetting('varieta',b.dataset.var);s.remove();toast(t('varSaved'))});
+}
+
+/* ================= ACCOUNT GOOGLE =================
+   Facoltativo. I dati si salvano nel Google Drive dell'utente, nella cartella nascosta
+   riservata a OutfitDay (appDataFolder): li vede solo lui, nemmeno il creatore del sito. */
+const CLIENT_ID='733233625759-qjpr2p2thfveq5i6hc05vau2im944d82.apps.googleusercontent.com';
+const SCOPES='https://www.googleapis.com/auth/drive.appdata openid email profile';
+const SYNC_KEYS=['stile','regimi','varieta'];
+const DRIVE_NAME='outfitday.json';
+let TOKEN=null,TOKEN_EXP=0,tokenClient=null,pendingToken=null,syncTimer=null,SYNCING=false;
+const ACC=()=>LS.get('account',null);
+const hasToken=()=>!!TOKEN&&Date.now()<TOKEN_EXP;
+function initGis(){
+  if(tokenClient)return true;
+  if(!(window.google&&google.accounts&&google.accounts.oauth2))return false;
+  tokenClient=google.accounts.oauth2.initTokenClient({client_id:CLIENT_ID,scope:SCOPES,
+    callback:r=>{const p=pendingToken;pendingToken=null;
+      if(r&&r.access_token){TOKEN=r.access_token;TOKEN_EXP=Date.now()+((r.expires_in||3600)-60)*1000;p&&p.ok()}
+      else p&&p.fail(new Error('token'))},
+    error_callback:e=>{const p=pendingToken;pendingToken=null;p&&p.fail(e)}});
+  return true;
+}
+// va chiamata direttamente dal tocco dell'utente, altrimenti il browser blocca la finestra di Google
+function getToken(prompt){return new Promise((ok,fail)=>{
+  if(hasToken())return ok();
+  if(!initGis())return fail(new Error('gis'));
+  if(pendingToken){const prev=pendingToken;pendingToken={ok:()=>{prev.ok();ok()},fail:e=>{prev.fail(e);fail(e)}};return}
+  pendingToken={ok,fail};
+  const a=ACC(),opt={prompt:prompt||''};if(a&&a.email)opt.login_hint=a.email;
+  tokenClient.requestAccessToken(opt);
+})}
+// chiamata all'inizio di ogni salvataggio: se il collegamento con Google è scaduto lo rinnova
+function kickSync(){
+  if(!ACC()||hasToken()||pendingToken)return;
+  if(!initGis())return;
+  toast(t('accSyncing'));
+  getToken('').then(()=>syncNow()).catch(()=>{});
+}
+function markDirty(){
+  if(!ACC())return;
+  LS.set('dirty',true);updateAccBtn();
+  if(hasToken()){clearTimeout(syncTimer);syncTimer=setTimeout(syncNow,1200)}
+}
+function setSetting(k,v){if(v==null)LS.del(k);else LS.set(k,v);LS.set('settingsT',Date.now());markDirty()}
+function addTomb(id){const d=LS.get('eliminati',[]);d.push({id,t:Date.now()});LS.set('eliminati',d.slice(-500))}
+
+async function gfetch(url,opt={}){
+  opt.headers=Object.assign({Authorization:'Bearer '+TOKEN},opt.headers||{});
+  const r=await fetch(url,opt);if(!r.ok)throw new Error('drive '+r.status);return r;
+}
+async function driveFind(){
+  const q=encodeURIComponent(`name='${DRIVE_NAME}'`);
+  const j=await (await gfetch(`https://www.googleapis.com/drive/v3/files?spaces=appDataFolder&q=${q}&fields=files(id)&pageSize=5`)).json();
+  return j.files&&j.files[0]?j.files[0].id:null;
+}
+async function driveRead(id){return (await gfetch(`https://www.googleapis.com/drive/v3/files/${id}?alt=media`)).json()}
+async function driveWrite(id,data){
+  const body=JSON.stringify(data);
+  const meta=id?{}:{name:DRIVE_NAME,parents:['appDataFolder'],mimeType:'application/json'};
+  const base='https://www.googleapis.com/upload/drive/v3/files'+(id?'/'+id:'');
+  try{ // caricamento "riprendibile": va bene anche per armadi molto grandi
+    const r=await gfetch(base+'?uploadType=resumable',{method:id?'PATCH':'POST',
+      headers:{'Content-Type':'application/json; charset=UTF-8','X-Upload-Content-Type':'application/json'},body:JSON.stringify(meta)});
+    const loc=r.headers.get('Location');if(!loc)throw new Error('noloc');
+    const r2=await fetch(loc,{method:'PUT',headers:{'Content-Type':'application/json'},body});
+    if(!r2.ok)throw new Error('put '+r2.status);return (await r2.json()).id;
+  }catch(e){ // piano B: caricamento in un colpo solo
+    const b='od'+Date.now();
+    const mp=`--${b}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${JSON.stringify(meta)}\r\n--${b}\r\nContent-Type: application/json\r\n\r\n${body}\r\n--${b}--`;
+    const r=await gfetch(base+'?uploadType=multipart',{method:id?'PATCH':'POST',headers:{'Content-Type':'multipart/related; boundary='+b},body:mp});
+    return (await r.json()).id;
+  }
+}
+function localSnapshot(){
+  const settings={};SYNC_KEYS.forEach(k=>settings[k]=LS.get(k,null));
+  return {app:'OutfitDay',v:1,saved:Date.now(),items:ITEMS,deleted:LS.get('eliminati',[]),settings,settingsT:LS.get('settingsT',0)};
+}
+// unisce l'armadio del telefono con quello nel Drive: vince la versione più recente di ogni capo
+async function mergeCloud(cloud){
+  if(!cloud||!Array.isArray(cloud.items))return;
+  const ts=i=>i.updated||i.added||0;
+  const del=new Map();
+  [...(cloud.deleted||[]),...LS.get('eliminati',[])].forEach(d=>{if(!del.has(d.id)||del.get(d.id)<d.t)del.set(d.id,d.t)});
+  const map=new Map();
+  const put=it=>{const d=del.get(it.id);if(d&&d>=ts(it))return;const ex=map.get(it.id);if(!ex||ts(it)>ts(ex))map.set(it.id,it)};
+  ITEMS.forEach(put);cloud.items.forEach(put);
+  const merged=[...map.values()];
+  for(const it of merged){const loc=ITEMS.find(i=>i.id===it.id);if(loc!==it)await DB.put(it)}
+  for(const it of ITEMS)if(!map.has(it.id))await DB.del(it.id);
+  ITEMS=merged;
+  LS.set('eliminati',[...del.entries()].map(([id,t])=>({id,t})).slice(-500));
+  if((cloud.settingsT||0)>LS.get('settingsT',0)){
+    SYNC_KEYS.forEach(k=>{const v=cloud.settings?cloud.settings[k]:null;if(v==null)LS.del(k);else LS.set(k,v)});
+    LS.set('settingsT',cloud.settingsT);
+  }
+}
+async function syncNow(){
+  if(SYNCING||!ACC()||!hasToken())return;
+  SYNCING=true;LS.set('syncErr',false);updateAccBtn();
+  try{
+    let id=LS.get('driveFile',null),cloud=null;
+    if(id){try{cloud=await driveRead(id)}catch(e){id=null}}
+    if(!id){id=await driveFind();if(id)cloud=await driveRead(id)}
+    if(cloud)await mergeCloud(cloud);
+    id=await driveWrite(id,localSnapshot());
+    LS.set('driveFile',id);LS.set('dirty',false);LS.set('lastSync',Date.now());
+    refresh();if(WSTATE==='ok')renderWeather();
+  }catch(e){console.warn(e);LS.set('syncErr',true)}
+  finally{SYNCING=false;updateAccBtn()}
+}
+// accesso o registrazione: per Google sono la stessa cosa
+async function loginGoogle(after){
+  if(!initGis())return toast(t('accNoGoogle'));
+  try{await getToken('select_account')}catch(e){return toast(t('accFail'))}
+  try{const u=await (await gfetch('https://www.googleapis.com/oauth2/v3/userinfo')).json();
+    LS.set('account',{email:u.email||'',name:u.name||u.email||'Google',picture:u.picture||''})}
+  catch(e){LS.set('account',{email:'',name:'Google',picture:''})}
+  LS.set('dirty',true);
+  document.querySelectorAll('.sheet-bg').forEach(x=>x.remove());
+  toast(t('accSyncing'));updateAccBtn();
+  await syncNow();
+  toast(LS.get('syncErr',false)?t('accErr'):t('accDone'));
+  // chi accede dalla pagina di benvenuto e ha già un armadio salvato va dritto all'outfit
+  if(!LS.get('visto',false)&&ITEMS.length){LS.set('visto',true);showApp();startGPS()}
+  if(!LS.get('syncInfoSeen',false))showSyncInfo(after);
+  else if(after)after();
+}
+// spiegazione della sincronizzazione: compare una sola volta, dopo il primo accesso con Google
+function showSyncInfo(after){
+  LS.set('syncInfoSeen',true);
+  const s=sheet(`<h2>☁️ ${t('siTitle')}</h2><p class="sub">${t('siIntro')}</p>
+    <ul class="bens"><li>${t('si1')}</li><li>${t('si2')}</li><li>${t('si3')}</li><li>${t('si4')}</li></ul>
+    <button class="btn" id="siOk">${t('siOk')}</button>`,after);
+  s.querySelector('#siOk').onclick=()=>{s.remove();if(after)after()};
+}
+
+
+/* ---- pulsante in alto a sinistra ---- */
+function updateAccBtn(){
+  const b=document.getElementById('acc');if(!b)return;
+  const a=ACC();
+  if(!a){b.className='accbtn';b.innerHTML=t('acc_login');return}
+  const st=SYNCING?'busy':LS.get('syncErr',false)?'err':LS.get('dirty',false)?'dirty':'ok';
+  b.className='accbtn on';
+  b.innerHTML=(a.picture?`<img src="${esc(a.picture)}" alt="" referrerpolicy="no-referrer">`:`<span class="ini">${esc((a.name||'?').charAt(0).toUpperCase())}</span>`)
+    +`<span class="sdot ${st}"></span>`;
+}
+document.getElementById('acc').onclick=()=>ACC()?openAccount():openAuthChoice();
+
+const GLOGO=`<svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.7 6c4.5-4.2 6.9-10.3 6.9-17.7z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C.9 16.6 0 20.2 0 24s.9 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.7-6c-2.2 1.5-5 2.3-8.2 2.3-6.3 0-11.6-4.2-13.5-10l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>`;
+const gBtn=(id,label)=>`<button class="gbtn" id="${id}">${GLOGO}<span>${label}</span></button>`;
+const benefits=()=>`<ul class="bens"><li>${t('ben1')}</li><li>${t('ben2')}</li><li>${t('ben3')}</li></ul>`;
+
+// "Accedi" in alto a sinistra: Registrati oppure Accedi
+function openAuthChoice(){
+  const s=sheet(`<h2>👤 ${t('accTitle')}</h2><p class="sub">${t('accChoose')}</p>
+    <div class="langs"><button id="aReg"><span class="fl">✨</span><span>${t('accReg')}<small class="desc">${t('accRegD')}</small></span></button>
+    <button id="aLog"><span class="fl">🔑</span><span>${t('accLog')}<small class="desc">${t('accLogD')}</small></span></button></div>`);
+  s.querySelector('#aReg').onclick=()=>{s.remove();openGoogleStep('reg')};
+  s.querySelector('#aLog').onclick=()=>{s.remove();openGoogleStep('log')};
+}
+function openGoogleStep(kind,after){
+  const s=sheet(`<h2>${kind==='reg'?t('accReg'):t('accLog')}</h2>
+    <p class="sub">${kind==='reg'?t('accRegText'):t('accLogText')}</p>${kind==='reg'?benefits():''}
+    ${gBtn('gGo',kind==='reg'?t('accRegGoogle'):t('accLogGoogle'))}
+    <button class="btn ghost" id="gNo" style="margin-top:10px">${t('cancel')}</button>`,after);
+  s.querySelector('#gGo').onclick=()=>loginGoogle(after);
+  s.querySelector('#gNo').onclick=()=>{s.remove();if(after)after()};
+}
+// proposta di registrazione: per i nuovi utenti dopo "Inizia", per gli altri una sola volta al rientro
+function openRegister(isNew){
+  const next=()=>{if(isNew&&!ITEMS.length)openBulk()};
+  const s=sheet(`<h2>☁️ ${t('askTitle')}</h2><p class="sub">${t('askText')}</p>${benefits()}
+    ${isNew?gBtn('rGoogle',t('accRegGoogle')):`<button class="btn" id="rReg">${t('accReg')}</button>`}
+    ${isNew?`<button class="btn ghost" id="rLog" style="margin-top:10px">🔑 ${t('haveAcc')}</button>`:''}
+    <button class="btn ghost" id="rNo" style="margin-top:10px">${t('noThanks')}</button>`);
+  const no=()=>{LS.set('noReg',true);s.remove();next()}; // non viene più riproposta
+  s.querySelector('#rNo').onclick=no;
+  if(isNew){
+    s.querySelector('#rGoogle').onclick=()=>loginGoogle(next);
+    s.querySelector('#rLog').onclick=()=>loginGoogle(next);
+  }else s.querySelector('#rReg').onclick=()=>{s.remove();openGoogleStep('reg')};
+}
+// menu di chi ha già fatto l'accesso
+function openAccount(){
+  const a=ACC(),last=LS.get('lastSync',0);
+  const status=LS.get('syncErr',false)?t('accErr'):LS.get('dirty',false)?t('accDirty')
+    :last?t('accSynced',{t:new Date(last).toLocaleString(LOCALE[LANG],{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}):'';
+  const s=sheet(`<div class="accHead">${a.picture?`<img src="${esc(a.picture)}" alt="" referrerpolicy="no-referrer">`:`<span class="ini big">${esc((a.name||'?').charAt(0).toUpperCase())}</span>`}
+    <div><b>${esc(a.name)}</b><small>${esc(a.email)}</small></div></div>
+    <p class="sub">☁️ ${status}</p>
+    <button class="btn blue" id="aSync">${t('syncNow')}</button>
+    <button class="btn ghost" id="aOut" style="margin-top:10px">${t('logout')}</button>`);
+  s.querySelector('#aSync').onclick=()=>{
+    if(!initGis())return toast(t('accNoGoogle'));
+    getToken('').then(async()=>{s.remove();toast(t('accSyncing'));await syncNow();toast(LS.get('syncErr',false)?t('accErr'):t('accDone'))})
+      .catch(()=>toast(t('accFail')));
+  };
+  s.querySelector('#aOut').onclick=async()=>{
+    s.remove();
+    if(!await ask(t('logoutTitle'),t('logoutText'),t('logout')))return;
+    try{if(TOKEN&&window.google)google.accounts.oauth2.revoke(TOKEN,()=>{})}catch(e){}
+    TOKEN=null;TOKEN_EXP=0;['account','dirty','driveFile','lastSync','syncErr'].forEach(k=>LS.del(k));
+    updateAccBtn();toast(t('loggedOut'));
+  };
 }
 
 /* ================= LINGUA ================= */
@@ -944,31 +1690,28 @@ function applyStatic(){
 function setLang(l){
   LANG=l;LS.set('lingua',l);
   document.querySelectorAll('.sheet-bg').forEach(x=>x.remove());
-  applyStatic();renderWeather();refresh();
-  const outfit=!document.getElementById('tab-outfit').classList.contains('hidden');
-  document.getElementById('title').textContent=outfit?t('tabOutfit'):t('tabWardrobe');
+  applyStatic();renderWeather();refresh();updateAccBtn();
+  document.getElementById('title').textContent=t(TAB_TITLE[curTab()]);
 }
-document.getElementById('gear').onclick=()=>{
-  const s=sheet(`<h2>🌍 ${t('language')}</h2><div class="langs">${Object.entries(LANGS).map(([k,[f,n]])=>
-    `<button data-l="${k}" class="${k===LANG?'on':''}"><span class="fl">${f}</span>${n}</button>`).join('')}</div>`);
-  s.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
-};
+document.getElementById('gear').onclick=openSettings;
 
 /* ================= NAVIGAZIONE ================= */
+function curTab(){return ['outfit','meteo','armadio'].find(x=>!document.getElementById('tab-'+x).classList.contains('hidden'))||'outfit'}
+const TAB_TITLE={outfit:'tabOutfit',meteo:'tabMeteo',armadio:'tabWardrobe'};
 function showTab(tab){
   document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
-  document.getElementById('tab-outfit').classList.toggle('hidden',tab!=='outfit');
-  document.getElementById('tab-armadio').classList.toggle('hidden',tab!=='armadio');
-  document.getElementById('title').textContent=tab==='outfit'?t('tabOutfit'):t('tabWardrobe');
+  ['outfit','meteo','armadio'].forEach(x=>document.getElementById('tab-'+x).classList.toggle('hidden',x!==tab));
+  document.getElementById('title').textContent=t(TAB_TITLE[tab]);
+  if(tab==='meteo')renderMeteo();
   updateSub();window.scrollTo(0,0);
 }
 function updateSub(){
-  const outfit=!document.getElementById('tab-outfit').classList.contains('hidden');
-  document.getElementById('subtitle').textContent=outfit
-    ?new Date().toLocaleDateString(LOCALE[LANG],{weekday:'long',day:'numeric',month:'long'})
-    :(ITEMS.length===1?t('count1',{n:1}):t('countN',{n:ITEMS.length}));
+  const tab=curTab(),el=document.getElementById('subtitle');
+  if(tab==='outfit')el.textContent=new Date().toLocaleDateString(LOCALE[LANG],{weekday:'long',day:'numeric',month:'long'});
+  else if(tab==='meteo')el.textContent=WEATHER?t('meteoSub',{p:WEATHER.place||(PLACE_AUTO==='gps'?t('wYourPos'):t('wNet'))}):'';
+  else el.textContent=ITEMS.length===1?t('count1',{n:1}):t('countN',{n:ITEMS.length});
 }
-function refresh(){renderWardrobe();renderOutfit(false);updateSub();
+function refresh(){DAYCACHE={};renderWardrobe();renderOutfit(false);renderMeteo();updateSub();
   document.getElementById('addBtn').textContent=ITEMS.length?t('addOne'):t('addAll')}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
 document.getElementById('addBtn').onclick=addClick;
@@ -980,7 +1723,8 @@ function showApp(){
 }
 document.getElementById('startBtn').onclick=()=>{
   LS.set('visto',true);showApp();startGPS();
-  if(!ITEMS.length)openBulk(); // dopo "Inizia": caricamento delle foto
+  if(!ACC())openRegister(true);         // dopo "Inizia": vuoi registrarti?
+  else if(!ITEMS.length)openBulk();      // poi il caricamento delle foto
 };
 
 /* ================= AVVIO ================= */
@@ -993,9 +1737,12 @@ document.getElementById('startBtn').onclick=()=>{
     document.getElementById('welcome').classList.remove('hidden'); // solo al primo accesso
   }else{showApp();startGPS()}
   document.getElementById('title').textContent=t('tabOutfit');
-  refresh();
-  if(WSTATE==='gps'&&!LS.get('visto',false))renderWeather();
+  refresh();updateAccBtn();
+  if(!LS.get('visto',false))renderWeather();
+  // chi usa già il sito senza account: una sola proposta di registrazione
+  else if(!ACC()&&!LS.get('noReg',false)&&ITEMS.length)setTimeout(()=>openRegister(false),900);
 })();
+
 </script>
 </body>
 </html>
