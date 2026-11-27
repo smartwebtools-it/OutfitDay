@@ -2060,6 +2060,7 @@ function generate(opt={}){
   try{
   const sl=slotsNow();
   if(opt.must){const k={maglietta:'T',felpa:'F',giacca:'G',pantaloni:'P',scarpe:'S',calze:'C'}[opt.must.cat];sl[k]=[opt.must]}
+  if(opt.brand){['T','F','G','P','S','C'].forEach(k=>{const b=(sl[k]||[]).filter(i=>isBrand(i,opt.brand));if(b.length)sl[k]=b})}
   const {T,F,G,P,S,C}=sl;
   const slots=[T,F,G,P,C,S].filter(x=>x.length);if(!slots.length)return null;
   const total=slots.reduce((a,x)=>a*x.length,1);
@@ -3164,8 +3165,9 @@ it:{
     ph:"Scrivi una domanda…",voice:"🔊 Voce",noRec:"Il riconoscimento vocale non è disponibile in questo browser: puoi scrivere qui sotto. Su iPhone usa Safari, sul computer Chrome.",
     vTitle:"Scegli la voce dell'assistente",vText:"Tocca ▶ per sentirla, poi scegli quella che preferisci. Potrai cambiarla quando vuoi.",vSys:"Voce predefinita del dispositivo",
     vSample:"Ciao! Sono il tuo Outfit Assistant. Cosa ti metti oggi?",vSave:"Usa questa voce",vNone:"Su questo dispositivo non ci sono voci in italiano: l'assistente risponderà solo per scritto.",
-    hints:["Cosa mi metto oggi?","Non so cosa mettermi domani","Voglio mettere la felpa blu","Che tempo fa questa settimana?","Metti a lavare la felpa rossa","Cosa sai fare?"]},
+    hints:["Cosa mi metto oggi?","Non so cosa mettermi domani","Voglio mettere la felpa blu","Che tempo fa questa settimana?","Metti a lavare la felpa rossa","Cosa porto in valigia per 3 giorni a Roma?","Cosa sai fare?"]},
   kw:{
+    about:["cos e outfit day", "che cos e outfit day", "cosa e outfit day", "che cosa e outfit day", "che e outfit day", "cos e outfitday", "che cos e outfitday", "cosa e outfitday", "parlami di outfit day", "raccontami di outfit day", "dimmi di outfit day", "chi ha creato outfit day", "chi ha fatto outfit day", "chi ha inventato outfit day", "chi ti ha creato", "chi ti ha fatto", "chi ha creato il sito", "chi ha fatto il sito", "chi ha creato questo sito", "chi e il creatore", "chi ha programmato", "di cosa si tratta", "cos e questo sito", "che cos e questo sito", "presentati", "chi sei", "parlami di te", "chi ha fatto questo sito", "informazioni su outfit day", "informazioni sul sito", "dov e il sito", "indirizzo del sito", "link del sito"],privacy:["privacy", "informativa", "dati personali", "i miei dati", "miei dati", "riservatezza", "trattamento dei dati", "chi vede i miei", "chi puo vedere", "dove salvi", "dove vengono salvat*", "dove finiscono", "sono al sicuro", "al sicuro i", "protezione dei dati", "termini e condizioni", "condizioni d uso"],pro:["outfit pro", "versione pro", "piano pro", "il pro", "del pro", "nel pro", "col pro", "con il pro", "pro"],skill:["skill", "alexa"],site:["sito", "outfit day", "outfitday", "app", "applicazione", "web", "pagina"],feat:["funzion*", "caratteristic*", "cosa fa", "cosa fai", "cosa sa fare", "cosa puo fare", "cosa offre", "cosa mi offre", "cosa posso fare", "cosa posso chiedere", "cosa posso chiederle", "cosa le posso chiedere", "cosa posso dire", "cosa posso dirle", "che domande", "quali domande", "a cosa serve", "come funziona", "cosa c e", "cosa trovo", "cosa include", "comandi", "vantagg*", "servizi", "cosa si puo fare", "elenc*", "cosa ottengo", "cosa ha", "cosa contiene", "cosa sai fare", "cosa puoi fare", "cos e", "cosa e", "che cos e", "cosa cambia", "in cosa consiste", "cosa sblocca"],repeat:["ripeti", "ripetilo", "ripetimelo", "ripeterlo", "ripetermelo", "ripetermi", "ripetimi", "puoi ripetere", "ripetere", "ridillo", "ridimmelo", "rido", "come hai detto", "cosa hai detto", "che hai detto", "non ho sentito", "non ho capito", "dillo di nuovo", "dimmelo di nuovo", "ancora una volta"],repeatNot:["possono", "capi", "outfit di", "varieta"],last:["l ultima volta", "ultima volta", "quando ho messo", "quando ho indossato", "quando l ho messo", "quando l ho messa", "quando li ho messi", "quando le ho messe", "quando l ho indossat*", "da quanto non metto", "da quanto tempo non metto", "da quanti giorni non metto", "quanto tempo fa ho messo", "quando ho usato", "quando mi sono messo", "quando mi sono messa", "quando ho portato"],pack:["valigia", "valige", "valigie", "bagaglio", "bagagli", "viaggio", "vacanza", "vacanze", "trasferta", "zaino", "trolley", "cosa porto", "cosa mi porto", "cosa devo portare", "cosa mi devo portare", "cosa mi conviene portare", "parto per", "parto", "partire", "partenza"],packWeak:["vado a", "vado ad", "vado in", "andro a", "andro in", "sto andando a", "vado per", "resto a", "staro a"],dayW:["giorni", "giorno", "notti", "notte"],weekW:["settimana", "settimane"],monthW:["mese", "mesi"],prep:["a", "ad", "in", "per"],cprep:["negli", "nel", "nella", "nello", "in", "ad", "a"],art:["il", "lo", "la", "i", "gli", "le", "l"],pstop:["per", "negli", "nel", "nella", "nello", "nei", "nelle", "in", "da", "dal", "dalla", "tra", "fra", "con", "e", "ed", "di", "del", "della", "che", "cosa", "quanto", "domani", "oggi", "dopodomani", "lunedi", "martedi", "mercoledi", "giovedi", "venerdi", "sabato", "domenica", "prossimo", "prossima", "settimana", "settimane", "giorni", "giorno", "mese", "mesi", "notti", "valigia", "valige", "bagaglio", "viaggio", "vacanza", "vacanze", "trasferta", "zaino", "porto", "portare", "parto", "partire", "vado", "devo", "mi", "ti", "ci", "mettere", "mettermi", "quali", "quale", "vestiti", "capi", "dimmi", "fammi", "il", "la", "lo", "le", "gli", "i", "l", "un", "una", "uno"],
     stop:["basta","stop","fine","ferma","fermati","ho finito","a posto cosi"],thanks:["grazie","ti ringrazio"],
     help:["cosa sai fare","aiuto","cosa posso chiederti","cosa puoi fare","come funzioni"],
     yes:["si","va bene","ok","okay","certo","perfetto","mi piace","mi va bene","va benissimo","d accordo","confermo","esatto","benissimo","ottimo"],
@@ -3211,6 +3213,7 @@ it:{
   langs:{it:["italiano"],en:["inglese"],es:["spagnolo"],fr:["francese"]},
   nums:{uno:1,una:1,un:1,due:2,tre:3,quattro:4,cinque:5,sei:6,sette:7,otto:8,nove:9,dieci:10,undici:11,dodici:12,quindici:15,venti:20},
   r:{
+    about:"Outfit Day è un sito che ti aiuta a scegliere cosa indossare. Carichi le foto dei tuoi vestiti e ogni giorno ti propone un outfit abbinato e adatto al meteo della tua città. Puoi usarlo anche a voce, con me o con la skill per Alexa. È stato creato da Matteo, di Smart Web Tools.",privacy:"In breve: le foto e i dati del tuo armadio restano sul tuo telefono. Se accedi con Google, si salvano anche nel tuo Google Drive, in uno spazio riservato a OutfitDay: nessun altro può vederli, nemmeno chi ha creato il sito. La posizione serve solo per il meteo e non viene salvata. Niente pubblicità, niente tracciamento e nessuna vendita di dati. Qui sotto trovi il link all'informativa completa.",privacyLink:"Leggi l'informativa completa",pro:"Con Outfit Pro hai: {list}. Si sblocca gratis dopo 90 giorni di utilizzo, oppure subito superando il quiz sulla moda.",site:"Il sito Outfit Day ti offre: {list}.",skill:"Con la skill OutfitDay per Alexa puoi chiedere l'outfit di oggi, di domani o di un giorno della settimana, e se non ti piace chiederne un altro; cambiare un solo capo; farti un outfit intorno a un capo, un colore, uno stile o un marchio; chiedere il meteo, la temperatura percepita e se serve l'ombrello; sapere quando hai messo un capo l'ultima volta; preparare la valigia per un viaggio col meteo della destinazione; contare i capi dell'armadio; farti ripetere l'ultima risposta; e avere informazioni su Outfit Day, Outfit Pro e la privacy.",repeatNone:"Non ho ancora detto niente da ripetere.",last:"L'ultima volta che hai messo {item} è stato {when}.",lastNever:"Non risulta che tu abbia mai messo {item}.",lastToday:"oggi",lastYest:"ieri",lastAgo:"{day}, {n} giorni fa",brandO:"Ecco un outfit {brand} per {day}: {list}. Ti piace?",packAskCity:"In che città vai?",packAskDays:"Per quanti giorni parti?",packNoCity:"Non trovo la città {c}. Me la ripeti?",packFail:"Non riesco a prendere il meteo adesso: riprova tra poco.",packW:"Per {n} {dd} a {city}: massime tra {a} e {b} gradi, minime fino a {m}, temperatura percepita da {fa} a {fb} gradi.",packOld:" Il viaggio va oltre le previsioni, quindi uso i valori dello stesso periodo dell'anno scorso.",packRain:" Pioggia in {r} {rd}: porta l'ombrello.",packDry:" Pioggia quasi assente.",packList:" Ti consiglio di portare: {list}.",packEmpty:" Nel tuo armadio non ho trovato capi adatti.",dd:["giorno", "giorni"],
     hello:"Ciao! Dimmi pure.",today:"oggi",tomorrow:"domani",
     outfit:"{Day} ti consiglio: {list}.",askToday:"Ti va bene o vuoi cambiare qualcosa?",okToday:"Perfetto, buona giornata!",
     propose:"Che ne dici di questo per {day}: {list}. Ti piace?",saved:"Perfetto! È l'outfit di {day}, anche sul sito e su Alexa.",keep:"Va bene, lascio quello di prima.",
@@ -3240,7 +3243,7 @@ it:{
     setRain:"Fatto: ti avviso dal {n} per cento di pioggia.",setHour:"Fatto: guardo la temperatura delle {h}.",setHourOff:"Fatto: guardo la temperatura massima del giorno.",
     setReview:"Fatto: il riepilogo sarà il {d}.",setBrand:"Fatto: completo {b} il {days}.",setBrandOff:"Fatto: completo di marca disattivato.",brandMiss:"Per un completo {b} ti mancano: {m}.",brandNeed:"Dimmi il marchio e i giorni, per esempio: completo Nike il sabato e la domenica.",
     setPair:"Fatto: non abbinerò più {a} e {b}.",need2c:"Dimmi due colori, per esempio: non abbinare rosso e verde.",
-    help:"Posso dirti l'outfit di oggi o di un altro giorno, proporti un outfit nuovo, cambiare un capo, creare un outfit con un capo o uno stile, dirti il meteo, la temperatura, la pioggia e il vento, mettere a lavare un capo, gestire i preferiti, rispondere su armadio e statistiche, consigliarti abbinamenti, aprire i negozi vicini e cambiare le impostazioni. Prova a dire: non so cosa mettermi domani.",
+    help:"Posso dirti l'outfit di oggi o di un altro giorno, proporti un outfit nuovo, cambiare un capo, creare un outfit con un capo o uno stile, dirti il meteo, la temperatura, la pioggia e il vento, mettere a lavare un capo, gestire i preferiti, rispondere su armadio e statistiche, consigliarti abbinamenti, aprire i negozi vicini e cambiare le impostazioni. Posso anche prepararti la valigia per un viaggio, dirti quando hai messo un capo l'ultima volta, farti un outfit di un marchio, ripetere l'ultima risposta e parlarti di Outfit Day, di Outfit Pro, della skill per Alexa e della privacy. Prova a dire: non so cosa mettermi domani.",
     fallback:"Non ho capito bene. Prova a dire, per esempio: cosa mi metto oggi, che tempo fa domani, oppure voglio mettere la felpa blu.",
     bye:"A presto!",thanks:"Figurati, quando vuoi!",and:"e"}
 },
@@ -3249,8 +3252,9 @@ en:{
     ph:"Type a question…",voice:"🔊 Voice",noRec:"Speech recognition isn't available in this browser: you can type below. On iPhone use Safari, on a computer use Chrome.",
     vTitle:"Choose the assistant's voice",vText:"Tap ▶ to hear it, then pick your favourite. You can change it anytime.",vSys:"Device default voice",
     vSample:"Hi! I'm your Outfit Assistant. What are you wearing today?",vSave:"Use this voice",vNone:"There are no English voices on this device: the assistant will only reply in writing.",
-    hints:["What should I wear today?","I don't know what to wear tomorrow","I want to wear the blue hoodie","What's the weather this week?","Put the red hoodie in the wash","What can you do?"]},
+    hints:["What should I wear today?","I don't know what to wear tomorrow","I want to wear the blue hoodie","What's the weather this week?","Put the red hoodie in the wash","What should I pack for 3 days in London?","What can you do?"]},
   kw:{
+    about:["what is outfit day", "what s outfit day", "what is outfitday", "what s outfitday", "tell me about outfit day", "who made outfit day", "who created outfit day", "who built outfit day", "who made you", "who created you", "who built you", "who made the website", "who created the website", "who made this site", "who is the creator", "who developed", "what is this website", "what s this website", "introduce yourself", "who are you", "who made this website", "tell me about yourself", "information about outfit day", "website address", "link to the website"],privacy:["privacy", "privacy policy", "personal data", "my data", "data protection", "who can see my", "who sees my", "where do you save", "where do you store", "where is my data", "is my data safe", "are my photos safe", "terms and conditions", "terms of use", "what data do you", "what data does"],pro:["outfit pro", "pro version", "pro plan", "the pro", "pro"],skill:["skill", "alexa"],site:["website", "site", "outfit day", "outfitday", "app", "web", "page"],feat:["feature*", "function*", "what can", "what does", "what do i get", "what is included", "what s included", "include*", "offer*", "commands", "benefits", "perks", "advantages", "services", "what can i do", "what can i ask", "what can i say", "what questions", "how does", "how do", "what is it for", "what s it for", "list", "what s in", "what is in", "what s new", "what is outfit pro", "what s outfit pro", "what does it unlock", "capabilities", "abilities", "what is the", "what s the", "what s on", "what is on", "what is it"],repeat:["repeat", "repeat that", "repeat it", "say that again", "say it again", "come again", "what did you say", "i didn t hear", "i didn t catch", "i didn t get", "pardon", "what did you just say", "once more", "one more time", "say again"],repeatNot:["can be", "items", "outfit from", "variety"],last:["last time", "when did i last", "when did i wear", "when was the last", "when have i worn", "how long since i wore", "how long since i ve worn", "how long ago did i wear", "since i last wore", "when i last wore", "when did i put on"],pack:["suitcase", "luggage", "pack", "packing", "trip", "travel", "travelling", "traveling", "holiday", "vacation", "journey", "bag", "backpack", "business trip", "what should i bring", "what do i bring", "what to bring", "leaving for"],packWeak:["going to", "i m going to", "heading to", "flying to", "staying in", "off to", "i ll be in", "visiting"],dayW:["days", "day", "nights", "night"],weekW:["week", "weeks"],monthW:["month", "months"],prep:["to", "in", "at", "for"],cprep:["in", "the"],art:["the", "a", "an"],pstop:["for", "in", "the", "to", "at", "from", "with", "and", "on", "of", "next", "this", "tomorrow", "today", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "week", "weeks", "days", "day", "month", "months", "nights", "suitcase", "luggage", "pack", "packing", "trip", "travel", "holiday", "vacation", "bag", "backpack", "weekend", "what", "should", "i", "bring", "take", "do", "need", "going", "m", "am", "ll", "flying", "heading", "staying", "visiting", "clothes", "items", "a", "an", "my", "me", "tell", "please", "s"],
     stop:["stop","that s all","that is all","enough","i m done","goodbye","bye"],thanks:["thanks","thank you"],
     help:["what can you do","help","what can i ask","how do you work"],
     yes:["yes","yeah","yep","ok","okay","sure","great","perfect","i like it","sounds good","fine","that s fine","good"],
@@ -3296,6 +3300,7 @@ en:{
   langs:{it:["italian"],en:["english"],es:["spanish"],fr:["french"]},
   nums:{one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,eleven:11,twelve:12,fifteen:15,twenty:20},
   r:{
+    about:"Outfit Day is a website that helps you choose what to wear. You upload photos of your clothes and every day it suggests an outfit that matches and suits the weather in your city. You can also use it by voice, with me or with the Alexa skill. It was created by Matteo, of Smart Web Tools.",privacy:"In short: the photos and data of your wardrobe stay on your phone. If you sign in with Google, they're also saved in your Google Drive, in a space reserved for OutfitDay: nobody else can see them, not even the site's creator. Your location is only used for the weather and isn't saved. No ads, no tracking and no selling of data. Below you'll find the link to the full privacy policy.",privacyLink:"Read the full privacy policy",pro:"With Outfit Pro you get: {list}. It unlocks for free after 90 days of use, or straight away by passing the fashion quiz.",site:"The Outfit Day website gives you: {list}.",skill:"With the OutfitDay skill for Alexa you can ask for today's outfit, tomorrow's or a weekday's, and ask for another one if you don't like it; change a single item; get an outfit built around an item, a colour, a style or a brand; ask for the weather, the feels-like temperature and whether you need an umbrella; find out when you last wore an item; pack for a trip with the weather at your destination; count the items in your wardrobe; have the last answer repeated; and get information about Outfit Day, Outfit Pro and privacy.",repeatNone:"I haven't said anything to repeat yet.",last:"The last time you wore the {item} was {when}.",lastNever:"It looks like you've never worn the {item}.",lastToday:"today",lastYest:"yesterday",lastAgo:"{day}, {n} days ago",brandO:"Here's a {brand} outfit for {day}: {list}. Do you like it?",packAskCity:"Which city are you going to?",packAskDays:"How many days are you going for?",packNoCity:"I can't find the city {c}. Can you say it again?",packFail:"I can't get the weather right now: try again shortly.",packW:"For {n} {dd} in {city}: highs between {a} and {b} degrees, lows down to {m}, feels-like temperature from {fa} to {fb} degrees.",packOld:" The trip goes beyond the forecast, so I'm using last year's values for the same period.",packRain:" Rain on {r} {rd}: take an umbrella.",packDry:" Hardly any rain.",packList:" I suggest you pack: {list}.",packEmpty:" I couldn't find suitable items in your wardrobe.",dd:["day", "days"],
     hello:"Hi! Go ahead.",today:"today",tomorrow:"tomorrow",
     outfit:"{Day} I suggest: {list}.",askToday:"Is that okay, or do you want to change something?",okToday:"Great, have a nice day!",
     propose:"How about this for {day}: {list}. Do you like it?",saved:"Great! It's the outfit for {day}, on the website and on Alexa too.",keep:"Okay, I'll keep the previous one.",
@@ -3325,7 +3330,7 @@ en:{
     setRain:"Done: I'll warn you from {n} percent chance of rain.",setHour:"Done: I'll look at the temperature at {h}.",setHourOff:"Done: I'll look at the day's highest temperature.",
     setReview:"Done: the recap will be on {d}.",setBrand:"Done: {b} outfit on {days}.",setBrandOff:"Done: brand outfit turned off.",brandMiss:"For a {b} outfit you're missing: {m}.",brandNeed:"Tell me the brand and the days, for example: Nike outfit on Saturday and Sunday.",
     setPair:"Done: I won't pair {a} and {b} anymore.",need2c:"Tell me two colours, for example: don't pair red and green.",
-    help:"I can tell you today's outfit or another day's, suggest a new outfit, change one item, build an outfit around an item or a style, tell you the weather, temperature, rain and wind, put an item in the wash, manage favourites, answer about your wardrobe and stats, suggest combinations, open nearby shops and change settings. Try saying: I don't know what to wear tomorrow.",
+    help:"I can tell you today's outfit or another day's, suggest a new outfit, change one item, build an outfit around an item or a style, tell you the weather, temperature, rain and wind, put an item in the wash, manage favourites, answer about your wardrobe and stats, suggest combinations, open nearby shops and change settings. I can also pack your suitcase for a trip, tell you when you last wore an item, make you an outfit from a brand, repeat my last answer and tell you about Outfit Day, Outfit Pro, the Alexa skill and privacy. Try saying: I don't know what to wear tomorrow.",
     fallback:"I didn't quite get that. Try saying, for example: what should I wear today, what's the weather tomorrow, or I want to wear the blue hoodie.",
     bye:"See you soon!",thanks:"You're welcome, anytime!",and:"and"}
 },
@@ -3334,8 +3339,9 @@ es:{
     ph:"Escribe una pregunta…",voice:"🔊 Voz",noRec:"El reconocimiento de voz no está disponible en este navegador: puedes escribir abajo. En iPhone usa Safari, en el ordenador Chrome.",
     vTitle:"Elige la voz del asistente",vText:"Toca ▶ para escucharla y elige la que prefieras. Podrás cambiarla cuando quieras.",vSys:"Voz predeterminada del dispositivo",
     vSample:"¡Hola! Soy tu Outfit Assistant. ¿Qué te pones hoy?",vSave:"Usar esta voz",vNone:"En este dispositivo no hay voces en español: el asistente responderá solo por escrito.",
-    hints:["¿Qué me pongo hoy?","No sé qué ponerme mañana","Quiero ponerme la sudadera azul","¿Qué tiempo hará esta semana?","Pon a lavar la sudadera roja","¿Qué sabes hacer?"]},
+    hints:["¿Qué me pongo hoy?","No sé qué ponerme mañana","Quiero ponerme la sudadera azul","¿Qué tiempo hará esta semana?","Pon a lavar la sudadera roja","¿Qué llevo en la maleta para 3 días en Madrid?","¿Qué sabes hacer?"]},
   kw:{
+    about:["que es outfit day", "que es outfitday", "hablame de outfit day", "cuentame de outfit day", "cuentame sobre outfit day", "quien creo outfit day", "quien hizo outfit day", "quien ha creado outfit day", "quien te creo", "quien te hizo", "quien te ha creado", "quien creo el sitio", "quien hizo la web", "quien creo esta web", "quien es el creador", "quien lo creo", "que es esta web", "que es este sitio", "presentate", "quien eres"],privacy:["privacidad", "politica de privacidad", "datos personales", "mis datos", "proteccion de datos", "quien ve mis", "quien puede ver", "donde guardas", "donde se guardan", "estan seguros", "terminos y condiciones", "condiciones de uso", "aviso legal"],pro:["outfit pro", "version pro", "plan pro", "el pro", "del pro", "con el pro", "pro"],skill:["skill", "alexa"],site:["sitio", "web", "pagina", "outfit day", "outfitday", "app", "aplicacion"],feat:["funcion*", "caracteristic*", "que hace", "que haces", "que sabe hacer", "que puede hacer", "que ofrece", "que me ofrece", "que puedo hacer", "que puedo preguntar", "que le puedo preguntar", "que puedo decir", "que preguntas", "para que sirve", "como funciona", "que hay", "que encuentro", "que incluye", "comandos", "ventaja*", "servicios", "que se puede hacer", "enumera", "lista", "que obtengo", "que tiene", "que contiene", "que sabes hacer", "que puedes hacer", "que es", "que cambia", "en que consiste", "que desbloquea"],repeat:["repite", "repitelo", "repitemelo", "repites", "repetirlo", "repetirmelo", "repetirmelo", "puedes repetir", "repetir", "repetirlo", "dilo otra vez", "dimelo otra vez", "como has dicho", "que has dicho", "que dijiste", "no te he oido", "no he oido", "no te oi", "no he entendido", "una vez mas", "repitelo otra vez"],repeatNot:["pueden", "prendas", "outfit de", "variedad"],last:["la ultima vez", "ultima vez", "cuando me puse", "cuando me he puesto", "cuando lleve", "cuando he llevado", "cuando use", "cuando he usado", "cuanto hace que no me pongo", "cuanto tiempo hace que no me pongo", "desde cuando no me pongo", "hace cuanto que no llevo", "cuanto hace que no llevo"],pack:["maleta", "maletas", "equipaje", "viaje", "vacaciones", "mochila", "que llevo", "que me llevo", "que debo llevar", "que tengo que llevar", "que me conviene llevar", "salgo para", "me voy de viaje", "hacer la maleta"],packWeak:["voy a", "me voy a", "viajo a", "vuelo a", "estare en", "me quedo en", "voy para"],dayW:["dias", "dia", "noches", "noche"],weekW:["semana", "semanas"],monthW:["mes", "meses"],prep:["a", "en", "para"],cprep:["en", "a"],art:["el", "la", "los", "las"],pstop:["por", "para", "en", "de", "del", "con", "y", "durante", "desde", "hasta", "manana", "hoy", "pasado", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo", "proximo", "proxima", "semana", "semanas", "dias", "dia", "mes", "meses", "noches", "maleta", "maletas", "equipaje", "viaje", "vacaciones", "mochila", "llevo", "llevar", "me", "voy", "vuelo", "viajo", "que", "debo", "tengo", "ropa", "prendas", "dime", "el", "la", "los", "las", "un", "una"],
     stop:["basta","para","stop","ya esta","he terminado","adios"],thanks:["gracias","muchas gracias"],
     help:["que sabes hacer","ayuda","que puedo preguntarte","que puedes hacer","como funcionas"],
     yes:["si","vale","ok","claro","perfecto","me gusta","me va bien","de acuerdo","genial","bien","esta bien"],
@@ -3381,6 +3387,7 @@ es:{
   langs:{it:["italiano"],en:["ingles"],es:["espanol","castellano"],fr:["frances"]},
   nums:{uno:1,una:1,dos:2,tres:3,cuatro:4,cinco:5,seis:6,siete:7,ocho:8,nueve:9,diez:10,once:11,doce:12,quince:15,veinte:20},
   r:{
+    about:"Outfit Day es una web que te ayuda a elegir qué ponerte. Subes las fotos de tu ropa y cada día te propone un outfit combinado y adecuado al tiempo de tu ciudad. También puedes usarlo con la voz, conmigo o con la skill para Alexa. Lo creó Matteo, de Smart Web Tools.",privacy:"En resumen: las fotos y los datos de tu armario se quedan en tu teléfono. Si inicias sesión con Google, también se guardan en tu Google Drive, en un espacio reservado a OutfitDay: nadie más puede verlos, ni siquiera quien creó la web. La ubicación solo sirve para el tiempo y no se guarda. Sin publicidad, sin seguimiento y sin venta de datos. Aquí abajo tienes el enlace a la política completa.",privacyLink:"Leer la política de privacidad completa",pro:"Con Outfit Pro tienes: {list}. Se desbloquea gratis tras 90 días de uso, o enseguida superando el quiz de moda.",site:"La web Outfit Day te ofrece: {list}.",skill:"Con la skill OutfitDay para Alexa puedes pedir el outfit de hoy, de mañana o de un día de la semana, y si no te gusta pedir otro; cambiar una sola prenda; crear un outfit alrededor de una prenda, un color, un estilo o una marca; preguntar el tiempo, la sensación térmica y si necesitas paraguas; saber cuándo te pusiste una prenda por última vez; hacer la maleta para un viaje con el tiempo del destino; contar las prendas del armario; hacer que repita la última respuesta; y obtener información sobre Outfit Day, Outfit Pro y la privacidad.",repeatNone:"Todavía no he dicho nada que repetir.",last:"La última vez que te pusiste {item} fue {when}.",lastNever:"Parece que nunca te has puesto {item}.",lastToday:"hoy",lastYest:"ayer",lastAgo:"el {day}, hace {n} días",brandO:"Aquí tienes un outfit {brand} para {day}: {list}. ¿Te gusta?",packAskCity:"¿A qué ciudad vas?",packAskDays:"¿Para cuántos días te vas?",packNoCity:"No encuentro la ciudad {c}. ¿Me la repites?",packFail:"Ahora no consigo el tiempo: inténtalo de nuevo dentro de un rato.",packW:"Para {n} {dd} en {city}: máximas entre {a} y {b} grados, mínimas hasta {m}, sensación térmica de {fa} a {fb} grados.",packOld:" El viaje va más allá de las previsiones, así que uso los valores del mismo periodo del año pasado.",packRain:" Lluvia en {r} {rd}: lleva paraguas.",packDry:" Casi sin lluvia.",packList:" Te aconsejo llevar: {list}.",packEmpty:" No he encontrado prendas adecuadas en tu armario.",dd:["día", "días"],
     hello:"¡Hola! Dime.",today:"hoy",tomorrow:"mañana",
     outfit:"{Day} te recomiendo: {list}.",askToday:"¿Te va bien o quieres cambiar algo?",okToday:"¡Perfecto, que tengas un buen día!",
     propose:"¿Qué te parece este para {day}?: {list}. ¿Te gusta?",saved:"¡Perfecto! Es el outfit de {day}, también en la web y en Alexa.",keep:"Vale, dejo el anterior.",
@@ -3410,7 +3417,7 @@ es:{
     setRain:"Hecho: te aviso desde el {n} por ciento de lluvia.",setHour:"Hecho: miro la temperatura de las {h}.",setHourOff:"Hecho: miro la temperatura máxima del día.",
     setReview:"Hecho: el resumen será el {d}.",setBrand:"Hecho: conjunto {b} el {days}.",setBrandOff:"Hecho: conjunto de marca desactivado.",brandMiss:"Para un conjunto {b} te faltan: {m}.",brandNeed:"Dime la marca y los días, por ejemplo: conjunto Nike el sábado y el domingo.",
     setPair:"Hecho: ya no combinaré {a} y {b}.",need2c:"Dime dos colores, por ejemplo: no combines rojo y verde.",
-    help:"Puedo decirte el outfit de hoy o de otro día, proponerte uno nuevo, cambiar una prenda, crear un outfit con una prenda o un estilo, decirte el tiempo, la temperatura, la lluvia y el viento, poner a lavar una prenda, gestionar favoritos, responder sobre tu armario y estadísticas, recomendarte combinaciones, abrir las tiendas cercanas y cambiar los ajustes. Prueba a decir: no sé qué ponerme mañana.",
+    help:"Puedo decirte el outfit de hoy o de otro día, proponerte uno nuevo, cambiar una prenda, crear un outfit con una prenda o un estilo, decirte el tiempo, la temperatura, la lluvia y el viento, poner a lavar una prenda, gestionar favoritos, responder sobre tu armario y estadísticas, recomendarte combinaciones, abrir las tiendas cercanas y cambiar los ajustes. También puedo hacerte la maleta para un viaje, decirte cuándo te pusiste una prenda por última vez, crearte un outfit de una marca, repetir la última respuesta y hablarte de Outfit Day, de Outfit Pro, de la skill para Alexa y de la privacidad. Prueba a decir: no sé qué ponerme mañana.",
     fallback:"No te he entendido bien. Prueba a decir, por ejemplo: qué me pongo hoy, qué tiempo hará mañana, o quiero ponerme la sudadera azul.",
     bye:"¡Hasta pronto!",thanks:"¡De nada, cuando quieras!",and:"y"}
 },
@@ -3419,8 +3426,9 @@ fr:{
     ph:"Écris une question…",voice:"🔊 Voix",noRec:"La reconnaissance vocale n'est pas disponible dans ce navigateur : tu peux écrire ci-dessous. Sur iPhone utilise Safari, sur ordinateur Chrome.",
     vTitle:"Choisis la voix de l'assistant",vText:"Touche ▶ pour l'écouter, puis choisis celle que tu préfères. Tu pourras la changer quand tu veux.",vSys:"Voix par défaut de l'appareil",
     vSample:"Salut ! Je suis ton Outfit Assistant. Qu'est-ce que tu mets aujourd'hui ?",vSave:"Utiliser cette voix",vNone:"Il n'y a pas de voix françaises sur cet appareil : l'assistant répondra seulement par écrit.",
-    hints:["Qu'est-ce que je mets aujourd'hui ?","Je ne sais pas quoi mettre demain","Je veux mettre le sweat bleu","Quel temps cette semaine ?","Mets le sweat rouge au lavage","Que sais-tu faire ?"]},
+    hints:["Qu'est-ce que je mets aujourd'hui ?","Je ne sais pas quoi mettre demain","Je veux mettre le sweat bleu","Quel temps cette semaine ?","Mets le sweat rouge au lavage","Qu'est-ce que j'emporte pour 3 jours à Paris ?","Que sais-tu faire ?"]},
   kw:{
+    about:["c est quoi outfit day", "qu est ce que outfit day", "qu est ce qu outfit day", "c est quoi outfitday", "qu est ce que outfitday", "parle moi d outfit day", "parle moi de outfit day", "raconte moi outfit day", "qui a cree outfit day", "qui a fait outfit day", "qui t a cree", "qui t a fait", "qui a cree le site", "qui a fait le site", "qui a cree ce site", "qui est le createur", "qui l a cree", "c est quoi ce site", "qu est ce que ce site", "presente toi", "qui es tu", "qui a fait ce site", "parle moi de toi", "informations sur outfit day", "adresse du site", "lien du site"],privacy:["confidentialite", "vie privee", "privacy", "politique de confidentialite", "donnees personnelles", "mes donnees", "protection des donnees", "qui voit mes", "qui peut voir", "ou tu sauvegardes", "ou sont sauvegarde*", "ou sont enregistre*", "sont en securite", "conditions d utilisation", "mentions legales"],pro:["outfit pro", "version pro", "formule pro", "le pro", "du pro", "avec le pro", "pro"],skill:["skill", "alexa"],site:["site", "site web", "outfit day", "outfitday", "app", "appli", "application", "web", "page"],feat:["fonction*", "caracteristique*", "que fait", "qu est ce que tu fais", "que sait faire", "que peut faire", "que propose", "qu est ce que je peux faire", "qu est ce que je peux demander", "que puis je demander", "que puis je dire", "quelles questions", "a quoi sert", "comment marche", "comment fonctionne", "qu y a t il", "qu est ce qu il y a", "que comprend", "qu est ce qu on peut faire", "commandes", "avantage*", "services", "liste", "qu est ce que j obtiens", "qu est ce que ca debloque", "qu est ce que c est", "c est quoi", "en quoi consiste", "que sais tu faire", "que peux tu faire", "qu est ce que", "qu est ce qu"],repeat:["repete", "repete le", "repete moi", "redire", "je n ai pas bien entendu", "tu peux repeter", "peux tu repeter", "repeter", "redis le", "redis moi", "redis", "qu est ce que tu as dit", "qu as tu dit", "je n ai pas entendu", "je n ai pas compris", "encore une fois"],repeatNot:["peuvent", "vetements", "tenue d", "variete"],last:["la derniere fois", "derniere fois", "quand ai je mis", "quand ai je porte", "quand est ce que j ai mis", "quand est ce que j ai porte", "quand j ai mis", "quand j ai porte", "depuis quand je n ai pas mis", "depuis combien de temps je n ai pas mis", "depuis quand je ne porte", "il y a combien de temps j ai mis"],pack:["valise", "valises", "bagage", "bagages", "voyage", "vacances", "sac a dos", "deplacement", "qu est ce que j emporte", "qu est ce que je prends", "que dois je emporter", "qu est ce que je dois emporter", "quoi emporter", "quoi prendre", "faire ma valise", "je pars", "partir", "depart"],packWeak:["je vais a", "je vais au", "je vais en", "je vais aux", "je serai a", "je reste a", "je vole vers"],dayW:["jours", "jour", "nuits", "nuit"],weekW:["semaine", "semaines"],monthW:["mois"],prep:["a", "au", "aux", "en", "pour"],cprep:["au", "aux", "en"],art:["le", "la", "les", "l"],pstop:["week", "end", "pour", "pendant", "au", "aux", "en", "dans", "de", "du", "des", "d", "avec", "et", "demain", "aujourd", "hui", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche", "prochain", "prochaine", "semaine", "semaines", "jours", "jour", "mois", "nuits", "valise", "valises", "bagage", "bagages", "voyage", "vacances", "sac", "emporte", "emporter", "prends", "prendre", "pars", "partir", "vais", "je", "j", "qu", "est", "ce", "que", "quoi", "dois", "vetements", "dis", "moi", "le", "la", "les", "l", "un", "une"],
     stop:["stop","arrete","c est tout","ca suffit","j ai fini","au revoir"],thanks:["merci","merci beaucoup"],
     help:["que sais tu faire","aide","qu est ce que je peux te demander","que peux tu faire","comment tu marches"],
     yes:["oui","ok","d accord","parfait","ca me va","ca me plait","j aime","super","bien","tres bien","c est bon"],
@@ -3466,6 +3474,7 @@ fr:{
   langs:{it:["italien"],en:["anglais"],es:["espagnol"],fr:["francais"]},
   nums:{un:1,une:1,deux:2,trois:3,quatre:4,cinq:5,six:6,sept:7,huit:8,neuf:9,dix:10,onze:11,douze:12,quinze:15,vingt:20},
   r:{
+    about:"Outfit Day est un site qui t'aide à choisir quoi porter. Tu ajoutes les photos de tes vêtements et chaque jour il te propose une tenue bien assortie et adaptée à la météo de ta ville. Tu peux aussi l'utiliser à la voix, avec moi ou avec la skill pour Alexa. Il a été créé par Matteo, de Smart Web Tools.",privacy:"En bref : les photos et les données de ta garde-robe restent sur ton téléphone. Si tu te connectes avec Google, elles sont aussi enregistrées dans ton Google Drive, dans un espace réservé à OutfitDay : personne d'autre ne peut les voir, pas même le créateur du site. La position sert seulement pour la météo et n'est pas enregistrée. Pas de publicité, pas de pistage et aucune vente de données. Tu trouveras ci-dessous le lien vers la politique complète.",privacyLink:"Lire la politique de confidentialité complète",pro:"Avec Outfit Pro tu as : {list}. Il se débloque gratuitement après 90 jours d'utilisation, ou tout de suite en réussissant le quiz de mode.",site:"Le site Outfit Day te propose : {list}.",skill:"Avec la skill OutfitDay pour Alexa tu peux demander la tenue d'aujourd'hui, de demain ou d'un jour de la semaine, et en demander une autre si elle ne te plaît pas ; changer un seul vêtement ; créer une tenue autour d'un vêtement, d'une couleur, d'un style ou d'une marque ; demander la météo, la température ressentie et s'il faut un parapluie ; savoir quand tu as porté un vêtement pour la dernière fois ; préparer ta valise pour un voyage avec la météo de la destination ; compter les vêtements de ta garde-robe ; faire répéter la dernière réponse ; et avoir des informations sur Outfit Day, Outfit Pro et la confidentialité.",repeatNone:"Je n'ai encore rien dit à répéter.",last:"La dernière fois que tu as mis {item}, c'était {when}.",lastNever:"On dirait que tu n'as jamais mis {item}.",lastToday:"aujourd'hui",lastYest:"hier",lastAgo:"{day}, il y a {n} jours",brandO:"Voici une tenue {brand} pour {day} : {list}. Elle te plaît ?",packAskCity:"Dans quelle ville vas-tu ?",packAskDays:"Pour combien de jours pars-tu ?",packNoCity:"Je ne trouve pas la ville {c}. Tu peux la répéter ?",packFail:"Je n'arrive pas à obtenir la météo pour l'instant : réessaie dans un moment.",packW:"Pour {n} {dd} à {city} : maximales entre {a} et {b} degrés, minimales jusqu'à {m}, température ressentie de {fa} à {fb} degrés.",packOld:" Le voyage dépasse les prévisions, alors j'utilise les valeurs de la même période l'an dernier.",packRain:" Pluie pendant {r} {rd} : prends un parapluie.",packDry:" Presque pas de pluie.",packList:" Je te conseille d'emporter : {list}.",packEmpty:" Je n'ai pas trouvé de vêtements adaptés dans ta garde-robe.",dd:["jour", "jours"],
     hello:"Salut ! Je t'écoute.",today:"aujourd'hui",tomorrow:"demain",
     outfit:"{Day} je te conseille : {list}.",askToday:"Ça te va ou tu veux changer quelque chose ?",okToday:"Parfait, bonne journée !",
     propose:"Que dis-tu de celle-ci pour {day} : {list}. Elle te plaît ?",saved:"Parfait ! C'est la tenue de {day}, aussi sur le site et sur Alexa.",keep:"D'accord, je garde la précédente.",
@@ -3495,7 +3504,7 @@ fr:{
     setRain:"C'est fait : je te préviens à partir de {n} pour cent de pluie.",setHour:"C'est fait : je regarde la température de {h} heures.",setHourOff:"C'est fait : je regarde la température maximale du jour.",
     setReview:"C'est fait : le récapitulatif sera le {d}.",setBrand:"C'est fait : tenue {b} le {days}.",setBrandOff:"C'est fait : tenue de marque désactivée.",brandMiss:"Pour une tenue {b}, il te manque : {m}.",brandNeed:"Dis-moi la marque et les jours, par exemple : tenue Nike le samedi et le dimanche.",
     setPair:"C'est fait : je n'associerai plus {a} et {b}.",need2c:"Dis-moi deux couleurs, par exemple : n'associe pas rouge et vert.",
-    help:"Je peux te dire la tenue d'aujourd'hui ou d'un autre jour, te proposer une nouvelle tenue, changer un vêtement, créer une tenue autour d'un vêtement ou d'un style, te dire la météo, la température, la pluie et le vent, mettre un vêtement au lavage, gérer les favoris, répondre sur ta garde-robe et tes statistiques, te conseiller des associations, ouvrir les boutiques proches et changer les réglages. Essaie de dire : je ne sais pas quoi mettre demain.",
+    help:"Je peux te dire la tenue d'aujourd'hui ou d'un autre jour, te proposer une nouvelle tenue, changer un vêtement, créer une tenue autour d'un vêtement ou d'un style, te dire la météo, la température, la pluie et le vent, mettre un vêtement au lavage, gérer les favoris, répondre sur ta garde-robe et tes statistiques, te conseiller des associations, ouvrir les boutiques proches et changer les réglages. Je peux aussi préparer ta valise pour un voyage, te dire quand tu as porté un vêtement pour la dernière fois, te faire une tenue d'une marque, répéter ma dernière réponse et te parler d'Outfit Day, d'Outfit Pro, de la skill pour Alexa et de la confidentialité. Essaie de dire : je ne sais pas quoi mettre demain.",
     fallback:"Je n'ai pas bien compris. Essaie de dire par exemple : qu'est-ce que je mets aujourd'hui, quel temps demain, ou je veux mettre le sweat bleu.",
     bye:"À bientôt !",thanks:"Avec plaisir, quand tu veux !",and:"et"}
 }};
@@ -3621,7 +3630,8 @@ function asAdd(who,text,pieces){
   log.appendChild(d);d.scrollIntoView({behavior:'smooth',block:'end'});
 }
 // risposta: scrive, parla e (se la conversazione è attiva) torna ad ascoltare
-function asSay(text,pieces,keep){
+function asSay(text,pieces,keep,noLast){
+  if(!noLast){AST.last={text,pieces:pieces?pieces.slice():null}}
   asAdd('ai',text,pieces);
   asSpeak(text,()=>{if(AST.convo&&keep!==false)asListen()});
 }
@@ -3689,12 +3699,106 @@ function asPropose(date,opt,kind,extra){
   const ids=p.map(x=>x.id);
   AST.pending={type:'propose',date,ids,opt:Object.assign({},opt,{avoid:avoid.concat(sig(ids))}),kind,extra};
   const day=asDayLabel(date);
-  const txt=kind==='built'?asFmt(r.built,Object.assign({day,list:asList(p)},extra)):kind==='style'?asFmt(r.styleO,Object.assign({day,list:asList(p)},extra)):asFmt(r.propose,{day,list:asList(p)});
+  const txt=kind==='brand'?asFmt(r.brandO,Object.assign({day,list:asList(p)},extra)):kind==='built'?asFmt(r.built,Object.assign({day,list:asList(p)},extra)):kind==='style'?asFmt(r.styleO,Object.assign({day,list:asList(p)},extra)):asFmt(r.propose,{day,list:asList(p)});
   asSay(txt,p);
 }
 function asWeatherDay(date){const i=asDayIndex(date);return i>=0?WEATHER.days[i]:null}
 function asWc(code){return t('wc'+WCODE(code)[1]).toLowerCase()}
 const asT=(k,v)=>t(k,v);
+
+/* ---------- informazioni: Outfit Day, sito, Pro, skill, privacy ---------- */
+function asBold(k){const d=document.createElement('div');d.innerHTML=t(k);const b=d.querySelector('b');return ((b?b.textContent:d.textContent)||'').trim()}
+function asJoin(a){a=a.filter(Boolean);return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' '+ASL().r.and+' '+a[a.length-1]}
+function asLow(x){x=x.replace(/,\s*/g,' ');return /^(Outfit|Google|Alexa|Gen )/.test(x)?x:x.charAt(0).toLowerCase()+x.slice(1)}
+function asSiteList(){const ks=[...document.querySelectorAll('#welcome [data-i18n^="w_f"]')].map(e=>e.getAttribute('data-i18n')).filter(k=>/^w_f\d+$/.test(k));
+  return asJoin((ks.length?ks:[1,2,3,16,17,11,7,12,8,4,13,14,5,6,15].map(n=>'w_f'+n)).map(k=>asLow(asBold(k))))}
+function asProList(){const a=[];for(let i=1;i<=30;i++){const k='pa'+i;if(TXT.it[k]===undefined)break;a.push(asLow(asBold(k)))}return asJoin(a)}
+function asSayLink(text,url,label){asSay(text);const log=document.getElementById('asLog');const m=log&&log.lastElementChild;
+  if(m){const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent='🔗 '+label;a.style.cssText='display:block;margin-top:8px;color:var(--blue);font-weight:600';m.appendChild(a)}}
+function asInfo(t){const K=ASL().kw,r=ASL().r;
+  if(asHas(t,K.about))return ()=>asSay(r.about);
+  if(asHas(t,K.privacy))return ()=>asSayLink(r.privacy,'privacy.html',r.privacyLink);
+  const f=asHas(t,K.feat);
+  if(asHas(t,['outfit pro'])||asHas(t,K.pro)&&(f||t.split(' ').length<=3))return ()=>asSay(asFmt(r.pro,{list:asProList()}));
+  if(asHas(t,K.skill)&&(f||t.split(' ').length<=3))return ()=>asSay(r.skill);
+  if(asHas(t,K.site)&&f)return ()=>asSay(asFmt(r.site,{list:asSiteList()}));
+  return null}
+
+/* ---------- quando ho messo l'ultima volta ---------- */
+function asLastWorn(it){const last={};const add=(d,ids)=>(ids||[]).forEach(id=>{if(d&&(!last[id]||last[id]<d))last[id]=d});
+  Object.entries(worn()).forEach(([d,ids])=>add(d,ids));LS.get('usati',[]).forEach(x=>add(isoOf(x.date),x.ids));
+  const tdy=isoDay();if(CURRENT&&CURRENT.some(p=>p.id===it.id))add(tdy,[it.id]);
+  return last[it.id]&&last[it.id]<=tdy?last[it.id]:null}
+function asLastText(it,d){const r=ASL().r;if(!d)return asFmt(r.lastNever,{item:asArtItem(it)});
+  const n=Math.round((new Date(isoDay()+'T12:00:00')-new Date(d+'T12:00:00'))/864e5);
+  const when=n<=0?r.lastToday:n===1?r.lastYest:asFmt(r.lastAgo,{n,day:new Date(d+'T12:00:00').toLocaleDateString(LOCALE[LANG],{weekday:'long',day:'numeric',month:'long'})});
+  return asFmt(r.last,{item:asArtItem(it),when})}
+function asArtItem(it){const g=(AS_GENDER[LANG]||{})[it.cat];const a={it:{fs:'la ',fp:'le ',mp:'i ',ms:'il '},es:{fs:'la ',fp:'las ',mp:'los ',ms:'el '},fr:{fs:'la ',fp:'les ',mp:'les ',ms:'le '}}[LANG];return (a&&g?a[g]:'')+asItem(it)}
+
+/* ---------- valigia per un viaggio ---------- */
+function asPackDays(t){const K=ASL().kw,w=t.split(' ');if(asHas(t,['weekend','fine settimana','fin de semana','week end']))return 2;
+  for(let i=0;i<w.length;i++){const n=/^\d+$/.test(w[i])?+w[i]:ASL().nums[w[i]];if(n==null)continue;const u=w[i+1]||'';
+    if(K.dayW.includes(u))return n;if(K.weekW.includes(u))return n*7;if(K.monthW.includes(u))return n*30}
+  for(const u of w){if(K.weekW.includes(u))return 7;if(K.monthW.includes(u))return 30}
+  if(asHas(t,['weekend','fine settimana','fin de semana','week end']))return 2;return null}
+function asPackPlace(t){const K=ASL().kw,w=t.split(' '),stop=new Set(K.pstop),art=new Set(K.art);
+  for(let i=0;i<w.length;i++){if(!K.prep.includes(w[i]))continue;
+    let j=i+1,c=[];while(j<w.length&&!(stop.has(w[j])&&!(c.length===0&&art.has(w[j])&&w[j+1]&&!stop.has(w[j+1])))&&!/^\d+$/.test(w[j])){c.push(w[j]);j++}
+    if(!c.length||c.every(x=>art.has(x)))continue;
+    let country=null;for(let k=j;k<w.length;k++){if(K.cprep.includes(w[k])){let q=k+1,cc=[];while(q<w.length&&art.has(w[q]))q++;
+      while(q<w.length&&!stop.has(w[q])&&!/^\d+$/.test(w[q])){cc.push(w[q]);q++}if(cc.length){country=cc.join(' ');break}}}
+    return {city:c.join(' '),country}}
+  return null}
+async function asGeo(city,country){
+  const j=await (await fetchT(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10&language=${LANG}`)).json();
+  const rs=j.results||[];if(!rs.length)return null;
+  if(country){const c=asNorm(country);const m=rs.find(x=>{const n=asNorm(x.country||'');return n&&(n.includes(c)||c.includes(n)||n.slice(0,5)===c.slice(0,5))});if(m)return m}
+  return rs[0]}
+async function asPackGo(n,city,country,start){
+  const r=ASL().r;n=Math.max(1,Math.min(60,n));
+  let g;try{g=await asGeo(city,country)}catch(e){return asSay(r.packFail)}
+  if(!g){AST.pending={type:'pack',n,start};return asSay(asFmt(r.packNoCity,{c:city}))}
+  const s0=new Date((start||isoDay())+'T12:00:00'),e0=new Date(s0);e0.setDate(e0.getDate()+n-1);
+  const lim=new Date();lim.setHours(12,0,0,0);lim.setDate(lim.getDate()+15);const old=e0>lim;
+  const sh=d=>{const x=new Date(d);if(old)x.setFullYear(x.getFullYear()-1);return isoDay(x)};
+  const daily='temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum'+(old?'':',precipitation_probability_max');
+  const base=old?'https://archive-api.open-meteo.com/v1/archive':'https://api.open-meteo.com/v1/forecast';
+  let d;try{d=(await (await fetchT(`${base}?latitude=${g.latitude}&longitude=${g.longitude}&daily=${daily}&timezone=auto&start_date=${sh(s0)}&end_date=${sh(e0)}`)).json()).daily}catch(e){d=null}
+  if(!d||!d.time||!d.time.length)return asSay(r.packFail);
+  const num=a=>(a||[]).filter(x=>x!=null),mx=num(d.temperature_2m_max),mn=num(d.temperature_2m_min),ax=num(d.apparent_temperature_max),an=num(d.apparent_temperature_min);
+  if(!mx.length)return asSay(r.packFail);
+  const rd=d.time.filter((_,i)=>(d.precipitation_sum&&d.precipitation_sum[i]>=1)||(d.precipitation_probability_max&&d.precipitation_probability_max[i]>=rainThr())).length;
+  const R0=R(),hi=Math.round(Math.max(...mx)),lo=Math.round(Math.min(...mx)),avg=mx.reduce((a,b)=>a+b,0)/mx.length,dn=Math.min(n,7);
+  const ok=c=>ITEMS.filter(i=>i.cat===c&&!isLaundry(i)).sort((a,b)=>(b.fav?1:0)-(a.fav?1:0)||Math.random()-0.5);
+  const pick=(c,k,len)=>{let l=ok(c);if(len){const p=l.filter(i=>lenOf(i)===len);if(p.length)l=p.concat(l.filter(i=>lenOf(i)!==len))}return l.slice(0,k)};
+  const sel=[];const felpa=lo<=R0.felpa,jk=lo<=R0.pesante?'pesante':lo<=R0.giacca?'leggero':null;
+  sel.push(['maglietta',pick('maglietta',dn,avg>=R0.manica?'corto':(felpa?null:'lungo'))]);
+  if(felpa)sel.push(['felpa',pick('felpa',Math.max(1,Math.ceil(dn/3)))]);
+  const np=Math.max(1,Math.ceil(dn/3));
+  if(avg>=R0.corti&&lo>=R0.corti)sel.push(['pantaloni',pick('pantaloni',np,'corto')]);
+  else if(hi>=R0.corti){const c=pick('pantaloni',np,'corto').filter(i=>lenOf(i)==='corto'),l=pick('pantaloni',np,'lungo').filter(i=>lenOf(i)!=='corto');sel.push(['pantaloni',c.slice(0,Math.ceil(np/2)).concat(l.slice(0,Math.max(1,np-Math.ceil(np/2))))])}
+  else sel.push(['pantaloni',pick('pantaloni',np,'lungo')]);
+  if(jk)sel.push(['giacca',pick('giacca',1,jk)]);
+  sel.push(['scarpe',rd?pick('scarpe',2,'pesante'):pick('scarpe',1)]);
+  sel.push(['calze',pick('calze',dn)]);
+  const parts=sel.filter(([,l])=>l.length).map(([c,l])=>{const nm=asCnt(l.length,c);return l.length<=3?nm+' ('+asJoin(l.map(i=>(LANG==='en'?colName(i.color).toLowerCase():asAgree(i.color,(AS_GENDER[LANG]||{})[i.cat]))+(i.brand?' '+i.brand:'')))+')':nm});
+  const fa=an.length?Math.round(Math.min(...an)):Math.round(Math.min(...mn)),fb=ax.length?Math.round(Math.max(...ax)):hi;
+  let txt=asFmt(r.packW,{n,dd:r.dd[n===1?0:1],city:g.name,a:lo,b:hi,m:Math.round(Math.min(...mn)),fa,fb});
+  txt+=rd?asFmt(r.packRain,{r:rd,rd:r.dd[rd===1?0:1]}):r.packDry;
+  txt+=parts.length?asFmt(r.packList,{list:asJoin(parts)}):r.packEmpty;
+  if(LANG==='it'&&/^[aeiou]/i.test(g.name))txt=txt.replace(' a '+g.name,' ad '+g.name);
+  if(old)txt+=r.packOld;
+  AST.pending=null;return asSay(txt,sel.flatMap(([,l])=>l).slice(0,12));
+}
+function asPack(t,prev){const r=ASL().r,K=ASL().kw;
+  let n=(prev&&prev.n)||asPackDays(t),pl=prev&&prev.city?{city:prev.city,country:prev.country}:asPackPlace(t);
+  let start=(prev&&prev.start)||null;const dt=asDate(t,false);if(dt&&dt>=isoDay())start=dt;
+  if(prev&&!prev.city&&!pl){const w=t.split(' ').filter(x=>!K.pstop.includes(x)&&!K.prep.includes(x)&&!/^\d+$/.test(x));if(w.length&&w.length<=4)pl={city:w.join(' '),country:null}}
+  if(prev&&!n&&prev.city){n=asNum(t);const u=asPackDays(t);if(u)n=u}
+  if(!pl){AST.pending={type:'pack',n,start};return asSay(r.packAskCity)}
+  if(!n){AST.pending={type:'pack',city:pl.city,country:pl.country,start};return asSay(r.packAskDays)}
+  AST.pending=null;asAdd('ai',ASL().ui.think);asPackGo(n,pl.city,pl.country,start);
+}
 
 /* ---------- comprensione ---------- */
 function asHandle(raw){
@@ -3708,6 +3812,9 @@ function asHandle(raw){
     else{const f=asFindItems(t,P.cat).items.filter(i=>P.cands.includes(i));if(f.length===1)pick=f[0]}
     if(pick){AST.pending=null;return P.then(pick)}
   }
+  if(P&&P.type==='pack'&&!asHas(t,K.stop)){return asPack(t,P)}
+  if(asHas(t,K.repeat)&&!asHas(t,K.repeatNot)&&!asCats(t).length&&t.split(' ').length<=12){
+    if(!AST.last)return asSay(ASL().r.repeatNone,null,true,true);return asSay(AST.last.text,AST.last.pieces,true,true)}
   if(P&&(P.type==='propose'||P.type==='today')&&!asHas(t,K.change.concat(K.wear))){
     if(asHas(t,K.yes)&&!asHas(t,['non','not','no me','ne me','pas'])){AST.pending=null;
       if(P.type==='today')return asSay(r.okToday,null,false);
@@ -3718,6 +3825,12 @@ function asHandle(raw){
   }
   if(asHas(t,K.stop)&&t.split(' ').length<=4){AST.pending=null;AST.convo=false;return asSay(r.bye,null,false)}
   if(asHas(t,K.thanks)&&t.split(' ').length<=4){return asSay(r.thanks,null,false)}
+  {const inf=asInfo(t);if(inf)return inf()}
+  if(asHas(t,K.pack)||(asHas(t,K.packWeak)&&asPackDays(t))){return asPack(t,null)}
+  if(asHas(t,K.last)&&(asCats(t).length||asBrands(t).length)){const f=asFindItems(t);
+    if(f.cat&&f.items.length>1&&!(f.cols&&f.cols.length)&&!(f.brs&&f.brs.length)){let best=null,bd=null;f.items.forEach(i=>{const d=asLastWorn(i);if(d&&(!bd||d>bd)){bd=d;best=i}});
+      if(best)return asSay(asLastText(best,bd),[best])}
+    return asResolve(f,it=>asSay(asLastText(it,asLastWorn(it)),[it]))}
   if(asHas(t,K.help))return asSay(r.help);
 
   const date=asDate(t,asHas(t,K.history.concat(K.redo)));
@@ -3747,6 +3860,7 @@ function asHandle(raw){
   if(asHas(t,K.brandSet)&&!asHas(t,K.outfit.filter(x=>x!=='outfit'))){const a=ADV();
     if(asHas(t,K.off)&&!asBrands(t).length){a.brandSet={brand:'',days:[]};kickSync();setSetting('avanzate',a);afterRules();return asSay(r.setBrandOff)}
     const b=asBrands(t)[0],D=ASL().days,days=D.wd.map((w,i)=>asHas(t,[w])?(i+1)%7:null).filter(x=>x!=null);
+    if(b&&!days.length)return asPropose(isoDay(),{brand:b.b},'brand',{brand:b.b});
     if(!b||!days.length)return asSay(r.brandNeed);
     const miss=brandMissing(b.b);if(miss.length)return asSay(asFmt(r.brandMiss,{b:b.b,m:miss.map(c=>catName(c).toLowerCase()).join(', ')}));
     a.brandSet={brand:b.b,days};kickSync();setSetting('avanzate',a);afterRules();
@@ -3817,6 +3931,8 @@ function asHandle(raw){
     let s=0;for(let k=0;k<5;k++)s+=score([Object.assign({cat:A.cat},A),Object.assign({cat:B.cat},B)],null);s/=5;
     return asSay(s>=0.5?asFmt(r.pairYes,{a:da,b:db}):asFmt(r.pairMeh,{a:da,b:db}))}
 
+  {const bs=asBrands(t);if(bs.length&&!cats.length){const bd=asDate(t,false),od=bd&&bd>=isoDay()?bd:isoDay();
+    if(od!==isoDay()&&asDayIndex(od)<0)return asSay(r.only7);return asPropose(od,{brand:bs[0].b},'brand',{brand:bs[0].b})}}
   // meteo
   const wDate=date||isoDay(),wd=WEATHER?asWeatherDay(wDate):null;
   const isWeatherQ=asHas(t,K.weather.concat(K.feels,K.now,K.hourly,K.week,K.rain,K.wind,K.uv,K.hum))||(asHas(t,K.jacket)&&asHas(t,K.jacketQ)&&!asHas(t,K.change.concat(K.wear)))||(asHas(t,K.shorts)&&!asHas(t,K.wear));
