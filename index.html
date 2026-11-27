@@ -202,6 +202,7 @@
   .txt{width:100%;background:var(--card2);border:1px solid var(--line);color:var(--text);border-radius:12px;
     padding:13px 14px;font-size:16px}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .morecats{display:inline-block;border:none;background:none;color:var(--blue);font-weight:700;font-size:15px;padding:4px 2px 10px;cursor:pointer;text-align:left}
   .chips button{border:1px solid var(--line);background:var(--card2);color:var(--text);border-radius:999px;
     padding:8px 14px;font-size:15px;font-weight:600;cursor:pointer}
   .chips.big button{padding:12px 18px;font-size:16px}
@@ -285,6 +286,8 @@
   .asmsg.ai{align-self:flex-start;background:var(--card2);border:1px solid var(--line);border-bottom-left-radius:6px}
   .asthumbs{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.asthumbs img{width:58px;height:58px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
   .asmic{width:96px;height:96px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--accent),var(--blue));color:#fff;font-size:40px;align-self:center;box-shadow:0 8px 24px rgba(61,139,255,.35)}
+  .asmic.tap{animation:astap 1s infinite;background:linear-gradient(135deg,#2ecc71,var(--blue))}
+  @keyframes astap{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
   .asmic.on{animation:aspulse 1.2s infinite;background:linear-gradient(135deg,#ff5d6c,#ff9a5d)}
   @keyframes aspulse{0%{box-shadow:0 0 0 0 rgba(255,93,108,.6)}70%{box-shadow:0 0 0 22px rgba(255,93,108,0)}100%{box-shadow:0 0 0 0 rgba(255,93,108,0)}}
   .asstate{text-align:center;color:var(--muted);font-size:15px;min-height:20px}
@@ -690,6 +693,121 @@ it:{
   tabAssist:"Assistant",
   asSub:"Parla o scrivi: ti rispondo a voce",
   pa12:"🎙️ <b>Outfit Assistant</b> · un assistente vocale nel sito: gli parli come ad Alexa, conosce il tuo armadio e cambia anche le impostazioni",
+  cat_camicia:"Camicia",
+  cat_maglione:"Maglione",
+  cat_cardigan:"Cardigan",
+  cat_top:"Top",
+  cat_blazer:"Blazer",
+  cat_cappotto:"Cappotto",
+  cat_abito:"Abito",
+  cat_vestitolungo:"Vestito lungo",
+  cat_gonna:"Gonna",
+  cat_collant:"Collant",
+  cat_calzespesse:"Calze spesse",
+  cat_cravatta:"Cravatta",
+  cat_cintura:"Cintura",
+  cat_sciarpa:"Sciarpa",
+  cat_cappello:"Cappello",
+  cat_borsa:"Borsa",
+  cat_zaino:"Zaino",
+  cat_occhiali:"Occhiali da sole",
+  cat_burqa:"Burqa",
+  cat_niqab:"Niqab",
+  cat_hijab:"Hijab",
+  v_camicia_q:"Che maniche ha?",
+  v_camicia_corto:"Manica corta",
+  v_camicia_lungo:"Manica lunga",
+  v_camicia_need:"Scegli se la camicia ha la manica corta o lunga",
+  l_camicia_corto:"Camicia manica corta",
+  l_camicia_lungo:"Camicia manica lunga",
+  underLayer:"Sotto: {c}",
+  overLayer:"Sopra: {c}",
+  moreCats:"Altre categorie",
+  catSearch:"Cerca una categoria…",
+  catNone:"Nessuna categoria trovata. Puoi crearla qui sotto.",
+  addCat:"Aggiungi categoria",
+  ncTitle:"Nuova categoria",
+  ncEdit:"Modifica categoria",
+  ncIntro:"Crea una categoria tua: OutfitDay la userà negli outfit seguendo le stesse regole delle altre.",
+  ncName:"Nome",
+  ncNamePh:"Es. Salopette, Poncho, Orologio…",
+  ncRole:"Dove va nell'outfit?",
+  role_top:"Sopra",
+  role_top_d:"Come maglietta, camicia o top",
+  role_mid:"Strato caldo",
+  role_mid_d:"Sopra la maglia, come felpa o maglione",
+  role_outer:"Giacca",
+  role_outer_d:"L'ultimo strato, come giacca o cappotto",
+  role_bottom:"Sotto",
+  role_bottom_d:"Come pantaloni o gonna",
+  role_full:"Pezzo unico",
+  role_full_d:"Prende il posto di sopra e sotto, come un abito",
+  role_shoes:"Scarpe",
+  role_shoes_d:"Ai piedi",
+  role_socks:"Calze",
+  role_socks_d:"Calze o calzini",
+  role_acc:"Accessorio",
+  role_acc_d:"Si aggiunge all'outfit, come un orologio",
+  ncWarm:"Quanto tiene caldo?",
+  warm0:"Poco",
+  warm1:"Abbastanza",
+  warm2:"Tanto",
+  ncSeason:"Quando si mette?",
+  sea_estate:"☀️ Estivo",
+  sea_inverno:"❄️ Invernale",
+  sea_sempre:"🔁 Sempre",
+  ncNeedName:"Scrivi il nome della categoria",
+  ncNeedRole:"Scegli dove va nell'outfit",
+  ncExists:"Esiste già una categoria con questo nome",
+  ncSaved:"Categoria salvata!",
+  ncDel:"Elimina categoria",
+  ncDelText:"Vuoi eliminare la categoria \"{c}\"?",
+  ncDelBusy:"Prima sposta in un'altra categoria o rimuovi i capi di questa categoria",
+  ncDeleted:"Categoria eliminata",
+  setGender:"👤 Uomo o donna",
+  setCats:"🏷️ Le mie categorie",
+  setBags:"🎒 Proposte zaino e borsa",
+  myCats:"Le mie categorie",
+  myCatsText:"Le categorie che hai creato tu. Tocca una categoria per modificarla o eliminarla.",
+  myCatsNone:"Non hai ancora creato categorie.",
+  gTitle:"Uomo o donna?",
+  gText:"Serve a mettere per prime le categorie più adatte a te e ad attivare la versione giusta degli stili. Tutte le categorie restano sempre disponibili.",
+  g_m:"Uomo",
+  g_m_d:"In cima camicia, blazer, cravatta…",
+  g_f:"Donna",
+  g_f_d:"In cima abito, gonna, top, collant… e gli stili in versione donna",
+  g_x:"Preferisco non dirlo",
+  g_x_d:"Tutte le categorie in ordine alfabetico",
+  gNote:"È facoltativo e puoi cambiarlo quando vuoi dalle impostazioni.",
+  gSaved:"Fatto!",
+  bagsTitle:"Proposte zaino e borsa",
+  bagsText:"Scegli in quali giorni proporti lo zaino e in quali la borsa. Ogni giorno ti propongo uno solo dei due.",
+  bagsNone:"Non hai ancora zaini o borse nell'armadio: aggiungili con \"Altre categorie\" quando carichi un capo.",
+  bagZaino:"Giorni dello zaino",
+  bagBorsa:"Giorni della borsa",
+  bagsBoth:"Se un giorno è scelto per tutti e due, decido in base allo stile: borsa con elegante e alla moda, zaino con gli altri.",
+  bagsSaved:"Proposte salvate!",
+  color2:"Secondo colore",
+  color2Add:"Aggiungi un secondo colore (righe, due colori…)",
+  color2Rm:"Togli il secondo colore",
+  pattern:"Fantasia (facoltativa)",
+  pat_unita:"Tinta unita",
+  pat_righe:"A righe",
+  pat_quadri:"A quadri",
+  pat_fiori:"A fiori",
+  pat_pois:"A pois",
+  pat_mimetica:"Mimetica",
+  pat_multicolor:"Multicolor",
+  tr_sciarpa:"Sciarpa",
+  tr_sciarpa_d:"Te la propongo quando ci sono {n}° o meno.",
+  tr_cappello:"Cappello",
+  tr_cappello_d:"Te lo propongo quando ci sono {n}° o meno.",
+  tr_calzep:"Calze spesse e collant",
+  tr_calzep_d:"Con {n}° o meno: calze spesse con i pantaloni, collant o calze spesse con gonna e abito.",
+  ad_uv:"Occhiali da sole",
+  ad_uv_d:"Te li propongo quando c'è sole e l'indice UV arriva almeno a questo valore.",
+  ad_uvVal:"Da indice UV {n}",
+  pa13:"🏷️ <b>Categorie</b> · camicie, abiti, gonne, accessori e categorie tue, con le loro regole (anche nella versione base)",
   col:{"nero":"Nero","bianco":"Bianco","grigio":"Grigio","blu scuro":"Blu scuro","beige":"Beige","blu jeans":"Blu jeans","marrone":"Marrone","verde oliva":"Verde oliva","bordeaux":"Bordeaux","azzurro":"Azzurro","rosso":"Rosso","rosa":"Rosa","arancione":"Arancione","giallo":"Giallo","verde":"Verde","viola":"Viola"}
 },
 en:{
@@ -1003,6 +1121,121 @@ en:{
   tabAssist:"Assistant",
   asSub:"Talk or type: I answer out loud",
   pa12:"🎙️ <b>Outfit Assistant</b> · a voice assistant in the site: talk to it like Alexa, it knows your wardrobe and can change settings too",
+  cat_camicia:"Shirt",
+  cat_maglione:"Jumper",
+  cat_cardigan:"Cardigan",
+  cat_top:"Top",
+  cat_blazer:"Blazer",
+  cat_cappotto:"Coat",
+  cat_abito:"Dress",
+  cat_vestitolungo:"Long dress",
+  cat_gonna:"Skirt",
+  cat_collant:"Tights",
+  cat_calzespesse:"Thick socks",
+  cat_cravatta:"Tie",
+  cat_cintura:"Belt",
+  cat_sciarpa:"Scarf",
+  cat_cappello:"Hat",
+  cat_borsa:"Bag",
+  cat_zaino:"Backpack",
+  cat_occhiali:"Sunglasses",
+  cat_burqa:"Burqa",
+  cat_niqab:"Niqab",
+  cat_hijab:"Hijab",
+  v_camicia_q:"What sleeves does it have?",
+  v_camicia_corto:"Short sleeves",
+  v_camicia_lungo:"Long sleeves",
+  v_camicia_need:"Choose whether the shirt has short or long sleeves",
+  l_camicia_corto:"Short-sleeve shirt",
+  l_camicia_lungo:"Long-sleeve shirt",
+  underLayer:"Under: {c}",
+  overLayer:"Over: {c}",
+  moreCats:"More categories",
+  catSearch:"Search a category…",
+  catNone:"No category found. You can create it below.",
+  addCat:"Add category",
+  ncTitle:"New category",
+  ncEdit:"Edit category",
+  ncIntro:"Create your own category: OutfitDay will use it in outfits with the same rules as the others.",
+  ncName:"Name",
+  ncNamePh:"E.g. Dungarees, Poncho, Watch…",
+  ncRole:"Where does it go in the outfit?",
+  role_top:"Top",
+  role_top_d:"Like a T-shirt, shirt or top",
+  role_mid:"Warm layer",
+  role_mid_d:"Over the top, like a sweatshirt or jumper",
+  role_outer:"Jacket",
+  role_outer_d:"The last layer, like a jacket or coat",
+  role_bottom:"Bottom",
+  role_bottom_d:"Like trousers or a skirt",
+  role_full:"One piece",
+  role_full_d:"Replaces top and bottom, like a dress",
+  role_shoes:"Shoes",
+  role_shoes_d:"On your feet",
+  role_socks:"Socks",
+  role_socks_d:"Socks",
+  role_acc:"Accessory",
+  role_acc_d:"Added to the outfit, like a watch",
+  ncWarm:"How warm is it?",
+  warm0:"A little",
+  warm1:"Quite",
+  warm2:"Very",
+  ncSeason:"When do you wear it?",
+  sea_estate:"☀️ Summer",
+  sea_inverno:"❄️ Winter",
+  sea_sempre:"🔁 Always",
+  ncNeedName:"Type the category name",
+  ncNeedRole:"Choose where it goes in the outfit",
+  ncExists:"A category with this name already exists",
+  ncSaved:"Category saved!",
+  ncDel:"Delete category",
+  ncDelText:"Do you want to delete the category \"{c}\"?",
+  ncDelBusy:"First move to another category or remove the items in this category",
+  ncDeleted:"Category deleted",
+  setGender:"👤 Man or woman",
+  setCats:"🏷️ My categories",
+  setBags:"🎒 Backpack and bag suggestions",
+  myCats:"My categories",
+  myCatsText:"The categories you created. Tap one to edit or delete it.",
+  myCatsNone:"You haven't created any categories yet.",
+  gTitle:"Man or woman?",
+  gText:"It puts the categories that suit you best first and turns on the right version of the styles. All categories are always available.",
+  g_m:"Man",
+  g_m_d:"Shirt, blazer, tie… first",
+  g_f:"Woman",
+  g_f_d:"Dress, skirt, top, tights… first, and the women's version of the styles",
+  g_x:"I'd rather not say",
+  g_x_d:"All categories in alphabetical order",
+  gNote:"It's optional and you can change it anytime in the settings.",
+  gSaved:"Done!",
+  bagsTitle:"Backpack and bag suggestions",
+  bagsText:"Choose on which days to suggest the backpack and on which the bag. Each day I suggest only one of them.",
+  bagsNone:"You have no backpacks or bags in your wardrobe yet: add them with \"More categories\" when you add an item.",
+  bagZaino:"Backpack days",
+  bagBorsa:"Bag days",
+  bagsBoth:"If a day is chosen for both, I decide by style: bag with smart and trendy, backpack with the others.",
+  bagsSaved:"Suggestions saved!",
+  color2:"Second colour",
+  color2Add:"Add a second colour (stripes, two colours…)",
+  color2Rm:"Remove the second colour",
+  pattern:"Pattern (optional)",
+  pat_unita:"Plain",
+  pat_righe:"Striped",
+  pat_quadri:"Checked",
+  pat_fiori:"Floral",
+  pat_pois:"Polka dot",
+  pat_mimetica:"Camo",
+  pat_multicolor:"Multicolour",
+  tr_sciarpa:"Scarf",
+  tr_sciarpa_d:"I suggest it at {n}° or less.",
+  tr_cappello:"Hat",
+  tr_cappello_d:"I suggest it at {n}° or less.",
+  tr_calzep:"Thick socks and tights",
+  tr_calzep_d:"At {n}° or less: thick socks with trousers, tights or thick socks with skirts and dresses.",
+  ad_uv:"Sunglasses",
+  ad_uv_d:"I suggest them when it's sunny and the UV index reaches at least this value.",
+  ad_uvVal:"From UV index {n}",
+  pa13:"🏷️ <b>Categories</b> · shirts, dresses, skirts, accessories and your own categories, with their rules (also in the basic version)",
   col:{"nero":"Black","bianco":"White","grigio":"Grey","blu scuro":"Navy","beige":"Beige","blu jeans":"Denim blue","marrone":"Brown","verde oliva":"Olive","bordeaux":"Burgundy","azzurro":"Light blue","rosso":"Red","rosa":"Pink","arancione":"Orange","giallo":"Yellow","verde":"Green","viola":"Purple"}
 },
 es:{
@@ -1316,6 +1549,121 @@ es:{
   tabAssist:"Asistente",
   asSub:"Habla o escribe: te respondo en voz alta",
   pa12:"🎙️ <b>Outfit Assistant</b> · un asistente de voz en la web: háblale como a Alexa, conoce tu armario y también cambia los ajustes",
+  cat_camicia:"Camisa",
+  cat_maglione:"Jersey",
+  cat_cardigan:"Cárdigan",
+  cat_top:"Top",
+  cat_blazer:"Blazer",
+  cat_cappotto:"Abrigo",
+  cat_abito:"Vestido",
+  cat_vestitolungo:"Vestido largo",
+  cat_gonna:"Falda",
+  cat_collant:"Medias",
+  cat_calzespesse:"Calcetines gruesos",
+  cat_cravatta:"Corbata",
+  cat_cintura:"Cinturón",
+  cat_sciarpa:"Bufanda",
+  cat_cappello:"Gorro",
+  cat_borsa:"Bolso",
+  cat_zaino:"Mochila",
+  cat_occhiali:"Gafas de sol",
+  cat_burqa:"Burka",
+  cat_niqab:"Nicab",
+  cat_hijab:"Hiyab",
+  v_camicia_q:"¿Qué mangas tiene?",
+  v_camicia_corto:"Manga corta",
+  v_camicia_lungo:"Manga larga",
+  v_camicia_need:"Elige si la camisa es de manga corta o larga",
+  l_camicia_corto:"Camisa de manga corta",
+  l_camicia_lungo:"Camisa de manga larga",
+  underLayer:"Debajo: {c}",
+  overLayer:"Encima: {c}",
+  moreCats:"Otras categorías",
+  catSearch:"Busca una categoría…",
+  catNone:"No hay ninguna categoría. Puedes crearla abajo.",
+  addCat:"Añadir categoría",
+  ncTitle:"Nueva categoría",
+  ncEdit:"Editar categoría",
+  ncIntro:"Crea tu propia categoría: OutfitDay la usará en los outfits con las mismas reglas que las demás.",
+  ncName:"Nombre",
+  ncNamePh:"Ej. Peto, Poncho, Reloj…",
+  ncRole:"¿Dónde va en el outfit?",
+  role_top:"Arriba",
+  role_top_d:"Como camiseta, camisa o top",
+  role_mid:"Capa de abrigo",
+  role_mid_d:"Encima, como sudadera o jersey",
+  role_outer:"Chaqueta",
+  role_outer_d:"La última capa, como chaqueta o abrigo",
+  role_bottom:"Abajo",
+  role_bottom_d:"Como pantalones o falda",
+  role_full:"Pieza única",
+  role_full_d:"Sustituye arriba y abajo, como un vestido",
+  role_shoes:"Zapatos",
+  role_shoes_d:"En los pies",
+  role_socks:"Calcetines",
+  role_socks_d:"Calcetines",
+  role_acc:"Accesorio",
+  role_acc_d:"Se añade al outfit, como un reloj",
+  ncWarm:"¿Cuánto abriga?",
+  warm0:"Poco",
+  warm1:"Bastante",
+  warm2:"Mucho",
+  ncSeason:"¿Cuándo se lleva?",
+  sea_estate:"☀️ Verano",
+  sea_inverno:"❄️ Invierno",
+  sea_sempre:"🔁 Siempre",
+  ncNeedName:"Escribe el nombre de la categoría",
+  ncNeedRole:"Elige dónde va en el outfit",
+  ncExists:"Ya existe una categoría con este nombre",
+  ncSaved:"¡Categoría guardada!",
+  ncDel:"Eliminar categoría",
+  ncDelText:"¿Quieres eliminar la categoría \"{c}\"?",
+  ncDelBusy:"Primero pasa a otra categoría o elimina las prendas de esta categoría",
+  ncDeleted:"Categoría eliminada",
+  setGender:"👤 Hombre o mujer",
+  setCats:"🏷️ Mis categorías",
+  setBags:"🎒 Propuestas de mochila y bolso",
+  myCats:"Mis categorías",
+  myCatsText:"Las categorías que has creado. Toca una para editarla o eliminarla.",
+  myCatsNone:"Todavía no has creado categorías.",
+  gTitle:"¿Hombre o mujer?",
+  gText:"Sirve para poner primero las categorías más adecuadas para ti y activar la versión correcta de los estilos. Todas las categorías siguen disponibles.",
+  g_m:"Hombre",
+  g_m_d:"Primero camisa, blazer, corbata…",
+  g_f:"Mujer",
+  g_f_d:"Primero vestido, falda, top, medias… y los estilos en versión mujer",
+  g_x:"Prefiero no decirlo",
+  g_x_d:"Todas las categorías en orden alfabético",
+  gNote:"Es opcional y puedes cambiarlo cuando quieras en los ajustes.",
+  gSaved:"¡Hecho!",
+  bagsTitle:"Propuestas de mochila y bolso",
+  bagsText:"Elige qué días proponerte la mochila y qué días el bolso. Cada día te propongo solo uno de los dos.",
+  bagsNone:"Todavía no tienes mochilas ni bolsos en el armario: añádelos con \"Otras categorías\" al subir una prenda.",
+  bagZaino:"Días de la mochila",
+  bagBorsa:"Días del bolso",
+  bagsBoth:"Si un día está elegido para los dos, decido según el estilo: bolso con elegante y a la moda, mochila con los demás.",
+  bagsSaved:"¡Propuestas guardadas!",
+  color2:"Segundo color",
+  color2Add:"Añadir un segundo color (rayas, dos colores…)",
+  color2Rm:"Quitar el segundo color",
+  pattern:"Estampado (opcional)",
+  pat_unita:"Liso",
+  pat_righe:"De rayas",
+  pat_quadri:"De cuadros",
+  pat_fiori:"De flores",
+  pat_pois:"De lunares",
+  pat_mimetica:"Camuflaje",
+  pat_multicolor:"Multicolor",
+  tr_sciarpa:"Bufanda",
+  tr_sciarpa_d:"Te la propongo con {n}° o menos.",
+  tr_cappello:"Gorro",
+  tr_cappello_d:"Te lo propongo con {n}° o menos.",
+  tr_calzep:"Calcetines gruesos y medias",
+  tr_calzep_d:"Con {n}° o menos: calcetines gruesos con pantalones, medias o calcetines gruesos con falda y vestido.",
+  ad_uv:"Gafas de sol",
+  ad_uv_d:"Te las propongo cuando hace sol y el índice UV llega al menos a este valor.",
+  ad_uvVal:"Desde índice UV {n}",
+  pa13:"🏷️ <b>Categorías</b> · camisas, vestidos, faldas, accesorios y categorías tuyas, con sus reglas (también en la versión básica)",
   col:{"nero":"Negro","bianco":"Blanco","grigio":"Gris","blu scuro":"Azul marino","beige":"Beige","blu jeans":"Azul vaquero","marrone":"Marrón","verde oliva":"Verde oliva","bordeaux":"Burdeos","azzurro":"Celeste","rosso":"Rojo","rosa":"Rosa","arancione":"Naranja","giallo":"Amarillo","verde":"Verde","viola":"Morado"}
 },
 fr:{
@@ -1629,6 +1977,121 @@ fr:{
   tabAssist:"Assistant",
   asSub:"Parle ou écris : je te réponds à voix haute",
   pa12:"🎙️ <b>Outfit Assistant</b> · un assistant vocal dans le site : parle-lui comme à Alexa, il connaît ta garde-robe et change aussi les réglages",
+  cat_camicia:"Chemise",
+  cat_maglione:"Pull",
+  cat_cardigan:"Cardigan",
+  cat_top:"Top",
+  cat_blazer:"Blazer",
+  cat_cappotto:"Manteau",
+  cat_abito:"Robe",
+  cat_vestitolungo:"Robe longue",
+  cat_gonna:"Jupe",
+  cat_collant:"Collant",
+  cat_calzespesse:"Chaussettes épaisses",
+  cat_cravatta:"Cravate",
+  cat_cintura:"Ceinture",
+  cat_sciarpa:"Écharpe",
+  cat_cappello:"Bonnet",
+  cat_borsa:"Sac",
+  cat_zaino:"Sac à dos",
+  cat_occhiali:"Lunettes de soleil",
+  cat_burqa:"Burqa",
+  cat_niqab:"Niqab",
+  cat_hijab:"Hijab",
+  v_camicia_q:"Quelles manches ?",
+  v_camicia_corto:"Manches courtes",
+  v_camicia_lungo:"Manches longues",
+  v_camicia_need:"Choisis si la chemise a des manches courtes ou longues",
+  l_camicia_corto:"Chemise manches courtes",
+  l_camicia_lungo:"Chemise manches longues",
+  underLayer:"Dessous : {c}",
+  overLayer:"Dessus : {c}",
+  moreCats:"Autres catégories",
+  catSearch:"Cherche une catégorie…",
+  catNone:"Aucune catégorie trouvée. Tu peux la créer ci-dessous.",
+  addCat:"Ajouter une catégorie",
+  ncTitle:"Nouvelle catégorie",
+  ncEdit:"Modifier la catégorie",
+  ncIntro:"Crée ta propre catégorie : OutfitDay l'utilisera dans les tenues avec les mêmes règles que les autres.",
+  ncName:"Nom",
+  ncNamePh:"Ex. Salopette, Poncho, Montre…",
+  ncRole:"Où va-t-elle dans la tenue ?",
+  role_top:"Haut",
+  role_top_d:"Comme un t-shirt, une chemise ou un top",
+  role_mid:"Couche chaude",
+  role_mid_d:"Par-dessus, comme un sweat ou un pull",
+  role_outer:"Veste",
+  role_outer_d:"La dernière couche, comme une veste ou un manteau",
+  role_bottom:"Bas",
+  role_bottom_d:"Comme un pantalon ou une jupe",
+  role_full:"Pièce unique",
+  role_full_d:"Remplace le haut et le bas, comme une robe",
+  role_shoes:"Chaussures",
+  role_shoes_d:"Aux pieds",
+  role_socks:"Chaussettes",
+  role_socks_d:"Chaussettes",
+  role_acc:"Accessoire",
+  role_acc_d:"S'ajoute à la tenue, comme une montre",
+  ncWarm:"Elle tient chaud ?",
+  warm0:"Un peu",
+  warm1:"Assez",
+  warm2:"Beaucoup",
+  ncSeason:"Quand la porter ?",
+  sea_estate:"☀️ Été",
+  sea_inverno:"❄️ Hiver",
+  sea_sempre:"🔁 Toujours",
+  ncNeedName:"Écris le nom de la catégorie",
+  ncNeedRole:"Choisis où elle va dans la tenue",
+  ncExists:"Une catégorie avec ce nom existe déjà",
+  ncSaved:"Catégorie enregistrée !",
+  ncDel:"Supprimer la catégorie",
+  ncDelText:"Tu veux supprimer la catégorie « {c} » ?",
+  ncDelBusy:"Déplace d'abord dans une autre catégorie ou retire les vêtements de cette catégorie",
+  ncDeleted:"Catégorie supprimée",
+  setGender:"👤 Homme ou femme",
+  setCats:"🏷️ Mes catégories",
+  setBags:"🎒 Propositions sac à dos et sac",
+  myCats:"Mes catégories",
+  myCatsText:"Les catégories que tu as créées. Touche-en une pour la modifier ou la supprimer.",
+  myCatsNone:"Tu n'as encore créé aucune catégorie.",
+  gTitle:"Homme ou femme ?",
+  gText:"Ça sert à mettre en premier les catégories qui te conviennent et à activer la bonne version des styles. Toutes les catégories restent disponibles.",
+  g_m:"Homme",
+  g_m_d:"En premier chemise, blazer, cravate…",
+  g_f:"Femme",
+  g_f_d:"En premier robe, jupe, top, collant… et les styles en version femme",
+  g_x:"Je préfère ne pas le dire",
+  g_x_d:"Toutes les catégories par ordre alphabétique",
+  gNote:"C'est facultatif et tu peux le changer quand tu veux dans les réglages.",
+  gSaved:"C'est fait !",
+  bagsTitle:"Propositions sac à dos et sac",
+  bagsText:"Choisis les jours où te proposer le sac à dos et ceux où te proposer le sac. Chaque jour je n'en propose qu'un seul.",
+  bagsNone:"Tu n'as pas encore de sac à dos ni de sac dans ta garde-robe : ajoute-les avec « Autres catégories » en ajoutant un vêtement.",
+  bagZaino:"Jours du sac à dos",
+  bagBorsa:"Jours du sac",
+  bagsBoth:"Si un jour est choisi pour les deux, je décide selon le style : sac avec élégant et tendance, sac à dos avec les autres.",
+  bagsSaved:"Propositions enregistrées !",
+  color2:"Deuxième couleur",
+  color2Add:"Ajouter une deuxième couleur (rayures, deux couleurs…)",
+  color2Rm:"Retirer la deuxième couleur",
+  pattern:"Motif (facultatif)",
+  pat_unita:"Uni",
+  pat_righe:"À rayures",
+  pat_quadri:"À carreaux",
+  pat_fiori:"À fleurs",
+  pat_pois:"À pois",
+  pat_mimetica:"Camouflage",
+  pat_multicolor:"Multicolore",
+  tr_sciarpa:"Écharpe",
+  tr_sciarpa_d:"Je te la propose à {n}° ou moins.",
+  tr_cappello:"Bonnet",
+  tr_cappello_d:"Je te le propose à {n}° ou moins.",
+  tr_calzep:"Chaussettes épaisses et collants",
+  tr_calzep_d:"À {n}° ou moins : chaussettes épaisses avec le pantalon, collants ou chaussettes épaisses avec jupe et robe.",
+  ad_uv:"Lunettes de soleil",
+  ad_uv_d:"Je te les propose quand il y a du soleil et que l'indice UV atteint au moins cette valeur.",
+  ad_uvVal:"Dès l'indice UV {n}",
+  pa13:"🏷️ <b>Catégories</b> · chemises, robes, jupes, accessoires et tes propres catégories, avec leurs règles (aussi dans la version de base)",
   col:{"nero":"Noir","bianco":"Blanc","grigio":"Gris","blu scuro":"Bleu marine","beige":"Beige","blu jeans":"Bleu jean","marrone":"Marron","verde oliva":"Vert olive","bordeaux":"Bordeaux","azzurro":"Bleu ciel","rosso":"Rouge","rosa":"Rose","arancione":"Orange","giallo":"Jaune","verde":"Vert","viola":"Violet"}
 }};
 
@@ -1638,23 +2101,67 @@ const LOCALE = {it:'it-IT',en:'en-GB',es:'es-ES',fr:'fr-FR'};
 let LANG = 'it';
 function t(k,v){let s=(TXT[LANG][k]!==undefined?TXT[LANG][k]:TXT.it[k]);if(s===undefined)s=k;
   if(v)for(const x in v)s=s.split('{'+x+'}').join(v[x]);return s}
-const catName=c=>t('cat_'+c);
+const catName=c=>{if(TXT.it['cat_'+c]!==undefined)return t('cat_'+c);const u=(LS.get('categorie',[])||[]).find(x=>x.id===c);return u?u.name:c};
 const colName=c=>TXT[LANG].col[c]||c;
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 /* ================= DATI DI BASE ================= */
-const CAT_ICON = {maglietta:'👕', felpa:'🧶', giacca:'🧥', pantaloni:'👖', scarpe:'👟', calze:'🧦'};
-const CAT_ORDER = ['maglietta','felpa','giacca','pantaloni','scarpe','calze'];
+/* Categorie: le 7 principali, le "altre" e quelle create dall'utente.
+   r = ruolo nell'outfit: top (sopra), mid (strato caldo), outer (giacca/capospalla), bottom (sotto),
+   full (pezzo unico), legs (collant e calze spesse), socks (calze), shoes (scarpe), acc (accessorio), fixed (ogni giorno).
+   f = eleganza: 0 sportivo, 1 normale, 2 elegante. */
+const CATS={
+  maglietta:{r:'top',ic:'👕',f:0},camicia:{r:'top',ic:'👔',f:2},felpa:{r:'mid',ic:'🧶',f:0},giacca:{r:'outer',ic:'🧥',f:1},
+  pantaloni:{r:'bottom',ic:'👖',f:1},scarpe:{r:'shoes',ic:'👟',f:1},calze:{r:'socks',ic:'🧦',f:1},
+  maglione:{r:'mid',ic:'🧶',f:1},cardigan:{r:'mid',ic:'🧥',f:1},top:{r:'top',ic:'🎽',f:1,len:'corto'},
+  blazer:{r:'outer',ic:'🧥',f:2,wt:'leggero'},cappotto:{r:'outer',ic:'🧥',f:1,wt:'pesante'},
+  abito:{r:'full',ic:'👗',f:2},vestitolungo:{r:'full',ic:'👗',f:2},gonna:{r:'bottom',ic:'👗',f:1,skirt:1},
+  collant:{r:'legs',ic:'🧦',f:1},calzespesse:{r:'legs',ic:'🧦',f:1},
+  cravatta:{r:'acc',ic:'👔',f:2},cintura:{r:'acc',ic:'➰',f:1},sciarpa:{r:'acc',ic:'🧣',f:1},cappello:{r:'acc',ic:'🧢',f:1},
+  borsa:{r:'acc',ic:'👜',f:1},zaino:{r:'acc',ic:'🎒',f:0},occhiali:{r:'acc',ic:'🕶️',f:1},
+  burqa:{r:'fixed',ic:'🧕',f:1},niqab:{r:'fixed',ic:'🧕',f:1},hijab:{r:'fixed',ic:'🧕',f:1}
+};
+const MAIN_CATS=['maglietta','camicia','felpa','giacca','pantaloni','scarpe','calze'];
+const MORE_F=['abito','vestitolungo','gonna','top','collant','borsa','cardigan','maglione','calzespesse','cappotto','sciarpa','cappello','occhiali','cintura','zaino','blazer','cravatta'];
+const MORE_M=['maglione','blazer','cravatta','cappotto','cintura','zaino','cardigan','sciarpa','cappello','occhiali','calzespesse','borsa','top','gonna','abito','vestitolungo','collant'];
+const END_CATS=['burqa','niqab','hijab'];
+const ROLES=['top','mid','outer','bottom','full','shoes','socks','acc'];
+const ROLE_IC={top:'👕',mid:'🧶',outer:'🧥',bottom:'👖',full:'👗',legs:'🧦',socks:'🧦',shoes:'👟',acc:'🏷️',fixed:'🧕'};
+const ROLE_ORDER=['fixed','outer','mid','full','top','bottom','legs','socks','shoes','acc'];
+function userCats(){return LS.get('categorie',[])||[]}
+function catMeta(c){if(CATS[c])return CATS[c];const u=userCats().find(x=>x.id===c);
+  return u?{r:u.role,ic:ROLE_IC[u.role]||'🏷️',f:1,w:u.warm||0,season:u.season||'sempre',custom:1}:{r:'acc',ic:'🏷️',f:1,unknown:1}}
+const roleOf=c=>catMeta(c).r;
+const catIcon=c=>catMeta(c).ic;
+const isExtra=p=>['acc','fixed'].includes(roleOf(p.cat));
+const mainOnly=ids=>ids.filter(id=>{const it=ITEMS.find(i=>i.id===id);return !it||!isExtra(it)});
+const mainSig=ids=>sig(mainOnly(ids));
+function allCats(){ // ordine dell'elenco completo: principali, altre (in base a uomo/donna), create da te, in fondo burqa/niqab/hijab
+  const sx=LS.get('sesso',null),more=sx==='f'?MORE_F:sx==='m'?MORE_M:MORE_M.slice().sort((a,b)=>catName(a).localeCompare(catName(b)));
+  return MAIN_CATS.concat(more,userCats().map(u=>u.id),END_CATS)}
+const ordOf=c=>ROLE_ORDER.indexOf(roleOf(c))*10+(c==='felpa'?1:0);
+const byShow=(a,b)=>ordOf(a.cat)-ordOf(b.cat);
+// categorie create da te: estive solo col caldo, invernali solo col freddo
+function seasonOK(i){const m=catMeta(i.cat);if(!m.custom||m.season==='sempre'||!m.season)return true;return m.season==='inverno'?needFelpa():!needFelpa()}
+// colore con secondo colore e fantasia
+function dotHTML(p,sz){const a=COLORS[p.color]?COLORS[p.color].hex:'#888',b=p.color2&&COLORS[p.color2]?COLORS[p.color2].hex:null;
+  return `<span class="dot" style="background:${b?`linear-gradient(135deg,${a} 50%,${b} 50%)`:a}${sz?`;width:${sz}px;height:${sz}px`:''}"></span>`}
+const PATTERNS=['unita','righe','quadri','fiori','pois','mimetica','multicolor'];
+const hasPat=p=>!!p.pattern&&p.pattern!=='unita';
+function colText(p){return colName(p.color)+(p.color2&&COLORS[p.color2]?' / '+colName(p.color2):'')+(hasPat(p)?' · '+t('pat_'+p.pattern):'')}
 // tipo di capo: per alcune categorie si sceglie anche il tipo
 // (capi caricati prima: magliette manica corta, pantaloni lunghi, giacche e scarpe leggere)
 const VARIANTS = {
   maglietta:{vals:['corto','lungo'],def:'corto'},
+  camicia:{vals:['corto','lungo'],def:'lungo'},
   pantaloni:{vals:['corto','lungo'],def:'lungo'},
   giacca:{vals:['leggero','pesante'],def:'leggero'},
   scarpe:{vals:['leggero','pesante'],def:'leggero'}
 };
 const hasVar=c=>!!VARIANTS[c];
-function lenOf(i){return i.len||(VARIANTS[i.cat]?VARIANTS[i.cat].def:null)}
+function lenOf(i){if(i.len)return i.len;if(VARIANTS[i.cat])return VARIANTS[i.cat].def;const m=catMeta(i.cat);if(m.len)return m.len;if(m.wt)return m.wt;
+  if(m.custom){if(m.r==='outer'||m.r==='shoes')return m.w>=2?'pesante':'leggero';if(m.r==='top'||m.r==='bottom')return m.w>=1?'lungo':'corto'}
+  return null}
 // tipo: n = neutro, s = semi-neutro, f = colore forte
 const COLORS = {
   'nero':{hex:'#1a1a1a',t:'n'}, 'bianco':{hex:'#f2f2f2',t:'n'}, 'grigio':{hex:'#8c8c8c',t:'n'},
@@ -1680,8 +2187,18 @@ const TRENDS = {
     pairs:[['azzurro','grigio'],['azzurro','bianco'],['rosa','grigio'],['rosa','bianco'],['azzurro','blu jeans'],['rosa','blu jeans'],['marrone','beige']],
     avoid:['rosso','arancione','giallo','verde','viola']}
 };
+/* Versione donna degli stili (si attiva se nelle impostazioni hai scelto "Donna").
+   Alla moda: base neutra (grigio, blu notte, nero, marrone, crema) + un solo colore di tendenza
+   (bordeaux, melanzana, giallo burro, rosa baby), coppie come marrone+panna e oliva+beige/grigio.
+   Gen Z: dopamine dressing, colori accesi e fantasie, sopra e sotto dello stesso colore (completo coordinato). */
+const TRENDS_F = {
+  moda:{base:['grigio','blu scuro','nero','marrone','beige','bianco'],accent:['bordeaux','viola','giallo','rosa'],
+    pairs:[['marrone','beige'],['marrone','bianco'],['verde oliva','beige'],['verde oliva','grigio'],['rosa','beige'],['rosa','marrone'],['rosa','grigio'],['bordeaux','beige']],
+    avoid:['arancione','verde']}
+};
+const isFem=()=>LS.get('sesso',null)==='f';
 // regimi di temperatura (temperatura massima del giorno); l'utente li può cambiare nelle impostazioni
-const REG_DEF = {manica:22, corti:24, felpa:19, giacca:15, pesante:10};
+const REG_DEF = {manica:22, corti:24, felpa:19, giacca:15, pesante:10, sciarpa:10, cappello:8, calzep:12};
 function R(){return Object.assign({},REG_DEF,LS.get('regimi',{}))}
 
 /* ================= ARCHIVIO ================= */
@@ -1873,13 +2390,14 @@ function outfitForDay(i){
   if(DAYCACHE[i])return DAYCACHE[i];
   const d=WEATHER.days[i];
   const pr=plan()[d.date];let p=null;
-  if(pr){p=pr.ids.map(id=>ITEMS.find(x=>x.id===id));if(!p.length||p.some(x=>!x))p=null}
+  if(pr){p=pr.ids.map(id=>ITEMS.find(x=>x.id===id));if(!p.length||p.some(x=>!x))p=null;
+    else if(!p.some(isExtra)){WX={max:d.max,min:d.min,rain:d.rain,code:d.code,prob:d.prob,date:d.date,app:d.app};try{p=withExtras(p)}finally{WX=null}}}
   if(!p){
     WX={max:d.max,min:d.min,rain:d.rain,code:d.code,prob:d.prob,date:d.date,app:d.app};
     try{p=generate()}finally{WX=null}
     if(p&&i>=1)setPlan(d.date,{ids:p.map(x=>x.id),t:Date.now(),by:'site'});
   }
-  if(p)p=p.slice().sort((a,b)=>ORDER_SHOW.indexOf(a.cat)-ORDER_SHOW.indexOf(b.cat));
+  if(p)p=p.slice().sort(byShow);
   DAYCACHE[i]=p;return p;
 }
 function layersText(d){
@@ -1904,7 +2422,7 @@ function renderMeteo(){
       x=`<div class="dayx"><div class="lbl" style="margin-top:4px">${t('dayOutfit')}</div>
         <p class="step" style="margin:0 0 10px">${layersText(d)}</p>
         ${p.length?`<div class="minis">${p.map(q=>`<div class="mini"><img src="${q.img}" alt="">
-          <div><b>${CAT_ICON[q.cat]} ${pieceLabel(q)}</b><span><span class="dot" style="background:${COLORS[q.color].hex};width:12px;height:12px"></span> ${colName(q.color)}${q.brand?' · '+esc(q.brand):''}</span></div></div>`).join('')}</div>`
+          <div><b>${catIcon(q.cat)} ${esc(pieceLabel(q))}</b><span>${dotHTML(q,12)} ${colText(q)}${q.brand?' · '+esc(q.brand):''}</span></div></div>`).join('')}</div>`
           :`<p class="step">${t('emptyText')}</p>`}
         ${isPro()?wxProHTML(d.app,d.hum,d.uv):''}
         ${dayRain(d)?`<div class="rain">${t('rainTip')}<button class="morebtn" data-rain="${i}">${t('rainMore')} ›</button></div>`:''}
@@ -1986,37 +2504,48 @@ function nearSigs(){ // outfit interi da non ripetere mai nei giorni vicini (±6
   return neighborOutfits(target).filter(x=>Math.abs(dDiff(x.date,target))<=6).map(x=>sig(x.ids));
 }
 function score(pieces,recent){
-  const st=LS.get('stile',null)||{},sty=effStyle(st),pro=isPro(),adv=pro?ADV():null;
-  const cols=pieces.map(p=>p.color);let s=0;
+  const st=LS.get('stile',null)||{},sty=effStyle(st),pro=isPro(),adv=pro?ADV():null,fem=isFem();
+  const cols=pieces.map(p=>p.color),all=cols.concat(pieces.filter(p=>p.color2&&COLORS[p.color2]).map(p=>p.color2));let s=0;
   const strong=cols.filter(c=>COLORS[c].t==='f').length,semi=cols.filter(c=>COLORS[c].t==='s').length;
   // quanto colore
   if(st.colore==='neutri'){s-=strong*4+semi}
   else if(st.colore==='vivaci'){if(strong>=1)s+=3;if(strong>2)s-=3}
   else{if(strong>1)s-=10;if(strong===1)s+=2;if(semi>2)s-=3}
-  for(let i=0;i<cols.length;i++)for(let j=i+1;j<cols.length;j++){if(clash(cols[i],cols[j]))s-=6;
-    if(pro&&adv.pairs.some(([x,y])=>(x===cols[i]&&y===cols[j])||(x===cols[j]&&y===cols[i])))s-=8}
-  const top=pieces.find(p=>p.cat==='felpa')||pieces.find(p=>p.cat==='maglietta'),pants=pieces.find(p=>p.cat==='pantaloni');
-  if(top&&pants){
+  for(let i=0;i<pieces.length;i++)for(let j=i+1;j<pieces.length;j++){
+    const A=[pieces[i].color,pieces[i].color2].filter(Boolean),B=[pieces[j].color,pieces[j].color2].filter(Boolean);
+    if(A.some(x=>B.some(y=>clash(x,y))))s-=6;
+    if(pro&&A.some(x=>B.some(y=>adv.pairs.some(([p,q])=>(p===x&&q===y)||(p===y&&q===x)))))s-=8}
+  const role=r=>pieces.find(p=>roleOf(p.cat)===r);
+  const full=role('full'),top=role('mid')||role('top')||full,pants=role('bottom')||full;
+  if(top&&pants&&top!==pants){
     const dL=Math.abs(LIGHT[top.color]-LIGHT[pants.color]);
     if(st.abbina==='contrasto'){if(dL>=30)s+=2;else if(dL<15)s-=2}
     else if(st.abbina==='tono'){if(dL<20)s+=2}
-    if(top.color===pants.color&&top.color!=='nero'&&st.abbina!=='tono')s-=4;
+    if(top.color===pants.color&&top.color!=='nero'&&st.abbina!=='tono')s+=(fem&&sty==='genz')?3:-4; // Gen Z donna: completo coordinato
   }
-  const tee=pieces.find(p=>p.cat==='maglietta'),hood=pieces.find(p=>p.cat==='felpa');
+  const tee=role('top'),hood=role('mid');
   if(tee&&hood&&tee.color===hood.color)s-=1;
+  // fantasie: al massimo un capo a fantasia, gli altri in tinta unita con i suoi colori (Gen Z donna: anche due)
+  const pat=pieces.filter(hasPat);
+  if(pat.length>1)s+=(fem&&sty==='genz')?1:-8;
+  else if(pat.length===1){const pc=[pat[0].color,pat[0].color2].filter(Boolean);if(pieces.some(p=>p!==pat[0]&&pc.includes(p.color)))s+=1.5}
   // stile
-  const neutral=cols.filter(c=>COLORS[c].t==='n').length;
-  if(sty==='elegante'){s+=neutral*0.8;if(cols.includes('blu jeans'))s-=1}
-  else if(sty==='sportivo'){if(strong>=1)s+=1}
-  else if(sty==='casual'){if(pants&&pants.color==='blu jeans')s+=1.5}
+  const neutral=cols.filter(c=>COLORS[c].t==='n').length,jeans=pants&&pants.color==='blu jeans'&&roleOf(pants.cat)==='bottom'&&!catMeta(pants.cat).skirt;
+  if(sty==='elegante'){s+=neutral*0.8;if(cols.includes('blu jeans'))s-=1;
+    s+=pieces.filter(p=>catMeta(p.cat).f>=2).length*0.8-pieces.filter(p=>catMeta(p.cat).f<1&&!isExtra(p)).length*0.8;
+    if(fem&&(full||(pants&&catMeta(pants.cat).skirt)))s+=2}
+  else if(sty==='sportivo'){if(strong>=1)s+=1;s-=pieces.filter(p=>catMeta(p.cat).f>=2&&!isExtra(p)).length*1.5}
+  else if(sty==='casual'){if(jeans)s+=1.5}
   else if(sty==='street'){if(cols.includes('nero'))s+=1;if(top&&pants&&Math.abs(LIGHT[top.color]-LIGHT[pants.color])>=30)s+=1}
-  else if(sty==='moda'){s+=trendScore(cols,TRENDS.moda)}
-  else if(sty==='genz'){s+=trendScore(cols,TRENDS.genz);if(pants&&pants.color==='blu jeans')s+=1}
+  else if(sty==='moda'){s+=trendScore(cols,fem?TRENDS_F.moda:TRENDS.moda)}
+  else if(sty==='genz'){if(fem){s+=Math.min(strong,3)*2+pat.length*1.5;if(strong>1)s+=8}else{s+=trendScore(cols,TRENDS.genz);if(jeans)s+=1}}
+  // con il freddo, gonna e abito vanno con collant o calze spesse
+  if((full||(pants&&catMeta(pants.cat).skirt))&&legsWant()&&!role('legs'))s-=3;
   // colori e marchi preferiti: escono un po' più spesso, senza escludere gli altri
   const fk=pro?{poco:.5,medio:1,molto:2}[adv.favBoost]||1:1;
-  if(pro&&adv.dayColor&&cols.includes(adv.dayColor)){ // almeno un capo del colore scelto, cambiando capo ogni giorno
+  if(pro&&adv.dayColor&&all.includes(adv.dayColor)){ // almeno un capo del colore scelto, cambiando capo ogni giorno
     s+=10;const tg=(WX&&WX.date)||isoDay(),yd=(neighborOutfits(tg).find(x=>dDiff(tg,x.date)===1)||{}).ids||[]; // capo del colore usato il giorno prima
-    if(pieces.some(p=>p.color===adv.dayColor&&yd.includes(p.id)))s-=3}
+    if(pieces.some(p=>(p.color===adv.dayColor||p.color2===adv.dayColor)&&yd.includes(p.id)))s-=3}
   const fav=st.preferiti||[];if(fav.length)s+=Math.min(3*fk,cols.filter(c=>fav.includes(c)).length*1.5*fk);
   const favB=(st.marchi||[]).map(b=>b.toLowerCase());
   if(favB.length)s+=Math.min(2*fk,pieces.filter(p=>p.brand&&favB.includes(p.brand.toLowerCase())).length*fk);
@@ -2030,66 +2559,136 @@ const sig=ids=>ids.slice().sort().join('|');
 function today(){const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
 function scartati(){const s=LS.get('scartati',null);return s&&s.date===today()?s.ids:[]}
 function addScartato(id){const ids=scartati();if(!ids.includes(id))ids.push(id);LS.set('scartati',{date:today(),ids})}
-function saveToday(ids){
-  LS.set('oggi',{date:today(),ids,t:Date.now()});
+function saveToday(ids,manual){
+  LS.set('oggi',Object.assign({date:today(),ids,t:Date.now()},manual?{manual:true}:{}));
   const u=LS.get('usati',[]).filter(x=>x.date!==today());u.push({date:today(),ids});LS.set('usati',u.slice(-120));
 }
+// temperature per accessori e calze pesanti (regimi): "sotto" la soglia
+function coldFor(k){if(W())return tPairs().some(([T,r])=>T<=r[k]);const m=month();return k==='cappello'?(m===11||m<=1):(m>=10||m<=2)}
+function legsWant(){return coldFor('calzep')}
+const uvThr=()=>isPro()?(ADV().uvGlasses||5):5;
+function dayOf(){const w=W();if(!WEATHER||!WEATHER.days)return null;const ds=(w&&w.date)||WEATHER.days[0].date;return WEATHER.days.find(x=>x.date===ds)||WEATHER.days[0]}
+function sunnyDay(){const w=W(),d=dayOf();if(!w||!d)return false;const code=WX?WX.code:d.code;return code<=2&&(d.uv||0)>=uvThr()}
+// zaino o borsa: in base ai giorni scelti in "Proposte zaino e borsa"
+function bagDays(){const hz=ITEMS.some(i=>i.cat==='zaino'),hb=ITEMS.some(i=>i.cat==='borsa'),cfg=LS.get('borse',null)||{};
+  return {hz,hb,zaino:cfg.zaino||(hb?[1,2,3,4,5]:[0,1,2,3,4,5,6]),borsa:cfg.borsa||(hz?[0,6]:[0,1,2,3,4,5,6])}}
+function bagCat(){
+  const b=bagDays();if(!b.hz&&!b.hb)return null;
+  const w=W(),ds=(w&&w.date)||isoDay(),dow=new Date(ds+'T12:00:00').getDay();
+  const z=b.hz&&b.zaino.includes(dow),bo=b.hb&&b.borsa.includes(dow);
+  if(z&&bo)return ['elegante','moda'].includes(effStyle(LS.get('stile',null)||{}))?'borsa':'zaino';
+  return z?'zaino':bo?'borsa':null}
+// regole dei capi insieme: camicia e blazer mai con la felpa
+function comboOK(c){
+  const g=r=>c.find(p=>roleOf(p.cat)===r),top=g('top'),mid=g('mid'),out=g('outer'),fm=p=>catMeta(p.cat).f;
+  if(top&&mid&&fm(top)>=2&&fm(mid)<1)return false;
+  if(out&&mid&&fm(out)>=2&&fm(mid)<1)return false;
+  return true}
 // nessuna categoria è obbligatoria: l'outfit si fa con quello che c'è
 function slotsNow(){
   const sc=WX?[]:scartati(); // per gli altri giorni non contano i capi scartati oggi
   const T=W()&&isPro()?refTemp():null;
   const tgt=(WX&&WX.date)||isoDay();
-  const by=c=>{let all=ITEMS.filter(i=>i.cat===c);
+  const pool=f=>{let all=ITEMS.filter(i=>f(i)&&seasonOK(i));
     const cl=all.filter(i=>!isLaundry(i,tgt));if(cl.length)all=cl;
     if(T!=null){const tk=all.filter(i=>(i.tmin==null||T>=i.tmin)&&(i.tmax==null||T<=i.tmax));if(tk.length)all=tk}
     const ok=all.filter(i=>!sc.includes(i.id));return ok.length?ok:all};
-  const Fall=by('felpa'),T0=by('maglietta'),Gall=by('giacca');
-  const useF=Fall.length>0&&(needFelpa()||T0.length===0);
-  const jw=jacketWant();
+  const role=r=>i=>roleOf(i.cat)===r;
   const bd=brandToday(),bp=(list,v)=>{if(bd){const b=list.filter(i=>isBrand(i,bd));if(b.length)return prefer(b,v)}return prefer(list,v)};
+  const T0=pool(role('top')),Fall=pool(role('mid')),Gall=pool(role('outer')),FULL=pool(role('full'));
+  const useF=Fall.length>0&&(needFelpa()||(T0.length===0&&FULL.length===0));
+  const jw=jacketWant(),lw=legsWant();
+  const legs=pool(role('legs')),thick=legs.filter(i=>i.cat!=='collant'),socks=pool(role('socks'));
   return {
     T:bp(T0,teeWant(useF)), F:useF?bp(Fall,null):[], G:jw?bp(Gall,jw):[],
-    P:bp(by('pantaloni'),wantShort()?'corto':'lungo'),
-    S:bp(by('scarpe'),isRain()?'pesante':null), C:bp(by('calze'),null), useF, jw
+    P:bp(pool(i=>roleOf(i.cat)==='bottom'&&!catMeta(i.cat).skirt),wantShort()?'corto':'lungo'),
+    K:pool(i=>!!catMeta(i.cat).skirt), D:FULL, L:lw?legs:[],
+    S:bp(pool(role('shoes')),isRain()?'pesante':null), C:bp(lw&&thick.length?thick:socks,null), useF, jw, lw
   };
+}
+// forme possibili dell'outfit: con i pantaloni, con la gonna, con l'abito
+function outfitModes(sl){
+  const M=[],top=sl.T.length?[['T',sl.T]]:[],layers=()=>{const s=[];if(sl.F.length)s.push(['F',sl.F]);if(sl.G.length)s.push(['G',sl.G]);return s};
+  const feet=legs=>{const s=[];if(legs&&sl.L.length)s.push(['L',sl.L]);else if(sl.C.length)s.push(['C',sl.C]);if(sl.S.length)s.push(['S',sl.S]);return s};
+  if(sl.P.length||(!sl.K.length&&!sl.D.length))M.push({k:'pants',slots:top.concat(layers(),sl.P.length?[['P',sl.P]]:[],feet(false))});
+  if(sl.K.length)M.push({k:'skirt',slots:top.concat(layers(),[['K',sl.K]],feet(sl.lw))});
+  if(sl.D.length){const mids=sl.F.filter(i=>catMeta(i.cat).f>=1),s=[['D',sl.D]];if(sl.useF&&mids.length)s.push(['F',mids]);if(sl.G.length)s.push(['G',sl.G]);
+    M.push({k:'full',slots:s.concat(feet(sl.lw).filter(x=>x[0]!=='C'))})}
+  return M.filter(m=>m.slots.length);
+}
+// accessori e capi fissi da aggiungere a un outfit
+function extrasWanted(main){
+  const out=[],sty=effStyle(LS.get('stile',null)||{});
+  const has=c=>main.some(p=>p.cat===c),hasRole=r=>main.some(p=>roleOf(p.cat)===r);
+  const bag=bagCat();
+  [...new Set(ITEMS.map(i=>i.cat))].forEach(c=>{const m=catMeta(c);
+    if(m.r==='fixed'){out.push(c);return}
+    if(m.r!=='acc')return;
+    let ok=false;
+    if(c==='cravatta')ok=has('camicia')&&!has('felpa')&&!has('maglietta')&&(sty==='elegante'||has('blazer'));
+    else if(c==='cintura')ok=hasRole('bottom');
+    else if(c==='sciarpa')ok=coldFor('sciarpa');
+    else if(c==='cappello')ok=coldFor('cappello');
+    else if(c==='occhiali')ok=sunnyDay();
+    else if(c==='borsa'||c==='zaino')ok=bag===c;
+    else if(m.custom)ok=seasonOK({cat:c})&&(m.w>=1?coldFor('sciarpa'):true);
+    if(ok)out.push(c)});
+  return out;
+}
+function withExtras(main,forced,keep){
+  const tgt=(WX&&WX.date)||isoDay(),res=main.slice(),recent=recentlyUsed(),sc=WX?[]:scartati();
+  const want=extrasWanted(main);if(forced&&!want.includes(forced.cat))want.push(forced.cat);
+  want.forEach(c=>{
+    const kp=(keep||[]).find(p=>p.cat===c&&!isLaundry(p,tgt));if(kp&&!(forced&&forced.cat===c)){res.push(kp);return}
+    let list=forced&&forced.cat===c?[forced]:ITEMS.filter(i=>i.cat===c);
+    const cl=list.filter(i=>!isLaundry(i,tgt));if(cl.length)list=cl;
+    const ok=list.filter(i=>!sc.includes(i.id));if(ok.length)list=ok;
+    let best=null,bs=-1e9;for(const it of list){const s=score(res.concat([it]),recent);if(s>bs){bs=s;best=it}}
+    if(best)res.push(best)});
+  return res;
 }
 let STYLE_OVERRIDE=null; // stile chiesto all'assistente, solo per una proposta
 function generate(opt={}){
   if(!ITEMS.length)return null;
   STYLE_OVERRIDE=opt.style||null;
   try{
-  const sl=slotsNow();
-  if(opt.must){const k={maglietta:'T',felpa:'F',giacca:'G',pantaloni:'P',scarpe:'S',calze:'C'}[opt.must.cat];sl[k]=[opt.must]}
-  if(opt.brand){['T','F','G','P','S','C'].forEach(k=>{const b=(sl[k]||[]).filter(i=>isBrand(i,opt.brand));if(b.length)sl[k]=b})}
-  const {T,F,G,P,S,C}=sl;
-  const slots=[T,F,G,P,C,S].filter(x=>x.length);if(!slots.length)return null;
-  const total=slots.reduce((a,x)=>a*x.length,1);
+  const sl=slotsNow(),must=opt.must,mr=must?roleOf(must.cat):null;
+  if(must&&!['acc','fixed'].includes(mr)){
+    if(mr==='top')sl.T=[must];else if(mr==='mid'){sl.F=[must];sl.useF=true}else if(mr==='outer')sl.G=[must];
+    else if(mr==='shoes')sl.S=[must];else if(mr==='socks')sl.C=[must];else if(mr==='legs'){sl.L=[must];sl.lw=true;sl.C=[must]}
+    else if(mr==='full'){sl.D=[must];sl.P=[];sl.K=[]}
+    else if(mr==='bottom'){if(catMeta(must.cat).skirt){sl.K=[must];sl.P=[]}else{sl.P=[must];sl.K=[]}sl.D=[]}
+  }
+  let modes=outfitModes(sl);
+  if(must&&!['acc','fixed'].includes(mr)){const w=modes.filter(m=>m.slots.some(([,l])=>l.includes(must)));
+    if(w.length)modes=w;else if(modes.length)modes=[{k:modes[0].k,slots:modes[0].slots.concat([['X',[must]]])}];else modes=[{k:'pants',slots:[['X',[must]]]}]}
   let combos=[];
-  if(total<=4000){combos=[[]];for(const sl of slots){const nx=[];for(const c of combos)for(const x of sl)nx.push(c.concat([x]));combos=nx}}
-  else for(let k=0;k<4000;k++)combos.push(slots.map(sl=>sl[Math.floor(Math.random()*sl.length)]));
-  const recentOut=LS.get('storico',[]).slice(-7).concat(nearSigs(),opt.avoid||[]),recent=recentlyUsed();
-  const ranked=combos.map(c=>({c,s:score(c,recent),r:recentOut.includes(sig(c.map(x=>x.id)))}));
+  for(const m of modes){const slots=m.slots.map(x=>x[1]),total=slots.reduce((a,x)=>a*x.length,1);
+    if(total<=3000){let cs=[[]];for(const s of slots){const nx=[];for(const c of cs)for(const x of s)nx.push(c.concat([x]));cs=nx}combos=combos.concat(cs)}
+    else for(let k=0;k<2000;k++)combos.push(slots.map(s=>s[Math.floor(Math.random()*s.length)]))}
+  combos=combos.filter(c=>c.length);if(!combos.length)return null;
+  const good=combos.filter(comboOK);if(good.length)combos=good;
+  const avoid=new Set(LS.get('storico',[]).slice(-7).concat(nearSigs(),opt.avoid||[]).map(s=>mainSig(String(s).split('|')))),recent=recentlyUsed();
+  const ranked=combos.map(c=>({c,s:score(c,recent),r:avoid.has(sig(c.map(x=>x.id)))}));
   let pool=ranked.filter(x=>!x.r);if(!pool.length)pool=ranked;
   pool.sort((a,b)=>b.s-a.s);
   const best=pool.slice(0,Math.max(1,Math.ceil(pool.length*0.15)));
-  return best[Math.floor(Math.random()*best.length)].c;
+  const main=best[Math.floor(Math.random()*best.length)].c;
+  return withExtras(main,must&&['acc','fixed'].includes(mr)?must:null);
   }finally{STYLE_OVERRIDE=null}
 }
 // capo a lavare: true = finché non torna pulito; data = fino a quel giorno compreso
 function isLaundry(i,date){return i.lavare===true||(typeof i.lavare==='string'&&i.lavare>=(date||isoDay()))}
-function stillValid(pieces){
-  if(pieces.some(p=>!p))return false;
+function stillValid(pieces,manual){
+  if(!pieces.length||pieces.some(p=>!p))return false;
   if(pieces.some(p=>isLaundry(p))&&ITEMS.some(i=>!isLaundry(i)))return false;
-  const {T,F,G,P,S,C,useF,jw}=slotsNow();
-  const has=c=>pieces.some(p=>p.cat===c),get=c=>pieces.find(p=>p.cat===c);
-  if(has('felpa')!==useF)return false;
-  if(has('giacca')!==(G.length>0))return false;
-  // se nel frattempo hai aggiunto una categoria che mancava, rifaccio l'outfit
-  if((T.length&&!has('maglietta'))||(P.length&&!has('pantaloni'))||(S.length&&!has('scarpe'))||(C.length&&!has('calze')))return false;
-  for(const[c,list]of[['maglietta',T],['pantaloni',P],['giacca',G],['scarpe',S]]){
-    const p=get(c);if(p&&!list.some(i=>lenOf(i)===lenOf(p)))return false;
-  }
-  return true;
+  if(manual)return true; // scelto da te (assistente, "rifammi l'outfit"): resta così
+  const main=pieces.filter(p=>!isExtra(p)),ex=pieces.filter(isExtra);
+  const sl=slotsNow(),k=main.some(p=>roleOf(p.cat)==='full')?'full':main.some(p=>catMeta(p.cat).skirt)?'skirt':'pants';
+  const m=outfitModes(sl).find(x=>x.k===k);if(!m||m.slots.length!==main.length)return false;
+  const used=new Set();
+  for(const [,list] of m.slots){const p=main.find(q=>!used.has(q.id)&&list.some(i=>i.id===q.id||(i.cat===q.cat&&lenOf(i)===lenOf(q))));if(!p)return false;used.add(p.id)}
+  return extrasWanted(main).sort().join('|')===[...new Set(ex.map(p=>p.cat))].sort().join('|');
 }
 function pieceLabel(p){return hasVar(p.cat)&&TXT.it['l_'+p.cat+'_'+lenOf(p)]?t('l_'+p.cat+'_'+lenOf(p)):catName(p.cat)}
 const ORDER_SHOW=['giacca','felpa','maglietta','pantaloni','calze','scarpe'];
@@ -2103,29 +2702,30 @@ function renderOutfit(force){
   const saved=LS.get('oggi',null);let pieces=null;
   if(!force&&saved&&saved.date===today()){
     pieces=saved.ids.map(id=>ITEMS.find(i=>i.id===id));
-    if(!stillValid(pieces))pieces=null;
+    if(!stillValid(pieces,saved.manual))pieces=null;
   }
   if(!pieces&&!force){const dm=plan()[isoDay()];
-    if(dm){const pp=dm.ids.map(id=>ITEMS.find(i=>i.id===id));
-      if(pp.length&&!pp.some(x=>!x)&&stillValid(pp)){pieces=pp;saveToday(dm.ids)}}}
+    if(dm){let pp=dm.ids.map(id=>ITEMS.find(i=>i.id===id));
+      if(pp.length&&!pp.some(x=>!x)&&!pp.some(isExtra)){pp=withExtras(pp);dm.ids=pp.map(x=>x.id)}
+      if(pp.length&&!pp.some(x=>!x)&&stillValid(pp,dm.manual)){pieces=pp;saveToday(dm.ids,dm.manual)}}}
   if(!pieces){
     pieces=generate();if(!pieces){box.innerHTML='';return}
     const ids=pieces.map(p=>p.id);saveToday(ids);
     const st=LS.get('storico',[]);st.push(sig(ids));LS.set('storico',st.slice(-20));
   }
-  pieces=pieces.slice().sort((a,b)=>ORDER_SHOW.indexOf(a.cat)-ORDER_SHOW.indexOf(b.cat));
+  pieces=pieces.slice().sort(byShow);
   CURRENT=pieces;markTodayWorn(pieces.map(p=>p.id));
-  const hasF=pieces.some(p=>p.cat==='felpa'),hasT=pieces.some(p=>p.cat==='maglietta');
+  const hasF=pieces.some(p=>roleOf(p.cat)==='mid'),hasT=pieces.some(p=>roleOf(p.cat)==='top');
   const pro=isPro();
   box.innerHTML=`${pro?`<div class="greet">${greeting()}</div>${reviewDue()?`<div class="revbanner"><b>${t('rvBanner')}</b><span>${t('rvBannerTx')}</span>
     <button class="btn" id="rvGo">${t('rvBtn')}</button></div>`:''}`:''}<div class="outfit">${pieces.map((p,idx)=>`
       <div class="piece"><img src="${p.img}" alt="">
-        <div><div class="lab">${CAT_ICON[p.cat]} ${pieceLabel(p)}</div>
-        <div class="nm"><span class="dot" style="background:${COLORS[p.color].hex}"></span>${colName(p.color)}</div>
+        <div><div class="lab">${catIcon(p.cat)} ${esc(pieceLabel(p))}</div>
+        <div class="nm">${dotHTML(p)}${colText(p)}</div>
         ${p.brand?`<div class="brandtag">${esc(p.brand)}</div>`:''}
-        ${hasF&&p.cat==='maglietta'?`<div class="layer">${t('underHoodie')}</div>`:''}
-        ${hasT&&p.cat==='felpa'?`<div class="layer">${t('overTee')}</div>`:''}
-        ${p.cat==='giacca'?`<div class="layer">${t('jacketNote')}</div>`:''}
+        ${hasF&&roleOf(p.cat)==='top'?`<div class="layer">${t('underLayer',{c:catName(pieces.find(q=>roleOf(q.cat)==='mid').cat).toLowerCase()})}</div>`:''}
+        ${hasT&&roleOf(p.cat)==='mid'?`<div class="layer">${t('overLayer',{c:catName(pieces.find(q=>roleOf(q.cat)==='top').cat).toLowerCase()})}</div>`:''}
+        ${roleOf(p.cat)==='outer'?`<div class="layer">${t('jacketNote')}</div>`:''}
         <button class="change" data-change="${idx}">${t('change')}</button>
         </div></div>`).join('')}
     </div>
@@ -2140,15 +2740,19 @@ function renderOutfit(force){
 }
 // sostituisce un solo capo (es. è a lavare) e tiene il resto dell'outfit
 function changePiece(idx){
-  const cur=CURRENT[idx],sc=scartati().concat(cur.id);
-  const sl=slotsNow(),map={maglietta:sl.T,felpa:sl.F,giacca:sl.G,pantaloni:sl.P,scarpe:sl.S,calze:sl.C};
-  let cands=ITEMS.filter(i=>i.cat===cur.cat&&!sc.includes(i.id));
-  const pref=(map[cur.cat]||[]).filter(i=>i.id!==cur.id&&!sc.includes(i.id));
+  const cur=CURRENT[idx],sc=scartati().concat(cur.id),rl=roleOf(cur.cat),ex=isExtra(cur);
+  const sl=slotsNow(),map={top:sl.T,mid:sl.F,outer:sl.G,shoes:sl.S,socks:sl.C,legs:sl.L,full:sl.D,bottom:catMeta(cur.cat).skirt?sl.K:sl.P};
+  // stesso tipo di capo: maglietta, camicia e top sono intercambiabili, come felpa/maglione e giacca/blazer/cappotto
+  const same=i=>ex||['bottom','socks','legs'].includes(rl)?i.cat===cur.cat:roleOf(i.cat)===rl;
+  let cands=ITEMS.filter(i=>same(i)&&!sc.includes(i.id));
+  const pref=(map[rl]||[]).filter(i=>i.id!==cur.id&&!sc.includes(i.id)&&same(i));
   if(pref.length)cands=pref;
+  const okc=cands.filter(c=>{const tt=CURRENT.slice();tt[idx]=c;return comboOK(tt.filter(p=>!isExtra(p)))});if(okc.length)cands=okc;
   if(!cands.length)return toast(t('noOther',{c:catName(cur.cat)}));
   addScartato(cur.id);
   const recent=recentlyUsed();let best=null,bs=-1e9;
   for(const c of cands){const tt=CURRENT.slice();tt[idx]=c;const s=score(tt,recent);if(s>bs){bs=s;best=tt}}
+  if(!ex){const main=best.filter(p=>!isExtra(p));best=withExtras(main,null,best.filter(isExtra))}
   saveToday(best.map(p=>p.id));renderOutfit(false);
 }
 
@@ -2156,7 +2760,7 @@ function changePiece(idx){
 let WQ='';
 const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 function matchQ(i,q){if(!q)return true;
-  const hay=norm([catName(i.cat),pieceLabel(i),colName(i.color),i.color,i.brand||'',i.fav?t('favWord'):''].join(' '));
+  const hay=norm([catName(i.cat),pieceLabel(i),colName(i.color),i.color,i.color2?colName(i.color2):'',hasPat(i)?t('pat_'+i.pattern):'',i.brand||'',i.fav?t('favWord'):''].join(' '));
   return q.split(/\s+/).every(w=>hay.includes(w))}
 function renderWardrobe(){
   const w=document.getElementById('wardrobe'),pro=isPro();
@@ -2171,14 +2775,14 @@ function renderWardrobe(){
   if(pro){tools.querySelector('#multiBtn').textContent=t('multiAdd');tools.querySelector('#multiHint').textContent=t('multiAdd_d');
     tools.querySelector('#wSearch').placeholder=t('searchPh')}
   const q=pro?norm(WQ.trim()):'';
-  const cats=q?CAT_ORDER.filter(c=>ITEMS.some(i=>i.cat===c&&matchQ(i,q))):CAT_ORDER;
+  const cats=q?allCats().filter(c=>ITEMS.some(i=>i.cat===c&&matchQ(i,q))):allCats().filter(c=>MAIN_CATS.includes(c)||ITEMS.some(i=>i.cat===c));
   w.innerHTML=(q&&!cats.length?`<p class="step" style="text-align:center;margin:20px 0">${t('searchNone')}</p>`:'')+cats.map(c=>{
     const list=ITEMS.filter(i=>i.cat===c&&matchQ(i,q)).sort((a,b)=>b.added-a.added);
-    return `<div class="cat"><h3>${CAT_ICON[c]} ${catName(c)} <span>${list.length}</span></h3>
+    return `<div class="cat"><h3>${catIcon(c)} ${esc(catName(c))} <span>${list.length}</span></h3>
       ${list.length?`<div class="grid">${list.map(i=>`
         <div class="item"><img src="${i.img}" alt="">
           <div class="bar">
-            <div class="meta"><span class="dot" style="background:${COLORS[i.color].hex}"></span>${colName(i.color)}</div>
+            <div class="meta">${dotHTML(i)}${colText(i)}</div>
             ${hasVar(i.cat)?`<div class="meta2">${pieceLabel(i)}</div>`:''}
             ${i.brand?`<div class="brandtag">${esc(i.brand)}</div>`:''}
             <div class="btns2"><button class="btn editbtn" data-edit="${i.id}">${t('edit')}</button>
@@ -2216,7 +2820,10 @@ function ask(title,text,okLabel){return new Promise(res=>{
 })}
 function paletteHTML(sel,attr='c'){return `<div class="palette">${Object.entries(COLORS).map(([n,c])=>
   `<button data-${attr}="${n}" class="${(Array.isArray(sel)?sel.includes(n):n===sel)?'on':''}"><span class="dot" style="background:${c.hex}"></span>${colName(n)}</button>`).join('')}</div>`}
-function catButtons(sel){return `<div class="cats">${CAT_ORDER.map(c=>`<button data-cat="${c}" class="${sel===c?'on':''}">${CAT_ICON[c]} ${catName(c)}</button>`).join('')}</div>`}
+// in primo piano le 7 categorie principali; tutte le altre sotto "Altre categorie" (con ricerca)
+function catButtons(sel){const extra=sel&&!MAIN_CATS.includes(sel)?[sel]:[];
+  return `<div class="cats">${MAIN_CATS.concat(extra).map(c=>`<button data-cat="${esc(c)}" class="${sel===c?'on':''}">${catIcon(c)} ${esc(catName(c))}</button>`).join('')}</div>
+    <button class="morecats" data-more="1">➕ ${t('moreCats')}</button>`}
 
 /* Scheda del capo, usata da Aggiungi, Caricamento multiplo e Modifica.
    st = {cat, len, color, brand} */
@@ -2226,7 +2833,10 @@ function formHTML(st){
     h+=`<div class="lbl">${t('v_'+st.cat+'_q')}</div><div class="cats">${VARIANTS[st.cat].vals.map(v=>
       `<button data-len="${v}" class="${st.len===v?'on':''}">${t('v_'+st.cat+'_'+v)}</button>`).join('')}</div>`;
   }
-  if(st.color)h+=`<div class="lbl">${t('colorDetected')}</div><div id="pal">${paletteHTML(st.color)}</div>`;
+  if(st.color){h+=`<div class="lbl">${t('colorDetected')}</div><div id="pal">${paletteHTML(st.color)}</div>`;
+    h+=st.c2open||st.color2?`<div class="lbl">${t('color2')}</div><div id="pal2">${paletteHTML(st.color2||null,'c2')}</div>
+      <button class="morecats" data-c2off="1">✕ ${t('color2Rm')}</button>`:`<button class="morecats" data-c2on="1">➕ ${t('color2Add')}</button>`;
+    h+=`<div class="lbl">${t('pattern')}</div><div class="chips">${PATTERNS.map(p=>`<button data-pat="${p}" class="${(st.pattern||'unita')===p?'on':''}">${t('pat_'+p)}</button>`).join('')}</div>`}
   const bl=brands();
   h+=`<div class="lbl">${t('brand')}</div>
     <input class="txt" id="brandIn" value="${esc(st.brand||'')}" placeholder="${t('brandPh')}" autocomplete="off" autocapitalize="words" enterkeyhint="done">
@@ -2239,6 +2849,11 @@ function formHTML(st){
 }
 function bindForm(el,st,redraw){
   el.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{if(st.cat!==b.dataset.cat)st.len=null;st.cat=b.dataset.cat;redraw()});
+  el.querySelectorAll('[data-more]').forEach(b=>b.onclick=()=>openCatPicker(st.cat,c=>{if(st.cat!==c)st.len=null;st.cat=c;redraw()}));
+  el.querySelectorAll('#pal2 [data-c2]').forEach(b=>b.onclick=()=>{st.color2=st.color2===b.dataset.c2?null:b.dataset.c2;redraw()});
+  el.querySelectorAll('[data-c2on]').forEach(b=>b.onclick=()=>{st.c2open=true;redraw()});
+  el.querySelectorAll('[data-c2off]').forEach(b=>b.onclick=()=>{st.c2open=false;st.color2=null;redraw()});
+  el.querySelectorAll('[data-pat]').forEach(b=>b.onclick=()=>{st.pattern=b.dataset.pat==='unita'?null:b.dataset.pat;redraw()});
   el.querySelectorAll('[data-len]').forEach(b=>b.onclick=()=>{st.len=b.dataset.len;redraw()});
   el.querySelectorAll('#pal [data-c]').forEach(b=>b.onclick=()=>{st.color=b.dataset.c;redraw()});
   const bi=el.querySelector('#brandIn');if(bi)bi.oninput=()=>{st.brand=bi.value};
@@ -2254,6 +2869,7 @@ function formError(st){
   return null;
 }
 function applyForm(it,st){it.updated=Date.now();it.cat=st.cat;it.color=st.color;if(hasVar(st.cat))it.len=st.len;else delete it.len;
+  if(st.color2&&st.color2!==st.color)it.color2=st.color2;else delete it.color2;if(st.pattern)it.pattern=st.pattern;else delete it.pattern;
   const b=normBrand(st.brand);if(b)it.brand=b;else delete it.brand;
   if(isPro()){if(st.tmin!=null)it.tmin=st.tmin;else delete it.tmin;if(st.tmax!=null)it.tmax=st.tmax;else delete it.tmax}
   return it}
@@ -2282,7 +2898,7 @@ function openAdd(){
   };
 }
 function openEdit(item){
-  const st={cat:item.cat,len:hasVar(item.cat)?lenOf(item):null,color:item.color,brand:item.brand||'',tmin:item.tmin??null,tmax:item.tmax??null};
+  const st={cat:item.cat,len:hasVar(item.cat)?lenOf(item):null,color:item.color,color2:item.color2||null,pattern:item.pattern||null,brand:item.brand||'',tmin:item.tmin??null,tmax:item.tmax??null};
   const s=sheet(`<h2>${t('editTitle')}</h2><img class="preview" src="${item.img}" alt="">
     <div id="form"></div>
     <div class="row" style="margin-top:16px"><button class="btn ghost" id="cancel">${t('cancel')}</button><button class="btn" id="save">${t('save')}</button></div>`);
@@ -2392,15 +3008,106 @@ function openStyle(isNew){
   draw();
 }
 
+
+/* ================= CATEGORIE, UOMO/DONNA, ZAINO E BORSA ================= */
+// elenco completo delle categorie, con barra di ricerca e "Aggiungi categoria" in fondo
+function openCatPicker(sel,cb){
+  const s=sheet(`<h2>🏷️ ${t('moreCats')}</h2><input class="txt" id="cpQ" type="search" placeholder="${t('catSearch')}" autocomplete="off" enterkeyhint="search">
+    <div id="cpL" class="cats" style="margin-top:12px"></div><button class="btn blue" id="cpAdd">➕ ${t('addCat')}</button>`);
+  const draw=()=>{const q=norm(s.querySelector('#cpQ').value.trim());
+    const list=allCats().filter(c=>!MAIN_CATS.includes(c)&&(!q||norm(catName(c)).includes(q)));
+    s.querySelector('#cpL').innerHTML=list.length?list.map(c=>`<button data-pc="${esc(c)}" class="${sel===c?'on':''}">${catIcon(c)} ${esc(catName(c))}</button>`).join('')
+      :`<p class="step" style="grid-column:1/-1">${t('catNone')}</p>`;
+    s.querySelectorAll('[data-pc]').forEach(b=>b.onclick=()=>{s.remove();cb(b.dataset.pc)})};
+  s.querySelector('#cpQ').oninput=draw;draw();
+  s.querySelector('#cpAdd').onclick=()=>{s.remove();openCatEdit(null,c=>{if(c)cb(c)})};
+}
+// crea o modifica una categoria: nome, dove va nell'outfit, quanto tiene caldo, stagione
+function openCatEdit(id,cb){
+  const ex=id?userCats().find(u=>u.id===id):null;
+  const st={name:ex?ex.name:'',role:ex?ex.role:null,warm:ex?(ex.warm||0):0,season:ex?(ex.season||'sempre'):'sempre'};
+  const s=sheet('<div id="ce"></div>');const box=s.querySelector('#ce');
+  function draw(){
+    box.innerHTML=`<h2>🏷️ ${ex?t('ncEdit'):t('ncTitle')}</h2><p class="sub">${t('ncIntro')}</p>
+      <div class="lbl">${t('ncName')}</div><input class="txt" id="ceN" value="${esc(st.name)}" placeholder="${t('ncNamePh')}" autocomplete="off" maxlength="30" enterkeyhint="done">
+      <div class="lbl" style="margin-top:12px">${t('ncRole')}</div><div class="langs">${ROLES.map(r=>`<button data-r="${r}" class="${st.role===r?'on':''}"><span class="fl">${ROLE_IC[r]}</span><span>${t('role_'+r)}<small class="desc">${t('role_'+r+'_d')}</small></span></button>`).join('')}</div>
+      <div class="lbl" style="margin-top:12px">${t('ncWarm')}</div><div class="chips">${[0,1,2].map(w=>`<button data-w="${w}" class="${st.warm===w?'on':''}">${t('warm'+w)}</button>`).join('')}</div>
+      <div class="lbl" style="margin-top:12px">${t('ncSeason')}</div><div class="chips">${['estate','inverno','sempre'].map(x=>`<button data-s="${x}" class="${st.season===x?'on':''}">${t('sea_'+x)}</button>`).join('')}</div>
+      <div class="row" style="margin-top:16px"><button class="btn ghost" id="ceNo">${t('cancel')}</button><button class="btn" id="ceOk">${t('save')}</button></div>
+      ${ex?`<button class="btn danger" id="ceDel" style="margin-top:10px">${t('ncDel')}</button>`:''}`;
+    box.querySelector('#ceN').oninput=e=>{st.name=e.target.value};
+    box.querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>{st.role=b.dataset.r;draw()});
+    box.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>{st.warm=+b.dataset.w;draw()});
+    box.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{st.season=b.dataset.s;draw()});
+    box.querySelector('#ceNo').onclick=()=>{s.remove();if(cb)cb(null)};
+    box.querySelector('#ceOk').onclick=()=>{
+      const name=st.name.trim().replace(/\s+/g,' ');if(!name)return toast(t('ncNeedName'));if(!st.role)return toast(t('ncNeedRole'));
+      if(allCats().some(c=>c!==id&&norm(catName(c))===norm(name)))return toast(t('ncExists'));
+      const list=userCats();let cid=id;
+      if(ex)Object.assign(list.find(u=>u.id===id),{name,role:st.role,warm:st.warm,season:st.season});
+      else{cid='u_'+newId();list.push({id:cid,name,role:st.role,warm:st.warm,season:st.season})}
+      kickSync();setSetting('categorie',list);s.remove();toast(t('ncSaved'));refresh();if(cb)cb(cid)};
+    const del=box.querySelector('#ceDel');if(del)del.onclick=async()=>{
+      if(ITEMS.some(i=>i.cat===id))return toast(t('ncDelBusy'));
+      if(!await ask(t('ncDel'),t('ncDelText',{c:esc(ex.name)}),t('remove')))return;
+      kickSync();setSetting('categorie',userCats().filter(u=>u.id!==id));s.remove();toast(t('ncDeleted'));refresh();if(cb)cb(null)};
+  }
+  draw();
+}
+function openMyCats(){
+  const s=sheet('<div id="mc"></div>');const box=s.querySelector('#mc');
+  const draw=()=>{const l=userCats();
+    box.innerHTML=`<h2>🏷️ ${t('myCats')}</h2><p class="sub">${t('myCatsText')}</p>
+      ${l.length?`<div class="langs">${l.map(u=>`<button data-ed="${esc(u.id)}"><span class="fl">${ROLE_IC[u.role]||'🏷️'}</span><span>${esc(u.name)}<small class="desc">${t('role_'+u.role)} · ${t('sea_'+(u.season||'sempre'))} · ${ITEMS.filter(i=>i.cat===u.id).length}</small></span></button>`).join('')}</div>`
+        :`<p class="step">${t('myCatsNone')}</p>`}
+      <button class="btn blue" id="mcAdd" style="margin-top:12px">➕ ${t('addCat')}</button>`;
+    box.querySelectorAll('[data-ed]').forEach(b=>b.onclick=()=>openCatEdit(b.dataset.ed,()=>draw()));
+    box.querySelector('#mcAdd').onclick=()=>openCatEdit(null,()=>draw())};
+  draw();
+}
+// uomo, donna o preferisco non dirlo: cambia l'ordine delle categorie e la versione degli stili
+function openGender(first,after){
+  const cur=LS.get('sesso',null);let done=false;
+  const end=()=>{if(done)return;done=true;LS.set('sessoChiesto',true);if(after)after()};
+  const s=sheet(`<h2>👤 ${t('gTitle')}</h2><p class="sub">${t('gText')}</p><div class="langs">
+    ${[['m','👨','g_m'],['f','👩','g_f'],['x','🙂','g_x']].map(([k,ic,l])=>`<button data-g="${k}" class="${cur===k?'on':''}"><span class="fl">${ic}</span><span>${t(l)}<small class="desc">${t(l+'_d')}</small></span></button>`).join('')}</div>
+    <p class="tip">${t('gNote')}</p>`,end);
+  s.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{kickSync();setSetting('sesso',b.dataset.g);s.remove();if(!first)toast(t('gSaved'));DAYCACHE={};afterRules();renderMeteo();renderWardrobe();end()});
+}
+const askGender=next=>{if(LS.get('sesso',null)||LS.get('sessoChiesto',false)){if(next)next()}else openGender(true,next)};
+// in quali giorni proporre lo zaino e la borsa
+function openBags(){
+  const b=bagDays(),z=b.zaino.slice(),bo=b.borsa.slice(),names=t('wdLong').split(',');
+  const s=sheet('<div id="bg"></div>');const box=s.querySelector('#bg');
+  const row=(arr,k)=>`<div class="chips">${[1,2,3,4,5,6,0].map(n=>`<button data-${k}="${n}" class="${arr.includes(n)?'on':''}">${names[(n+6)%7].slice(0,3)}</button>`).join('')}</div>`;
+  function draw(){
+    box.innerHTML=`<h2>🎒 ${t('bagsTitle')}</h2><p class="sub">${t('bagsText')}</p>
+      ${!b.hz&&!b.hb?`<div class="explain">${t('bagsNone')}</div>`:''}
+      ${b.hz?`<div class="lbl">🎒 ${t('bagZaino')}</div>${row(z,'bz')}`:''}
+      ${b.hb?`<div class="lbl" style="margin-top:12px">👜 ${t('bagBorsa')}</div>${row(bo,'bb')}`:''}
+      ${b.hz&&b.hb?`<p class="tip">${t('bagsBoth')}</p>`:''}
+      ${b.hz||b.hb?`<button class="btn" id="bgOk" style="margin-top:14px">${t('save')}</button>`:''}`;
+    const tog=(arr,n)=>{const k=arr.indexOf(n);if(k>=0)arr.splice(k,1);else arr.push(n)};
+    box.querySelectorAll('[data-bz]').forEach(x=>x.onclick=()=>{tog(z,+x.dataset.bz);draw()});
+    box.querySelectorAll('[data-bb]').forEach(x=>x.onclick=()=>{tog(bo,+x.dataset.bb);draw()});
+    const ok=box.querySelector('#bgOk');if(ok)ok.onclick=()=>{kickSync();setSetting('borse',{zaino:z,borsa:bo});s.remove();toast(t('bagsSaved'));DAYCACHE={};afterRules();renderMeteo()};
+  }
+  draw();
+}
+
 /* ================= IMPOSTAZIONI ================= */
 function openSettings(){
   const s=sheet(`<h2>⚙︎ ${t('settings')}</h2><div class="langs">
-    <button id="sLang">${t('setLang')}</button><button id="sTemp">${t('setTemp')}</button><button id="sVar">${t('setVar')}</button>
+    <button id="sLang">${t('setLang')}</button><button id="sGender">${t('setGender')}</button><button id="sTemp">${t('setTemp')}</button><button id="sVar">${t('setVar')}</button>
+    <button id="sCats">${t('setCats')}</button><button id="sBags">${t('setBags')}</button>
     ${isPro()?`<button id="sAdv">${t('setAdv')}</button>`:''}</div>`);
   const ad=s.querySelector('#sAdv');if(ad)ad.onclick=()=>{s.remove();openAdvanced()};
   s.querySelector('#sLang').onclick=()=>{s.remove();openLang()};
   s.querySelector('#sTemp').onclick=()=>{s.remove();openTemp()};
   s.querySelector('#sVar').onclick=()=>{s.remove();openVariety()};
+  s.querySelector('#sGender').onclick=()=>{s.remove();openGender(false)};
+  s.querySelector('#sCats').onclick=()=>{s.remove();openMyCats()};
+  s.querySelector('#sBags').onclick=()=>{s.remove();openBags()};
 }
 function openLang(){
   const s=sheet(`<h2>🌍 ${t('language')}</h2><div class="langs">${Object.entries(LANGS).map(([k,[f,n]])=>
@@ -2409,10 +3116,11 @@ function openLang(){
 }
 function openTemp(){
   const r=R(),rp=RP(),pro=isPro();let mode=tempMode();
-  const has=c=>ITEMS.some(i=>i.cat===c);
+  const has=c=>ITEMS.some(i=>i.cat===c),hasR=r=>ITEMS.some(i=>roleOf(i.cat)===r);
   // mostra solo le regole dei capi che hai nell'armadio
-  const rows=[['manica','tr_manica','tr_manica_d',has('maglietta')],['corti','tr_corti','tr_corti_d',has('pantaloni')],
-    ['felpa','tr_felpa','tr_felpa_d',has('felpa')],['giacca','tr_giacca','tr_giacca_d',has('giacca')],['pesante','tr_pesante','tr_pesante_d',has('giacca')]]
+  const rows=[['manica','tr_manica','tr_manica_d',hasR('top')],['corti','tr_corti','tr_corti_d',has('pantaloni')],
+    ['felpa','tr_felpa','tr_felpa_d',hasR('mid')],['giacca','tr_giacca','tr_giacca_d',hasR('outer')],['pesante','tr_pesante','tr_pesante_d',hasR('outer')],
+    ['sciarpa','tr_sciarpa','tr_sciarpa_d',has('sciarpa')],['cappello','tr_cappello','tr_cappello_d',has('cappello')],['calzep','tr_calzep','tr_calzep_d',has('collant')||has('calzespesse')]]
     .filter(x=>x[3]);
   const s=sheet('<div id="tp"></div>');const box=s.querySelector('#tp');
   const group=(obj,id)=>rows.length?rows.map(([k,lk,dk])=>`<div class="trow"><div class="ttxt"><b>${t(lk)}</b><span>${t(dk,{n:obj[k]})}</span></div>
@@ -2458,7 +3166,7 @@ function openVariety(){
    riservata a OutfitDay (appDataFolder): li vede solo lui, nemmeno il creatore del sito. */
 const CLIENT_ID='733233625759-qjpr2p2thfveq5i6hc05vau2im944d82.apps.googleusercontent.com';
 const SCOPES='https://www.googleapis.com/auth/drive.appdata openid email profile';
-const SYNC_KEYS=['stile','regimi','regimiP','varieta','avanzate'];
+const SYNC_KEYS=['stile','regimi','regimiP','varieta','avanzate','sesso','categorie','borse'];
 const DRIVE_NAME='outfitday.json';
 let TOKEN=null,TOKEN_EXP=0,tokenClient=null,pendingToken=null,syncTimer=null,SYNCING=false;
 const ACC=()=>LS.get('account',null);
@@ -2495,7 +3203,7 @@ function markDirty(){
   if(hasToken()){clearTimeout(syncTimer);syncTimer=setTimeout(syncNow,1200)}
 }
 function setSetting(k,v){if(v==null)LS.del(k);else LS.set(k,v);LS.set('settingsT',Date.now());
-  if(['stile','regimi','regimiP','varieta','avanzate'].includes(k))resetPlan();markDirty()}
+  if(['stile','regimi','regimiP','varieta','avanzate','sesso','categorie','borse'].includes(k))resetPlan();markDirty()}
 // impostazioni cambiate: gli outfit dei prossimi giorni si ricalcolano (sul sito e su Alexa)
 function resetPlan(){const p=plan(),d=isoDay();Object.keys(p).forEach(k=>{if(k>d)delete p[k]});LS.set('piano',p);LS.set('planReset',Date.now());DAYCACHE={};
   setTimeout(()=>{precomputePlan();if(typeof renderMeteo==='function')renderMeteo()},50)}
@@ -2595,7 +3303,8 @@ async function syncAlexa(){
   const d=isoDay(),loc=LS.get('oggi',null),locT=loc&&loc.date===today()?(loc.t||0):-1;
   const at=cur.today;
   if(at&&at.date===d&&at.by==='alexa'&&(at.t||0)>locT){ // Alexa ha scelto dopo: vince lei
-    const ids=at.ids.filter(x=>ITEMS.some(i=>i.id===x));
+    let ids=at.ids.filter(x=>ITEMS.some(i=>i.id===x));
+    if(ids.length&&!ids.some(x=>isExtra(ITEMS.find(i=>i.id===x))))ids=withExtras(ids.map(x=>ITEMS.find(i=>i.id===x))).map(p=>p.id); // Alexa non conosce gli accessori
     if(ids.length){LS.set('oggi',{date:today(),ids,t:at.t});
       const u=LS.get('usati',[]).filter(x=>x.date!==today());u.push({date:today(),ids});LS.set('usati',u.slice(-120))}
   }
@@ -2618,16 +3327,26 @@ async function syncAlexa(){
   if(pl[d]&&(!loc||loc.date!==today())){ // il previsto per oggi diventa l'outfit di oggi
     const ids=pl[d].ids.filter(x=>ITEMS.some(i=>i.id===x));if(ids.length)saveToday(ids);
   }
-  const fut={};Object.entries(pl).forEach(([dt,r])=>{if(dt>d)fut[dt]=r});
+  // Alexa (finché la skill non viene aggiornata) conosce solo le 6 categorie di prima:
+  // gli altri capi le arrivano con la categoria più vicina, accessori e abiti restano solo sul sito
+  const AXC=['maglietta','felpa','giacca','pantaloni','scarpe','calze'];
+  const axItem=i=>{const r=roleOf(i.cat),L=lenOf(i);let cat=i.cat,len=i.len;
+    if(!AXC.includes(i.cat)){if(r==='top'){cat='maglietta';len=L==='corto'?'corto':'lungo'}else if(r==='mid'){cat='felpa';len=null}
+      else if(r==='outer'){cat='giacca';len=L==='pesante'?'pesante':'leggero'}else if(r==='bottom'){cat='pantaloni';len=L==='corto'?'corto':'lungo'}
+      else if(r==='shoes'){cat='scarpe';len=L==='pesante'?'pesante':'leggero'}else if(r==='socks'||r==='legs'){cat='calze';len=null}else return null}
+    const x={id:i.id,cat,color:i.color};if(len)x.len=len;if(cat!==i.cat){x.cat2=i.cat;x.label=catName(i.cat)}
+    ['brand','fav','tmin','tmax','lavare','color2','pattern'].forEach(k=>{if(i[k]!=null)x[k]=i[k]});return x};
+  const axItems=ITEMS.map(axItem).filter(Boolean),axIds=new Set(axItems.map(x=>x.id)),axF=ids=>(ids||[]).filter(x=>axIds.has(x));
+  const fut={};Object.entries(pl).forEach(([dt,r])=>{if(dt>d)fut[dt]=Object.assign({},r,{ids:axF(r.ids)})});
   const tmw=Object.keys(fut).sort()[0];
   const o=LS.get('oggi',null),w=WEATHER||{};
   const data={app:'OutfitDay-Alexa',v:1,saved:Date.now(),lang:LANG,name:(ACC()||{}).name||'',
     place:w.place||cur.place||'',lat:w.lat!=null?w.lat:(cur.lat!=null?cur.lat:null),lon:w.lon!=null?w.lon:(cur.lon!=null?cur.lon:null),
     regimi:LS.get('regimi',null),stile:LS.get('stile',null),pro:isPro(),avanzate:isPro()?ADV():null,
-    items:ITEMS.map(i=>{const x={id:i.id,cat:i.cat,color:i.color};['len','brand','fav','tmin','tmax','lavare'].forEach(k=>{if(i[k]!=null)x[k]=i[k]});return x}),
-    today:o&&o.date===today()?{date:d,ids:o.ids,t:o.t||Date.now(),by:(at&&at.date===d&&at.t===o.t)?at.by:'site'}:(cur.today||null),
+    items:axItems,sesso:LS.get('sesso',null),
+    today:o&&o.date===today()?{date:d,ids:axF(o.ids),t:o.t||Date.now(),by:(at&&at.date===d&&at.t===o.t)?at.by:'site'}:(cur.today||null),
     plan:fut,tomorrow:tmw?Object.assign({date:tmw},fut[tmw]):null,regimiP:LS.get('regimiP',null),
-    varieta:LS.get('varieta','nuovi'),history:LS.get('usati',[]).slice(-30).map(x=>({date:isoOf(x.date),ids:x.ids}))};
+    varieta:LS.get('varieta','nuovi'),history:LS.get('usati',[]).slice(-30).map(x=>({date:isoOf(x.date),ids:axF(x.ids)}))};
   id=await driveWrite(id,data,ALEXA_NAME);LS.set('alexaFile',id);
 }
 // accesso o registrazione: per Google sono la stessa cosa
@@ -2692,7 +3411,7 @@ function openGoogleStep(kind,after){
 }
 // proposta di registrazione: per i nuovi utenti dopo "Inizia", per gli altri una sola volta al rientro
 function openRegister(isNew){
-  const next=()=>{if(isNew&&!ITEMS.length)openBulk()};
+  const next=()=>{if(isNew&&!ITEMS.length)askGender(openBulk);else if(isNew)askGender()};
   const s=sheet(`<h2>☁️ ${t('askTitle')}</h2><p class="sub">${t('askText')}</p>${benefits()}
     ${isNew?gBtn('rGoogle',t('accRegGoogle')):`<button class="btn" id="rReg">${t('accReg')}</button>`}
     ${isNew?`<button class="btn ghost" id="rLog" style="margin-top:10px">🔑 ${t('haveAcc')}</button>`:''}
@@ -2777,7 +3496,7 @@ function showApp(){
 document.getElementById('startBtn').onclick=()=>{
   LS.set('visto',true);showApp();startGPS();
   if(!ACC())openRegister(true);         // dopo "Inizia": vuoi registrarti?
-  else if(!ITEMS.length)openBulk();      // poi il caricamento delle foto
+  else if(!ITEMS.length)askGender(openBulk); // uomo/donna, poi il caricamento delle foto
 };
 
 /* ================= OUTFIT PRO =================
@@ -2788,7 +3507,7 @@ const PRO_DAYS=90, QUIZ_N=10, QUIZ_PASS=8, QUIZ_WAIT=7;
 const FORM_URL='https://docs.google.com/forms/d/e/1FAIpQLScmT9IAT_n2EgX57dGbgAe3K0IdA3FYwjEVebtODSbquDgAcA/formResponse';
 const FORM_FIELDS=['entry.76409573','entry.565991293','entry.324887330','entry.841919613'];
 const isPro=()=>!!(ACC()&&LS.get('pro',false));
-const ADV_DEF={pairs:[],favBoost:'medio',rest:{n:0,unit:'g'},weekday:null,weekend:null,rainProb:60,refHour:null,reviewDay:null,tempMode:'classica',dayColor:null,brandSet:{brand:'',days:[]}};
+const ADV_DEF={pairs:[],favBoost:'medio',rest:{n:0,unit:'g'},weekday:null,weekend:null,rainProb:60,refHour:null,reviewDay:null,tempMode:'classica',dayColor:null,brandSet:{brand:'',days:[]},uvGlasses:5};
 function ADV(){const a=Object.assign({},ADV_DEF,LS.get('avanzate',{}));a.rest=Object.assign({},ADV_DEF.rest,a.rest||{});
   const bs=a.brandSet||{};a.brandSet={brand:bs.brand||'',days:(bs.days||[]).slice()};a.pairs=(a.pairs||[]).slice();return a}
 const isoDay=(d=new Date())=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
@@ -2973,8 +3692,8 @@ function openCalendar(){
     let det='';
     if(sel){const ids=map[sel]||[],its=ids.map(id=>ITEMS.find(i=>i.id===id)).filter(Boolean);
       det=`<div class="lbl" style="margin-top:14px">${new Date(sel+'T12:00:00').toLocaleDateString(LOCALE[LANG],{weekday:'long',day:'numeric',month:'long'})}</div>`+
-        (its.length?`<div class="minis">${its.map(q=>`<div class="mini"><img src="${q.img}" alt=""><div><b>${CAT_ICON[q.cat]} ${pieceLabel(q)}</b>
-          <span><span class="dot" style="background:${COLORS[q.color].hex};width:12px;height:12px"></span> ${colName(q.color)}${q.brand?' · '+esc(q.brand):''}</span></div></div>`).join('')}</div>`
+        (its.length?`<div class="minis">${its.map(q=>`<div class="mini"><img src="${q.img}" alt=""><div><b>${catIcon(q.cat)} ${esc(pieceLabel(q))}</b>
+          <span>${dotHTML(q,12)} ${colText(q)}${q.brand?' · '+esc(q.brand):''}</span></div></div>`).join('')}</div>`
           :`<p class="step" style="margin:0">${t('calEmpty')}</p>`)}
     box.innerHTML=`<h2>${t('toolCal')}</h2>
       <div class="calhead"><button id="cPrev">‹</button><b>${title.charAt(0).toUpperCase()+title.slice(1)}</b><button id="cNext">›</button></div>
@@ -2993,7 +3712,7 @@ function openStats(){
   Object.entries(map).forEach(([d,ids])=>ids.forEach(id=>{count[id]=(count[id]||0)+1;if(!last[id]||last[id]<d)last[id]=d}));
   const hasData=Object.keys(count).length>0;
   const times=n=>n===1?t('stTime1'):t('stTimes',{n});
-  const row=(i,extra)=>`<div class="mini"><img src="${i.img}" alt=""><div><b>${CAT_ICON[i.cat]} ${pieceLabel(i)} · ${colName(i.color)}</b><span>${extra}</span></div></div>`;
+  const row=(i,extra)=>`<div class="mini"><img src="${i.img}" alt=""><div><b>${catIcon(i.cat)} ${esc(pieceLabel(i))} · ${colText(i)}</b><span>${extra}</span></div></div>`;
   const bars=(arr)=>{const mx=Math.max(1,...arr.map(x=>x[1]));return `<div class="bars">${arr.map(([l,v,c])=>`<div class="bar1"><span>${l}</span>
     <div><i style="width:${v/mx*100}%;${c?`background:${c}`:''}"></i></div><b>${v}</b></div>`).join('')}</div>`};
   const most=ITEMS.filter(i=>count[i.id]).sort((a,b)=>count[b.id]-count[a.id]).slice(0,5);
@@ -3008,7 +3727,7 @@ function openStats(){
     <div class="lbl" style="margin-top:14px">${t('stNever')} (${never.length})</div>${never.length?`<div class="minis">${never.slice(0,8).map(i=>row(i,'0')).join('')}</div>`:`<p class="step" style="margin:0">${t('stNone')}</p>`}
     ${old.length?`<div class="lbl" style="margin-top:14px">${t('stOld')}</div><div class="minis">${old.slice(0,8).map(i=>row(i,new Date(last[i.id]+'T12:00:00').toLocaleDateString(LOCALE[LANG],{day:'numeric',month:'short'}))).join('')}</div>`:''}
     ${Object.keys(colCount).length?`<div class="lbl" style="margin-top:14px">${t('stColors')}</div>${bars(Object.entries(colCount).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([c,v])=>[colName(c),v,COLORS[c].hex]))}`:''}
-    <div class="lbl" style="margin-top:14px">${t('stCats')}</div>${bars(CAT_ORDER.map(c=>[CAT_ICON[c]+' '+catName(c),ITEMS.filter(i=>i.cat===c).length]))}
+    <div class="lbl" style="margin-top:14px">${t('stCats')}</div>${bars(allCats().filter(c=>ITEMS.some(i=>i.cat===c)).map(c=>[catIcon(c)+' '+esc(catName(c)),ITEMS.filter(i=>i.cat===c).length]))}
     ${Object.keys(brandCount).length?`<div class="lbl" style="margin-top:14px">${t('stBrands')}</div>${bars(Object.entries(brandCount).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([b,v])=>[esc(b),v]))}`:''}
   `);
 }
@@ -3035,6 +3754,8 @@ function openAdvanced(){
       ${sec(t('ad_wend'),t('ad_wend_d'),stSel('avWe',a.weekend))}
       ${sec(t('ad_rain'),t('ad_rain_d'),`<div class="trow" style="margin:0"><div class="ttxt"><span>${t('ad_rainVal',{p:a.rainProb})}</span></div>
         <div class="stepper"><button data-rp="-10">−</button><output>${a.rainProb}%</output><button data-rp="10">+</button></div></div>`)}
+      ${sec(t('ad_uv'),t('ad_uv_d'),`<div class="trow" style="margin:0"><div class="ttxt"><span>${t('ad_uvVal',{n:a.uvGlasses})}</span></div>
+        <div class="stepper"><button data-uv="-1">−</button><output>${a.uvGlasses}</output><button data-uv="1">+</button></div></div>`)}
       ${sec(t('ad_hour'),t('ad_hour_d'),`<select class="txt" id="avH"><option value="">${t('ad_hourMax')}</option>${Array.from({length:17},(_,k)=>k+6).map(h=>
         `<option value="${h}" ${a.refHour===h?'selected':''}>${t('ad_hourAt',{h:String(h).padStart(2,'0')+':00'})}</option>`).join('')}</select>`)}
       ${sec(t('ad_review'),t('ad_review_d'),daySelect('avRv',a.reviewDay))}
@@ -3051,6 +3772,7 @@ function openAdvanced(){
     box.querySelectorAll('[data-fb]').forEach(b=>b.onclick=()=>{a.favBoost=b.dataset.fb;draw()});
     box.querySelectorAll('[data-rs]').forEach(b=>b.onclick=()=>{a.rest.n=Math.max(0,Math.min(12,a.rest.n+(+b.dataset.rs)));draw()});
     box.querySelectorAll('[data-ru]').forEach(b=>b.onclick=()=>{a.rest.unit=b.dataset.ru;draw()});
+    box.querySelectorAll('[data-uv]').forEach(b=>b.onclick=()=>{a.uvGlasses=Math.max(1,Math.min(11,a.uvGlasses+(+b.dataset.uv)));draw()});
     box.querySelectorAll('[data-rp]').forEach(b=>b.onclick=()=>{a.rainProb=Math.max(30,Math.min(90,a.rainProb+(+b.dataset.rp)));draw()});
     box.querySelector('#avWd').onchange=e=>{a.weekday=e.target.value||null};
     box.querySelector('#avWe').onchange=e=>{a.weekend=e.target.value||null};
@@ -3124,7 +3846,7 @@ function openReview(){
   else list.innerHTML=has.map(d=>{const its=(m[d]||[]).map(id=>ITEMS.find(i=>i.id===id)).filter(Boolean);
     const lab=new Date(d+'T12:00:00').toLocaleDateString(LOCALE[LANG],{weekday:'long',day:'numeric',month:'long'});
     return `<div class="lbl" style="margin-top:12px">${lab.charAt(0).toUpperCase()+lab.slice(1)}</div><div class="rvgrid">${its.map(i=>
-      `<button class="rvit on" data-d="${d}" data-id="${i.id}"><img src="${i.img}" alt=""><span class="ck">✓</span><small>${CAT_ICON[i.cat]} ${colName(i.color)}</small></button>`).join('')}</div>`}).join('');
+      `<button class="rvit on" data-d="${d}" data-id="${i.id}"><img src="${i.img}" alt=""><span class="ck">✓</span><small>${catIcon(i.cat)} ${colName(i.color)}</small></button>`).join('')}</div>`}).join('');
   list.querySelectorAll('.rvit').forEach(b=>b.onclick=()=>{const st=sel[b.dataset.d],id=b.dataset.id;
     if(st.has(id))st.delete(id);else st.add(id);b.classList.toggle('on',st.has(id))});
   s.querySelector('#rvSave').onclick=()=>{
@@ -3161,13 +3883,12 @@ function wxProHTML(app,hum,uv){
    Gratis e senza server: capisce i comandi previsti, detti in tanti modi diversi. */
 const AS = {
 it:{
-  ui:{intro:"Ciao! Sono Outfit Assistant. Tocca il microfono e parlami, oppure scrivi qui sotto.",listen:"Ti ascolto…",think:"Ci penso…",tap:"Tocca il microfono per parlare",
+  ui:{intro:"Ciao! Sono Outfit Assistant. Tocca il microfono e parlami, oppure scrivi qui sotto.",listen:"Ti ascolto…",think:"Ci penso…",tap:"Tocca il microfono per parlare",tapAgain:"Tocca 🎙️ per rispondere",
     ph:"Scrivi una domanda…",voice:"🔊 Voce",noRec:"Il riconoscimento vocale non è disponibile in questo browser: puoi scrivere qui sotto. Su iPhone usa Safari, sul computer Chrome.",
     vTitle:"Scegli la voce dell'assistente",vText:"Tocca ▶ per sentirla, poi scegli quella che preferisci. Potrai cambiarla quando vuoi.",vSys:"Voce predefinita del dispositivo",
     vSample:"Ciao! Sono il tuo Outfit Assistant. Cosa ti metti oggi?",vSave:"Usa questa voce",vNone:"Su questo dispositivo non ci sono voci in italiano: l'assistente risponderà solo per scritto.",
-    hints:["Cosa mi metto oggi?","Non so cosa mettermi domani","Voglio mettere la felpa blu","Che tempo fa questa settimana?","Metti a lavare la felpa rossa","Cosa porto in valigia per 3 giorni a Roma?","Cosa sai fare?"]},
+    hints:["Cosa mi metto oggi?","Non so cosa mettermi domani","Voglio mettere la felpa blu","Che tempo fa questa settimana?","Metti a lavare la felpa rossa","Cosa sai fare?"]},
   kw:{
-    about:["cos e outfit day", "che cos e outfit day", "cosa e outfit day", "che cosa e outfit day", "che e outfit day", "cos e outfitday", "che cos e outfitday", "cosa e outfitday", "parlami di outfit day", "raccontami di outfit day", "dimmi di outfit day", "chi ha creato outfit day", "chi ha fatto outfit day", "chi ha inventato outfit day", "chi ti ha creato", "chi ti ha fatto", "chi ha creato il sito", "chi ha fatto il sito", "chi ha creato questo sito", "chi e il creatore", "chi ha programmato", "di cosa si tratta", "cos e questo sito", "che cos e questo sito", "presentati", "chi sei", "parlami di te", "chi ha fatto questo sito", "informazioni su outfit day", "informazioni sul sito", "dov e il sito", "indirizzo del sito", "link del sito"],privacy:["privacy", "informativa", "dati personali", "i miei dati", "miei dati", "riservatezza", "trattamento dei dati", "chi vede i miei", "chi puo vedere", "dove salvi", "dove vengono salvat*", "dove finiscono", "sono al sicuro", "al sicuro i", "protezione dei dati", "termini e condizioni", "condizioni d uso"],pro:["outfit pro", "versione pro", "piano pro", "il pro", "del pro", "nel pro", "col pro", "con il pro", "pro"],skill:["skill", "alexa"],site:["sito", "outfit day", "outfitday", "app", "applicazione", "web", "pagina"],feat:["funzion*", "caratteristic*", "cosa fa", "cosa fai", "cosa sa fare", "cosa puo fare", "cosa offre", "cosa mi offre", "cosa posso fare", "cosa posso chiedere", "cosa posso chiederle", "cosa le posso chiedere", "cosa posso dire", "cosa posso dirle", "che domande", "quali domande", "a cosa serve", "come funziona", "cosa c e", "cosa trovo", "cosa include", "comandi", "vantagg*", "servizi", "cosa si puo fare", "elenc*", "cosa ottengo", "cosa ha", "cosa contiene", "cosa sai fare", "cosa puoi fare", "cos e", "cosa e", "che cos e", "cosa cambia", "in cosa consiste", "cosa sblocca"],repeat:["ripeti", "ripetilo", "ripetimelo", "ripeterlo", "ripetermelo", "ripetermi", "ripetimi", "puoi ripetere", "ripetere", "ridillo", "ridimmelo", "rido", "come hai detto", "cosa hai detto", "che hai detto", "non ho sentito", "non ho capito", "dillo di nuovo", "dimmelo di nuovo", "ancora una volta"],repeatNot:["possono", "capi", "outfit di", "varieta"],last:["l ultima volta", "ultima volta", "quando ho messo", "quando ho indossato", "quando l ho messo", "quando l ho messa", "quando li ho messi", "quando le ho messe", "quando l ho indossat*", "da quanto non metto", "da quanto tempo non metto", "da quanti giorni non metto", "quanto tempo fa ho messo", "quando ho usato", "quando mi sono messo", "quando mi sono messa", "quando ho portato"],pack:["valigia", "valige", "valigie", "bagaglio", "bagagli", "viaggio", "vacanza", "vacanze", "trasferta", "zaino", "trolley", "cosa porto", "cosa mi porto", "cosa devo portare", "cosa mi devo portare", "cosa mi conviene portare", "parto per", "parto", "partire", "partenza"],packWeak:["vado a", "vado ad", "vado in", "andro a", "andro in", "sto andando a", "vado per", "resto a", "staro a"],dayW:["giorni", "giorno", "notti", "notte"],weekW:["settimana", "settimane"],monthW:["mese", "mesi"],prep:["a", "ad", "in", "per"],cprep:["negli", "nel", "nella", "nello", "in", "ad", "a"],art:["il", "lo", "la", "i", "gli", "le", "l"],pstop:["per", "negli", "nel", "nella", "nello", "nei", "nelle", "in", "da", "dal", "dalla", "tra", "fra", "con", "e", "ed", "di", "del", "della", "che", "cosa", "quanto", "domani", "oggi", "dopodomani", "lunedi", "martedi", "mercoledi", "giovedi", "venerdi", "sabato", "domenica", "prossimo", "prossima", "settimana", "settimane", "giorni", "giorno", "mese", "mesi", "notti", "valigia", "valige", "bagaglio", "viaggio", "vacanza", "vacanze", "trasferta", "zaino", "porto", "portare", "parto", "partire", "vado", "devo", "mi", "ti", "ci", "mettere", "mettermi", "quali", "quale", "vestiti", "capi", "dimmi", "fammi", "il", "la", "lo", "le", "gli", "i", "l", "un", "una", "uno"],
     stop:["basta","stop","fine","ferma","fermati","ho finito","a posto cosi"],thanks:["grazie","ti ringrazio"],
     help:["cosa sai fare","aiuto","cosa posso chiederti","cosa puoi fare","come funzioni"],
     yes:["si","va bene","ok","okay","certo","perfetto","mi piace","mi va bene","va benissimo","d accordo","confermo","esatto","benissimo","ottimo"],
@@ -3213,7 +3934,6 @@ it:{
   langs:{it:["italiano"],en:["inglese"],es:["spagnolo"],fr:["francese"]},
   nums:{uno:1,una:1,un:1,due:2,tre:3,quattro:4,cinque:5,sei:6,sette:7,otto:8,nove:9,dieci:10,undici:11,dodici:12,quindici:15,venti:20},
   r:{
-    about:"Outfit Day è un sito che ti aiuta a scegliere cosa indossare. Carichi le foto dei tuoi vestiti e ogni giorno ti propone un outfit abbinato e adatto al meteo della tua città. Puoi usarlo anche a voce, con me o con la skill per Alexa. È stato creato da Matteo, di Smart Web Tools.",privacy:"In breve: le foto e i dati del tuo armadio restano sul tuo telefono. Se accedi con Google, si salvano anche nel tuo Google Drive, in uno spazio riservato a OutfitDay: nessun altro può vederli, nemmeno chi ha creato il sito. La posizione serve solo per il meteo e non viene salvata. Niente pubblicità, niente tracciamento e nessuna vendita di dati. Qui sotto trovi il link all'informativa completa.",privacyLink:"Leggi l'informativa completa",pro:"Con Outfit Pro hai: {list}. Si sblocca gratis dopo 90 giorni di utilizzo, oppure subito superando il quiz sulla moda.",site:"Il sito Outfit Day ti offre: {list}.",skill:"Con la skill OutfitDay per Alexa puoi chiedere l'outfit di oggi, di domani o di un giorno della settimana, e se non ti piace chiederne un altro; cambiare un solo capo; farti un outfit intorno a un capo, un colore, uno stile o un marchio; chiedere il meteo, la temperatura percepita e se serve l'ombrello; sapere quando hai messo un capo l'ultima volta; preparare la valigia per un viaggio col meteo della destinazione; contare i capi dell'armadio; farti ripetere l'ultima risposta; e avere informazioni su Outfit Day, Outfit Pro e la privacy.",repeatNone:"Non ho ancora detto niente da ripetere.",last:"L'ultima volta che hai messo {item} è stato {when}.",lastNever:"Non risulta che tu abbia mai messo {item}.",lastToday:"oggi",lastYest:"ieri",lastAgo:"{day}, {n} giorni fa",brandO:"Ecco un outfit {brand} per {day}: {list}. Ti piace?",packAskCity:"In che città vai?",packAskDays:"Per quanti giorni parti?",packNoCity:"Non trovo la città {c}. Me la ripeti?",packFail:"Non riesco a prendere il meteo adesso: riprova tra poco.",packW:"Per {n} {dd} a {city}: massime tra {a} e {b} gradi, minime fino a {m}, temperatura percepita da {fa} a {fb} gradi.",packOld:" Il viaggio va oltre le previsioni, quindi uso i valori dello stesso periodo dell'anno scorso.",packRain:" Pioggia in {r} {rd}: porta l'ombrello.",packDry:" Pioggia quasi assente.",packList:" Ti consiglio di portare: {list}.",packEmpty:" Nel tuo armadio non ho trovato capi adatti.",dd:["giorno", "giorni"],
     hello:"Ciao! Dimmi pure.",today:"oggi",tomorrow:"domani",
     outfit:"{Day} ti consiglio: {list}.",askToday:"Ti va bene o vuoi cambiare qualcosa?",okToday:"Perfetto, buona giornata!",
     propose:"Che ne dici di questo per {day}: {list}. Ti piace?",saved:"Perfetto! È l'outfit di {day}, anche sul sito e su Alexa.",keep:"Va bene, lascio quello di prima.",
@@ -3243,18 +3963,17 @@ it:{
     setRain:"Fatto: ti avviso dal {n} per cento di pioggia.",setHour:"Fatto: guardo la temperatura delle {h}.",setHourOff:"Fatto: guardo la temperatura massima del giorno.",
     setReview:"Fatto: il riepilogo sarà il {d}.",setBrand:"Fatto: completo {b} il {days}.",setBrandOff:"Fatto: completo di marca disattivato.",brandMiss:"Per un completo {b} ti mancano: {m}.",brandNeed:"Dimmi il marchio e i giorni, per esempio: completo Nike il sabato e la domenica.",
     setPair:"Fatto: non abbinerò più {a} e {b}.",need2c:"Dimmi due colori, per esempio: non abbinare rosso e verde.",
-    help:"Posso dirti l'outfit di oggi o di un altro giorno, proporti un outfit nuovo, cambiare un capo, creare un outfit con un capo o uno stile, dirti il meteo, la temperatura, la pioggia e il vento, mettere a lavare un capo, gestire i preferiti, rispondere su armadio e statistiche, consigliarti abbinamenti, aprire i negozi vicini e cambiare le impostazioni. Posso anche prepararti la valigia per un viaggio, dirti quando hai messo un capo l'ultima volta, farti un outfit di un marchio, ripetere l'ultima risposta e parlarti di Outfit Day, di Outfit Pro, della skill per Alexa e della privacy. Prova a dire: non so cosa mettermi domani.",
+    help:"Posso dirti l'outfit di oggi o di un altro giorno, proporti un outfit nuovo, cambiare un capo, creare un outfit con un capo o uno stile, dirti il meteo, la temperatura, la pioggia e il vento, mettere a lavare un capo, gestire i preferiti, rispondere su armadio e statistiche, consigliarti abbinamenti, aprire i negozi vicini e cambiare le impostazioni. Prova a dire: non so cosa mettermi domani.",
     fallback:"Non ho capito bene. Prova a dire, per esempio: cosa mi metto oggi, che tempo fa domani, oppure voglio mettere la felpa blu.",
     bye:"A presto!",thanks:"Figurati, quando vuoi!",and:"e"}
 },
 en:{
-  ui:{intro:"Hi! I'm Outfit Assistant. Tap the microphone and talk to me, or type below.",listen:"Listening…",think:"Thinking…",tap:"Tap the microphone to talk",
+  ui:{intro:"Hi! I'm Outfit Assistant. Tap the microphone and talk to me, or type below.",listen:"Listening…",think:"Thinking…",tap:"Tap the microphone to talk",tapAgain:"Tap 🎙️ to answer",
     ph:"Type a question…",voice:"🔊 Voice",noRec:"Speech recognition isn't available in this browser: you can type below. On iPhone use Safari, on a computer use Chrome.",
     vTitle:"Choose the assistant's voice",vText:"Tap ▶ to hear it, then pick your favourite. You can change it anytime.",vSys:"Device default voice",
     vSample:"Hi! I'm your Outfit Assistant. What are you wearing today?",vSave:"Use this voice",vNone:"There are no English voices on this device: the assistant will only reply in writing.",
-    hints:["What should I wear today?","I don't know what to wear tomorrow","I want to wear the blue hoodie","What's the weather this week?","Put the red hoodie in the wash","What should I pack for 3 days in London?","What can you do?"]},
+    hints:["What should I wear today?","I don't know what to wear tomorrow","I want to wear the blue hoodie","What's the weather this week?","Put the red hoodie in the wash","What can you do?"]},
   kw:{
-    about:["what is outfit day", "what s outfit day", "what is outfitday", "what s outfitday", "tell me about outfit day", "who made outfit day", "who created outfit day", "who built outfit day", "who made you", "who created you", "who built you", "who made the website", "who created the website", "who made this site", "who is the creator", "who developed", "what is this website", "what s this website", "introduce yourself", "who are you", "who made this website", "tell me about yourself", "information about outfit day", "website address", "link to the website"],privacy:["privacy", "privacy policy", "personal data", "my data", "data protection", "who can see my", "who sees my", "where do you save", "where do you store", "where is my data", "is my data safe", "are my photos safe", "terms and conditions", "terms of use", "what data do you", "what data does"],pro:["outfit pro", "pro version", "pro plan", "the pro", "pro"],skill:["skill", "alexa"],site:["website", "site", "outfit day", "outfitday", "app", "web", "page"],feat:["feature*", "function*", "what can", "what does", "what do i get", "what is included", "what s included", "include*", "offer*", "commands", "benefits", "perks", "advantages", "services", "what can i do", "what can i ask", "what can i say", "what questions", "how does", "how do", "what is it for", "what s it for", "list", "what s in", "what is in", "what s new", "what is outfit pro", "what s outfit pro", "what does it unlock", "capabilities", "abilities", "what is the", "what s the", "what s on", "what is on", "what is it"],repeat:["repeat", "repeat that", "repeat it", "say that again", "say it again", "come again", "what did you say", "i didn t hear", "i didn t catch", "i didn t get", "pardon", "what did you just say", "once more", "one more time", "say again"],repeatNot:["can be", "items", "outfit from", "variety"],last:["last time", "when did i last", "when did i wear", "when was the last", "when have i worn", "how long since i wore", "how long since i ve worn", "how long ago did i wear", "since i last wore", "when i last wore", "when did i put on"],pack:["suitcase", "luggage", "pack", "packing", "trip", "travel", "travelling", "traveling", "holiday", "vacation", "journey", "bag", "backpack", "business trip", "what should i bring", "what do i bring", "what to bring", "leaving for"],packWeak:["going to", "i m going to", "heading to", "flying to", "staying in", "off to", "i ll be in", "visiting"],dayW:["days", "day", "nights", "night"],weekW:["week", "weeks"],monthW:["month", "months"],prep:["to", "in", "at", "for"],cprep:["in", "the"],art:["the", "a", "an"],pstop:["for", "in", "the", "to", "at", "from", "with", "and", "on", "of", "next", "this", "tomorrow", "today", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "week", "weeks", "days", "day", "month", "months", "nights", "suitcase", "luggage", "pack", "packing", "trip", "travel", "holiday", "vacation", "bag", "backpack", "weekend", "what", "should", "i", "bring", "take", "do", "need", "going", "m", "am", "ll", "flying", "heading", "staying", "visiting", "clothes", "items", "a", "an", "my", "me", "tell", "please", "s"],
     stop:["stop","that s all","that is all","enough","i m done","goodbye","bye"],thanks:["thanks","thank you"],
     help:["what can you do","help","what can i ask","how do you work"],
     yes:["yes","yeah","yep","ok","okay","sure","great","perfect","i like it","sounds good","fine","that s fine","good"],
@@ -3300,7 +4019,6 @@ en:{
   langs:{it:["italian"],en:["english"],es:["spanish"],fr:["french"]},
   nums:{one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,eleven:11,twelve:12,fifteen:15,twenty:20},
   r:{
-    about:"Outfit Day is a website that helps you choose what to wear. You upload photos of your clothes and every day it suggests an outfit that matches and suits the weather in your city. You can also use it by voice, with me or with the Alexa skill. It was created by Matteo, of Smart Web Tools.",privacy:"In short: the photos and data of your wardrobe stay on your phone. If you sign in with Google, they're also saved in your Google Drive, in a space reserved for OutfitDay: nobody else can see them, not even the site's creator. Your location is only used for the weather and isn't saved. No ads, no tracking and no selling of data. Below you'll find the link to the full privacy policy.",privacyLink:"Read the full privacy policy",pro:"With Outfit Pro you get: {list}. It unlocks for free after 90 days of use, or straight away by passing the fashion quiz.",site:"The Outfit Day website gives you: {list}.",skill:"With the OutfitDay skill for Alexa you can ask for today's outfit, tomorrow's or a weekday's, and ask for another one if you don't like it; change a single item; get an outfit built around an item, a colour, a style or a brand; ask for the weather, the feels-like temperature and whether you need an umbrella; find out when you last wore an item; pack for a trip with the weather at your destination; count the items in your wardrobe; have the last answer repeated; and get information about Outfit Day, Outfit Pro and privacy.",repeatNone:"I haven't said anything to repeat yet.",last:"The last time you wore the {item} was {when}.",lastNever:"It looks like you've never worn the {item}.",lastToday:"today",lastYest:"yesterday",lastAgo:"{day}, {n} days ago",brandO:"Here's a {brand} outfit for {day}: {list}. Do you like it?",packAskCity:"Which city are you going to?",packAskDays:"How many days are you going for?",packNoCity:"I can't find the city {c}. Can you say it again?",packFail:"I can't get the weather right now: try again shortly.",packW:"For {n} {dd} in {city}: highs between {a} and {b} degrees, lows down to {m}, feels-like temperature from {fa} to {fb} degrees.",packOld:" The trip goes beyond the forecast, so I'm using last year's values for the same period.",packRain:" Rain on {r} {rd}: take an umbrella.",packDry:" Hardly any rain.",packList:" I suggest you pack: {list}.",packEmpty:" I couldn't find suitable items in your wardrobe.",dd:["day", "days"],
     hello:"Hi! Go ahead.",today:"today",tomorrow:"tomorrow",
     outfit:"{Day} I suggest: {list}.",askToday:"Is that okay, or do you want to change something?",okToday:"Great, have a nice day!",
     propose:"How about this for {day}: {list}. Do you like it?",saved:"Great! It's the outfit for {day}, on the website and on Alexa too.",keep:"Okay, I'll keep the previous one.",
@@ -3330,18 +4048,17 @@ en:{
     setRain:"Done: I'll warn you from {n} percent chance of rain.",setHour:"Done: I'll look at the temperature at {h}.",setHourOff:"Done: I'll look at the day's highest temperature.",
     setReview:"Done: the recap will be on {d}.",setBrand:"Done: {b} outfit on {days}.",setBrandOff:"Done: brand outfit turned off.",brandMiss:"For a {b} outfit you're missing: {m}.",brandNeed:"Tell me the brand and the days, for example: Nike outfit on Saturday and Sunday.",
     setPair:"Done: I won't pair {a} and {b} anymore.",need2c:"Tell me two colours, for example: don't pair red and green.",
-    help:"I can tell you today's outfit or another day's, suggest a new outfit, change one item, build an outfit around an item or a style, tell you the weather, temperature, rain and wind, put an item in the wash, manage favourites, answer about your wardrobe and stats, suggest combinations, open nearby shops and change settings. I can also pack your suitcase for a trip, tell you when you last wore an item, make you an outfit from a brand, repeat my last answer and tell you about Outfit Day, Outfit Pro, the Alexa skill and privacy. Try saying: I don't know what to wear tomorrow.",
+    help:"I can tell you today's outfit or another day's, suggest a new outfit, change one item, build an outfit around an item or a style, tell you the weather, temperature, rain and wind, put an item in the wash, manage favourites, answer about your wardrobe and stats, suggest combinations, open nearby shops and change settings. Try saying: I don't know what to wear tomorrow.",
     fallback:"I didn't quite get that. Try saying, for example: what should I wear today, what's the weather tomorrow, or I want to wear the blue hoodie.",
     bye:"See you soon!",thanks:"You're welcome, anytime!",and:"and"}
 },
 es:{
-  ui:{intro:"¡Hola! Soy Outfit Assistant. Toca el micrófono y háblame, o escribe abajo.",listen:"Te escucho…",think:"Pensando…",tap:"Toca el micrófono para hablar",
+  ui:{intro:"¡Hola! Soy Outfit Assistant. Toca el micrófono y háblame, o escribe abajo.",listen:"Te escucho…",think:"Pensando…",tap:"Toca el micrófono para hablar",tapAgain:"Toca 🎙️ para responder",
     ph:"Escribe una pregunta…",voice:"🔊 Voz",noRec:"El reconocimiento de voz no está disponible en este navegador: puedes escribir abajo. En iPhone usa Safari, en el ordenador Chrome.",
     vTitle:"Elige la voz del asistente",vText:"Toca ▶ para escucharla y elige la que prefieras. Podrás cambiarla cuando quieras.",vSys:"Voz predeterminada del dispositivo",
     vSample:"¡Hola! Soy tu Outfit Assistant. ¿Qué te pones hoy?",vSave:"Usar esta voz",vNone:"En este dispositivo no hay voces en español: el asistente responderá solo por escrito.",
-    hints:["¿Qué me pongo hoy?","No sé qué ponerme mañana","Quiero ponerme la sudadera azul","¿Qué tiempo hará esta semana?","Pon a lavar la sudadera roja","¿Qué llevo en la maleta para 3 días en Madrid?","¿Qué sabes hacer?"]},
+    hints:["¿Qué me pongo hoy?","No sé qué ponerme mañana","Quiero ponerme la sudadera azul","¿Qué tiempo hará esta semana?","Pon a lavar la sudadera roja","¿Qué sabes hacer?"]},
   kw:{
-    about:["que es outfit day", "que es outfitday", "hablame de outfit day", "cuentame de outfit day", "cuentame sobre outfit day", "quien creo outfit day", "quien hizo outfit day", "quien ha creado outfit day", "quien te creo", "quien te hizo", "quien te ha creado", "quien creo el sitio", "quien hizo la web", "quien creo esta web", "quien es el creador", "quien lo creo", "que es esta web", "que es este sitio", "presentate", "quien eres"],privacy:["privacidad", "politica de privacidad", "datos personales", "mis datos", "proteccion de datos", "quien ve mis", "quien puede ver", "donde guardas", "donde se guardan", "estan seguros", "terminos y condiciones", "condiciones de uso", "aviso legal"],pro:["outfit pro", "version pro", "plan pro", "el pro", "del pro", "con el pro", "pro"],skill:["skill", "alexa"],site:["sitio", "web", "pagina", "outfit day", "outfitday", "app", "aplicacion"],feat:["funcion*", "caracteristic*", "que hace", "que haces", "que sabe hacer", "que puede hacer", "que ofrece", "que me ofrece", "que puedo hacer", "que puedo preguntar", "que le puedo preguntar", "que puedo decir", "que preguntas", "para que sirve", "como funciona", "que hay", "que encuentro", "que incluye", "comandos", "ventaja*", "servicios", "que se puede hacer", "enumera", "lista", "que obtengo", "que tiene", "que contiene", "que sabes hacer", "que puedes hacer", "que es", "que cambia", "en que consiste", "que desbloquea"],repeat:["repite", "repitelo", "repitemelo", "repites", "repetirlo", "repetirmelo", "repetirmelo", "puedes repetir", "repetir", "repetirlo", "dilo otra vez", "dimelo otra vez", "como has dicho", "que has dicho", "que dijiste", "no te he oido", "no he oido", "no te oi", "no he entendido", "una vez mas", "repitelo otra vez"],repeatNot:["pueden", "prendas", "outfit de", "variedad"],last:["la ultima vez", "ultima vez", "cuando me puse", "cuando me he puesto", "cuando lleve", "cuando he llevado", "cuando use", "cuando he usado", "cuanto hace que no me pongo", "cuanto tiempo hace que no me pongo", "desde cuando no me pongo", "hace cuanto que no llevo", "cuanto hace que no llevo"],pack:["maleta", "maletas", "equipaje", "viaje", "vacaciones", "mochila", "que llevo", "que me llevo", "que debo llevar", "que tengo que llevar", "que me conviene llevar", "salgo para", "me voy de viaje", "hacer la maleta"],packWeak:["voy a", "me voy a", "viajo a", "vuelo a", "estare en", "me quedo en", "voy para"],dayW:["dias", "dia", "noches", "noche"],weekW:["semana", "semanas"],monthW:["mes", "meses"],prep:["a", "en", "para"],cprep:["en", "a"],art:["el", "la", "los", "las"],pstop:["por", "para", "en", "de", "del", "con", "y", "durante", "desde", "hasta", "manana", "hoy", "pasado", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo", "proximo", "proxima", "semana", "semanas", "dias", "dia", "mes", "meses", "noches", "maleta", "maletas", "equipaje", "viaje", "vacaciones", "mochila", "llevo", "llevar", "me", "voy", "vuelo", "viajo", "que", "debo", "tengo", "ropa", "prendas", "dime", "el", "la", "los", "las", "un", "una"],
     stop:["basta","para","stop","ya esta","he terminado","adios"],thanks:["gracias","muchas gracias"],
     help:["que sabes hacer","ayuda","que puedo preguntarte","que puedes hacer","como funcionas"],
     yes:["si","vale","ok","claro","perfecto","me gusta","me va bien","de acuerdo","genial","bien","esta bien"],
@@ -3387,7 +4104,6 @@ es:{
   langs:{it:["italiano"],en:["ingles"],es:["espanol","castellano"],fr:["frances"]},
   nums:{uno:1,una:1,dos:2,tres:3,cuatro:4,cinco:5,seis:6,siete:7,ocho:8,nueve:9,diez:10,once:11,doce:12,quince:15,veinte:20},
   r:{
-    about:"Outfit Day es una web que te ayuda a elegir qué ponerte. Subes las fotos de tu ropa y cada día te propone un outfit combinado y adecuado al tiempo de tu ciudad. También puedes usarlo con la voz, conmigo o con la skill para Alexa. Lo creó Matteo, de Smart Web Tools.",privacy:"En resumen: las fotos y los datos de tu armario se quedan en tu teléfono. Si inicias sesión con Google, también se guardan en tu Google Drive, en un espacio reservado a OutfitDay: nadie más puede verlos, ni siquiera quien creó la web. La ubicación solo sirve para el tiempo y no se guarda. Sin publicidad, sin seguimiento y sin venta de datos. Aquí abajo tienes el enlace a la política completa.",privacyLink:"Leer la política de privacidad completa",pro:"Con Outfit Pro tienes: {list}. Se desbloquea gratis tras 90 días de uso, o enseguida superando el quiz de moda.",site:"La web Outfit Day te ofrece: {list}.",skill:"Con la skill OutfitDay para Alexa puedes pedir el outfit de hoy, de mañana o de un día de la semana, y si no te gusta pedir otro; cambiar una sola prenda; crear un outfit alrededor de una prenda, un color, un estilo o una marca; preguntar el tiempo, la sensación térmica y si necesitas paraguas; saber cuándo te pusiste una prenda por última vez; hacer la maleta para un viaje con el tiempo del destino; contar las prendas del armario; hacer que repita la última respuesta; y obtener información sobre Outfit Day, Outfit Pro y la privacidad.",repeatNone:"Todavía no he dicho nada que repetir.",last:"La última vez que te pusiste {item} fue {when}.",lastNever:"Parece que nunca te has puesto {item}.",lastToday:"hoy",lastYest:"ayer",lastAgo:"el {day}, hace {n} días",brandO:"Aquí tienes un outfit {brand} para {day}: {list}. ¿Te gusta?",packAskCity:"¿A qué ciudad vas?",packAskDays:"¿Para cuántos días te vas?",packNoCity:"No encuentro la ciudad {c}. ¿Me la repites?",packFail:"Ahora no consigo el tiempo: inténtalo de nuevo dentro de un rato.",packW:"Para {n} {dd} en {city}: máximas entre {a} y {b} grados, mínimas hasta {m}, sensación térmica de {fa} a {fb} grados.",packOld:" El viaje va más allá de las previsiones, así que uso los valores del mismo periodo del año pasado.",packRain:" Lluvia en {r} {rd}: lleva paraguas.",packDry:" Casi sin lluvia.",packList:" Te aconsejo llevar: {list}.",packEmpty:" No he encontrado prendas adecuadas en tu armario.",dd:["día", "días"],
     hello:"¡Hola! Dime.",today:"hoy",tomorrow:"mañana",
     outfit:"{Day} te recomiendo: {list}.",askToday:"¿Te va bien o quieres cambiar algo?",okToday:"¡Perfecto, que tengas un buen día!",
     propose:"¿Qué te parece este para {day}?: {list}. ¿Te gusta?",saved:"¡Perfecto! Es el outfit de {day}, también en la web y en Alexa.",keep:"Vale, dejo el anterior.",
@@ -3417,18 +4133,17 @@ es:{
     setRain:"Hecho: te aviso desde el {n} por ciento de lluvia.",setHour:"Hecho: miro la temperatura de las {h}.",setHourOff:"Hecho: miro la temperatura máxima del día.",
     setReview:"Hecho: el resumen será el {d}.",setBrand:"Hecho: conjunto {b} el {days}.",setBrandOff:"Hecho: conjunto de marca desactivado.",brandMiss:"Para un conjunto {b} te faltan: {m}.",brandNeed:"Dime la marca y los días, por ejemplo: conjunto Nike el sábado y el domingo.",
     setPair:"Hecho: ya no combinaré {a} y {b}.",need2c:"Dime dos colores, por ejemplo: no combines rojo y verde.",
-    help:"Puedo decirte el outfit de hoy o de otro día, proponerte uno nuevo, cambiar una prenda, crear un outfit con una prenda o un estilo, decirte el tiempo, la temperatura, la lluvia y el viento, poner a lavar una prenda, gestionar favoritos, responder sobre tu armario y estadísticas, recomendarte combinaciones, abrir las tiendas cercanas y cambiar los ajustes. También puedo hacerte la maleta para un viaje, decirte cuándo te pusiste una prenda por última vez, crearte un outfit de una marca, repetir la última respuesta y hablarte de Outfit Day, de Outfit Pro, de la skill para Alexa y de la privacidad. Prueba a decir: no sé qué ponerme mañana.",
+    help:"Puedo decirte el outfit de hoy o de otro día, proponerte uno nuevo, cambiar una prenda, crear un outfit con una prenda o un estilo, decirte el tiempo, la temperatura, la lluvia y el viento, poner a lavar una prenda, gestionar favoritos, responder sobre tu armario y estadísticas, recomendarte combinaciones, abrir las tiendas cercanas y cambiar los ajustes. Prueba a decir: no sé qué ponerme mañana.",
     fallback:"No te he entendido bien. Prueba a decir, por ejemplo: qué me pongo hoy, qué tiempo hará mañana, o quiero ponerme la sudadera azul.",
     bye:"¡Hasta pronto!",thanks:"¡De nada, cuando quieras!",and:"y"}
 },
 fr:{
-  ui:{intro:"Salut ! Je suis Outfit Assistant. Touche le micro et parle-moi, ou écris ci-dessous.",listen:"Je t'écoute…",think:"Je réfléchis…",tap:"Touche le micro pour parler",
+  ui:{intro:"Salut ! Je suis Outfit Assistant. Touche le micro et parle-moi, ou écris ci-dessous.",listen:"Je t'écoute…",think:"Je réfléchis…",tap:"Touche le micro pour parler",tapAgain:"Touche 🎙️ pour répondre",
     ph:"Écris une question…",voice:"🔊 Voix",noRec:"La reconnaissance vocale n'est pas disponible dans ce navigateur : tu peux écrire ci-dessous. Sur iPhone utilise Safari, sur ordinateur Chrome.",
     vTitle:"Choisis la voix de l'assistant",vText:"Touche ▶ pour l'écouter, puis choisis celle que tu préfères. Tu pourras la changer quand tu veux.",vSys:"Voix par défaut de l'appareil",
     vSample:"Salut ! Je suis ton Outfit Assistant. Qu'est-ce que tu mets aujourd'hui ?",vSave:"Utiliser cette voix",vNone:"Il n'y a pas de voix françaises sur cet appareil : l'assistant répondra seulement par écrit.",
-    hints:["Qu'est-ce que je mets aujourd'hui ?","Je ne sais pas quoi mettre demain","Je veux mettre le sweat bleu","Quel temps cette semaine ?","Mets le sweat rouge au lavage","Qu'est-ce que j'emporte pour 3 jours à Paris ?","Que sais-tu faire ?"]},
+    hints:["Qu'est-ce que je mets aujourd'hui ?","Je ne sais pas quoi mettre demain","Je veux mettre le sweat bleu","Quel temps cette semaine ?","Mets le sweat rouge au lavage","Que sais-tu faire ?"]},
   kw:{
-    about:["c est quoi outfit day", "qu est ce que outfit day", "qu est ce qu outfit day", "c est quoi outfitday", "qu est ce que outfitday", "parle moi d outfit day", "parle moi de outfit day", "raconte moi outfit day", "qui a cree outfit day", "qui a fait outfit day", "qui t a cree", "qui t a fait", "qui a cree le site", "qui a fait le site", "qui a cree ce site", "qui est le createur", "qui l a cree", "c est quoi ce site", "qu est ce que ce site", "presente toi", "qui es tu", "qui a fait ce site", "parle moi de toi", "informations sur outfit day", "adresse du site", "lien du site"],privacy:["confidentialite", "vie privee", "privacy", "politique de confidentialite", "donnees personnelles", "mes donnees", "protection des donnees", "qui voit mes", "qui peut voir", "ou tu sauvegardes", "ou sont sauvegarde*", "ou sont enregistre*", "sont en securite", "conditions d utilisation", "mentions legales"],pro:["outfit pro", "version pro", "formule pro", "le pro", "du pro", "avec le pro", "pro"],skill:["skill", "alexa"],site:["site", "site web", "outfit day", "outfitday", "app", "appli", "application", "web", "page"],feat:["fonction*", "caracteristique*", "que fait", "qu est ce que tu fais", "que sait faire", "que peut faire", "que propose", "qu est ce que je peux faire", "qu est ce que je peux demander", "que puis je demander", "que puis je dire", "quelles questions", "a quoi sert", "comment marche", "comment fonctionne", "qu y a t il", "qu est ce qu il y a", "que comprend", "qu est ce qu on peut faire", "commandes", "avantage*", "services", "liste", "qu est ce que j obtiens", "qu est ce que ca debloque", "qu est ce que c est", "c est quoi", "en quoi consiste", "que sais tu faire", "que peux tu faire", "qu est ce que", "qu est ce qu"],repeat:["repete", "repete le", "repete moi", "redire", "je n ai pas bien entendu", "tu peux repeter", "peux tu repeter", "repeter", "redis le", "redis moi", "redis", "qu est ce que tu as dit", "qu as tu dit", "je n ai pas entendu", "je n ai pas compris", "encore une fois"],repeatNot:["peuvent", "vetements", "tenue d", "variete"],last:["la derniere fois", "derniere fois", "quand ai je mis", "quand ai je porte", "quand est ce que j ai mis", "quand est ce que j ai porte", "quand j ai mis", "quand j ai porte", "depuis quand je n ai pas mis", "depuis combien de temps je n ai pas mis", "depuis quand je ne porte", "il y a combien de temps j ai mis"],pack:["valise", "valises", "bagage", "bagages", "voyage", "vacances", "sac a dos", "deplacement", "qu est ce que j emporte", "qu est ce que je prends", "que dois je emporter", "qu est ce que je dois emporter", "quoi emporter", "quoi prendre", "faire ma valise", "je pars", "partir", "depart"],packWeak:["je vais a", "je vais au", "je vais en", "je vais aux", "je serai a", "je reste a", "je vole vers"],dayW:["jours", "jour", "nuits", "nuit"],weekW:["semaine", "semaines"],monthW:["mois"],prep:["a", "au", "aux", "en", "pour"],cprep:["au", "aux", "en"],art:["le", "la", "les", "l"],pstop:["week", "end", "pour", "pendant", "au", "aux", "en", "dans", "de", "du", "des", "d", "avec", "et", "demain", "aujourd", "hui", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche", "prochain", "prochaine", "semaine", "semaines", "jours", "jour", "mois", "nuits", "valise", "valises", "bagage", "bagages", "voyage", "vacances", "sac", "emporte", "emporter", "prends", "prendre", "pars", "partir", "vais", "je", "j", "qu", "est", "ce", "que", "quoi", "dois", "vetements", "dis", "moi", "le", "la", "les", "l", "un", "une"],
     stop:["stop","arrete","c est tout","ca suffit","j ai fini","au revoir"],thanks:["merci","merci beaucoup"],
     help:["que sais tu faire","aide","qu est ce que je peux te demander","que peux tu faire","comment tu marches"],
     yes:["oui","ok","d accord","parfait","ca me va","ca me plait","j aime","super","bien","tres bien","c est bon"],
@@ -3474,7 +4189,6 @@ fr:{
   langs:{it:["italien"],en:["anglais"],es:["espagnol"],fr:["francais"]},
   nums:{un:1,une:1,deux:2,trois:3,quatre:4,cinq:5,six:6,sept:7,huit:8,neuf:9,dix:10,onze:11,douze:12,quinze:15,vingt:20},
   r:{
-    about:"Outfit Day est un site qui t'aide à choisir quoi porter. Tu ajoutes les photos de tes vêtements et chaque jour il te propose une tenue bien assortie et adaptée à la météo de ta ville. Tu peux aussi l'utiliser à la voix, avec moi ou avec la skill pour Alexa. Il a été créé par Matteo, de Smart Web Tools.",privacy:"En bref : les photos et les données de ta garde-robe restent sur ton téléphone. Si tu te connectes avec Google, elles sont aussi enregistrées dans ton Google Drive, dans un espace réservé à OutfitDay : personne d'autre ne peut les voir, pas même le créateur du site. La position sert seulement pour la météo et n'est pas enregistrée. Pas de publicité, pas de pistage et aucune vente de données. Tu trouveras ci-dessous le lien vers la politique complète.",privacyLink:"Lire la politique de confidentialité complète",pro:"Avec Outfit Pro tu as : {list}. Il se débloque gratuitement après 90 jours d'utilisation, ou tout de suite en réussissant le quiz de mode.",site:"Le site Outfit Day te propose : {list}.",skill:"Avec la skill OutfitDay pour Alexa tu peux demander la tenue d'aujourd'hui, de demain ou d'un jour de la semaine, et en demander une autre si elle ne te plaît pas ; changer un seul vêtement ; créer une tenue autour d'un vêtement, d'une couleur, d'un style ou d'une marque ; demander la météo, la température ressentie et s'il faut un parapluie ; savoir quand tu as porté un vêtement pour la dernière fois ; préparer ta valise pour un voyage avec la météo de la destination ; compter les vêtements de ta garde-robe ; faire répéter la dernière réponse ; et avoir des informations sur Outfit Day, Outfit Pro et la confidentialité.",repeatNone:"Je n'ai encore rien dit à répéter.",last:"La dernière fois que tu as mis {item}, c'était {when}.",lastNever:"On dirait que tu n'as jamais mis {item}.",lastToday:"aujourd'hui",lastYest:"hier",lastAgo:"{day}, il y a {n} jours",brandO:"Voici une tenue {brand} pour {day} : {list}. Elle te plaît ?",packAskCity:"Dans quelle ville vas-tu ?",packAskDays:"Pour combien de jours pars-tu ?",packNoCity:"Je ne trouve pas la ville {c}. Tu peux la répéter ?",packFail:"Je n'arrive pas à obtenir la météo pour l'instant : réessaie dans un moment.",packW:"Pour {n} {dd} à {city} : maximales entre {a} et {b} degrés, minimales jusqu'à {m}, température ressentie de {fa} à {fb} degrés.",packOld:" Le voyage dépasse les prévisions, alors j'utilise les valeurs de la même période l'an dernier.",packRain:" Pluie pendant {r} {rd} : prends un parapluie.",packDry:" Presque pas de pluie.",packList:" Je te conseille d'emporter : {list}.",packEmpty:" Je n'ai pas trouvé de vêtements adaptés dans ta garde-robe.",dd:["jour", "jours"],
     hello:"Salut ! Je t'écoute.",today:"aujourd'hui",tomorrow:"demain",
     outfit:"{Day} je te conseille : {list}.",askToday:"Ça te va ou tu veux changer quelque chose ?",okToday:"Parfait, bonne journée !",
     propose:"Que dis-tu de celle-ci pour {day} : {list}. Elle te plaît ?",saved:"Parfait ! C'est la tenue de {day}, aussi sur le site et sur Alexa.",keep:"D'accord, je garde la précédente.",
@@ -3504,11 +4218,115 @@ fr:{
     setRain:"C'est fait : je te préviens à partir de {n} pour cent de pluie.",setHour:"C'est fait : je regarde la température de {h} heures.",setHourOff:"C'est fait : je regarde la température maximale du jour.",
     setReview:"C'est fait : le récapitulatif sera le {d}.",setBrand:"C'est fait : tenue {b} le {days}.",setBrandOff:"C'est fait : tenue de marque désactivée.",brandMiss:"Pour une tenue {b}, il te manque : {m}.",brandNeed:"Dis-moi la marque et les jours, par exemple : tenue Nike le samedi et le dimanche.",
     setPair:"C'est fait : je n'associerai plus {a} et {b}.",need2c:"Dis-moi deux couleurs, par exemple : n'associe pas rouge et vert.",
-    help:"Je peux te dire la tenue d'aujourd'hui ou d'un autre jour, te proposer une nouvelle tenue, changer un vêtement, créer une tenue autour d'un vêtement ou d'un style, te dire la météo, la température, la pluie et le vent, mettre un vêtement au lavage, gérer les favoris, répondre sur ta garde-robe et tes statistiques, te conseiller des associations, ouvrir les boutiques proches et changer les réglages. Je peux aussi préparer ta valise pour un voyage, te dire quand tu as porté un vêtement pour la dernière fois, te faire une tenue d'une marque, répéter ma dernière réponse et te parler d'Outfit Day, d'Outfit Pro, de la skill pour Alexa et de la confidentialité. Essaie de dire : je ne sais pas quoi mettre demain.",
+    help:"Je peux te dire la tenue d'aujourd'hui ou d'un autre jour, te proposer une nouvelle tenue, changer un vêtement, créer une tenue autour d'un vêtement ou d'un style, te dire la météo, la température, la pluie et le vent, mettre un vêtement au lavage, gérer les favoris, répondre sur ta garde-robe et tes statistiques, te conseiller des associations, ouvrir les boutiques proches et changer les réglages. Essaie de dire : je ne sais pas quoi mettre demain.",
     fallback:"Je n'ai pas bien compris. Essaie de dire par exemple : qu'est-ce que je mets aujourd'hui, quel temps demain, ou je veux mettre le sweat bleu.",
     bye:"À bientôt !",thanks:"Avec plaisir, quand tu veux !",and:"et"}
 }};
 const ASL=()=>AS[LANG]||AS.it;
+/* ---------- assistente: nuove categorie, fantasie, uomo/donna, zaino e borsa ---------- */
+const AS2={
+it:{cat:{camicia:['camicia','camicie','camicetta'],maglione:['maglione','maglioni','pullover'],cardigan:['cardigan','golfino'],top:['top','canotta','canotte'],
+    blazer:['blazer','giacca elegante'],cappotto:['cappotto','cappotti'],abito:['abito','abiti','vestito','vestiti','vestitino'],vestitolungo:['vestito lungo','abito lungo','vestiti lunghi'],
+    gonna:['gonna','gonne','minigonna'],collant:['collant','calze velate'],calzespesse:['calze spesse','calze pesanti','calzettoni'],cravatta:['cravatta','cravatte'],
+    cintura:['cintura','cinture','cinta'],sciarpa:['sciarpa','sciarpe'],cappello:['cappello','cappelli','berretto','cuffia'],borsa:['borsa','borse','borsetta'],
+    zaino:['zaino','zaini','zainetto'],occhiali:['occhiali da sole','occhiali'],burqa:['burqa'],niqab:['niqab'],hijab:['hijab','velo']},
+  drop:['maglione','maglioni','pullover','cardigan','cappotto','canottiera'],
+  pat:{righe:['a righe','righe','rigata','rigato','rigate','rigati'],quadri:['a quadri','quadri','quadretti','scozzese'],fiori:['a fiori','fiori','fiorata','fiorato','floreale'],
+    pois:['a pois','pois'],mimetica:['mimetica','mimetico','militare'],multicolor:['multicolor','multicolore','colorata','colorato'],unita:['tinta unita']},
+  g:{camicia:'fs',maglione:'ms',cardigan:'ms',top:'ms',blazer:'ms',cappotto:'ms',abito:'ms',vestitolungo:'ms',gonna:'fs',collant:'mp',calzespesse:'fp',cravatta:'fs',cintura:'fs',
+    sciarpa:'fs',cappello:'ms',borsa:'fs',zaino:'ms',occhiali:'mp',burqa:'ms',niqab:'ms',hijab:'ms'},
+  pl:{camicia:['camicia','camicie'],maglione:['maglione','maglioni'],cardigan:['cardigan','cardigan'],top:['top','top'],blazer:['blazer','blazer'],cappotto:['cappotto','cappotti'],
+    abito:['abito','abiti'],vestitolungo:['vestito lungo','vestiti lunghi'],gonna:['gonna','gonne'],collant:['paio di collant','paia di collant'],calzespesse:['paio di calze spesse','paia di calze spesse'],
+    cravatta:['cravatta','cravatte'],cintura:['cintura','cinture'],sciarpa:['sciarpa','sciarpe'],cappello:['cappello','cappelli'],borsa:['borsa','borse'],zaino:['zaino','zaini'],
+    occhiali:['paio di occhiali da sole','paia di occhiali da sole'],burqa:['burqa','burqa'],niqab:['niqab','niqab'],hijab:['hijab','hijab']},
+  the:{sciarpa:'la sciarpa',cappello:'il cappello',occhiali:'gli occhiali da sole',collant:'i collant',calzespesse:'le calze spesse'},
+  fem:['donna','ragazza','femmina'],male:['uomo','ragazzo','maschio'],neutral:['preferisco non dirlo','non dirlo','nessuno dei due'],iam:['sono','imposta','metti','modalita','scegli'],
+  all:['tutti i giorni','ogni giorno','sempre'],wdays:['feriali','giorni feriali','dal lunedi al venerdi'],wend:['weekend','fine settimana','week end'],range:[' al ',' fino a '],
+  askQ:['prendo','porto','metto','serve','servono','devo','mi conviene','ci vuole','ci vogliono'],
+  r:{accYes:"Sì, {day} ti consiglio {what}.",accNo:"No, {day} non è necessario: {why}.",whyT:"ci saranno {n} gradi",whyUV:"l'indice UV sarà {u}",whyCloud:"non ci sarà il sole",
+    setG:{m:"Fatto: ti ho impostato come uomo.",f:"Fatto: ti ho impostata come donna, con gli stili in versione donna.",x:"Fatto: non uso né uomo né donna."},
+    setBag:"Fatto: {what} il {days}.",bagNo:"Dimmi i giorni, per esempio: zaino dal lunedì al venerdì.",setUv:"Fatto: ti propongo gli occhiali da sole da indice UV {n}.",
+    reg2:{sciarpa:"sciarpa",cappello:"cappello",calzep:"calze spesse e collant"}}},
+en:{cat:{camicia:['shirt','shirts','blouse'],maglione:['jumper','jumpers','sweater','sweaters','pullover'],cardigan:['cardigan','cardigans'],top:['top','tops','tank top','camisole'],
+    blazer:['blazer','blazers','suit jacket'],cappotto:['coat','coats','overcoat'],abito:['dress','dresses'],vestitolungo:['long dress','maxi dress','long dresses'],
+    gonna:['skirt','skirts'],collant:['tights','pantyhose'],calzespesse:['thick socks','warm socks','wool socks'],cravatta:['tie','ties'],cintura:['belt','belts'],
+    sciarpa:['scarf','scarves'],cappello:['hat','hats','beanie','cap'],borsa:['bag','bags','handbag','purse'],zaino:['backpack','backpacks','rucksack'],
+    occhiali:['sunglasses','shades'],burqa:['burqa'],niqab:['niqab'],hijab:['hijab','headscarf','veil']},
+  drop:['shirt','top','tops','jumper','sweater','cardigan','coat','coats'],
+  pat:{righe:['striped','stripes','stripy'],quadri:['checked','check','plaid','tartan'],fiori:['floral','flowery','flowers'],pois:['polka dot','polka dots','dotted'],
+    mimetica:['camo','camouflage'],multicolor:['multicolour','multicolor','colourful','colorful'],unita:['plain']},
+  g:{},pl:{camicia:['shirt','shirts'],maglione:['jumper','jumpers'],cardigan:['cardigan','cardigans'],top:['top','tops'],blazer:['blazer','blazers'],cappotto:['coat','coats'],
+    abito:['dress','dresses'],vestitolungo:['long dress','long dresses'],gonna:['skirt','skirts'],collant:['pair of tights','pairs of tights'],calzespesse:['pair of thick socks','pairs of thick socks'],
+    cravatta:['tie','ties'],cintura:['belt','belts'],sciarpa:['scarf','scarves'],cappello:['hat','hats'],borsa:['bag','bags'],zaino:['backpack','backpacks'],
+    occhiali:['pair of sunglasses','pairs of sunglasses'],burqa:['burqa','burqas'],niqab:['niqab','niqabs'],hijab:['hijab','hijabs']},
+  the:{sciarpa:'a scarf',cappello:'a hat',occhiali:'sunglasses',collant:'tights',calzespesse:'thick socks'},
+  fem:['woman','girl','female'],male:['man','boy','male'],neutral:['rather not say','prefer not to say','neither'],iam:['i am','i m','set','make me','choose'],
+  all:['every day','all days','always'],wdays:['weekdays','week days','monday to friday'],wend:['weekend','weekends'],range:[' to ',' until ',' through '],
+  askQ:['do i need','should i','take','bring','wear','need'],
+  r:{accYes:"Yes, {day} I suggest {what}.",accNo:"No, {day} there's no need: {why}.",whyT:"it will be {n} degrees",whyUV:"the UV index will be {u}",whyCloud:"it won't be sunny",
+    setG:{m:"Done: I've set you as a man.",f:"Done: I've set you as a woman, with the women's version of the styles.",x:"Done: I won't use man or woman."},
+    setBag:"Done: {what} on {days}.",bagNo:"Tell me the days, for example: backpack from Monday to Friday.",setUv:"Done: I'll suggest sunglasses from UV index {n}.",
+    reg2:{sciarpa:"scarf",cappello:"hat",calzep:"thick socks and tights"}}},
+es:{cat:{camicia:['camisa','camisas','blusa'],maglione:['jersey','jerseis','sueter','pullover'],cardigan:['cardigan','chaqueta de punto','rebeca'],top:['top','tops','camiseta de tirantes'],
+    blazer:['blazer','americana'],cappotto:['abrigo','abrigos'],abito:['vestido','vestidos'],vestitolungo:['vestido largo','vestidos largos'],gonna:['falda','faldas'],
+    collant:['medias','pantis'],calzespesse:['calcetines gruesos','calcetines de lana'],cravatta:['corbata','corbatas'],cintura:['cinturon','cinturones','cinto'],
+    sciarpa:['bufanda','bufandas'],cappello:['gorro','gorros','sombrero','gorra'],borsa:['bolso','bolsos','cartera'],zaino:['mochila','mochilas'],
+    occhiali:['gafas de sol','gafas','lentes de sol'],burqa:['burka','burqa'],niqab:['nicab','niqab'],hijab:['hiyab','hijab','velo']},
+  drop:['jersey','jerseis','sueter','chaqueta de punto','cardigan','abrigo','abrigos','top','polo'],
+  pat:{righe:['de rayas','rayas','rayada','rayado'],quadri:['de cuadros','cuadros','escoces'],fiori:['de flores','flores','floral'],pois:['de lunares','lunares'],
+    mimetica:['camuflaje','militar'],multicolor:['multicolor','colorida','colorido'],unita:['liso','lisa']},
+  g:{camicia:'fs',maglione:'ms',cardigan:'ms',top:'ms',blazer:'ms',cappotto:'ms',abito:'ms',vestitolungo:'ms',gonna:'fs',collant:'fp',calzespesse:'mp',cravatta:'fs',cintura:'ms',
+    sciarpa:'fs',cappello:'ms',borsa:'ms',zaino:'fs',occhiali:'fp',burqa:'ms',niqab:'ms',hijab:'ms'},
+  pl:{camicia:['camisa','camisas'],maglione:['jersey','jerséis'],cardigan:['cárdigan','cárdigans'],top:['top','tops'],blazer:['blazer','blazers'],cappotto:['abrigo','abrigos'],
+    abito:['vestido','vestidos'],vestitolungo:['vestido largo','vestidos largos'],gonna:['falda','faldas'],collant:['par de medias','pares de medias'],calzespesse:['par de calcetines gruesos','pares de calcetines gruesos'],
+    cravatta:['corbata','corbatas'],cintura:['cinturón','cinturones'],sciarpa:['bufanda','bufandas'],cappello:['gorro','gorros'],borsa:['bolso','bolsos'],zaino:['mochila','mochilas'],
+    occhiali:['par de gafas de sol','pares de gafas de sol'],burqa:['burka','burkas'],niqab:['nicab','nicabs'],hijab:['hiyab','hiyabs']},
+  the:{sciarpa:'la bufanda',cappello:'el gorro',occhiali:'las gafas de sol',collant:'las medias',calzespesse:'los calcetines gruesos'},
+  fem:['mujer','chica'],male:['hombre','chico'],neutral:['prefiero no decirlo','ninguno de los dos'],iam:['soy','pon','configura','modo','elige'],
+  all:['todos los dias','cada dia','siempre'],wdays:['entre semana','dias laborables','de lunes a viernes'],wend:['fin de semana','finde'],range:[' a ',' al ',' hasta '],
+  askQ:['necesito','llevo','me pongo','hace falta','tengo que','cojo'],
+  r:{accYes:"Sí, {day} te recomiendo {what}.",accNo:"No, {day} no hace falta: {why}.",whyT:"habrá {n} grados",whyUV:"el índice UV será {u}",whyCloud:"no hará sol",
+    setG:{m:"Hecho: te he configurado como hombre.",f:"Hecho: te he configurado como mujer, con los estilos en versión mujer.",x:"Hecho: no uso ni hombre ni mujer."},
+    setBag:"Hecho: {what} el {days}.",bagNo:"Dime los días, por ejemplo: mochila de lunes a viernes.",setUv:"Hecho: te propongo las gafas de sol desde índice UV {n}.",
+    reg2:{sciarpa:"bufanda",cappello:"gorro",calzep:"calcetines gruesos y medias"}}},
+fr:{cat:{camicia:['chemise','chemises','chemisier'],maglione:['pull','pulls','pullover'],cardigan:['cardigan','gilet'],top:['top','tops','debardeur'],blazer:['blazer'],
+    cappotto:['manteau','manteaux'],abito:['robe','robes'],vestitolungo:['robe longue','robes longues'],gonna:['jupe','jupes'],collant:['collant','collants'],
+    calzespesse:['chaussettes epaisses','grosses chaussettes'],cravatta:['cravate','cravates'],cintura:['ceinture','ceintures'],sciarpa:['echarpe','echarpes'],
+    cappello:['bonnet','chapeau','casquette'],borsa:['sac','sac a main','sacs'],zaino:['sac a dos'],occhiali:['lunettes de soleil','lunettes'],burqa:['burqa'],niqab:['niqab'],hijab:['hijab','voile']},
+  drop:['pull','pulls','gilet','manteau','manteaux','debardeur'],
+  pat:{righe:['a rayures','rayures','raye','rayee'],quadri:['a carreaux','carreaux','ecossais'],fiori:['a fleurs','fleurs','fleuri','fleurie'],pois:['a pois','pois'],
+    mimetica:['camouflage','camo','militaire'],multicolor:['multicolore','colore','coloree'],unita:['uni','unie']},
+  g:{camicia:'fs',maglione:'ms',cardigan:'ms',top:'ms',blazer:'ms',cappotto:'ms',abito:'fs',vestitolungo:'fs',gonna:'fs',collant:'ms',calzespesse:'fp',cravatta:'fs',cintura:'fs',
+    sciarpa:'fs',cappello:'ms',borsa:'ms',zaino:'ms',occhiali:'fp',burqa:'fs',niqab:'ms',hijab:'ms'},
+  pl:{camicia:['chemise','chemises'],maglione:['pull','pulls'],cardigan:['cardigan','cardigans'],top:['top','tops'],blazer:['blazer','blazers'],cappotto:['manteau','manteaux'],
+    abito:['robe','robes'],vestitolungo:['robe longue','robes longues'],gonna:['jupe','jupes'],collant:['collant','collants'],calzespesse:['paire de chaussettes épaisses','paires de chaussettes épaisses'],
+    cravatta:['cravate','cravates'],cintura:['ceinture','ceintures'],sciarpa:['écharpe','écharpes'],cappello:['bonnet','bonnets'],borsa:['sac','sacs'],zaino:['sac à dos','sacs à dos'],
+    occhiali:['paire de lunettes de soleil','paires de lunettes de soleil'],burqa:['burqa','burqas'],niqab:['niqab','niqabs'],hijab:['hijab','hijabs']},
+  the:{sciarpa:'une écharpe',cappello:'un bonnet',occhiali:'des lunettes de soleil',collant:'des collants',calzespesse:'des chaussettes épaisses'},
+  fem:['femme','fille'],male:['homme','garcon'],neutral:['prefere ne pas le dire','ne pas le dire','aucun des deux'],iam:['je suis','mets','regle','mode','choisis'],
+  all:['tous les jours','chaque jour','toujours'],wdays:['en semaine','jours de semaine','du lundi au vendredi'],wend:['week end','weekend','fin de semaine'],range:[' au ',' a ',' jusqu au '],
+  askQ:['dois je','faut il','je prends','je mets','besoin','je porte'],
+  r:{accYes:"Oui, {day} je te conseille {what}.",accNo:"Non, {day} ce n'est pas nécessaire : {why}.",whyT:"il fera {n} degrés",whyUV:"l'indice UV sera de {u}",whyCloud:"il n'y aura pas de soleil",
+    setG:{m:"C'est fait : je t'ai réglé comme homme.",f:"C'est fait : je t'ai réglée comme femme, avec les styles en version femme.",x:"C'est fait : je n'utilise ni homme ni femme."},
+    setBag:"C'est fait : {what} le {days}.",bagNo:"Dis-moi les jours, par exemple : sac à dos du lundi au vendredi.",setUv:"C'est fait : je te propose les lunettes de soleil dès l'indice UV {n}.",
+    reg2:{sciarpa:"écharpe",cappello:"bonnet",calzep:"chaussettes épaisses et collants"}}}};
+const AS2L=()=>AS2[LANG]||AS2.it;
+// tutte le parole delle categorie: quelle di prima, le nuove e i nomi delle categorie create da te
+function asCatDict(){const base=ASL().cat,x=AS2L(),drop=new Set(x.drop.map(asNorm)),out={};
+  Object.entries(base).forEach(([c,ws])=>out[c]=ws.filter(w=>!drop.has(asNorm(w))));
+  Object.entries(x.cat).forEach(([c,ws])=>out[c]=ws);
+  userCats().forEach(u=>out[u.id]=[u.name]);return out}
+function asPattern(t){for(const [k,ws] of Object.entries(AS2L().pat))if(asHas(t,ws))return k;return null}
+function asDaysIn(t){ // giorni della settimana detti nella frase (0 = domenica)
+  const x=AS2L(),D=ASL().days;
+  if(asHas(t,x.all))return [0,1,2,3,4,5,6];if(asHas(t,x.wdays))return [1,2,3,4,5];if(asHas(t,x.wend))return [6,0];
+  const found=[];D.wd.forEach((w,i)=>{const k=' '+asNorm(w);const p=(' '+t+' ').indexOf(k);if(p>=0)found.push([p,(i+1)%7])});
+  found.sort((a,b)=>a[0]-b[0]);let days=found.map(f=>f[1]);
+  if(days.length===2&&x.range.some(r=>(' '+t+' ').includes(r))){const ord=[1,2,3,4,5,6,0],a=ord.indexOf(days[0]),b=ord.indexOf(days[1]);if(a<b)days=ord.slice(a,b+1)}
+  return [...new Set(days)]}
+function asDayNames(days){const names=asT('wdLong').split(','),r=ASL().r;const l=[1,2,3,4,5,6,0].filter(d=>days.includes(d)).map(d=>LANG==='en'?names[(d+6)%7]:names[(d+6)%7].toLowerCase());
+  return l.length<2?l.join(''):l.slice(0,-1).join(', ')+' '+r.and+' '+l[l.length-1]}
+
 
 /* ---------- testo: normalizzazione e parole chiave ---------- */
 const asNorm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[’'`´]/g,' ').replace(/[^a-z0-9%\s]/g,' ').replace(/\s+/g,' ').trim();
@@ -3521,21 +4339,24 @@ function asNum(t){const m=t.match(/\d+/);if(m)return +m[0];const n=ASL().nums;fo
 /* ---------- concordanza dei colori (come nella skill) ---------- */
 const AS_GENDER={it:{maglietta:'fs',felpa:'fs',giacca:'fs',pantaloni:'mp',scarpe:'fp',calze:'fp'},
   es:{maglietta:'fs',felpa:'fs',giacca:'fs',pantaloni:'mp',scarpe:'mp',calze:'mp'},fr:{maglietta:'ms',felpa:'ms',giacca:'fs',pantaloni:'ms',scarpe:'fp',calze:'fp'}};
-function asAgree(col,g){const c=colName(col).toLowerCase();
+function asAgree(col,g){const c=colName(col).toLowerCase();g=g||'ms';
   if(LANG==='it'){if(['blu scuro','beige','blu jeans','verde oliva','bordeaux','rosa','viola'].includes(col)||g==='ms')return c;
     if(col==='bianco')return {fs:'bianca',mp:'bianchi',fp:'bianche'}[g];
     if(c.endsWith('o')){const b=c.slice(0,-1);return g==='fs'?b+'a':g==='mp'?(b.endsWith('i')?b:b+'i'):b+'e'}
     if(c.endsWith('e'))return g==='fs'?c:c.slice(0,-1)+'i';return c}
   if(LANG==='es'){if(['naranja','rosa','beige','azul marino','azul vaquero','burdeos','verde oliva'].includes(c))return c;
-    if(g==='fs'&&c.endsWith('o'))return c.slice(0,-1)+'a';if(g==='mp'){if(/[aeo]$/.test(c))return c+'s';if(c==='marrón')return 'marrones';return c+'es'}return c}
+    if(g==='fs'&&c.endsWith('o'))return c.slice(0,-1)+'a';if(g==='fp'){if(c.endsWith('o'))return c.slice(0,-1)+'as';if(/[ae]$/.test(c))return c+'s';if(c==='marrón')return 'marrones';return c+'es'}if(g==='mp'){if(/[aeo]$/.test(c))return c+'s';if(c==='marrón')return 'marrones';return c+'es'}return c}
   if(LANG==='fr'){if(['orange','marron','bleu marine','bleu jean','bleu ciel','bordeaux','vert olive'].includes(c))return c;
     const fem={noir:'noire',blanc:'blanche',vert:'verte',violet:'violette',gris:'grise'};let x=c;if(g[0]==='f'&&fem[c])x=fem[c];if(g[1]==='p'&&!x.endsWith('s'))x+='s';return x}
   return c}
-function asItem(p){ // "felpa rossa Puma"
-  const lab=pieceLabel(p).toLowerCase(),g=(AS_GENDER[LANG]||{})[p.cat];
-  let s=LANG==='en'?colName(p.color).toLowerCase()+' '+lab:lab+' '+asAgree(p.color,g);
+function asItem(p){ // "felpa rossa Puma", "camicia bianca e blu a righe"
+  const lab=pieceLabel(p).toLowerCase(),g=(AS_GENDER[LANG]||{})[p.cat]||AS2L().g[p.cat];
+  const c2=p.color2&&COLORS[p.color2]?p.color2:null,pat=hasPat(p)?asT('pat_'+p.pattern).toLowerCase():'';
+  let s;
+  if(LANG==='en')s=colName(p.color).toLowerCase()+(c2?' and '+colName(c2).toLowerCase():'')+(pat?' '+pat:'')+' '+lab;
+  else s=lab+' '+asAgree(p.color,g)+(c2?' '+ASL().r.and+' '+asAgree(c2,g):'')+(pat?' '+pat:'');
   if(p.brand)s+=' '+p.brand;return s}
-function asList(ps){const a=ps.slice().sort((x,y)=>ORDER_SHOW.indexOf(x.cat)-ORDER_SHOW.indexOf(y.cat)).map(asItem);
+function asList(ps){const a=ps.slice().sort(byShow).map(asItem);
   return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' '+ASL().r.and+' '+a[a.length-1]}
 
 /* ---------- riconoscimento di capi, colori, marchi, date, stili ---------- */
@@ -3555,7 +4376,7 @@ function asColors(t){ // colori trovati nel testo, ognuno come elenco di colori 
   for(const [p,ids] of phrases){const k=' '+p+' ';let i=T.indexOf(k);while(i>=0){out.push({pos:i,ids});T=T.slice(0,i)+' '+'_'.repeat(p.length)+' '+T.slice(i+k.length);i=T.indexOf(k)}}
   return out.sort((a,b)=>a.pos-b.pos);
 }
-function asCats(t){const out=[],T=' '+t+' ';Object.entries(ASL().cat).forEach(([c,ws])=>ws.forEach(w=>{const k=' '+asNorm(w)+' ';const i=T.indexOf(k);if(i>=0)out.push({pos:i,cat:c,len:k.length})}));
+function asCats(t){const out=[],T=' '+t+' ';Object.entries(asCatDict()).forEach(([c,ws])=>ws.forEach(w=>{const k=' '+asNorm(w)+' ';const i=T.indexOf(k);if(i>=0)out.push({pos:i,cat:c,len:k.length})}));
   out.sort((a,b)=>a.pos-b.pos||b.len-a.len);const res=[];out.forEach(x=>{if(!res.some(y=>Math.abs(y.pos-x.pos)<3))res.push(x)});return res}
 function asBrands(t){const bs=[...new Set(ITEMS.filter(i=>i.brand).map(i=>i.brand.trim()))];
   return bs.filter(b=>(' '+t+' ').includes(' '+asNorm(b)+' ')).map(b=>({b,pos:(' '+t+' ').indexOf(' '+asNorm(b)+' ')}))}
@@ -3563,7 +4384,7 @@ const AS_PL={it:{maglietta:['maglietta','magliette'],felpa:['felpa','felpe'],gia
   en:{maglietta:['T-shirt','T-shirts'],felpa:['sweatshirt','sweatshirts'],giacca:['jacket','jackets'],pantaloni:['pair of trousers','pairs of trousers'],scarpe:['pair of shoes','pairs of shoes'],calze:['pair of socks','pairs of socks']},
   es:{maglietta:['camiseta','camisetas'],felpa:['sudadera','sudaderas'],giacca:['chaqueta','chaquetas'],pantaloni:['pantalón','pantalones'],scarpe:['par de zapatos','pares de zapatos'],calze:['par de calcetines','pares de calcetines']},
   fr:{maglietta:['t-shirt','t-shirts'],felpa:['sweat','sweats'],giacca:['veste','vestes'],pantaloni:['pantalon','pantalons'],scarpe:['paire de chaussures','paires de chaussures'],calze:['paire de chaussettes','paires de chaussettes']}};
-const asCnt=(n,c)=>n+' '+((AS_PL[LANG]||AS_PL.it)[c]||[c,c])[n===1?0:1];
+const asCnt=(n,c)=>n+' '+((AS_PL[LANG]||AS_PL.it)[c]||AS2L().pl[c]||[catName(c).toLowerCase(),catName(c).toLowerCase()])[n===1?0:1];
 function asStyle(t){for(const [k,ws] of Object.entries(ASL().styles))if(asHas(t,ws))return k;return null}
 function asDate(t,past){ // data ISO dal testo
   const D=ASL().days,d=new Date();d.setHours(12,0,0,0);const add=n=>{const x=new Date(d);x.setDate(x.getDate()+n);return isoDay(x)};
@@ -3579,8 +4400,9 @@ function asFindItems(t,catHint){ // capi che corrispondono a quello che hai dett
   const cats=asCats(t),cols=asColors(t),brs=asBrands(t);
   const cat=catHint||(cats[0]&&cats[0].cat);if(!cat)return {cat:null,items:[]};
   let items=ITEMS.filter(i=>i.cat===cat);
-  if(cols.length){const allowed=new Set(cols.flatMap(c=>c.ids));const f=items.filter(i=>allowed.has(i.color));items=f}
+  if(cols.length){const allowed=new Set(cols.flatMap(c=>c.ids));const f=items.filter(i=>allowed.has(i.color)||allowed.has(i.color2));items=f}
   if(brs.length){const f=items.filter(i=>i.brand&&brs.some(b=>b.b.toLowerCase()===i.brand.trim().toLowerCase()));items=f}
+  const pt=asPattern(t);if(pt){const f=items.filter(i=>(i.pattern||'unita')===pt);items=f}
   return {cat,items,cols,brs}}
 function asDescr(cat,cols,brs){ // "felpa blu Puma" per i messaggi "non trovo"
   let s=catName(cat).toLowerCase();if(cols&&cols.length){const c=cols[0].ids[0];s=LANG==='en'?colName(c).toLowerCase()+' '+s:s+' '+asAgree(c,(AS_GENDER[LANG]||{})[cat])}
@@ -3594,32 +4416,51 @@ function asVoices(){if(!('speechSynthesis' in window))return [];const pre=LOCALE
   const fem=/alice|elsa|federica|paola|alessandra|isabella|serena|samantha|karen|kate|serena|moira|tessa|monica|paulina|marisol|amelie|audrey|marie|aurelie|helena|lucia|laura|female|femm|google/i;
   return v.sort((a,b)=>(fem.test(b.name)-fem.test(a.name))||a.name.localeCompare(b.name))}
 function asVoice(){const uri=LS.get('asVoice',null);if(!uri||uri==='sys')return null;return asVoices().find(v=>v.voiceURI===uri)||null}
+// iPhone/iPad: tutti i browser usano il motore di Safari. La voce parte solo se "sbloccata" da un tocco
+// e il microfono deve essere chiuso del tutto prima che la voce parli.
+const AS_IOS=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+function asUnlock(){ // da chiamare dentro ogni tocco: sblocca la voce per le risposte successive
+  if(!('speechSynthesis' in window))return;
+  try{if(!speechSynthesis.speaking&&!speechSynthesis.pending){const u=new SpeechSynthesisUtterance(' ');u.volume=0;u.lang=LOCALE[LANG];speechSynthesis.speak(u)}speechSynthesis.resume()}catch(e){}
+  AST.unlocked=true}
 function asSpeak(text,after){
-  if(!('speechSynthesis' in window)){if(after)setTimeout(after,300);return}
-  try{speechSynthesis.cancel()}catch(e){}
-  const u=new SpeechSynthesisUtterance(text.replace(/[\u{1F300}-\u{1FAFF}☀-➿]/gu,''));
+  let done=false;const fin=()=>{if(done)return;done=true;clearTimeout(AST.spTimer);AST.speaking=false;asUI();if(after)after()};
+  if(!('speechSynthesis' in window)){setTimeout(fin,300);return}
+  try{if(speechSynthesis.speaking||speechSynthesis.pending)speechSynthesis.cancel()}catch(e){}
+  const clean=text.replace(/[\u{1F300}-\u{1FAFF}☀-➿]/gu,'').replace(/\b(\d+)\)/g,'$1,');
+  const u=new SpeechSynthesisUtterance(clean);AST.utt=u; // tenuta in memoria: su Safari altrimenti la voce si interrompe
   u.lang=LOCALE[LANG];const v=asVoice();if(v)u.voice=v;u.rate=1;
   AST.speaking=true;asUI();
-  u.onend=u.onerror=()=>{AST.speaking=false;asUI();if(after)after()};
-  speechSynthesis.speak(u);
+  u.onend=u.onerror=fin;
+  // se il dispositivo non avvisa la fine della voce, si va avanti lo stesso
+  AST.spTimer=setTimeout(fin,Math.max(4000,clean.length*95));
+  setTimeout(()=>{try{speechSynthesis.resume();speechSynthesis.speak(u)}catch(e){fin()}},AS_IOS?250:0);
 }
 function asListen(){
   if(!SRClass){asUI();return}
   if(AST.listening)return;
-  try{speechSynthesis.cancel()}catch(e){}
+  try{if(speechSynthesis.speaking)speechSynthesis.cancel()}catch(e){}
   const r=new SRClass();AST.rec=r;r.lang=LOCALE[LANG];r.interimResults=false;r.maxAlternatives=3;r.continuous=false;
-  let got=false;
-  r.onresult=e=>{got=true;const res=e.results[0];const text=res[0].transcript;AST.listening=false;asUI();asHandle(text)};
-  r.onerror=e=>{AST.listening=false;if(e.error==='not-allowed'||e.error==='service-not-allowed'){AST.convo=false;asAdd('ai',ASL().ui.noRec)}asUI()};
-  r.onend=()=>{AST.listening=false;if(!got)AST.convo=false;asUI()};
+  let text=null,started=false;
+  r.onstart=()=>{started=true;AST.needTap=false;asUI()};
+  r.onresult=e=>{const res=e.results[e.results.length-1];if(res&&res[0])text=res[0].transcript;try{r.stop()}catch(x){}};
+  r.onerror=e=>{if(e.error==='not-allowed'||e.error==='service-not-allowed'){
+      if(AST.auto){AST.needTap=true}else{AST.convo=false;asAdd('ai',ASL().ui.noRec)}}};
+  // la risposta parte solo quando il microfono è chiuso del tutto (su iPhone altrimenti la voce resta muta)
+  r.onend=()=>{AST.listening=false;AST.rec=null;
+    if(text){asUI();setTimeout(()=>asHandle(text),AS_IOS?150:0);return}
+    if(AST.auto&&!started)AST.needTap=true; // il telefono non ha riaperto il microfono da solo: serve un tocco
+    else if(!AST.auto)AST.convo=false;
+    asUI()};
   AST.listening=true;asUI();
-  try{r.start()}catch(e){AST.listening=false;asUI()}
+  try{r.start()}catch(e){AST.listening=false;AST.needTap=!!AST.auto;asUI()}
 }
-function asStop(){AST.convo=false;try{AST.rec&&AST.rec.abort()}catch(e){}AST.listening=false;try{speechSynthesis.cancel()}catch(e){}AST.speaking=false}
+function asStop(){AST.convo=false;AST.needTap=false;try{AST.rec&&AST.rec.abort()}catch(e){}AST.listening=false;try{speechSynthesis.cancel()}catch(e){}AST.speaking=false;clearTimeout(AST.spTimer)}
 function asUI(){
   const m=document.getElementById('asMic'),st=document.getElementById('asState');if(!m)return;
   m.classList.toggle('on',AST.listening);m.textContent=AST.listening?'⏹':'🎙️';
-  st.textContent=AST.listening?ASL().ui.listen:AST.speaking?'🔊':SRClass?ASL().ui.tap:'';
+  m.classList.toggle('tap',!!AST.needTap&&!AST.listening&&!AST.speaking);
+  st.textContent=AST.listening?ASL().ui.listen:AST.speaking?'🔊':AST.needTap?ASL().ui.tapAgain:SRClass?ASL().ui.tap:'';
 }
 function asAdd(who,text,pieces){
   AST.log.push({who,text,pieces:pieces?pieces.map(p=>p.id):null});AST.log=AST.log.slice(-40);
@@ -3630,10 +4471,9 @@ function asAdd(who,text,pieces){
   log.appendChild(d);d.scrollIntoView({behavior:'smooth',block:'end'});
 }
 // risposta: scrive, parla e (se la conversazione è attiva) torna ad ascoltare
-function asSay(text,pieces,keep,noLast){
-  if(!noLast){AST.last={text,pieces:pieces?pieces.slice():null}}
+function asSay(text,pieces,keep){
   asAdd('ai',text,pieces);
-  asSpeak(text,()=>{if(AST.convo&&keep!==false)asListen()});
+  asSpeak(text,()=>{if(AST.convo&&keep!==false){AST.auto=true;asListen()}});
 }
 
 /* ---------- schermata ---------- */
@@ -3650,9 +4490,9 @@ function openAssistant(){
   const log=document.getElementById('asLog');AST.log.forEach(m=>{const d=document.createElement('div');d.className='asmsg '+m.who;d.textContent=m.text;
     if(m.pieces){const th=document.createElement('div');th.className='asthumbs';m.pieces.map(id=>ITEMS.find(i=>i.id===id)).filter(Boolean).forEach(p=>{const im=document.createElement('img');im.src=p.img;th.appendChild(im)});d.appendChild(th)}
     log.appendChild(d)});
-  box.querySelectorAll('[data-h]').forEach(b=>b.onclick=()=>asHandle(b.dataset.h));
-  box.querySelector('#asMic').onclick=()=>{if(AST.listening){asStop();asUI();return}AST.convo=true;asListen()};
-  const send=()=>{const i=box.querySelector('#asText'),v=i.value.trim();if(!v)return;i.value='';asHandle(v)};
+  box.querySelectorAll('[data-h]').forEach(b=>b.onclick=()=>{asUnlock();asHandle(b.dataset.h)});
+  box.querySelector('#asMic').onclick=()=>{asUnlock();if(AST.listening){asStop();asUI();return}AST.convo=true;AST.auto=false;AST.needTap=false;asListen()};
+  const send=()=>{asUnlock();const i=box.querySelector('#asText'),v=i.value.trim();if(!v)return;i.value='';asHandle(v)};
   box.querySelector('#asSend').onclick=send;box.querySelector('#asText').onkeydown=e=>{if(e.key==='Enter')send()};
   box.querySelector('#asVoiceBtn').onclick=()=>asPickVoice(false);
   asUI();
@@ -3669,7 +4509,7 @@ function asPickVoice(first){
     s.querySelectorAll('[data-v]').forEach(d=>d.onclick=e=>{if(e.target.closest('[data-play]'))return;sel=d.dataset.v;s.querySelectorAll('[data-v]').forEach(x=>x.classList.toggle('on',x===d))});
     s.querySelectorAll('[data-play]').forEach(b=>b.onclick=()=>{try{speechSynthesis.cancel()}catch(e){}
       const x=new SpeechSynthesisUtterance(u.vSample);x.lang=LOCALE[LANG];const v=vs.find(y=>y.voiceURI===b.dataset.play);if(v)x.voice=v;speechSynthesis.speak(x)});
-    s.querySelector('#asVOk').onclick=()=>{LS.set('asVoice',sel);s.remove();if(first)asSay(ASL().r.hello,null,false)};
+    s.querySelector('#asVOk').onclick=()=>{asUnlock();LS.set('asVoice',sel);s.remove();if(first)asSay(ASL().r.hello,null,false)};
   };
   if('speechSynthesis' in window&&!speechSynthesis.getVoices().length){let done=false;const go=()=>{if(done)return;done=true;build()};speechSynthesis.onvoiceschanged=go;setTimeout(go,800)}
   else build();
@@ -3688,7 +4528,7 @@ function asOutfitOf(date){ // outfit già deciso per quel giorno
   const i=asDayIndex(date);if(i<0)return null;return outfitForDay(i);
 }
 function asSaveFor(date,ids){
-  if(date===isoDay()){saveToday(ids);renderOutfit(false)}
+  if(date===isoDay()){saveToday(ids,true);renderOutfit(false)}
   else{setPlan(date,{ids,t:Date.now(),by:'site',manual:true},true);DAYCACHE={};renderMeteo()}
   if(ACC())kickSync();
 }
@@ -3699,106 +4539,12 @@ function asPropose(date,opt,kind,extra){
   const ids=p.map(x=>x.id);
   AST.pending={type:'propose',date,ids,opt:Object.assign({},opt,{avoid:avoid.concat(sig(ids))}),kind,extra};
   const day=asDayLabel(date);
-  const txt=kind==='brand'?asFmt(r.brandO,Object.assign({day,list:asList(p)},extra)):kind==='built'?asFmt(r.built,Object.assign({day,list:asList(p)},extra)):kind==='style'?asFmt(r.styleO,Object.assign({day,list:asList(p)},extra)):asFmt(r.propose,{day,list:asList(p)});
+  const txt=kind==='built'?asFmt(r.built,Object.assign({day,list:asList(p)},extra)):kind==='style'?asFmt(r.styleO,Object.assign({day,list:asList(p)},extra)):asFmt(r.propose,{day,list:asList(p)});
   asSay(txt,p);
 }
 function asWeatherDay(date){const i=asDayIndex(date);return i>=0?WEATHER.days[i]:null}
 function asWc(code){return t('wc'+WCODE(code)[1]).toLowerCase()}
 const asT=(k,v)=>t(k,v);
-
-/* ---------- informazioni: Outfit Day, sito, Pro, skill, privacy ---------- */
-function asBold(k){const d=document.createElement('div');d.innerHTML=t(k);const b=d.querySelector('b');return ((b?b.textContent:d.textContent)||'').trim()}
-function asJoin(a){a=a.filter(Boolean);return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' '+ASL().r.and+' '+a[a.length-1]}
-function asLow(x){x=x.replace(/,\s*/g,' ');return /^(Outfit|Google|Alexa|Gen )/.test(x)?x:x.charAt(0).toLowerCase()+x.slice(1)}
-function asSiteList(){const ks=[...document.querySelectorAll('#welcome [data-i18n^="w_f"]')].map(e=>e.getAttribute('data-i18n')).filter(k=>/^w_f\d+$/.test(k));
-  return asJoin((ks.length?ks:[1,2,3,16,17,11,7,12,8,4,13,14,5,6,15].map(n=>'w_f'+n)).map(k=>asLow(asBold(k))))}
-function asProList(){const a=[];for(let i=1;i<=30;i++){const k='pa'+i;if(TXT.it[k]===undefined)break;a.push(asLow(asBold(k)))}return asJoin(a)}
-function asSayLink(text,url,label){asSay(text);const log=document.getElementById('asLog');const m=log&&log.lastElementChild;
-  if(m){const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent='🔗 '+label;a.style.cssText='display:block;margin-top:8px;color:var(--blue);font-weight:600';m.appendChild(a)}}
-function asInfo(t){const K=ASL().kw,r=ASL().r;
-  if(asHas(t,K.about))return ()=>asSay(r.about);
-  if(asHas(t,K.privacy))return ()=>asSayLink(r.privacy,'privacy.html',r.privacyLink);
-  const f=asHas(t,K.feat);
-  if(asHas(t,['outfit pro'])||asHas(t,K.pro)&&(f||t.split(' ').length<=3))return ()=>asSay(asFmt(r.pro,{list:asProList()}));
-  if(asHas(t,K.skill)&&(f||t.split(' ').length<=3))return ()=>asSay(r.skill);
-  if(asHas(t,K.site)&&f)return ()=>asSay(asFmt(r.site,{list:asSiteList()}));
-  return null}
-
-/* ---------- quando ho messo l'ultima volta ---------- */
-function asLastWorn(it){const last={};const add=(d,ids)=>(ids||[]).forEach(id=>{if(d&&(!last[id]||last[id]<d))last[id]=d});
-  Object.entries(worn()).forEach(([d,ids])=>add(d,ids));LS.get('usati',[]).forEach(x=>add(isoOf(x.date),x.ids));
-  const tdy=isoDay();if(CURRENT&&CURRENT.some(p=>p.id===it.id))add(tdy,[it.id]);
-  return last[it.id]&&last[it.id]<=tdy?last[it.id]:null}
-function asLastText(it,d){const r=ASL().r;if(!d)return asFmt(r.lastNever,{item:asArtItem(it)});
-  const n=Math.round((new Date(isoDay()+'T12:00:00')-new Date(d+'T12:00:00'))/864e5);
-  const when=n<=0?r.lastToday:n===1?r.lastYest:asFmt(r.lastAgo,{n,day:new Date(d+'T12:00:00').toLocaleDateString(LOCALE[LANG],{weekday:'long',day:'numeric',month:'long'})});
-  return asFmt(r.last,{item:asArtItem(it),when})}
-function asArtItem(it){const g=(AS_GENDER[LANG]||{})[it.cat];const a={it:{fs:'la ',fp:'le ',mp:'i ',ms:'il '},es:{fs:'la ',fp:'las ',mp:'los ',ms:'el '},fr:{fs:'la ',fp:'les ',mp:'les ',ms:'le '}}[LANG];return (a&&g?a[g]:'')+asItem(it)}
-
-/* ---------- valigia per un viaggio ---------- */
-function asPackDays(t){const K=ASL().kw,w=t.split(' ');if(asHas(t,['weekend','fine settimana','fin de semana','week end']))return 2;
-  for(let i=0;i<w.length;i++){const n=/^\d+$/.test(w[i])?+w[i]:ASL().nums[w[i]];if(n==null)continue;const u=w[i+1]||'';
-    if(K.dayW.includes(u))return n;if(K.weekW.includes(u))return n*7;if(K.monthW.includes(u))return n*30}
-  for(const u of w){if(K.weekW.includes(u))return 7;if(K.monthW.includes(u))return 30}
-  if(asHas(t,['weekend','fine settimana','fin de semana','week end']))return 2;return null}
-function asPackPlace(t){const K=ASL().kw,w=t.split(' '),stop=new Set(K.pstop),art=new Set(K.art);
-  for(let i=0;i<w.length;i++){if(!K.prep.includes(w[i]))continue;
-    let j=i+1,c=[];while(j<w.length&&!(stop.has(w[j])&&!(c.length===0&&art.has(w[j])&&w[j+1]&&!stop.has(w[j+1])))&&!/^\d+$/.test(w[j])){c.push(w[j]);j++}
-    if(!c.length||c.every(x=>art.has(x)))continue;
-    let country=null;for(let k=j;k<w.length;k++){if(K.cprep.includes(w[k])){let q=k+1,cc=[];while(q<w.length&&art.has(w[q]))q++;
-      while(q<w.length&&!stop.has(w[q])&&!/^\d+$/.test(w[q])){cc.push(w[q]);q++}if(cc.length){country=cc.join(' ');break}}}
-    return {city:c.join(' '),country}}
-  return null}
-async function asGeo(city,country){
-  const j=await (await fetchT(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=10&language=${LANG}`)).json();
-  const rs=j.results||[];if(!rs.length)return null;
-  if(country){const c=asNorm(country);const m=rs.find(x=>{const n=asNorm(x.country||'');return n&&(n.includes(c)||c.includes(n)||n.slice(0,5)===c.slice(0,5))});if(m)return m}
-  return rs[0]}
-async function asPackGo(n,city,country,start){
-  const r=ASL().r;n=Math.max(1,Math.min(60,n));
-  let g;try{g=await asGeo(city,country)}catch(e){return asSay(r.packFail)}
-  if(!g){AST.pending={type:'pack',n,start};return asSay(asFmt(r.packNoCity,{c:city}))}
-  const s0=new Date((start||isoDay())+'T12:00:00'),e0=new Date(s0);e0.setDate(e0.getDate()+n-1);
-  const lim=new Date();lim.setHours(12,0,0,0);lim.setDate(lim.getDate()+15);const old=e0>lim;
-  const sh=d=>{const x=new Date(d);if(old)x.setFullYear(x.getFullYear()-1);return isoDay(x)};
-  const daily='temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum'+(old?'':',precipitation_probability_max');
-  const base=old?'https://archive-api.open-meteo.com/v1/archive':'https://api.open-meteo.com/v1/forecast';
-  let d;try{d=(await (await fetchT(`${base}?latitude=${g.latitude}&longitude=${g.longitude}&daily=${daily}&timezone=auto&start_date=${sh(s0)}&end_date=${sh(e0)}`)).json()).daily}catch(e){d=null}
-  if(!d||!d.time||!d.time.length)return asSay(r.packFail);
-  const num=a=>(a||[]).filter(x=>x!=null),mx=num(d.temperature_2m_max),mn=num(d.temperature_2m_min),ax=num(d.apparent_temperature_max),an=num(d.apparent_temperature_min);
-  if(!mx.length)return asSay(r.packFail);
-  const rd=d.time.filter((_,i)=>(d.precipitation_sum&&d.precipitation_sum[i]>=1)||(d.precipitation_probability_max&&d.precipitation_probability_max[i]>=rainThr())).length;
-  const R0=R(),hi=Math.round(Math.max(...mx)),lo=Math.round(Math.min(...mx)),avg=mx.reduce((a,b)=>a+b,0)/mx.length,dn=Math.min(n,7);
-  const ok=c=>ITEMS.filter(i=>i.cat===c&&!isLaundry(i)).sort((a,b)=>(b.fav?1:0)-(a.fav?1:0)||Math.random()-0.5);
-  const pick=(c,k,len)=>{let l=ok(c);if(len){const p=l.filter(i=>lenOf(i)===len);if(p.length)l=p.concat(l.filter(i=>lenOf(i)!==len))}return l.slice(0,k)};
-  const sel=[];const felpa=lo<=R0.felpa,jk=lo<=R0.pesante?'pesante':lo<=R0.giacca?'leggero':null;
-  sel.push(['maglietta',pick('maglietta',dn,avg>=R0.manica?'corto':(felpa?null:'lungo'))]);
-  if(felpa)sel.push(['felpa',pick('felpa',Math.max(1,Math.ceil(dn/3)))]);
-  const np=Math.max(1,Math.ceil(dn/3));
-  if(avg>=R0.corti&&lo>=R0.corti)sel.push(['pantaloni',pick('pantaloni',np,'corto')]);
-  else if(hi>=R0.corti){const c=pick('pantaloni',np,'corto').filter(i=>lenOf(i)==='corto'),l=pick('pantaloni',np,'lungo').filter(i=>lenOf(i)!=='corto');sel.push(['pantaloni',c.slice(0,Math.ceil(np/2)).concat(l.slice(0,Math.max(1,np-Math.ceil(np/2))))])}
-  else sel.push(['pantaloni',pick('pantaloni',np,'lungo')]);
-  if(jk)sel.push(['giacca',pick('giacca',1,jk)]);
-  sel.push(['scarpe',rd?pick('scarpe',2,'pesante'):pick('scarpe',1)]);
-  sel.push(['calze',pick('calze',dn)]);
-  const parts=sel.filter(([,l])=>l.length).map(([c,l])=>{const nm=asCnt(l.length,c);return l.length<=3?nm+' ('+asJoin(l.map(i=>(LANG==='en'?colName(i.color).toLowerCase():asAgree(i.color,(AS_GENDER[LANG]||{})[i.cat]))+(i.brand?' '+i.brand:'')))+')':nm});
-  const fa=an.length?Math.round(Math.min(...an)):Math.round(Math.min(...mn)),fb=ax.length?Math.round(Math.max(...ax)):hi;
-  let txt=asFmt(r.packW,{n,dd:r.dd[n===1?0:1],city:g.name,a:lo,b:hi,m:Math.round(Math.min(...mn)),fa,fb});
-  txt+=rd?asFmt(r.packRain,{r:rd,rd:r.dd[rd===1?0:1]}):r.packDry;
-  txt+=parts.length?asFmt(r.packList,{list:asJoin(parts)}):r.packEmpty;
-  if(LANG==='it'&&/^[aeiou]/i.test(g.name))txt=txt.replace(' a '+g.name,' ad '+g.name);
-  if(old)txt+=r.packOld;
-  AST.pending=null;return asSay(txt,sel.flatMap(([,l])=>l).slice(0,12));
-}
-function asPack(t,prev){const r=ASL().r,K=ASL().kw;
-  let n=(prev&&prev.n)||asPackDays(t),pl=prev&&prev.city?{city:prev.city,country:prev.country}:asPackPlace(t);
-  let start=(prev&&prev.start)||null;const dt=asDate(t,false);if(dt&&dt>=isoDay())start=dt;
-  if(prev&&!prev.city&&!pl){const w=t.split(' ').filter(x=>!K.pstop.includes(x)&&!K.prep.includes(x)&&!/^\d+$/.test(x));if(w.length&&w.length<=4)pl={city:w.join(' '),country:null}}
-  if(prev&&!n&&prev.city){n=asNum(t);const u=asPackDays(t);if(u)n=u}
-  if(!pl){AST.pending={type:'pack',n,start};return asSay(r.packAskCity)}
-  if(!n){AST.pending={type:'pack',city:pl.city,country:pl.country,start};return asSay(r.packAskDays)}
-  AST.pending=null;asAdd('ai',ASL().ui.think);asPackGo(n,pl.city,pl.country,start);
-}
 
 /* ---------- comprensione ---------- */
 function asHandle(raw){
@@ -3812,9 +4558,6 @@ function asHandle(raw){
     else{const f=asFindItems(t,P.cat).items.filter(i=>P.cands.includes(i));if(f.length===1)pick=f[0]}
     if(pick){AST.pending=null;return P.then(pick)}
   }
-  if(P&&P.type==='pack'&&!asHas(t,K.stop)){return asPack(t,P)}
-  if(asHas(t,K.repeat)&&!asHas(t,K.repeatNot)&&!asCats(t).length&&t.split(' ').length<=12){
-    if(!AST.last)return asSay(ASL().r.repeatNone,null,true,true);return asSay(AST.last.text,AST.last.pieces,true,true)}
   if(P&&(P.type==='propose'||P.type==='today')&&!asHas(t,K.change.concat(K.wear))){
     if(asHas(t,K.yes)&&!asHas(t,['non','not','no me','ne me','pas'])){AST.pending=null;
       if(P.type==='today')return asSay(r.okToday,null,false);
@@ -3825,12 +4568,6 @@ function asHandle(raw){
   }
   if(asHas(t,K.stop)&&t.split(' ').length<=4){AST.pending=null;AST.convo=false;return asSay(r.bye,null,false)}
   if(asHas(t,K.thanks)&&t.split(' ').length<=4){return asSay(r.thanks,null,false)}
-  {const inf=asInfo(t);if(inf)return inf()}
-  if(asHas(t,K.pack)||(asHas(t,K.packWeak)&&asPackDays(t))){return asPack(t,null)}
-  if(asHas(t,K.last)&&(asCats(t).length||asBrands(t).length)){const f=asFindItems(t);
-    if(f.cat&&f.items.length>1&&!(f.cols&&f.cols.length)&&!(f.brs&&f.brs.length)){let best=null,bd=null;f.items.forEach(i=>{const d=asLastWorn(i);if(d&&(!bd||d>bd)){bd=d;best=i}});
-      if(best)return asSay(asLastText(best,bd),[best])}
-    return asResolve(f,it=>asSay(asLastText(it,asLastWorn(it)),[it]))}
   if(asHas(t,K.help))return asSay(r.help);
 
   const date=asDate(t,asHas(t,K.history.concat(K.redo)));
@@ -3848,10 +4585,25 @@ function asHandle(raw){
     return asSay(asFmt(r.setMode,{v:{classica:r.modeC,percepita:r.modeP,entrambe:r.modeB}[a.tempMode]}))}
   if(asNum(t)!=null&&asHas(t,K.under.concat(K.over))&&(asCats(t).length||asHas(t,K.shorts))&&!asHas(t,K.rain)){
     const n=asNum(t),cats=asCats(t).map(x=>x.cat);let key=null;
-    if(asHas(t,K.shorts))key='corti';else if(cats.includes('giacca'))key=asHas(t,[r.heavy,'pesante','heavy','gruesa','chaude','pesant*'])?'pesante':'giacca';
+    if(cats.includes('sciarpa'))key='sciarpa';else if(cats.includes('cappello'))key='cappello';else if(cats.includes('collant')||cats.includes('calzespesse'))key='calzep';
+    else if(cats.includes('occhiali'))key=null;
+    else if(asHas(t,K.shorts))key='corti';else if(cats.includes('giacca'))key=asHas(t,[r.heavy,'pesante','heavy','gruesa','chaude','pesant*'])?'pesante':'giacca';
     else if(cats.includes('felpa'))key='felpa';else if(cats.includes('maglietta'))key='manica';
     if(key){const perc=asHas(t,K.feels),obj=perc?RP():R();obj[key]=Math.max(-10,Math.min(40,n));kickSync();setSetting(perc?'regimiP':'regimi',obj);afterRules();
-      return asSay(asFmt(r.setReg,{what:r.reg[key],cmp:['manica','corti'].includes(key)?r.over:r.under,n,p:perc?r.regP:''}))}}
+      return asSay(asFmt(r.setReg,{what:r.reg[key]||AS2L().r.reg2[key],cmp:['manica','corti'].includes(key)?r.over:r.under,n,p:perc?r.regP:''}))}}
+  { // uomo / donna, giorni di zaino e borsa, soglia UV degli occhiali da sole
+    const X=AS2L(),cs=asCats(t).map(x=>x.cat);
+    if(asHas(t,X.neutral)&&(asHas(t,X.iam.concat(K.setVerb))||t.split(' ').length<=5)){kickSync();setSetting('sesso','x');DAYCACHE={};afterRules();renderWardrobe();return asSay(X.r.setG.x)}
+    if(asHas(t,X.iam)&&!cs.length&&(asHas(t,X.fem)||asHas(t,X.male))&&t.split(' ').length<=6){const g=asHas(t,X.fem)?'f':'m';
+      kickSync();setSetting('sesso',g);DAYCACHE={};afterRules();renderWardrobe();return asSay(X.r.setG[g])}
+    if(cs.includes('occhiali')&&asNum(t)!=null&&asHas(t,K.uv.concat(['indice','index','indice uv']))){const a=ADV();a.uvGlasses=Math.max(1,Math.min(11,asNum(t)));
+      kickSync();setSetting('avanzate',a);afterRules();return asSay(asFmt(X.r.setUv,{n:a.uvGlasses}))}
+    const bc=cs.filter(c=>c==='zaino'||c==='borsa');
+    if(bc.length===1&&!asHas(t,K.laundry.concat(K.fav,K.wear,K.change,K.clean))&&(asHas(t,K.setVerb)||asDaysIn(t).length)){
+      const days=asDaysIn(t);if(!days.length)return asSay(X.r.bagNo);
+      const b=bagDays(),cfg={zaino:b.zaino.slice(),borsa:b.borsa.slice()};cfg[bc[0]]=days;
+      kickSync();setSetting('borse',cfg);DAYCACHE={};afterRules();return asSay(asFmt(X.r.setBag,{what:catName(bc[0]).toLowerCase(),days:asDayNames(days)}))}
+  }
   if(asHas(t,K.rainSet)&&asNum(t)!=null){const a=ADV();a.rainProb=Math.max(10,Math.min(100,asNum(t)));kickSync();setSetting('avanzate',a);afterRules();return asSay(asFmt(r.setRain,{n:a.rainProb}))}
   if(asHas(t,K.refHour)){const a=ADV();if(asNum(t)!=null&&!asHas(t,K.refMax)){a.refHour=Math.max(0,Math.min(23,asNum(t)));kickSync();setSetting('avanzate',a);afterRules();return asSay(asFmt(r.setHour,{h:a.refHour}))}
     a.refHour=null;kickSync();setSetting('avanzate',a);afterRules();return asSay(r.setHourOff)}
@@ -3860,7 +4612,6 @@ function asHandle(raw){
   if(asHas(t,K.brandSet)&&!asHas(t,K.outfit.filter(x=>x!=='outfit'))){const a=ADV();
     if(asHas(t,K.off)&&!asBrands(t).length){a.brandSet={brand:'',days:[]};kickSync();setSetting('avanzate',a);afterRules();return asSay(r.setBrandOff)}
     const b=asBrands(t)[0],D=ASL().days,days=D.wd.map((w,i)=>asHas(t,[w])?(i+1)%7:null).filter(x=>x!=null);
-    if(b&&!days.length)return asPropose(isoDay(),{brand:b.b},'brand',{brand:b.b});
     if(!b||!days.length)return asSay(r.brandNeed);
     const miss=brandMissing(b.b);if(miss.length)return asSay(asFmt(r.brandMiss,{b:b.b,m:miss.map(c=>catName(c).toLowerCase()).join(', ')}));
     a.brandSet={brand:b.b,days};kickSync();setSetting('avanzate',a);afterRules();
@@ -3893,7 +4644,7 @@ function asHandle(raw){
   // storico: cosa avevo messo / rifammi l'outfit
   if(asHas(t,K.redo)&&date){const ids=(worn()[date]||(LS.get('usati',[]).find(x=>isoOf(x.date)===date)||{}).ids||[]).filter(id=>ITEMS.some(i=>i.id===id));
     if(!ids.length)return asSay(asFmt(r.historyNone,{day:asDayLabel(date)}));
-    saveToday(ids);renderOutfit(false);if(ACC())kickSync();return asSay(asFmt(r.redo,{day:asDayLabel(date),list:asList(CURRENT)}),CURRENT)}
+    saveToday(ids,true);renderOutfit(false);if(ACC())kickSync();return asSay(asFmt(r.redo,{day:asDayLabel(date),list:asList(CURRENT)}),CURRENT)}
   if(asHas(t,K.history)&&date&&date<isoDay()){const ids=worn()[date]||(LS.get('usati',[]).find(x=>isoOf(x.date)===date)||{}).ids;
     const ps=(ids||[]).map(id=>ITEMS.find(i=>i.id===id)).filter(Boolean);
     if(!ps.length)return asSay(asFmt(r.historyNone,{day:asDayLabel(date)}));return asSay(asFmt(r.history,{Day:asCap(asDayLabel(date)),list:asList(ps)}),ps)}
@@ -3912,14 +4663,15 @@ function asHandle(raw){
     if(!best)return asSay(r.noData);return asSay(asFmt(r.most,{item:asItem(best[0]),n:best[1],v:({it:['volta','volte'],en:['time','times'],es:['vez','veces'],fr:['fois','fois']}[LANG]||['',''])[best[1]===1?0:1]}),[best[0]])}
   if(asHas(t,K.count)&&!asHas(t,K.weather.concat(K.now,['gradi','degrees','grados','degres']))){const f=asCats(t)[0];
     if(f){const n=ITEMS.filter(i=>i.cat===f.cat).length;return asSay(asFmt(r.count,{n:asCnt(n,f.cat),cat:''}).replace(/ +\./,'.').replace(/ de tipo \./,'.'))}
-    return asSay(asFmt(r.countAll,{n:ITEMS.length,list:CAT_ORDER.map(c=>[c,ITEMS.filter(i=>i.cat===c).length]).filter(x=>x[1]).map(([c,n])=>asCnt(n,c)).join(', ')}))}
+    return asSay(asFmt(r.countAll,{n:ITEMS.length,list:allCats().map(c=>[c,ITEMS.filter(i=>i.cat===c).length]).filter(x=>x[1]).map(([c,n])=>asCnt(n,c)).join(', ')}))}
   // negozi
   if(asHas(t,K.shops)){asSay(r.shops,null,false);setTimeout(openShops,600);return}
   // abbinamenti
   const cats=asCats(t);
   if(asHas(t,K.match)&&cats.length){const f=asFindItems(t);
-    return asResolve(f,it=>{const out=[];['maglietta','felpa','pantaloni','scarpe','giacca'].filter(c=>c!==it.cat).forEach(c=>{
-        const best=ITEMS.filter(i=>i.cat===c&&!isLaundry(i)).map(i=>[i,score([it,i],null)]).sort((a,b)=>b[1]-a[1])[0];if(best)out.push(best[0])});
+    return asResolve(f,it=>{const out=[],rl=roleOf(it.cat);
+      (rl==='full'?['mid','shoes','outer']:['top','mid','bottom','shoes','outer']).filter(x=>x!==rl).forEach(x=>{
+        const best=ITEMS.filter(i=>roleOf(i.cat)===x&&!isLaundry(i)).map(i=>[i,score([it,i],null)]).sort((a,b)=>b[1]-a[1])[0];if(best)out.push(best[0])});
       out.splice(3);if(!out.length)return asSay(r.noData);return asSay(asFmt(r.match,{item:asItem(it),list:out.map(asItem).join(', ')}),[it].concat(out))})}
   if(asHas(t,K.pairQ)&&cats.length>=2){
     const sp=cats[1].pos,left=t.slice(0,sp),right=t.slice(sp);
@@ -3931,8 +4683,15 @@ function asHandle(raw){
     let s=0;for(let k=0;k<5;k++)s+=score([Object.assign({cat:A.cat},A),Object.assign({cat:B.cat},B)],null);s/=5;
     return asSay(s>=0.5?asFmt(r.pairYes,{a:da,b:db}):asFmt(r.pairMeh,{a:da,b:db}))}
 
-  {const bs=asBrands(t);if(bs.length&&!cats.length){const bd=asDate(t,false),od=bd&&bd>=isoDay()?bd:isoDay();
-    if(od!==isoDay()&&asDayIndex(od)<0)return asSay(r.only7);return asPropose(od,{brand:bs[0].b},'brand',{brand:bs[0].b})}}
+  // domande sugli accessori: "mi serve la sciarpa?", "prendo gli occhiali da sole?"
+  {const X=AS2L(),aq=cats.find(c=>['sciarpa','cappello','occhiali','collant','calzespesse'].includes(c.cat));
+    if(aq&&asHas(t,X.askQ.concat(K.jacketQ))&&!asHas(t,K.wear.concat(K.change,K.laundry,K.fav,K.clean))){
+      if(!WEATHER)return asSay(r.noWeather);const qd=date||isoDay(),i=asDayIndex(qd);if(i<0)return asSay(r.only7);
+      const d=WEATHER.days[i];WX={max:d.max,min:d.min,rain:d.rain,code:d.code,prob:d.prob,date:d.date,app:d.app};
+      let yes,why;try{const c=aq.cat;
+        if(c==='occhiali'){yes=sunnyDay();why=d.code>2?X.r.whyCloud:asFmt(X.r.whyUV,{u:d.uv!=null?d.uv:0})}
+        else{yes=coldFor(c==='sciarpa'?'sciarpa':c==='cappello'?'cappello':'calzep');why=asFmt(X.r.whyT,{n:Math.round(refTemp()!=null?refTemp():d.max)})}}finally{WX=null}
+      const day=asDayLabel(qd);return asSay(yes?asFmt(X.r.accYes,{day,what:X.the[aq.cat]}):asFmt(X.r.accNo,{day,why}))}}
   // meteo
   const wDate=date||isoDay(),wd=WEATHER?asWeatherDay(wDate):null;
   const isWeatherQ=asHas(t,K.weather.concat(K.feels,K.now,K.hourly,K.week,K.rain,K.wind,K.uv,K.hum))||(asHas(t,K.jacket)&&asHas(t,K.jacketQ)&&!asHas(t,K.change.concat(K.wear)))||(asHas(t,K.shorts)&&!asHas(t,K.wear));
@@ -4006,7 +4765,9 @@ function asResolve(f,then){
   refresh();updateAccBtn();
   if(!LS.get('visto',false))renderWeather();
   // chi usa già il sito senza account: una sola proposta di registrazione
-  else if(!ACC()&&!LS.get('noReg',false)&&ITEMS.length)setTimeout(()=>openRegister(false),900);
+  else{const reg=()=>{if(!ACC()&&!LS.get('noReg',false)&&ITEMS.length)setTimeout(()=>openRegister(false),400)};
+    // chi usa già il sito: una sola volta, la scelta uomo/donna
+    if(!LS.get('sesso',null)&&!LS.get('sessoChiesto',false))setTimeout(()=>openGender(true,reg),900);else reg()}
 })();
 
 </script>
